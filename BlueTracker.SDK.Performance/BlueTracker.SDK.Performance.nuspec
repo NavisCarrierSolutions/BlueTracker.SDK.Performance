@@ -20,11 +20,11 @@
   </dependencies>
   </metadata>  
   <files>  
-	<file src="bin\Release\net40\BlueCloud.*.dll" target="lib\net40" />
-	<file src="bin\Release\net40\BlueCloud.*.pdb" target="lib\net40" />
-	<file src="bin\Release\net40\BlueCloud.*.xml" target="lib\net40" />
-	<file src="bin\Release\net45\BlueCloud.*.dll" target="lib\net45" />
-	<file src="bin\Release\net45\BlueCloud.*.pdb" target="lib\net45" />
-	<file src="bin\Release\net45\BlueCloud.*.xml" target="lib\net45" />
+	<file src="bin\Release\net40\BlueTracker.SDK.Performance.dll" target="lib\net40" />
+	<file src="bin\Release\net40\BlueTracker.SDK.Performance.pdb" target="lib\net40" />
+	<file src="bin\Release\net40\BlueTracker.SDK.Performance.xml" target="lib\net40" />
+	<file src="bin\Release\net45\BlueTracker.SDK.Performance.dll" target="lib\net45" />
+	<file src="bin\Release\net45\BlueTracker.SDK.Performance.pdb" target="lib\net45" />
+	<file src="bin\Release\net45\BlueTracker.SDK.Performance.xml" target="lib\net45" />
   </files>
 </package>
