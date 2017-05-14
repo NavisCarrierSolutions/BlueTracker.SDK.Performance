@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>BlueTracker.SDK.Performance</id>
+    <version>$version$</version>
+    <title>BlueTracker.SDK.Performance</title>
+    <authors>INTERSCHALT maritime systems GmbH</authors>
+    <owners>INTERSCHALT maritime systems GmbH</owners>
+    <!--<licenseUrl>http://LICENSE_URL_HERE_OR_DELETE_THIS_LINE</licenseUrl>
+    <projectUrl>http://PROJECT_URL_HERE_OR_DELETE_THIS_LINE</projectUrl>
+    <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>-->
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Wrapper for BlueTracker One public API.</description>
+    <copyright>Copyright 2016</copyright>
+	<language>en-US</language>    
+	<dependencies>
+	  <group>
+		  <dependency id="Newtonsoft.Json" version="7.0.1" />
+	   </group>
+  </dependencies>
+  </metadata>  
+  <files>  
+	<file src="bin\Release\net40\BlueCloud.*.dll" target="lib\net40" />
+	<file src="bin\Release\net40\BlueCloud.*.pdb" target="lib\net40" />
+	<file src="bin\Release\net40\BlueCloud.*.xml" target="lib\net40" />
+	<file src="bin\Release\net45\BlueCloud.*.dll" target="lib\net45" />
+	<file src="bin\Release\net45\BlueCloud.*.pdb" target="lib\net45" />
+	<file src="bin\Release\net45\BlueCloud.*.xml" target="lib\net45" />
+  </files>
+</package>

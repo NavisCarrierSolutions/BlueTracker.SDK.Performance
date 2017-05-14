@@ -1,0 +1,25 @@
+﻿using Newtonsoft.Json;
+
+namespace BlueTracker.SDK.Performance.Query
+{
+    public class PortShort
+    {
+        /// <summary>
+        /// Id (given by bluetracker.one)
+        /// </summary>
+        [JsonProperty("id")]
+        public int Id { get; set; }
+
+        /// <summary>
+        /// UNLOC of Port
+        /// </summary>
+        [JsonProperty("unloc")]
+        public string UNLOC { get; set; }
+
+        /// <summary>
+        /// Port Name
+        /// </summary>
+        [JsonProperty("name")]
+        public string Name { get; set; }
+    }
+}

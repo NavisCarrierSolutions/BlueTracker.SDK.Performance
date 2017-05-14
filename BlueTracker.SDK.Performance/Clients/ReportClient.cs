@@ -1,0 +1,157 @@
+﻿using System;
+using System.Collections.Generic;
+using BlueTracker.SDK.Performance.Core;
+using BlueTracker.SDK.Performance.Query;
+using Newtonsoft.Json.Linq;
+
+namespace BlueTracker.SDK.Performance.Clients
+{
+    /// <summary>
+    /// Client for getting, creating and updating performance reports.
+    /// </summary>
+    public class ReportClient : ApiWrapper
+    {
+        /// <summary>
+        /// Create a new ReportClient intance.
+        /// </summary>
+        /// <param name="serverAddress">The server address.</param>
+        /// <param name="authorization">The API token.</param>
+        /// <remarks>
+        /// Instead of specifying the server address and the API token with constructur parameters,
+        /// they can be set in the appSettings section of the app.config. The key BlueCloud_ApiKey
+        /// is used to specify the API token, the key BlueCloud_ServerAddress is used to set the
+        /// service address. If the service address is neither specified as constructor parameter,
+        /// nor in the app settings, the default service address will be used.
+        /// </remarks>
+        public ReportClient(string serverAddress = null, string authorization = null) :
+            base(serverAddress, authorization)
+        {
+        }
+
+        /// <summary>
+        /// Get the metadata of a single report.
+        /// </summary>
+        /// <param name="id">ID of the report.</param>
+        /// <returns>The report metadata object.</returns>
+        public PerformanceReport GetSpecific(int id)
+        {
+            var reqString = $"/api/v1/reports/{id}";
+            var ret = GetObject<PerformanceReport>(reqString);
+            return ret;
+        }
+
+        /// <summary>
+        /// Returns a paged list of report metadata objects (with an optional time range filter).
+        /// </summary>
+        /// <param name="imoNumber">IMO number of the ship.</param>
+        /// <param name="start">Start date and time for the query.</param>
+        /// <param name="end">End date and time for the query.</param>
+        /// <param name="page">The page number of the query. (Optional. Default: 0)</param>
+        /// <param name="pageSize">The page size of the query. (Optional. Default: 20)</param>
+        /// <returns>
+        /// A list of report metadata objects for the specified IMO number within the specified time range.
+        /// </returns>
+        public PagedSearchResult<PerformanceReportShort> GetAll(int imoNumber, DateTime? start = null, DateTime? end = null,
+            int page = 0, int pageSize = 20)
+        {
+            if (start == null)
+                start = DateTime.MinValue;
+
+            if (end == null)
+                end = DateTime.MaxValue;
+
+            var reqString = $"/api/v1/ships/{imoNumber}/reports?start={start:yyyy-MM-ddTHH:mm}&end={end:yyyy-MM-ddTHH:mm}&page={page}&pageSize={pageSize}";
+            var result = GetObject<PagedSearchResult<PerformanceReportShort>>(reqString);
+
+            return result;
+        }
+
+        /// <summary>
+        /// Return a paged list of report metadata objects since a specific version stamp.
+        /// </summary>
+        /// <param name="imoNumber">IMO number of the ship.</param>
+        /// <param name="sinceVersion">Version stamp to filter the reports.</param>
+        /// <param name="page">The page number of the query. (Optional. Default: 0)</param>
+        /// <param name="pageSize">The page size of the query. (Optional. Default: 20)</param>
+        /// <returns>
+        /// A paged list of report metadata objects for the specified IMO number, which have a version stamp above
+        /// the specified sinceVersion parameter.
+        /// </returns>
+        /// <remarks>
+        /// Whenever a ship related entity (report, leg, voyage etc.) is created or modified, a version counter is increased.
+        /// The new or modified entity remembers the version at that moment. This allows the API client to get all
+        /// modified entities since the last query.
+        /// </remarks>
+        public PagedSearchResult<PerformanceReportShort> GetSinceVersion(int imoNumber, long sinceVersion, int page = 0, int pageSize = 20)
+        {
+            var reqString = $"/api/v1/ships/{imoNumber}/reports?sinceVersion={sinceVersion}&page={page}&pageSize={pageSize}";
+            var result = GetObject<PagedSearchResult<PerformanceReportShort>>(reqString);
+
+            return result;
+        }
+
+        /// <summary>
+        /// Return the list of reports, which are associated with a specific leg.
+        /// </summary>
+        /// <param name="legId">ID of the leg.</param>
+        /// <returns>
+        /// A list of report metadata objects, which are associated with the specified leg.
+        /// </returns>
+        public List<PerformanceReportShort> GetAllForLeg(int legId)
+        {
+            var reqString = $"/api/v1/legs/{legId}/reports";
+            var ret = GetObject<List<PerformanceReportShort>>(reqString);
+            return ret;
+        }
+
+        /// <summary>
+        /// Get the original report.
+        /// </summary>
+        /// <param name="reportId">ID of the report.</param>
+        /// <returns>The detailed report object.</returns>
+        public Report.PerformanceReport GetOriginal(int reportId)
+        {
+            var route = $"/api/v1/reports/{reportId}/original";
+            var ret = GetObject<Report.PerformanceReport>(route);
+            return ret;
+        }
+
+        /// <summary>
+        /// Get the complete and processed report.
+        /// </summary>
+        /// <param name="reportId">ID of the report.</param>
+        /// <returns>
+        /// A JSON object, which represents the fully processed report details.
+        /// </returns>
+        public JObject GetResult(int reportId)
+        {
+            var route = $"/api/v1/reports/{reportId}/result";
+            var ret = GetJson(route);
+            return ret;
+        }
+
+        /// <summary>
+        /// Gets the performance summary for a specific report.
+        /// </summary>
+        /// <param name="reportId">ID of the report.</param>
+        /// <returns>The report performance summary.</returns>
+        public PerformanceReportSummary GetSummary(int reportId)
+        {
+            var route = $"/api/v1/reports/{reportId}/summary";
+            var ret = GetObject<PerformanceReportSummary>(route);
+            return ret;
+        }
+
+        /// <summary>
+        /// Creates or updates a report.
+        /// </summary>
+        /// <param name="report">The detailed report object.</param>
+        /// <returns>
+        /// The report metadata object which was created for the report.
+        /// </returns>
+        public PerformanceReport CreateOrUpdate(Report.PerformanceReport report)
+        {
+            return PostObject<PerformanceReport, Report.PerformanceReport>(report, "/api/v1/reports");
+        }
+    }
+}
