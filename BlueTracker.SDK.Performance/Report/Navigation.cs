@@ -56,6 +56,18 @@ namespace BlueTracker.SDK.Performance.Report
         public double? SailedDistanceThroughWater { get; set; }
 
         /// <summary>
+        /// Depth of water below surface. (m)
+        /// </summary>
+        [JsonProperty(PropertyName = "waterDepth")]
+        public double? WaterDepth { get; set; }
+
+        /// <summary>
+        /// Depth of water below keel. (m)
+        /// </summary>
+        [JsonProperty(PropertyName = "waterDepthBelowKeel")]
+        public double? WaterDepthBelowKeel { get; set; }
+
+        /// <summary>
         /// Draft details.
         /// </summary>
         [JsonProperty(PropertyName = "draft")]

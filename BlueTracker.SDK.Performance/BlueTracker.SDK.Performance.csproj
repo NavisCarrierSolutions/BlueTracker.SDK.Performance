@@ -176,7 +176,7 @@
     <Compile Include="Ship\SuperStructureType.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="BlueCloud.SDK.nuspec" />
+    <None Include="BlueTracker.SDK.Performance.nuspec" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
