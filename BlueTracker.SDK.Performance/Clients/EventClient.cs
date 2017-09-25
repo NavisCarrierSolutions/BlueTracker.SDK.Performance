@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using BlueTracker.SDK.Performance.Core;
 using BlueTracker.SDK.Performance.Post;
 using BlueTracker.SDK.Performance.Query;
@@ -108,6 +109,22 @@ namespace BlueTracker.SDK.Performance.Clients
         public Event CreateOrUpdate(EventData eventData)
         {
             return PostObject<Event, EventData>(eventData, "/api/v1/events");
+        }
+
+        /// <summary>
+        /// Creates or updates multiple events.
+        /// </summary>
+        /// <param name="eventData">List of events to be updated or created.</param>
+        /// <returns>
+        /// The newly created or updated events.
+        /// </returns>
+        /// <remarks>
+        /// Uploads of multiple items must refer to the same IMO number. The maximum number
+        /// of items is 25. Further it is required to enable the batch mode for the ship.
+        /// </remarks>
+        public List<Event> CreateOrUpdate(List<EventData> eventData)
+        {
+            return PostObject<List<Event>, List<EventData>>(eventData, "/api/v1/events/batch");
         }
     }
 }
