@@ -1,4 +1,5 @@
-﻿using BlueTracker.SDK.Performance.Core;
+﻿using System.Collections.Generic;
+using BlueTracker.SDK.Performance.Core;
 using BlueTracker.SDK.Performance.Post;
 using BlueTracker.SDK.Performance.Query;
 
@@ -104,6 +105,22 @@ namespace BlueTracker.SDK.Performance.Clients
         public Voyage CreateOrUpdate(VoyageData voyageData)
         {
             return PostObject<Voyage, VoyageData>(voyageData, "/api/v1/voyages");
+        }
+
+        /// <summary>
+        /// Creates or updates multiple voyages.
+        /// </summary>
+        /// <param name="voyageData">List of voyages to be updated or created.</param>
+        /// <returns>
+        /// The newly created or updated voyages.
+        /// </returns>
+        /// <remarks>
+        /// Uploads of multiple items must refer to the same IMO number. The maximum number
+        /// of items is 25. Further it is required to enable the batch mode for the ship.
+        /// </remarks>
+        public List<Voyage> CreateOrUpdate(List<VoyageData> voyageData)
+        {
+            return PostObject<List<Voyage>, List<VoyageData>>(voyageData, "/api/v1/voyages/batch");
         }
     }
 }

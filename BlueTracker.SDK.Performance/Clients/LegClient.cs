@@ -138,5 +138,21 @@ namespace BlueTracker.SDK.Performance.Clients
         {
             return PostObject<Leg, LegData>(legData, "/api/v1/legs");
         }
+
+        /// <summary>
+        /// Creates or updates multiple legs.
+        /// </summary>
+        /// <param name="legData">List of legs to be updated or created.</param>
+        /// <returns>
+        /// The newly created or updated legs.
+        /// </returns>
+        /// <remarks>
+        /// Uploads of multiple items must refer to the same IMO number. The maximum number
+        /// of items is 25. Further it is required to enable the batch mode for the ship.
+        /// </remarks>
+        public List<Leg> CreateOrUpdate(List<LegData> legData)
+        {
+            return PostObject<List<Leg>, List<LegData>>(legData, "/api/v1/legs/batch");
+        }
     }
 }

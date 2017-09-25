@@ -153,5 +153,21 @@ namespace BlueTracker.SDK.Performance.Clients
         {
             return PostObject<PerformanceReport, Report.PerformanceReport>(report, "/api/v1/reports");
         }
+
+        /// <summary>
+        /// Creates or updates multiple reports.
+        /// </summary>
+        /// <param name="reports">List of reports to be updated or created.</param>
+        /// <returns>
+        /// The newly created or updated reports.
+        /// </returns>
+        /// <remarks>
+        /// Uploads of multiple items must refer to the same IMO number. The maximum number
+        /// of items is 25. Further it is required to enable the batch mode for the ship.
+        /// </remarks>
+        public List<PerformanceReport> CreateOrUpdate(List<Report.PerformanceReport> reports)
+        {
+            return PostObject<List<PerformanceReport>, List<Report.PerformanceReport>>(reports, "/api/v1/reports/batch");
+        }
     }
 }
