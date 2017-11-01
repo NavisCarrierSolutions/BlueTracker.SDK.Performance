@@ -86,6 +86,8 @@
   <ItemGroup>
     <Compile Include="Clients\EventClient.cs" />
     <Compile Include="Clients\HullModelClient.cs" />
+    <Compile Include="Clients\SampleClient.cs" />
+    <Compile Include="Clients\SampleSourceClient.cs" />
     <Compile Include="Clients\ShipBaseDataClient.cs" />
     <Compile Include="Clients\ShipClassBaseDataClient.cs" />
     <Compile Include="Clients\ShipClassClient.cs" />
@@ -94,6 +96,7 @@
     <Compile Include="Clients\LegClient.cs" />
     <Compile Include="Core\PagedSearchResult.cs" />
     <Compile Include="Enums\HullModelType.cs" />
+    <Compile Include="Enums\OnboardSampleSourceType.cs" />
     <Compile Include="Post\EventData.cs" />
     <Compile Include="Post\HullModelData.cs" />
     <Compile Include="Post\LegData.cs" />
@@ -114,10 +117,12 @@
     <Compile Include="Query\Leg.cs" />
     <Compile Include="Query\LegShort.cs" />
     <Compile Include="Query\LegSummary.cs" />
+    <Compile Include="Query\OnboardSampleSource.cs" />
     <Compile Include="Query\PerformanceReport.cs" />
     <Compile Include="Query\PerformanceReportShort.cs" />
     <Compile Include="Query\PerformanceReportSummary.cs" />
     <Compile Include="Query\PortShort.cs" />
+    <Compile Include="Query\Sample.cs" />
     <Compile Include="Query\Service.cs" />
     <Compile Include="Query\ServiceShort.cs" />
     <Compile Include="Query\Ship.cs" />
@@ -160,6 +165,24 @@
     <Compile Include="Report\Position.cs" />
     <Compile Include="Report\SpeedDirection.cs" />
     <Compile Include="Report\StateOptions.cs" />
+    <Compile Include="Sample\Aggregate.cs" />
+    <Compile Include="Sample\AggregateFuelFlow.cs" />
+    <Compile Include="Sample\AggregateOptions.cs" />
+    <Compile Include="Sample\AuxEngine.cs" />
+    <Compile Include="Sample\Boiler.cs" />
+    <Compile Include="Sample\Draft.cs" />
+    <Compile Include="Sample\Engine.cs" />
+    <Compile Include="Sample\Environment.cs" />
+    <Compile Include="Sample\FuelConsumer.cs" />
+    <Compile Include="Sample\FuelFlow.cs" />
+    <Compile Include="Sample\FuelGradeOptions.cs" />
+    <Compile Include="Sample\FuelKindOptions.cs" />
+    <Compile Include="Sample\FuelType.cs" />
+    <Compile Include="Sample\InternalCombustionEngine.cs" />
+    <Compile Include="Sample\MainEngine.cs" />
+    <Compile Include="Sample\Navigation.cs" />
+    <Compile Include="Sample\Sample.cs" />
+    <Compile Include="Sample\SpeedDirection.cs" />
     <Compile Include="Ship\Aggregate.cs" />
     <Compile Include="Ship\AuxEngine.cs" />
     <Compile Include="Ship\BowType.cs" />
@@ -176,12 +199,15 @@
     <Compile Include="Ship\SuperStructureType.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="BlueTracker.SDK.Performance.nuspec" />
+    <None Include="BlueTracker.SDK.Performance.nuspec">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Web" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
