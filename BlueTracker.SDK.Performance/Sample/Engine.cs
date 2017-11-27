@@ -4,18 +4,18 @@ using Newtonsoft.Json;
 namespace BlueTracker.SDK.Performance.Sample
 {
     /// <summary>
-    /// Represents the engine area of a vessel.
+    /// Engine related data.
     /// </summary>
     public class Engine
     {
         /// <summary>
-        /// Air temperature in engine room. (Unit: °C)
+        /// Air temperature in engine room. (°C)
         /// </summary>
         [JsonProperty(PropertyName = "engineRoomTemp")]
         public double? EngineRoomTemp { get; set; }
 
         /// <summary>
-        /// Temperature of LT cooling water. (Unit: °C)
+        /// Temperature of LT cooling water. (°C)
         /// </summary>
         [JsonProperty(PropertyName = "coolingWaterTemp")]
         public double? CoolingWaterTemp { get; set; }
@@ -39,7 +39,7 @@ namespace BlueTracker.SDK.Performance.Sample
         public List<Boiler> Boilers { get; set; }
 
         /// <summary>
-        /// A list of fuel flows on measured at timestamp.
+        /// A list of measured fuel flows.
         /// </summary>
         /// <remarks>
         /// Fuel flows can be added globally (here) or aggregate specific. If the
@@ -48,7 +48,7 @@ namespace BlueTracker.SDK.Performance.Sample
         /// the flow can only be collated to the aggregate type 
         /// (<see cref="AggregateOptions"/>), it should be added here.
         /// </remarks>
-        [JsonProperty(PropertyName = "consumption")]
-        public List<AggregateFuelFlow> Consumptions { get; set; }
+        [JsonProperty(PropertyName = "fuelFlows")]
+        public List<AggregateFuelFlow> FuelFlows { get; set; }
     }
 }

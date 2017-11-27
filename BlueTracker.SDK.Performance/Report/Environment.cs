@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using BlueTracker.SDK.Performance.Core;
+using Newtonsoft.Json;
 
 namespace BlueTracker.SDK.Performance.Report
 {

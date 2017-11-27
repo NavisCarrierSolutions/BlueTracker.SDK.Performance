@@ -12,6 +12,6 @@ namespace BlueTracker.SDK.Performance.Sample
         /// The fuel flow at time stamp
         /// </summary>
         [JsonProperty(PropertyName = "fuelFlow")]
-        public FuelFlow Consumption { get; set; }
+        public FuelFlow FuelFlow { get; set; }
     }
 }

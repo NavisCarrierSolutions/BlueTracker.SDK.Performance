@@ -1,46 +1,47 @@
+using BlueTracker.SDK.Performance.Core;
 using Newtonsoft.Json;
 
 namespace BlueTracker.SDK.Performance.Sample
 {
     /// <summary>
-    /// Represents the navigational area of a vessel.
+    /// Navigational data.
     /// </summary>
     public class Navigation
     {
         /// <summary>
-        /// Heading of vessel (Unit: deg)
+        /// Heading of ship. (degrees)
         /// </summary>
         [JsonProperty(PropertyName = "heading")]
         public double? Heading { get; set; }
 
         /// <summary>
-        /// Course made good (Unit: deg)
+        /// Course made good. (degrees)
         /// </summary>
         [JsonProperty(PropertyName = "courseMadeGood")]
         public double? CourseMadeGood { get; set; }
 
         /// <summary>
-        /// Speed over ground (Unit: knots)
+        /// Speed over ground. (knots)
         /// </summary>
         [JsonProperty(PropertyName = "speedOverGround")]
         public double? SpeedOverGround { get; set; }
 
         /// <summary>
-        /// Speed through water (Unit: knots)
+        /// Speed through water. (knots)
         /// </summary>
         [JsonProperty(PropertyName = "speedThroughWater")]
         public double? SpeedThroughWater { get; set; }
 
         /// <summary>
-        /// Draft details.
-        /// </summary>
-        [JsonProperty(PropertyName = "draft")]
-        public Draft Draft { get; set; }
-
-        /// <summary>
-        /// Trim of vessel (Unit: meters)
+        /// Trim. (meter)
         /// </summary>
         [JsonProperty(PropertyName = "trim")]
         public double? Trim { get; set; }
+
+        /// <summary>
+        /// Draft data.
+        /// </summary>
+        [JsonProperty(PropertyName = "draft")]
+        public Draft Draft { get; set; }
     }
 }

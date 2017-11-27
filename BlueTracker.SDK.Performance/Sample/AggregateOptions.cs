@@ -11,21 +11,21 @@ namespace BlueTracker.SDK.Performance.Sample
         /// <summary>
         /// Main engine of a vessel (used for propulsion), which may be fitted with a shaft generator.
         /// </summary>
-        [JsonProperty(PropertyName = "mainEngine")]
         [EnumMember(Value = "mainEngine")]
+        [JsonProperty(PropertyName = "mainEngine")]
         MainEngine,
 
         /// <summary>
         /// Auxilliary engine of a vessel (used for electrical power generation).
         /// </summary>
-        [JsonProperty(PropertyName = "auxEngine")]
         [EnumMember(Value = "auxEngine")]
+        [JsonProperty(PropertyName = "auxEngine")]
         AuxEngine,
 
         /// <summary>
         /// Auxilliary boiler of a vessel (with own fuel burner, no exhaust gas boiler).
         /// </summary>
-        /// [EnumMember(Value = "boiler")]
+        [EnumMember(Value = "boiler")]
         [JsonProperty(PropertyName = "boiler")]
         Boiler
     }

@@ -1,46 +1,49 @@
-﻿using Newtonsoft.Json;
+﻿using BlueTracker.SDK.Performance.Core;
+using BlueTracker.SDK.Performance.Enums;
+using BlueTracker.SDK.Performance.Report;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 namespace BlueTracker.SDK.Performance.Sample
 {
     /// <summary>
-    /// Represents the fuel flow of a fuel consumer
+    /// Fuel flow of a fuel consumer.
     /// </summary>
     public class FuelFlow
     {
         /// <summary>
-        /// The consumed fuel kind.
+        /// Kind of fuel in use.
         /// </summary>
         [JsonProperty(PropertyName = "kind")]
         [JsonConverter(typeof(StringEnumConverter))]
         public FuelKindOptions FuelKind { get; set; }
 
         /// <summary>
-        /// A detailed description of the fuel type used.
+        /// Detailed description of the fuel type used.
         /// </summary>
         [JsonProperty(PropertyName = "type")]
         public FuelType FuelType { get;set; }
 
         /// <summary>
-        /// The temperature of the consumed fuel (Unit: °C)
+        /// Temperature of fuel. (°C)
         /// </summary>
         [JsonProperty(PropertyName = "temp")]
         public double? Temp { get; set; }
 
         /// <summary>
-        /// The density of the consumed fuel (Unit: kg/m3)
+        /// Actual density of fuel. (kg/m3)
         /// </summary>
         [JsonProperty(PropertyName = "density")]
         public double? Density { get; set; }
 
         /// <summary>
-        /// The volume of the consumed fuel (Unit: m3)
+        /// Volume flow of the consumed fuel. (m3/h)
         /// </summary>
         [JsonProperty(PropertyName = "volumeFlow")]
         public double? VolumeFlow { get; set; }
 
         /// <summary>
-        /// The mass of the consumed fuel (Unit: Metric Tons)
+        /// Mass flow of the consumed fuel. (mt/h)
         /// </summary>
         [JsonProperty(PropertyName = "massFlow")]
         public double? MassFlow { get; set; }
