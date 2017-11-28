@@ -1,4 +1,6 @@
-﻿using Newtonsoft.Json;
+﻿using BlueTracker.SDK.Performance.Core;
+using BlueTracker.SDK.Performance.Report;
+using Newtonsoft.Json;
 
 namespace BlueTracker.SDK.Performance.Sample
 {
@@ -8,25 +10,25 @@ namespace BlueTracker.SDK.Performance.Sample
     public class Environment
     {
         /// <summary>
-        /// Outside air temperature. (Unit: °C)
+        /// Outside air temperature. (°C)
         /// </summary>
         [JsonProperty(PropertyName = "airTemp")]
         public double? AirTemp { get; set; }
 
         /// <summary>
-        /// Outside air pressure. (Unit: mbar)
+        /// Outside air pressure. (hPa)
         /// </summary>
         [JsonProperty(PropertyName = "airPress")]
         public double? AirPress { get; set; }
 
         /// <summary>
-        /// Sea water temperature. (Unit: °C)
+        /// Sea water temperature. (°C)
         /// </summary>
         [JsonProperty(PropertyName = "seaWaterTemp")]
         public double? SeaWaterTemp { get; set; }
 
         /// <summary>
-        /// Details of wind.
+        /// Wind data.
         /// </summary>
         [JsonProperty(PropertyName = "wind")]
         public SpeedDirection Wind { get; set; }

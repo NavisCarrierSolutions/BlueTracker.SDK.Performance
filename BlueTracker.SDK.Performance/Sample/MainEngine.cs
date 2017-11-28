@@ -1,9 +1,8 @@
-﻿using System.Diagnostics.CodeAnalysis;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 
 namespace BlueTracker.SDK.Performance.Sample
 {
-    [ExcludeFromCodeCoverage]
+    /// <inheritdoc />
     /// <summary>
     /// Main Engine of the vessel used for propulsion, which may be fitted with a shaft generator.
     /// </summary>
@@ -28,31 +27,25 @@ namespace BlueTracker.SDK.Performance.Sample
         public double? GeneratorPower { get; set; }
 
         /// <summary>
-        /// Is generator running
+        /// Indication if generator is running.
         /// </summary>
         [JsonProperty(PropertyName = "generatorRunning")]
         public bool? GeneratorRunning { get; set; }
 
         /// <summary>
-        /// Power of main engine (Unit: kW)
+        /// Power produced by engine. (kW)
         /// </summary>
         [JsonProperty(PropertyName = "power")]
         public double? Power { get; set; }
 
         /// <summary>
-        /// Pitch of attached propeller. (Unit: m)
+        /// Propeller pitch. (meters)
         /// </summary>
         [JsonProperty(PropertyName = "propellerPitch")]
         public double? PropellerPitch { get; set; }
 
         /// <summary>
-        /// Is engine running?
-        /// </summary>
-        [JsonProperty(PropertyName = "running")]
-        public bool? Running { get; set; }
-
-        /// <summary>
-        /// Power of shaft (Unit: kW)
+        /// Power on propeller shaft. (kW)
         /// </summary>
         [JsonProperty(PropertyName = "shaftPower")]
         public double? ShaftPower { get; set; }

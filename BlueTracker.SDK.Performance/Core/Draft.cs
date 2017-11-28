@@ -1,18 +1,12 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 
-namespace BlueTracker.SDK.Performance.Sample
+namespace BlueTracker.SDK.Performance.Core
 {
     /// <summary>
     /// Draft of vessel.
     /// </summary>
-    public class Draft
+    public struct Draft
     {
-        /// <summary>
-        /// Draft aft.
-        /// </summary>
-        [JsonProperty(PropertyName = "aft")]
-        public double? Aft { get; set; }
-
         /// <summary>
         /// Draft forward.
         /// </summary>
@@ -24,5 +18,11 @@ namespace BlueTracker.SDK.Performance.Sample
         /// </summary>
         [JsonProperty(PropertyName = "mid")]
         public double? Mid { get; set; }
+
+        /// <summary>
+        /// Draft aft.
+        /// </summary>
+        [JsonProperty(PropertyName = "aft")]
+        public double? Aft { get; set; }
     }
 }

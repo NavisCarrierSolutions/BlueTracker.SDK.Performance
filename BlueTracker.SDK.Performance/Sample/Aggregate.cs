@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 namespace BlueTracker.SDK.Performance.Sample
 {
     /// <summary>
-    /// Represents a generic aggregate.
+    /// A generic aggregate.
     /// </summary>
     public class Aggregate
     {
@@ -15,5 +15,11 @@ namespace BlueTracker.SDK.Performance.Sample
         /// </remarks>
         [JsonProperty(PropertyName = "no", Order = 1)]
         public int No { get; set; }
+
+        /// <summary>
+        /// Indication if aggregate is running.
+        /// </summary>
+        [JsonProperty(PropertyName = "running")]
+        public bool? Running { get; set; }
     }
 }
