@@ -8,6 +8,11 @@ namespace BlueTracker.SDK.Performance.Sample
     public class Navigation
     {
         /// <summary>
+        ///  Position of the vessel at reporting time.
+        /// </summary>
+        [JsonProperty(PropertyName = "position")]
+        public Position Position { get; set; }
+        /// <summary>
         /// Heading of vessel (Unit: deg)
         /// </summary>
         [JsonProperty(PropertyName = "heading")]

@@ -181,6 +181,7 @@
     <Compile Include="Sample\InternalCombustionEngine.cs" />
     <Compile Include="Sample\MainEngine.cs" />
     <Compile Include="Sample\Navigation.cs" />
+    <Compile Include="Sample\Position.cs" />
     <Compile Include="Sample\Sample.cs" />
     <Compile Include="Sample\SpeedDirection.cs" />
     <Compile Include="Ship\Aggregate.cs" />

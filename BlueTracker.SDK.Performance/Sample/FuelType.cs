@@ -25,7 +25,7 @@ namespace BlueTracker.SDK.Performance.Sample
         /// </summary>
         [JsonProperty(PropertyName = "grade")]
         [JsonConverter(typeof(StringEnumConverter))]
-        public FuelGradeOptions Grade { get; set; }
+        public FuelGradeOptions? Grade { get; set; }
 
         /// <summary>
         /// Lower Calorific Value of fuel (Unit: kJ/kg)
