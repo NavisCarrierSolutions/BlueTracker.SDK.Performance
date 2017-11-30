@@ -1,6 +1,5 @@
 ﻿using BlueTracker.SDK.Performance.Core;
 using BlueTracker.SDK.Performance.Enums;
-using BlueTracker.SDK.Performance.Report;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 

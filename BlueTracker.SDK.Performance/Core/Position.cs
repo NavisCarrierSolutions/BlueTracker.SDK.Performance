@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace BlueTracker.SDK.Performance.Sample
+namespace BlueTracker.SDK.Performance.Core
 {
     /// <summary>
     /// Geographical position information.

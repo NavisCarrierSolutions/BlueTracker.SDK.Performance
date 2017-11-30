@@ -1,16 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using BlueTracker.SDK.Performance.Core;
+using BlueTracker.SDK.Performance.Query;
 
 namespace BlueTracker.SDK.Performance.Clients
 {
+    /// <inheritdoc />
     /// <summary>
-    /// 
+    /// Client for getting onboard sample sources.
     /// </summary>
-    public class SampleClient: ApiWrapper
+    public class OnboardSampleSourceClient : ApiWrapper
     {
         /// <summary>
         /// Creates a new SampleClient instance.
@@ -24,25 +22,28 @@ namespace BlueTracker.SDK.Performance.Clients
         /// service address. If the service address is neither specified as constructor parameter,
         /// nor in the app settings, the default service address will be used.
         /// </remarks>
-        public SampleClient(string serverAddress = null, string authorization = null) :
+        public OnboardSampleSourceClient(string serverAddress = null, string authorization = null) :
             base(serverAddress, authorization)
         {
         }
 
         /// <summary>
-        /// Posts a sample of named sample source.
+        /// Gets all onboard sample sources for the company
         /// </summary>
-        /// <param name="sample">Sample data to post</param>
-        /// <param name="sourceName">The Name of the sample source</param>
-        /// <returns>A short version of the posted data.</returns>
-        public Query.Sample PostSample(Sample.Sample sample, string sourceName)
+        /// <returns>List of all sample sources</returns>
+        public List<OnboardSampleSource> GetAll()
         {
-            return PostObject<Query.Sample, Sample.Sample>(sample, $"api/v1/onboardSamples/sources/{sourceName}/values");
+            return GetObject<List<OnboardSampleSource>>("/api/v1/onboardSamples/sources");
         }
 
-        public Query.Sample Query(int sourceId, int imoNumber, long time)
+        /// <summary>
+        /// Get a specific sample source identified by name
+        /// </summary>
+        /// <param name="sourceName">The name of the sample source</param>
+        /// <returns>The sample source</returns>
+        public OnboardSampleSource Get(string sourceName)
         {
-            return GetObject<Query.Sample>($"api/v1/onboardSamples/sources/{sourceId}/{imoNumber}/{time}");
+            return GetObject<OnboardSampleSource>($"/api/v1/onboardSamples/sources/{sourceName}");
         }
     }
 }

@@ -86,14 +86,15 @@
   <ItemGroup>
     <Compile Include="Clients\EventClient.cs" />
     <Compile Include="Clients\HullModelClient.cs" />
-    <Compile Include="Clients\SampleClient.cs" />
-    <Compile Include="Clients\SampleSourceClient.cs" />
+    <Compile Include="Clients\OnboardSampleValueClient.cs" />
+    <Compile Include="Clients\OnboardSampleSourceClient.cs" />
     <Compile Include="Clients\ShipBaseDataClient.cs" />
     <Compile Include="Clients\ShipClassBaseDataClient.cs" />
     <Compile Include="Clients\ShipClassClient.cs" />
     <Compile Include="Clients\TagClient.cs" />
     <Compile Include="Core\ApiWrapper.cs" />
     <Compile Include="Clients\LegClient.cs" />
+    <Compile Include="Core\DateLimitedSearchResult.cs" />
     <Compile Include="Core\Draft.cs" />
     <Compile Include="Core\FuelType.cs" />
     <Compile Include="Core\HeightDirection.cs" />
@@ -163,7 +164,7 @@
     <Compile Include="Report\MainEngine.cs" />
     <Compile Include="Report\Navigation.cs" />
     <Compile Include="Report\PerformanceReport.cs" />
-    <Compile Include="Report\Position.cs" />
+    <Compile Include="Core\Position.cs" />
     <Compile Include="Report\StateOptions.cs" />
     <Compile Include="Sample\Aggregate.cs" />
     <Compile Include="Sample\AggregateFuelFlow.cs" />
@@ -177,7 +178,6 @@
     <Compile Include="Sample\InternalCombustionEngine.cs" />
     <Compile Include="Sample\MainEngine.cs" />
     <Compile Include="Sample\Navigation.cs" />
-    <Compile Include="Sample\Position.cs" />
     <Compile Include="Sample\Sample.cs" />
     <Compile Include="Ship\Aggregate.cs" />
     <Compile Include="Ship\AuxEngine.cs" />

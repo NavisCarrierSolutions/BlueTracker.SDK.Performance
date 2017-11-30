@@ -222,7 +222,7 @@ namespace BlueTracker.SDK.Performance.Core
 
         protected JObject GetJson(string route)
         {
-            var requestString = _serverAddress + route;
+            var requestString = CombineRoute(route);
             var request = WebRequest.Create(requestString);
             request.Method = "GET";
             request.Headers.Add("Authorization", "ApiKey " + _authorization);
@@ -269,7 +269,7 @@ namespace BlueTracker.SDK.Performance.Core
 
         protected T GetObject<T>(string route)
         {
-            var requestString = _serverAddress + route;
+            var requestString = CombineRoute(route);
             var request = WebRequest.Create(requestString);
             request.Method = "GET";
             request.Headers.Add("Authorization", "ApiKey " + _authorization);
@@ -295,9 +295,9 @@ namespace BlueTracker.SDK.Performance.Core
                         $"Failed to retrieve data with code {response.StatusCode}. Message: {content}");
                 }
             }
-            catch (WebException e)
+            catch (WebException)
             {
-                throw e;
+                throw;
             }
             catch (Exception ex)
             {
@@ -320,9 +320,17 @@ namespace BlueTracker.SDK.Performance.Core
             }
         }
 
+        private string CombineRoute(string route)
+        {
+            var requestString = _serverAddress.TrimEnd('/') + "/" + route.TrimStart('/');
+
+            return requestString;
+        }
+
         private static string GetServerAddress()
         {
             var appsettings = ConfigurationManager.AppSettings;
+
             if (appsettings.AllKeys.Contains("BlueCloud_ServerAddress") &&
                 !string.IsNullOrEmpty(appsettings["BlueCloud_ServerAddress"]))
                 return appsettings["BlueCloud_ServerAddress"];

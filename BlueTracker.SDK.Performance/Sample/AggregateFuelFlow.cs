@@ -3,6 +3,7 @@ using Newtonsoft.Json.Converters;
 
 namespace BlueTracker.SDK.Performance.Sample
 {
+    /// <inheritdoc />
     /// <summary>
     /// Fuel flow of an aggregate.
     /// </summary>

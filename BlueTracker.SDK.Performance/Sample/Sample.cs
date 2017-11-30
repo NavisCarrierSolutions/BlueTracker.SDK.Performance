@@ -28,8 +28,8 @@ namespace BlueTracker.SDK.Performance.Sample
         /// <summary>
         /// Time stamp of sample.
         /// </summary>
-        [JsonProperty(PropertyName = "timestamp")]
-        public DateTimeOffset? TimeStamp { get; set; }
+        [JsonProperty(PropertyName = "timestampUtc")]
+        public DateTime? TimeStampUtc { get; set; }
 
         /// <summary>
         /// Navigational data.
