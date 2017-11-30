@@ -1,7 +1,8 @@
-﻿using Newtonsoft.Json;
+﻿using BlueTracker.SDK.Performance.Enums;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-namespace BlueTracker.SDK.Performance.Report
+namespace BlueTracker.SDK.Performance.Core
 {
     /// <summary>
     /// Details of fuel type.
