@@ -1,4 +1,5 @@
-﻿namespace BlueTracker.SDK.Performance.Report
+﻿// ReSharper disable InconsistentNaming
+namespace BlueTracker.SDK.Performance.Enums
 {
     /// <summary>
     /// Known fuel kinds.

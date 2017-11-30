@@ -2,6 +2,9 @@
 
 namespace BlueTracker.SDK.Performance.Core
 {
+    /// <summary>
+    /// Wrapper for a list of items with paging information.
+    /// </summary>
     public class PagedSearchResult
     {
         /// <summary>
@@ -20,6 +23,7 @@ namespace BlueTracker.SDK.Performance.Core
         public int TotalCount { get; set; }
     }
 
+    /// <inheritdoc />
     public class PagedSearchResult<T> : PagedSearchResult
     {
         /// <summary>
@@ -27,6 +31,7 @@ namespace BlueTracker.SDK.Performance.Core
         /// </summary>
         public List<T> Items { get; set; }
 
+        /// <inheritdoc />
         public PagedSearchResult()
         {
             Items = new List<T>();

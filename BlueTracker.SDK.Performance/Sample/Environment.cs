@@ -1,7 +1,7 @@
 ﻿using BlueTracker.SDK.Performance.Core;
 using Newtonsoft.Json;
 
-namespace BlueTracker.SDK.Performance.Report
+namespace BlueTracker.SDK.Performance.Sample
 {
     /// <summary>
     /// Details of the vessel environment conditions (weather etc.).
@@ -9,43 +9,25 @@ namespace BlueTracker.SDK.Performance.Report
     public class Environment
     {
         /// <summary>
-        /// Outside air temperature. (Unit: °C)
+        /// Outside air temperature. (°C)
         /// </summary>
         [JsonProperty(PropertyName = "airTemp")]
         public double? AirTemp { get; set; }
 
         /// <summary>
-        /// Outside air pressure. (Unit: mbar)
+        /// Outside air pressure. (hPa)
         /// </summary>
         [JsonProperty(PropertyName = "airPress")]
         public double? AirPress { get; set; }
 
         /// <summary>
-        /// Sea water temperature. (Unit: °C)
+        /// Sea water temperature. (°C)
         /// </summary>
         [JsonProperty(PropertyName = "seaWaterTemp")]
         public double? SeaWaterTemp { get; set; }
 
         /// <summary>
-        /// Sea state on Beaufort scale.
-        /// </summary>
-        [JsonProperty(PropertyName = "seaState")]
-        public int? SeaState { get; set; }
-
-        /// <summary>
-        /// Details of waves.
-        /// </summary>
-        [JsonProperty(PropertyName = "wave")]
-        public HeightDirection Wave { get; set; }
-
-        /// <summary>
-        /// Details of swell.
-        /// </summary>
-        [JsonProperty(PropertyName = "swell")]
-        public HeightDirection Swell { get; set; }
-
-        /// <summary>
-        /// Details of wind.
+        /// Wind data.
         /// </summary>
         [JsonProperty(PropertyName = "wind")]
         public SpeedDirection Wind { get; set; }
