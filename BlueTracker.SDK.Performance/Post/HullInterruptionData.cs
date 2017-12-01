@@ -20,7 +20,6 @@ namespace BlueTracker.SDK.Performance.Post
         /// <summary>
         /// Custom ID of hull interruption (maximum lenght: 50).
         /// </summary>
-        [MaxLength(50)]
         [JsonProperty("customId")]
         public string CustomId { get; set; }
 
@@ -55,7 +54,6 @@ namespace BlueTracker.SDK.Performance.Post
         /// <summary>
         /// Remarks of hull interruption.
         /// </summary>
-        [MaxLength(256)]
         [JsonProperty("remarks")]
         public string Remarks { get; set; }
     }

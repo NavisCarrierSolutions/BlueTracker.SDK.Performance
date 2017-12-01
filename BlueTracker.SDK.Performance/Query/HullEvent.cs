@@ -1,5 +1,4 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations;
 using BlueTracker.SDK.Performance.Enums;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
@@ -20,7 +19,6 @@ namespace BlueTracker.SDK.Performance.Query
         /// <summary>
         /// Custom ID.
         /// </summary>
-        [MaxLength(50)]
         [JsonProperty("customId")]
         public string CustomId { get; set; }
 
@@ -76,7 +74,6 @@ namespace BlueTracker.SDK.Performance.Query
         /// <summary>
         /// Remarks of hull event.
         /// </summary>
-        [MaxLength(256)]
         [JsonProperty("remarks")]
         public string Remarks { get; set; }
 
