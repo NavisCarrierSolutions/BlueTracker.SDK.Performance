@@ -31,7 +31,7 @@ namespace BlueTracker.SDK.Performance.Query
         /// <summary>
         /// Type of hull event.
         /// </summary>
-        [JsonProperty("hullEventType")]
+        [JsonProperty("type")]
         [JsonConverter(typeof(StringEnumConverter))]
         public HullEventType HullEventType { get; set; }
     }
