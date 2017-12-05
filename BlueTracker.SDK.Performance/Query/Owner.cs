@@ -26,18 +26,6 @@ namespace BlueTracker.SDK.Performance.Query
         public string Name { get; set; }
 
         /// <summary>
-        /// ID of owner address.
-        /// </summary>
-        [JsonProperty("addressId")]
-        public int AddressId { get; set; }
-
-        /// <summary>
-        /// Custom ID of owner address.
-        /// </summary>
-        [JsonProperty("customAddressId")]
-        public string CustomAddressId { get; set; }
-
-        /// <summary>
         /// Street the owner lives in.
         /// </summary>
         [JsonProperty("street")]
