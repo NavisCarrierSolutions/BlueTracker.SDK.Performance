@@ -30,5 +30,11 @@ namespace BlueTracker.SDK.Performance.Post
         /// </summary>
         [JsonProperty("shipClassId")]
         public int? ShipClassId { get; set; }
+
+        /// <summary>
+        /// Second email address of ship.
+        /// </summary>
+        [JsonProperty("secondEmailAddress")]
+        public string SecondEmailAddress { get; set; }
     }
 }
