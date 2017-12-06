@@ -76,8 +76,7 @@ namespace BlueTracker.SDK.Performance.Query
         /// </summary>
         [JsonProperty("portOfRegistry")]
         public PortShort PortOfRegistry { get; set; }
-
-
+        
         /// <summary>
         /// Tags associated with ship.
         /// </summary>
