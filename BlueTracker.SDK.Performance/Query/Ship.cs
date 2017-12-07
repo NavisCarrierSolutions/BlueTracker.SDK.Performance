@@ -82,5 +82,11 @@ namespace BlueTracker.SDK.Performance.Query
         /// </summary>
         [JsonProperty("tags")]
         public List<TagShort> Tags { get; set; }
+
+        /// <summary>
+        /// Email address of ship.
+        /// </summary>
+        [JsonProperty("emailAddress")]
+        public string EmailAddress { get; set; }
     }
 }
