@@ -31,7 +31,7 @@ namespace BlueTracker.SDK.Performance.Query
         /// <summary>
         /// Timestamp of event (including offset to UTC.)
         /// </summary>
-        [JsonProperty("timeStampT")]
+        [JsonProperty("timeStamp")]
         public DateTimeOffset TimeStamp { get; set; }
 
         /// <summary>
