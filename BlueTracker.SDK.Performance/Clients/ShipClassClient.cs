@@ -2,6 +2,7 @@
 
 namespace BlueTracker.SDK.Performance.Clients
 {
+    /// <inheritdoc />
     /// <summary>
     /// Client for getting, creating and updating ship classes.
     /// </summary>
