@@ -54,5 +54,11 @@ namespace BlueTracker.SDK.Performance.Post
         /// </summary>
         [JsonProperty("emailAddress")]
         public string EmailAddress { get; set; }
+
+        /// <summary>
+        /// Second email address of ship.
+        /// </summary>
+        [JsonProperty("secondEmailAddress")]
+        public string SecondEmailAddress { get; set; }
     }
 }
