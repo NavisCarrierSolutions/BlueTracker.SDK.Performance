@@ -30,5 +30,29 @@ namespace BlueTracker.SDK.Performance.Post
         /// </summary>
         [JsonProperty("shipClassId")]
         public int? ShipClassId { get; set; }
+
+        /// <summary>
+        /// ID of port of registry. If you only have an UNLOC you can leave Id out and set only UNLOC
+        /// </summary>
+        [JsonProperty("portOfRegistryId")]
+        public int? PortOfRegistryId { get; set; }
+
+        /// <summary>
+        /// Unlocode of port of registry.
+        /// </summary>
+        [JsonProperty("portOfRegistryUnloc")]
+        public string PortOfRegistryUnloc { get; set; }
+
+        /// <summary>
+        /// ID of owner.
+        /// </summary>
+        [JsonProperty("ownerId")]
+        public int? OwnerId { get; set; }
+
+        /// <summary>
+        /// Email address of ship.
+        /// </summary>
+        [JsonProperty("emailAddress")]
+        public string EmailAddress { get; set; }
     }
 }

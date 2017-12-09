@@ -4,6 +4,7 @@ using BlueTracker.SDK.Performance.Query;
 
 namespace BlueTracker.SDK.Performance.Clients
 {
+    /// <inheritdoc />
     /// <summary>
     /// Client for getting, creating and updating ship information.
     /// </summary>
@@ -45,10 +46,10 @@ namespace BlueTracker.SDK.Performance.Clients
         /// A paged list of ship object, which belong to the company associated with the
         /// used API key.
         /// </returns>
-        public PagedSearchResult<Query.Ship> GetAll(int page = 0, int pageSize = 20)
+        public PagedSearchResult<ShipShort> GetAll(int page = 0, int pageSize = 20)
         {
             var route = $"/api/v1/ships?page={page}&pageSize={pageSize}";
-            var ret = GetObject<PagedSearchResult<Query.Ship>>(route);
+            var ret = GetObject<PagedSearchResult<ShipShort>>(route);
             return ret;
         }
 

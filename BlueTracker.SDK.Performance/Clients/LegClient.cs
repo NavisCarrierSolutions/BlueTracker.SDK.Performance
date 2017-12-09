@@ -6,6 +6,7 @@ using BlueTracker.SDK.Performance.Query;
 
 namespace BlueTracker.SDK.Performance.Clients
 {
+    /// <inheritdoc />
     /// <summary>
     /// Client for getting, creating and updating leg information.
     /// </summary>
