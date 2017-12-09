@@ -6,6 +6,7 @@ using Newtonsoft.Json.Linq;
 
 namespace BlueTracker.SDK.Performance.Clients
 {
+    /// <inheritdoc />
     /// <summary>
     /// Client for getting, creating and updating performance reports.
     /// </summary>

@@ -3,24 +3,24 @@
 namespace BlueTracker.SDK.Performance.Query
 {
     /// <summary>
-    /// Short description of port
+    /// Short representation of an owner.
     /// </summary>
-    public class PortShort
+    public class OwnerShort
     {
         /// <summary>
-        /// Id (given by bluetracker.one)
+        /// ID of owner.
         /// </summary>
         [JsonProperty("id")]
         public int Id { get; set; }
 
         /// <summary>
-        /// UNLOC of Port
+        /// Custom id of owner.
         /// </summary>
-        [JsonProperty("unloc")]
-        public string UNLOC { get; set; }
+        [JsonProperty("customId")]
+        public string CustomId { get; set; }
 
         /// <summary>
-        /// Port Name
+        /// Name of owner.
         /// </summary>
         [JsonProperty("name")]
         public string Name { get; set; }

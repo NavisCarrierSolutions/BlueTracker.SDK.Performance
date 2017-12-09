@@ -66,9 +66,33 @@ namespace BlueTracker.SDK.Performance.Query
         public ShipClassShort ShipClass { get; set; }
 
         /// <summary>
+        /// Owner associated with ship.
+        /// </summary>
+        [JsonProperty("owner")]
+        public OwnerShort Owner { get; set; }
+
+        /// <summary>
+        /// Port of registry.
+        /// </summary>
+        [JsonProperty("portOfRegistry")]
+        public PortShort PortOfRegistry { get; set; }
+        
+        /// <summary>
         /// Tags associated with ship.
         /// </summary>
         [JsonProperty("tags")]
         public List<TagShort> Tags { get; set; }
+
+        /// <summary>
+        /// Second email address of ship.
+        /// </summary>
+        [JsonProperty("secondEmailAddress")]
+        public string SecondEmailAddress { get; set; }
+
+        /// <summary>
+        /// Email address of ship.
+        /// </summary>
+        [JsonProperty("emailAddress")]
+        public string EmailAddress { get; set; }
     }
 }

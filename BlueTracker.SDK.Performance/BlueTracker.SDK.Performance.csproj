@@ -56,6 +56,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Numerics" />
     <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -75,6 +76,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Numerics" />
     <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -90,6 +92,7 @@
     <Compile Include="Clients\HullModelClient.cs" />
     <Compile Include="Clients\OnboardSampleValueClient.cs" />
     <Compile Include="Clients\OnboardSampleSourceClient.cs" />
+    <Compile Include="Clients\OwnerClient.cs" />
     <Compile Include="Clients\ShipBaseDataClient.cs" />
     <Compile Include="Clients\ShipClassBaseDataClient.cs" />
     <Compile Include="Clients\ShipClassClient.cs" />
@@ -112,6 +115,7 @@
     <Compile Include="Post\HullInterruptionData.cs" />
     <Compile Include="Post\HullModelData.cs" />
     <Compile Include="Post\LegData.cs" />
+    <Compile Include="Post\OwnerData.cs" />
     <Compile Include="Post\ShipClassData.cs" />
     <Compile Include="Post\ShipData.cs" />
     <Compile Include="Post\TagData.cs" />
@@ -133,6 +137,8 @@
     <Compile Include="Query\LegShort.cs" />
     <Compile Include="Query\LegSummary.cs" />
     <Compile Include="Query\OnboardSampleSource.cs" />
+    <Compile Include="Query\Owner.cs" />
+    <Compile Include="Query\OwnerShort.cs" />
     <Compile Include="Query\PerformanceReport.cs" />
     <Compile Include="Query\PerformanceReportShort.cs" />
     <Compile Include="Query\PerformanceReportSummary.cs" />
@@ -209,9 +215,6 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="System.Web" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
