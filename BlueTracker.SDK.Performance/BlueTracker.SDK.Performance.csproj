@@ -90,6 +90,7 @@
     <Compile Include="Clients\HullModelClient.cs" />
     <Compile Include="Clients\OnboardSampleValueClient.cs" />
     <Compile Include="Clients\OnboardSampleSourceClient.cs" />
+    <Compile Include="Clients\OwnerClient.cs" />
     <Compile Include="Clients\ShipBaseDataClient.cs" />
     <Compile Include="Clients\ShipClassBaseDataClient.cs" />
     <Compile Include="Clients\ShipClassClient.cs" />
@@ -108,6 +109,7 @@
     <Compile Include="Post\EventData.cs" />
     <Compile Include="Post\HullModelData.cs" />
     <Compile Include="Post\LegData.cs" />
+    <Compile Include="Post\OwnerData.cs" />
     <Compile Include="Post\ShipClassData.cs" />
     <Compile Include="Post\ShipData.cs" />
     <Compile Include="Post\TagData.cs" />
@@ -125,6 +127,7 @@
     <Compile Include="Query\LegShort.cs" />
     <Compile Include="Query\LegSummary.cs" />
     <Compile Include="Query\OnboardSampleSource.cs" />
+    <Compile Include="Query\Owner.cs" />
     <Compile Include="Query\OwnerShort.cs" />
     <Compile Include="Query\PerformanceReport.cs" />
     <Compile Include="Query\PerformanceReportShort.cs" />
