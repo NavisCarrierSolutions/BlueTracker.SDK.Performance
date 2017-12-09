@@ -5,8 +5,6 @@
     /// </summary>
     public enum HullEventType
     {
-        // WARNING! Do not change the number assignment, because it is used in the DB.
-
         /// <summary>
         /// Unspecified.
         /// </summary>
