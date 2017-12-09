@@ -2,6 +2,9 @@
 
 namespace BlueTracker.SDK.Performance.Query
 {
+    /// <summary>
+    /// Short description of port
+    /// </summary>
     public class PortShort
     {
         /// <summary>

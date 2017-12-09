@@ -3,6 +3,7 @@ using BlueTracker.SDK.Performance.Post;
 
 namespace BlueTracker.SDK.Performance.Clients
 {
+    /// <inheritdoc />
     /// <summary>
     /// Client for getting, creating and updating hull models.
     /// </summary>

@@ -5,6 +5,7 @@ using BlueTracker.SDK.Performance.Query;
 
 namespace BlueTracker.SDK.Performance.Clients
 {
+    /// <inheritdoc />
     /// <summary>
     /// Client for getting, creating and updating base data of ships.
     /// </summary>
