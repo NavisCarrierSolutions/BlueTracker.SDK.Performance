@@ -20,6 +20,12 @@ namespace BlueTracker.SDK.Performance.Post
         public string Name { get; set; }
 
         /// <summary>
+        /// Short name of ship.
+        /// </summary>
+        [JsonProperty("shortName")]
+        public string ShortName { get; set; }
+
+        /// <summary>
         /// Alternative name of the ship (eg. Chartername)
         /// </summary>
         [JsonProperty("alternativeName")]
