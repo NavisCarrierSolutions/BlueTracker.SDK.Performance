@@ -36,13 +36,13 @@ namespace BlueTracker.SDK.Performance.Sample
         public double? Density { get; set; }
 
         /// <summary>
-        /// Volume flow of the consumed fuel. (m3/h)
+        /// Volume flow of the consumed fuel. (l/h)
         /// </summary>
         [JsonProperty(PropertyName = "volumeFlow")]
         public double? VolumeFlow { get; set; }
 
         /// <summary>
-        /// Mass flow of the consumed fuel. (mt/h)
+        /// Mass flow of the consumed fuel. (kg/h)
         /// </summary>
         [JsonProperty(PropertyName = "massFlow")]
         public double? MassFlow { get; set; }
