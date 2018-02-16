@@ -8,26 +8,30 @@
         /// <summary>
         /// Container Ship
         /// </summary>
-        Container,
+        Container = 0,
         /// <summary>
         /// Tanker Ship
         /// </summary>
-        Tanker,
+        Tanker = 1,
         /// <summary>
         /// Car Carrier
         /// </summary>
-        CarCarrier,
+        CarCarrier = 2,
         /// <summary>
         /// LNG Carrier
         /// </summary>
-        LngCarrier,
+        LngCarrier = 3,
         /// <summary>
         /// General Cargo Ship
         /// </summary>
-        GeneralCargo,
+        GeneralCargo = 4,
         /// <summary>
         /// Cruise Ship / Ferry
         /// </summary>
-        CruiseFerry
+        CruiseFerry = 5,
+        /// <summary>
+        /// Bulker
+        /// </summary>
+        Bulker = 6
     }
 }
