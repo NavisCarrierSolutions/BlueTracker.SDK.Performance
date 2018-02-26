@@ -19,6 +19,12 @@ namespace BlueTracker.SDK.Performance.Core
     {
         private readonly string _serverAddress;
         private readonly string _authorization;
+        private HttpClient _httpClient;
+
+        /// <summary>
+        /// Singleton instance for every ApiClient to prevent depletion of connection pool
+        /// </summary>
+        private HttpClient HttpClient => _httpClient ?? (_httpClient = new HttpClient {BaseAddress = new Uri(_serverAddress)});
 
         private const string DefaultServerAddress = "https://api.bluetracker.one";
 
@@ -33,7 +39,7 @@ namespace BlueTracker.SDK.Performance.Core
             var json = JsonConvert.SerializeObject(postObject,
                 new JsonSerializerSettings {DateTimeZoneHandling = DateTimeZoneHandling.Unspecified});
 
-            var client = new HttpClient {BaseAddress = new Uri(_serverAddress)};
+            var client = HttpClient;
             var request = new HttpRequestMessage(HttpMethod.Post, route);
 
             request.Headers.Authorization = GetAuthHeader();
@@ -86,7 +92,7 @@ namespace BlueTracker.SDK.Performance.Core
             var json = JsonConvert.SerializeObject(putObject,
                 new JsonSerializerSettings { DateTimeZoneHandling = DateTimeZoneHandling.Unspecified });
 
-            var client = new HttpClient { BaseAddress = new Uri(_serverAddress) };
+            var client = HttpClient;
             var request = new HttpRequestMessage(HttpMethod.Put, route);
 
             request.Headers.Authorization = GetAuthHeader();
@@ -132,7 +138,7 @@ namespace BlueTracker.SDK.Performance.Core
 
         protected TR DeleteObject<TR>(string route)
         {
-            var client = new HttpClient { BaseAddress = new Uri(_serverAddress) };
+            var client = HttpClient;
             var request = new HttpRequestMessage(HttpMethod.Delete, route);
 
             request.Headers.Authorization = GetAuthHeader();
@@ -175,7 +181,7 @@ namespace BlueTracker.SDK.Performance.Core
 
         protected TR PostEmpty<TR>(string route)
         {
-            var client = new HttpClient { BaseAddress = new Uri(_serverAddress) };
+            var client = HttpClient;
             var request = new HttpRequestMessage(HttpMethod.Post, route);
 
             request.Headers.Authorization = GetAuthHeader();
