@@ -19,12 +19,12 @@ namespace BlueTracker.SDK.Performance.Core
     {
         private readonly string _serverAddress;
         private readonly string _authorization;
-        private HttpClient _httpClient;
+        private static HttpClient _httpClient;
 
         /// <summary>
         /// Singleton instance for every ApiClient to prevent depletion of connection pool
         /// </summary>
-        private HttpClient HttpClient => _httpClient ?? (_httpClient = new HttpClient {BaseAddress = new Uri(_serverAddress)});
+        private static HttpClient HttpClient => _httpClient ?? (_httpClient = new HttpClient());
 
         private const string DefaultServerAddress = "https://api.bluetracker.one";
 
@@ -32,6 +32,7 @@ namespace BlueTracker.SDK.Performance.Core
         {
             _serverAddress = string.IsNullOrEmpty(serverAddress) ? GetServerAddress() : serverAddress;
             _authorization = string.IsNullOrEmpty(authorization) ? GetApiKey() : authorization;
+            HttpClient.BaseAddress = new Uri(_serverAddress);
         }
 
         protected TR PostObject<TR, TI>(TI postObject, string route)
@@ -39,7 +40,6 @@ namespace BlueTracker.SDK.Performance.Core
             var json = JsonConvert.SerializeObject(postObject,
                 new JsonSerializerSettings {DateTimeZoneHandling = DateTimeZoneHandling.Unspecified});
 
-            var client = HttpClient;
             var request = new HttpRequestMessage(HttpMethod.Post, route);
 
             request.Headers.Authorization = GetAuthHeader();
@@ -53,7 +53,7 @@ namespace BlueTracker.SDK.Performance.Core
 
             try
             {
-                var sendTask = client.SendAsync(request);
+                var sendTask = HttpClient.SendAsync(request);
                 sendTask.Wait();
                 response = sendTask.Result;
 
@@ -92,7 +92,6 @@ namespace BlueTracker.SDK.Performance.Core
             var json = JsonConvert.SerializeObject(putObject,
                 new JsonSerializerSettings { DateTimeZoneHandling = DateTimeZoneHandling.Unspecified });
 
-            var client = HttpClient;
             var request = new HttpRequestMessage(HttpMethod.Put, route);
 
             request.Headers.Authorization = GetAuthHeader();
@@ -106,7 +105,7 @@ namespace BlueTracker.SDK.Performance.Core
 
             try
             {
-                var sendTask = client.SendAsync(request);
+                var sendTask = HttpClient.SendAsync(request);
                 sendTask.Wait();
                 response = sendTask.Result;
 
@@ -138,7 +137,6 @@ namespace BlueTracker.SDK.Performance.Core
 
         protected TR DeleteObject<TR>(string route)
         {
-            var client = HttpClient;
             var request = new HttpRequestMessage(HttpMethod.Delete, route);
 
             request.Headers.Authorization = GetAuthHeader();
@@ -149,7 +147,7 @@ namespace BlueTracker.SDK.Performance.Core
 
             try
             {
-                var sendTask = client.SendAsync(request);
+                var sendTask = HttpClient.SendAsync(request);
                 sendTask.Wait();
                 response = sendTask.Result;
 
@@ -181,7 +179,6 @@ namespace BlueTracker.SDK.Performance.Core
 
         protected TR PostEmpty<TR>(string route)
         {
-            var client = HttpClient;
             var request = new HttpRequestMessage(HttpMethod.Post, route);
 
             request.Headers.Authorization = GetAuthHeader();
@@ -192,7 +189,7 @@ namespace BlueTracker.SDK.Performance.Core
 
             try
             {
-                var sendTask = client.SendAsync(request);
+                var sendTask = HttpClient.SendAsync(request);
                 sendTask.Wait();
                 response = sendTask.Result;
 
