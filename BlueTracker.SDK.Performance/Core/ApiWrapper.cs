@@ -19,12 +19,7 @@ namespace BlueTracker.SDK.Performance.Core
     {
         private readonly string _serverAddress;
         private readonly string _authorization;
-        private HttpClient _httpClient;
-
-        /// <summary>
-        /// Singleton instance for every ApiClient to prevent depletion of connection pool
-        /// </summary>
-        private HttpClient HttpClient => _httpClient ?? (_httpClient = new HttpClient());
+        private readonly HttpClient _httpClient = new HttpClient();
 
         private const string DefaultServerAddress = "https://api.bluetracker.one";
 
@@ -32,7 +27,7 @@ namespace BlueTracker.SDK.Performance.Core
         {
             _serverAddress = string.IsNullOrEmpty(serverAddress) ? GetServerAddress() : serverAddress;
             _authorization = string.IsNullOrEmpty(authorization) ? GetApiKey() : authorization;
-            HttpClient.BaseAddress = new Uri(_serverAddress);
+            _httpClient.BaseAddress = new Uri(_serverAddress);
         }
 
         protected TR PostObject<TR, TI>(TI postObject, string route)
@@ -53,7 +48,7 @@ namespace BlueTracker.SDK.Performance.Core
 
             try
             {
-                var sendTask = HttpClient.SendAsync(request);
+                var sendTask = _httpClient.SendAsync(request);
                 sendTask.Wait();
                 response = sendTask.Result;
 
@@ -105,7 +100,7 @@ namespace BlueTracker.SDK.Performance.Core
 
             try
             {
-                var sendTask = HttpClient.SendAsync(request);
+                var sendTask = _httpClient.SendAsync(request);
                 sendTask.Wait();
                 response = sendTask.Result;
 
@@ -147,7 +142,7 @@ namespace BlueTracker.SDK.Performance.Core
 
             try
             {
-                var sendTask = HttpClient.SendAsync(request);
+                var sendTask = _httpClient.SendAsync(request);
                 sendTask.Wait();
                 response = sendTask.Result;
 
@@ -189,7 +184,7 @@ namespace BlueTracker.SDK.Performance.Core
 
             try
             {
-                var sendTask = HttpClient.SendAsync(request);
+                var sendTask = _httpClient.SendAsync(request);
                 sendTask.Wait();
                 response = sendTask.Result;
 
