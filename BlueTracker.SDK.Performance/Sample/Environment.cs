@@ -27,6 +27,18 @@ namespace BlueTracker.SDK.Performance.Sample
         public double? SeaWaterTemp { get; set; }
 
         /// <summary>
+        /// Sea water depth. (m)
+        /// </summary>
+        [JsonProperty(PropertyName = "seaWaterDepth")]
+        public double? SeaWaterDepth { get; set; }
+
+        /// <summary>
+        /// Sea water depth below keel. (m)
+        /// </summary>
+        [JsonProperty(PropertyName = "seaWaterDepthBelowKeel")]
+        public double? SeaWaterDepthBelowKeel { get; set; }
+
+        /// <summary>
         /// Wind data.
         /// </summary>
         [JsonProperty(PropertyName = "wind")]
