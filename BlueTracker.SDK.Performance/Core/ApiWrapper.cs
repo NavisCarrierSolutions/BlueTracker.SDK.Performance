@@ -19,12 +19,12 @@ namespace BlueTracker.SDK.Performance.Core
     {
         private readonly string _serverAddress;
         private readonly string _authorization;
-        private static HttpClient _httpClient;
+        private HttpClient _httpClient;
 
         /// <summary>
         /// Singleton instance for every ApiClient to prevent depletion of connection pool
         /// </summary>
-        private static HttpClient HttpClient => _httpClient ?? (_httpClient = new HttpClient());
+        private HttpClient HttpClient => _httpClient ?? (_httpClient = new HttpClient());
 
         private const string DefaultServerAddress = "https://api.bluetracker.one";
 
