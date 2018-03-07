@@ -28,23 +28,34 @@ namespace BlueTracker.SDK.Performance.Clients
         }
 
         /// <summary>
-        /// Gets all onboard sample sources value ranges for a specific source
+        /// Get a sample source value ranges for source identified by name
         /// </summary>
         /// <param name="sourceName">Name of sample source</param>
         /// <returns>List of all sample sources value ranges</returns>
-        public List<OnboardSampleSourceValueRange> Get(string sourceName)
+        public List<OnboardSampleSourceValueRange> GetAll(string sourceName)
         {
             return GetObject<List<OnboardSampleSourceValueRange>>($"/api/v1/onboardSamples/sources/{sourceName}/valueRanges");
         }
 
         /// <summary>
-        /// Get a specific sample source identified by name
+        /// Get a sample source value ranges for source identified by id
         /// </summary>
         /// <param name="sourceId">The ID of the sample source</param>
         /// <returns>List of all sample sources value ranges</returns>
-        public List<OnboardSampleSourceValueRange> Get(int sourceId)
+        public List<OnboardSampleSourceValueRange> GetAll(int sourceId)
         {
             return GetObject<List<OnboardSampleSourceValueRange>>($"/api/v1/onboardSamples/sources/{sourceId}/valueRanges");
+        }
+
+        /// <summary>
+        /// Get a single sample source value range for sample source identified by name and vessel identified by ImoNumber 
+        /// </summary>
+        /// <param name="sourceName">The name of the sample source</param>
+        /// <param name="imoNumber">The Imo Number of the vessel</param>
+        /// <returns>Sample sources value range for specific ship (single entry in array)</returns>
+        public List<OnboardSampleSourceValueRange> Get(string sourceName, int imoNumber)
+        {
+            return GetObject<List<OnboardSampleSourceValueRange>>($"/api/v1/ships/{imoNumber}/onboardSamples/{sourceName}/valueRanges");
         }
     }
 }
