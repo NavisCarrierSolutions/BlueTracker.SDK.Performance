@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using BlueTracker.SDK.Performance.Core;
+using BlueTracker.SDK.Performance.Query;
 
 namespace BlueTracker.SDK.Performance.Clients
 {
@@ -35,9 +36,9 @@ namespace BlueTracker.SDK.Performance.Clients
         /// <param name="sourceName">Name of the sample source.</param>
         /// <param name="imoNumber">IMO number of the ship.</param>
         /// <returns>A short version of the posted data.</returns>
-        public int PostSample(string sourceName, int imoNumber, params Sample.Sample[] samples)
+        public OnboardSampleValueResult PostSample(string sourceName, int imoNumber, params Sample.Sample[] samples)
         {
-            return PostObject<int, List<Sample.Sample>>(samples.ToList(),
+            return PostObject<OnboardSampleValueResult, List<Sample.Sample>>(samples.ToList(),
                 $"api/v1/onboardSamples/sources/{sourceName}/{imoNumber}");
         }
 
