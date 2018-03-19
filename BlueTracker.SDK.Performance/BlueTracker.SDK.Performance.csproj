@@ -126,7 +126,7 @@
     <Compile Include="Clients\VoyageClient.cs" />
     <Compile Include="Query\Event.cs" />
     <Compile Include="Query\EventShort.cs" />
-    <Compile Include="Query\FeedState.cs" />
+    <Compile Include="Enums\FeedState.cs" />
     <Compile Include="Query\HullEvent.cs" />
     <Compile Include="Query\HullEventShort.cs" />
     <Compile Include="Query\HullInterruption.cs" />
@@ -164,14 +164,13 @@
     <Compile Include="Query\VoyageSummary.cs" />
     <Compile Include="Report\Aggregate.cs" />
     <Compile Include="Report\AggregateConsumption.cs" />
-    <Compile Include="Report\AggregateOptions.cs" />
     <Compile Include="Report\AuxEngine.cs" />
     <Compile Include="Report\Boiler.cs" />
     <Compile Include="Report\Cargo.cs" />
     <Compile Include="Report\Consumption.cs" />
     <Compile Include="Report\Engine.cs" />
     <Compile Include="Report\Environment.cs" />
-    <Compile Include="Report\EventType.cs" />
+    <Compile Include="Enums\EventType.cs" />
     <Compile Include="Report\FuelConsumer.cs" />
     <Compile Include="Enums\FuelGradeOptions.cs" />
     <Compile Include="Enums\FuelKindOptions.cs" />
@@ -181,10 +180,10 @@
     <Compile Include="Report\Navigation.cs" />
     <Compile Include="Report\PerformanceReport.cs" />
     <Compile Include="Core\Position.cs" />
-    <Compile Include="Report\StateOptions.cs" />
+    <Compile Include="Enums\StateOptions.cs" />
     <Compile Include="Sample\Aggregate.cs" />
     <Compile Include="Sample\AggregateFuelFlow.cs" />
-    <Compile Include="Sample\AggregateOptions.cs" />
+    <Compile Include="Enums\AggregateOptions.cs" />
     <Compile Include="Sample\AuxEngine.cs" />
     <Compile Include="Sample\Boiler.cs" />
     <Compile Include="Sample\Engine.cs" />
@@ -197,7 +196,7 @@
     <Compile Include="Sample\Sample.cs" />
     <Compile Include="Ship\Aggregate.cs" />
     <Compile Include="Ship\AuxEngine.cs" />
-    <Compile Include="Ship\BowType.cs" />
+    <Compile Include="Enums\BowType.cs" />
     <Compile Include="Ship\Cargo.cs" />
     <Compile Include="Ship\Engine.cs" />
     <Compile Include="Ship\FuelConsumer.cs" />
@@ -207,8 +206,8 @@
     <Compile Include="Ship\MainEngine.cs" />
     <Compile Include="Ship\Propeller.cs" />
     <Compile Include="Ship\Ship.cs" />
-    <Compile Include="Ship\ShipType.cs" />
-    <Compile Include="Ship\SuperStructureType.cs" />
+    <Compile Include="Enums\ShipType.cs" />
+    <Compile Include="Enums\SuperStructureType.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="BlueTracker.SDK.Performance.nuspec">

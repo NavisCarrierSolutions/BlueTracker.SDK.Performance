@@ -1,4 +1,4 @@
-﻿namespace BlueTracker.SDK.Performance.Ship
+﻿namespace BlueTracker.SDK.Performance.Enums
 {
     /// <summary>
     /// Type of Bow

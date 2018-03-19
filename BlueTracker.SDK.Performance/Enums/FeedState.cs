@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace BlueTracker.SDK.Performance.Query
+namespace BlueTracker.SDK.Performance.Enums
 {
     /// <summary>
     /// State of ships data interface.
