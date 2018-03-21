@@ -48,6 +48,12 @@ namespace BlueTracker.SDK.Performance.Query
         public string AlternativeName { get; set; }
 
         /// <summary>
+        /// Radio call sign of vessel.
+        /// </summary>
+        [JsonProperty("callSign")]
+        public string CallSign { get; set; }
+
+        /// <summary>
         /// Time stamp of ship creation.
         /// </summary>
         [JsonProperty("createdOn")]
