@@ -53,9 +53,9 @@ namespace BlueTracker.SDK.Performance.Clients
         /// <param name="sourceName">The name of the sample source</param>
         /// <param name="imoNumber">The Imo Number of the vessel</param>
         /// <returns>Sample sources value range for specific ship (single entry in array)</returns>
-        public List<OnboardSampleSourceValueRange> Get(string sourceName, int imoNumber)
+        public OnboardSampleSourceValueRange Get(string sourceName, int imoNumber)
         {
-            return GetObject<List<OnboardSampleSourceValueRange>>($"/api/v1/ships/{imoNumber}/onboardSamples/{sourceName}/valueRanges");
+            return GetObject<OnboardSampleSourceValueRange>($"/api/v1/ships/{imoNumber}/onboardSamples/{sourceName}/valueRange");
         }
     }
 }
