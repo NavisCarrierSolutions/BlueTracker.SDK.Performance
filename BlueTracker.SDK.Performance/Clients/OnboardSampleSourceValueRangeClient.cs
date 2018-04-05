@@ -31,7 +31,7 @@ namespace BlueTracker.SDK.Performance.Clients
         /// Get a sample source value ranges for source identified by name
         /// </summary>
         /// <param name="sourceName">Name of sample source</param>
-        /// <returns>List of all sample sources value ranges</returns>
+        /// <returns>List of all sample source value ranges</returns>
         public List<OnboardSampleSourceValueRange> GetAll(string sourceName)
         {
             return GetObject<List<OnboardSampleSourceValueRange>>($"/api/v1/onboardSamples/sources/{sourceName}/valueRanges");
@@ -41,7 +41,7 @@ namespace BlueTracker.SDK.Performance.Clients
         /// Get a sample source value ranges for source identified by id
         /// </summary>
         /// <param name="sourceId">The ID of the sample source</param>
-        /// <returns>List of all sample sources value ranges</returns>
+        /// <returns>List of all sample source value ranges</returns>
         public List<OnboardSampleSourceValueRange> GetAll(int sourceId)
         {
             return GetObject<List<OnboardSampleSourceValueRange>>($"/api/v1/onboardSamples/sources/{sourceId}/valueRanges");
