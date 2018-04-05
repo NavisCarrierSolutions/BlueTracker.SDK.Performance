@@ -32,6 +32,10 @@
         /// <summary>
         /// Bulker
         /// </summary>
-        Bulker = 6
+        Bulker = 6,
+        /// <summary>
+        /// MPC
+        /// </summary>
+        MPC = 7
     }
 }
