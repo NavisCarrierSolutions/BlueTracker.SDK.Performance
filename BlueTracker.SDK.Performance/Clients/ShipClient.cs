@@ -1,4 +1,5 @@
 ﻿using BlueTracker.SDK.Performance.Core;
+using BlueTracker.SDK.Performance.Enums;
 using BlueTracker.SDK.Performance.Post;
 using BlueTracker.SDK.Performance.Query;
 

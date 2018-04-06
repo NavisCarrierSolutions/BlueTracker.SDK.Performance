@@ -1,4 +1,4 @@
-﻿namespace BlueTracker.SDK.Performance.Ship
+﻿namespace BlueTracker.SDK.Performance.Enums
 {
     /// <summary>
     /// Vessel Type
@@ -32,6 +32,10 @@
         /// <summary>
         /// Bulker
         /// </summary>
-        Bulker = 6
+        Bulker = 6,
+        /// <summary>
+        /// MPC
+        /// </summary>
+        MPC = 7
     }
 }
