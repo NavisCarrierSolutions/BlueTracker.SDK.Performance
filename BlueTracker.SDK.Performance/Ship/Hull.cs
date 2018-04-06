@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using BlueTracker.SDK.Performance.Enums;
 
 namespace BlueTracker.SDK.Performance.Ship
 {

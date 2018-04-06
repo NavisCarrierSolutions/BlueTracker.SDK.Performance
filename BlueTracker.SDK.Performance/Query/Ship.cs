@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using BlueTracker.SDK.Performance.Enums;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
@@ -45,6 +46,12 @@ namespace BlueTracker.SDK.Performance.Query
         /// </summary>
         [JsonProperty("alternativeName")]
         public string AlternativeName { get; set; }
+
+        /// <summary>
+        /// Radio call sign of vessel.
+        /// </summary>
+        [JsonProperty("callSign")]
+        public string CallSign { get; set; }
 
         /// <summary>
         /// Time stamp of ship creation.

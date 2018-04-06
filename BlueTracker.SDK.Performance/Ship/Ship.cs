@@ -1,4 +1,6 @@
-﻿namespace BlueTracker.SDK.Performance.Ship
+﻿using BlueTracker.SDK.Performance.Enums;
+
+namespace BlueTracker.SDK.Performance.Ship
 {
     /// <summary>
     /// A ship class.

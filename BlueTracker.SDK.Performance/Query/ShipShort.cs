@@ -35,6 +35,12 @@ namespace BlueTracker.SDK.Performance.Query
         public string AlternativeName { get; set; }
 
         /// <summary>
+        /// Radio call sign of vessel.
+        /// </summary>
+        [JsonProperty("callSign")]
+        public string CallSign { get; set; }
+
+        /// <summary>
         /// Name of ship class associated with ship.
         /// </summary>
         [JsonProperty("shipClassName")]
