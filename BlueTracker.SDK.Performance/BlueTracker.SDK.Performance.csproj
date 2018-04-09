@@ -90,6 +90,7 @@
     <Compile Include="Clients\HullEventClient.cs" />
     <Compile Include="Clients\HullInterruptionClient.cs" />
     <Compile Include="Clients\HullModelClient.cs" />
+    <Compile Include="Clients\OnboardSampleSourceValueRangeClient.cs" />
     <Compile Include="Clients\OnboardSampleValueClient.cs" />
     <Compile Include="Clients\OnboardSampleSourceClient.cs" />
     <Compile Include="Clients\OwnerClient.cs" />
@@ -137,6 +138,8 @@
     <Compile Include="Query\LegShort.cs" />
     <Compile Include="Query\LegSummary.cs" />
     <Compile Include="Query\OnboardSampleSource.cs" />
+    <Compile Include="Query\OnboardSampleSourceValueRange.cs" />
+    <Compile Include="Query\OnboardSampleValueResult.cs" />
     <Compile Include="Query\Owner.cs" />
     <Compile Include="Query\OwnerShort.cs" />
     <Compile Include="Query\PerformanceReport.cs" />
