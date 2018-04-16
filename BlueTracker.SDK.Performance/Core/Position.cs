@@ -18,7 +18,7 @@ namespace BlueTracker.SDK.Performance.Core
     ///   -> Latitude:   -12.721667
     ///   -> Longitude: -127.201667 
     /// </example>
-    public struct Position
+    public class Position
     {
         /// <summary>
         /// Geographical latitude. (Unit: deg; Range: -90 ... +90)
