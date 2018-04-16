@@ -5,7 +5,7 @@ namespace BlueTracker.SDK.Performance.Core
     /// <summary>
     /// Draft of vessel.
     /// </summary>
-    public struct Draft
+    public class Draft
     {
         /// <summary>
         /// Draft forward.

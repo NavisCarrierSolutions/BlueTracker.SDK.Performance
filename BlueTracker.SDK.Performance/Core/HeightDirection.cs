@@ -5,7 +5,7 @@ namespace BlueTracker.SDK.Performance.Core
     /// <summary>
     /// Generic height and direction (true/relative) description.
     /// </summary>
-    public struct HeightDirection
+    public class HeightDirection
     {
         /// <summary>
         /// Height. (Unit: m)
