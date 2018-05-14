@@ -89,6 +89,7 @@
     <Compile Include="Clients\EventClient.cs" />
     <Compile Include="Clients\HullEventClient.cs" />
     <Compile Include="Clients\HullInterruptionClient.cs" />
+    <Compile Include="Clients\ConsumptionCurveClient.cs" />
     <Compile Include="Clients\HullModelClient.cs" />
     <Compile Include="Clients\OnboardSampleSourceValueRangeClient.cs" />
     <Compile Include="Clients\OnboardSampleValueClient.cs" />
@@ -107,10 +108,12 @@
     <Compile Include="Core\HullPoint.cs" />
     <Compile Include="Core\PagedSearchResult.cs" />
     <Compile Include="Core\SpeedDirection.cs" />
+    <Compile Include="Enums\ConsumptionCurveType.cs" />
     <Compile Include="Enums\HullEventType.cs" />
     <Compile Include="Enums\HullInterruptionType.cs" />
     <Compile Include="Enums\HullModelType.cs" />
     <Compile Include="Enums\OnboardSampleSourceType.cs" />
+    <Compile Include="Post\ConsumptionCurve.cs" />
     <Compile Include="Post\EventData.cs" />
     <Compile Include="Post\HullEventData.cs" />
     <Compile Include="Post\HullInterruptionData.cs" />
@@ -125,6 +128,8 @@
     <Compile Include="Clients\ReportClient.cs" />
     <Compile Include="Clients\ShipClient.cs" />
     <Compile Include="Clients\VoyageClient.cs" />
+    <Compile Include="Query\CharterCurveShort.cs" />
+    <Compile Include="Query\ConsumptionCurve.cs" />
     <Compile Include="Query\Event.cs" />
     <Compile Include="Query\EventShort.cs" />
     <Compile Include="Enums\FeedState.cs" />
