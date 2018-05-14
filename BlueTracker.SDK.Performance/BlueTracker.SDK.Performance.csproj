@@ -86,6 +86,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clients\SfocCurveClient.cs" />
     <Compile Include="Clients\EventClient.cs" />
     <Compile Include="Clients\HullEventClient.cs" />
     <Compile Include="Clients\HullInterruptionClient.cs" />
@@ -120,6 +121,7 @@
     <Compile Include="Post\HullModelData.cs" />
     <Compile Include="Post\LegData.cs" />
     <Compile Include="Post\OwnerData.cs" />
+    <Compile Include="Post\SfocCurve.cs" />
     <Compile Include="Post\ShipClassData.cs" />
     <Compile Include="Post\ShipData.cs" />
     <Compile Include="Post\TagData.cs" />
@@ -154,6 +156,8 @@
     <Compile Include="Query\Sample.cs" />
     <Compile Include="Query\Service.cs" />
     <Compile Include="Query\ServiceShort.cs" />
+    <Compile Include="Query\SfocCurveDetails.cs" />
+    <Compile Include="Query\SfocCurveShort.cs" />
     <Compile Include="Query\Ship.cs" />
     <Compile Include="Query\ShipBaseData.cs" />
     <Compile Include="Query\ShipBaseDataShort.cs" />
