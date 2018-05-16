@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using BlueTracker.SDK.Performance.Core;
+using Newtonsoft.Json;
 
 namespace BlueTracker.SDK.Performance.Post
 {
@@ -7,18 +8,6 @@ namespace BlueTracker.SDK.Performance.Post
     /// </summary>
     public class SfocCurve
     {
-        /// <summary>
-        /// ID of sfoc curve
-        /// </summary>
-        [JsonProperty("id")]
-        public int Id { get; set; }
-
-        /// <summary>
-        /// SfocCurveId
-        /// </summary>
-        [JsonProperty("sfocCurveId")]
-        public int SfocCurveId { get; set; }
-
         /// <summary>
         /// The name of sfoc curve
         /// </summary>
@@ -35,7 +24,7 @@ namespace BlueTracker.SDK.Performance.Post
         /// The definition of sfoc curve
         /// </summary>
         [JsonProperty("definition")]
-        public string Definition { get; set; }
+        public SfocCurveDefinition Definition { get; set; }
 
         /// <summary>
         /// Reason of change

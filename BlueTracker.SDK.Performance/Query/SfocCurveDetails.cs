@@ -1,4 +1,5 @@
 ﻿using System;
+using BlueTracker.SDK.Performance.Core;
 using Newtonsoft.Json;
 
 namespace BlueTracker.SDK.Performance.Query
@@ -36,7 +37,7 @@ namespace BlueTracker.SDK.Performance.Query
         /// The definition
         /// </summary>
         [JsonProperty("definition")]
-        public string Definition { get; set; }
+        public SfocCurveDefinition Definition { get; set; }
 
         /// <summary>
         /// The reason for change 
@@ -54,7 +55,7 @@ namespace BlueTracker.SDK.Performance.Query
         /// Created by
         /// </summary>
         [JsonProperty("createdById")]
-        public int CreatedById { get; set; }
+        public int? CreatedById { get; set; }
 
         /// <summary>
         /// Created on

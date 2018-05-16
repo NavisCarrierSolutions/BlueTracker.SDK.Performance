@@ -111,6 +111,8 @@
     <Compile Include="Core\HeightDirection.cs" />
     <Compile Include="Core\HullPoint.cs" />
     <Compile Include="Core\PagedSearchResult.cs" />
+    <Compile Include="Core\SfocCurveDefinition.cs" />
+    <Compile Include="Core\SfocCurvePoint.cs" />
     <Compile Include="Core\SpeedDirection.cs" />
     <Compile Include="Enums\CharterPartyType.cs" />
     <Compile Include="Enums\ConsumptionCurveType.cs" />
