@@ -1,4 +1,5 @@
-﻿using BlueTracker.SDK.Performance.Enums;
+﻿using BlueTracker.SDK.Performance.Core;
+using BlueTracker.SDK.Performance.Enums;
 using Newtonsoft.Json;
 
 namespace BlueTracker.SDK.Performance.Post
@@ -30,7 +31,7 @@ namespace BlueTracker.SDK.Performance.Post
         /// The definition of the consumption curve
         /// </summary>
         [JsonProperty("definition")]
-        public string Definition { get; set; }
+        public CharterPartyDefinition Definition { get; set; }
 
         /// <summary>
         /// The type of consumption curve

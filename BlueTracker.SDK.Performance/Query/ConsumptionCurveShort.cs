@@ -8,7 +8,7 @@ namespace BlueTracker.SDK.Performance.Query
     /// <summary>
     /// A charter curve.
     /// </summary>
-    public class CharterCurveShort
+    public class ConsumptionCurveShort
     {
         /// <summary>
         /// ID of consumption curve.

@@ -49,10 +49,10 @@ namespace BlueTracker.SDK.Performance.Clients
         /// <returns>
         /// A paged list of consumption curves metadata.
         /// </returns>
-        public PagedSearchResult<CharterCurveShort> GetAll(int page = 0, int pageSize = 20)
+        public PagedSearchResult<ConsumptionCurveShort> GetAll(int page = 0, int pageSize = 20)
         {
             var route = $"/api/v1/consumptionCurves?page={page}&pageSize={pageSize}";
-            var result = GetObject<PagedSearchResult<CharterCurveShort>>(route);
+            var result = GetObject<PagedSearchResult<ConsumptionCurveShort>>(route);
             return result;
         }
 
@@ -90,10 +90,10 @@ namespace BlueTracker.SDK.Performance.Clients
         /// <returns>
         /// The deleted consumption curve.
         /// </returns>
-        public CharterCurveShort Delete(int id)
+        public ConsumptionCurveShort Delete(int id)
         {
             var route = $"/api/v1/consumptionCurves/{id}";
-            return DeleteObject<CharterCurveShort>(route);
+            return DeleteObject<ConsumptionCurveShort>(route);
         }
     }
 }
