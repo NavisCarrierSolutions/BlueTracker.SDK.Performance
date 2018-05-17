@@ -86,9 +86,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clients\SfocCurveClient.cs" />
     <Compile Include="Clients\EventClient.cs" />
     <Compile Include="Clients\HullEventClient.cs" />
     <Compile Include="Clients\HullInterruptionClient.cs" />
+    <Compile Include="Clients\ConsumptionCurveClient.cs" />
     <Compile Include="Clients\HullModelClient.cs" />
     <Compile Include="Clients\OnboardSampleSourceValueRangeClient.cs" />
     <Compile Include="Clients\OnboardSampleValueClient.cs" />
@@ -100,23 +102,33 @@
     <Compile Include="Clients\TagClient.cs" />
     <Compile Include="Core\ApiWrapper.cs" />
     <Compile Include="Clients\LegClient.cs" />
+    <Compile Include="Core\CharterCurvePoint.cs" />
+    <Compile Include="Core\CharterPartyDefinition.cs" />
     <Compile Include="Core\DateLimitedSearchResult.cs" />
+    <Compile Include="Core\Deviation.cs" />
     <Compile Include="Core\Draft.cs" />
     <Compile Include="Core\FuelType.cs" />
     <Compile Include="Core\HeightDirection.cs" />
     <Compile Include="Core\HullPoint.cs" />
     <Compile Include="Core\PagedSearchResult.cs" />
+    <Compile Include="Core\SfocCurveDefinition.cs" />
+    <Compile Include="Core\SfocCurvePoint.cs" />
     <Compile Include="Core\SpeedDirection.cs" />
+    <Compile Include="Enums\CharterPartyType.cs" />
+    <Compile Include="Enums\ConsumptionCurveType.cs" />
+    <Compile Include="Enums\ExcludedIssues.cs" />
     <Compile Include="Enums\HullEventType.cs" />
     <Compile Include="Enums\HullInterruptionType.cs" />
     <Compile Include="Enums\HullModelType.cs" />
     <Compile Include="Enums\OnboardSampleSourceType.cs" />
+    <Compile Include="Post\ConsumptionCurve.cs" />
     <Compile Include="Post\EventData.cs" />
     <Compile Include="Post\HullEventData.cs" />
     <Compile Include="Post\HullInterruptionData.cs" />
     <Compile Include="Post\HullModelData.cs" />
     <Compile Include="Post\LegData.cs" />
     <Compile Include="Post\OwnerData.cs" />
+    <Compile Include="Post\SfocCurve.cs" />
     <Compile Include="Post\ShipClassData.cs" />
     <Compile Include="Post\ShipData.cs" />
     <Compile Include="Post\TagData.cs" />
@@ -125,6 +137,8 @@
     <Compile Include="Clients\ReportClient.cs" />
     <Compile Include="Clients\ShipClient.cs" />
     <Compile Include="Clients\VoyageClient.cs" />
+    <Compile Include="Query\ConsumptionCurveShort.cs" />
+    <Compile Include="Query\ConsumptionCurve.cs" />
     <Compile Include="Query\Event.cs" />
     <Compile Include="Query\EventShort.cs" />
     <Compile Include="Enums\FeedState.cs" />
@@ -149,6 +163,8 @@
     <Compile Include="Query\Sample.cs" />
     <Compile Include="Query\Service.cs" />
     <Compile Include="Query\ServiceShort.cs" />
+    <Compile Include="Query\SfocCurveDetails.cs" />
+    <Compile Include="Query\SfocCurveShort.cs" />
     <Compile Include="Query\Ship.cs" />
     <Compile Include="Query\ShipBaseData.cs" />
     <Compile Include="Query\ShipBaseDataShort.cs" />
