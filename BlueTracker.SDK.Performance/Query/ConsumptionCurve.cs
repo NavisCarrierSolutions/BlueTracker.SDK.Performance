@@ -17,12 +17,6 @@ namespace BlueTracker.SDK.Performance.Query
         public int Id { get; set; }
 
         /// <summary>
-        /// Id of charter curve
-        /// </summary>
-        [JsonProperty("charterCurveId")]
-        public int CharterCurveId { get; set; }
-
-        /// <summary>
         /// Name of consumption curve
         /// </summary>
         [JsonProperty("name")]
