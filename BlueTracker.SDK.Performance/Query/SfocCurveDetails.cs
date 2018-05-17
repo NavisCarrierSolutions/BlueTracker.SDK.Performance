@@ -16,12 +16,6 @@ namespace BlueTracker.SDK.Performance.Query
         public int Id { get; set; }
 
         /// <summary>
-        /// The sfocCurceId
-        /// </summary>
-        [JsonProperty("sfocCurveId")]
-        public int SfocCurveId { get; set; }
-
-        /// <summary>
         /// The name
         /// </summary>
         [JsonProperty("name")]
