@@ -5,7 +5,7 @@ namespace BlueTracker.SDK.Performance.Core
     /// <summary>
     /// Represents a speed and direction information.
     /// </summary>
-    public struct SpeedDirection
+    public class SpeedDirection
     {
         /// <summary>
         /// True speed. (Unit: m/s)
