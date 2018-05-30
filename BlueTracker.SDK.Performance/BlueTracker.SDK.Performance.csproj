@@ -107,6 +107,7 @@
     <Compile Include="Core\DateLimitedSearchResult.cs" />
     <Compile Include="Core\Deviation.cs" />
     <Compile Include="Core\Draft.cs" />
+    <Compile Include="Core\EngineOpsPoint.cs" />
     <Compile Include="Core\FuelType.cs" />
     <Compile Include="Core\HeightDirection.cs" />
     <Compile Include="Core\HullPoint.cs" />

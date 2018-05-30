@@ -1,4 +1,6 @@
 ﻿using BlueTracker.SDK.Performance.Enums;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace BlueTracker.SDK.Performance.Ship
 {
@@ -13,9 +15,20 @@ namespace BlueTracker.SDK.Performance.Ship
         public double? ServiceSpeed { get; set; }
 
         /// <summary>
+        /// Estimated Index Value (EIV) according IMO Resolution MEPC.215 (63) (grams CO2/tonne-mile)
+        /// </summary>
+        public double? EstimatedIndexValue { get; set; }
+
+        /// <summary>
+        /// Energy Efficiency Design Index (EEDI) according MARPOL Annex VI, Chapter 4, Reg. 19 (grams CO2/tonne-mile)
+        /// </summary>
+        public double? EnergyEfficiencyDesignIndex { get; set; }
+
+        /// <summary>
         /// Ship type. (enumeration)
         /// </summary>
         /// <seealso cref="ShipType"/>
+        [JsonConverter(typeof(StringEnumConverter))]
         public ShipType? ShipType { get; set; }
 
         /// <summary>
@@ -40,5 +53,15 @@ namespace BlueTracker.SDK.Performance.Ship
         /// Id of hull model.
         /// </summary>
         public int? HullModelId { get; set; }
+
+        /// <summary>
+        /// Id of consumption curve
+        /// </summary>
+        public int? ConsumptionCurveId { get; set; }
+
+        /// <summary>
+        /// Id of SFOC curves.
+        /// </summary>
+        public int? SfocCurveId { get; set; }
     }
 }
