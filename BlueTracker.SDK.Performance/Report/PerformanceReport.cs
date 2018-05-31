@@ -98,5 +98,11 @@ namespace BlueTracker.SDK.Performance.Report
         /// </summary>
         [JsonProperty(PropertyName = "engine")]
         public Engine Engine { get; set; }
+
+        /// <summary>
+        /// Fluid quantities remain on board.
+        /// </summary>
+        [JsonProperty(PropertyName = "rob")]
+        public ROB ROB { get; set; }
     }
 }
