@@ -6,7 +6,7 @@ using Newtonsoft.Json.Converters;
 namespace BlueTracker.SDK.Performance.Report
 {
     /// <summary>
-    /// Represents the fuel consumption of a fuel by a fuel consumer.
+    /// Represents the fuel consumption of a fuel by a fuel consumer. You can either use "Amount" or a combination of "Volume" and "Density". If both is provided the value of "Amount" is used
     /// </summary>
     public class Consumption
     {
@@ -21,7 +21,25 @@ namespace BlueTracker.SDK.Performance.Report
         /// The amount of fuel which was consumed (Unit: metric tons).
         /// </summary>
         [JsonProperty(PropertyName = "amount")]
-        public double Amount { get; set; }
+        public double? Amount { get; set; }
+
+        /// <summary>
+        /// Amount of fuel consumed in cubic meters. 
+        /// </summary>
+        [JsonProperty(PropertyName = "volume")]
+        public double? Volume { get; set; }
+
+        /// <summary>
+        /// Density of fuel consumed.
+        /// </summary>
+        [JsonProperty(PropertyName = "density")]
+        public double? Density { get; set; }
+
+        /// <summary>
+        /// Temperature of consumed fuel.
+        /// </summary>
+        [JsonProperty(PropertyName = "temp")]
+        public double? Temp { get; set; }
 
         /// <summary>
         /// A detailed description of the fuel type used.
