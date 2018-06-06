@@ -1,9 +1,9 @@
 ﻿namespace BlueTracker.SDK.Performance.Enums
 {
     /// <summary>
-    /// Fresh water kinds.
+    /// Fresh water discharge methods.
     /// </summary>
-    public enum FreshWaterKindOptions
+    public enum FreshWaterDischargeMethods
     {
         /// <summary>
         /// Undefined
@@ -11,13 +11,13 @@
         Undef = 0,
 
         /// <summary>
-        /// Fresh water for domestic usage.
+        /// Discharge via oily water separator (OWS)
         /// </summary>
-        Domestic = 1,
+        ViaOws = 1,
 
         /// <summary>
-        /// Fresh water for boiler usage.
+        /// Discharge via oil discharge monitoring equipment (ODME)
         /// </summary>
-        Boiler = 2
+        ViaOdme = 2
     }
 }

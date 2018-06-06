@@ -69,5 +69,11 @@ namespace BlueTracker.SDK.Performance.Report
         /// </remarks>
         [JsonProperty(PropertyName = "consumption")]
         public List<AggregateConsumption> Consumptions { get; set; }
+
+        /// <summary>
+        /// Other non-fuel-oil consumptions such as luboil or freshwater.
+        /// </summary>
+        [JsonProperty(PropertyName = "otherConsumptions")]
+        public OtherConsumption OtherConsumptions { get; set; }
     }
 }
