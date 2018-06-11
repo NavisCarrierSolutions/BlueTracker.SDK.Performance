@@ -1,9 +1,9 @@
 ﻿namespace BlueTracker.SDK.Performance.Enums
 {
     /// <summary>
-    /// Fresh water discharge methods.
+    /// Oily water discharge methods.
     /// </summary>
-    public enum FreshWaterDischargeMethods
+    public enum OilyWaterDischargeMethods
     {
         /// <summary>
         /// Undefined

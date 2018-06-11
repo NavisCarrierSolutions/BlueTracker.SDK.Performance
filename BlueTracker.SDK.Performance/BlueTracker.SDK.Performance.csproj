@@ -120,7 +120,7 @@
     <Compile Include="Enums\ConsumptionCurveType.cs" />
     <Compile Include="Enums\ExcludedIssues.cs" />
     <Compile Include="Enums\FreshWaterConsumptionKindOptions.cs" />
-    <Compile Include="Enums\FreshWaterDischargeMethods.cs" />
+    <Compile Include="Enums\OilyWaterDischargeMethods.cs" />
     <Compile Include="Enums\FreshWaterKindOptions.cs" />
     <Compile Include="Enums\HullEventType.cs" />
     <Compile Include="Enums\HullInterruptionType.cs" />
@@ -197,7 +197,7 @@
     <Compile Include="Report\Environment.cs" />
     <Compile Include="Enums\EventType.cs" />
     <Compile Include="Report\FreshWaterConsumption.cs" />
-    <Compile Include="Report\FreshWaterDischarge.cs" />
+    <Compile Include="Report\OilyWaterDischarge.cs" />
     <Compile Include="Report\FreshWaterQuantity.cs" />
     <Compile Include="Report\FuelConsumer.cs" />
     <Compile Include="Enums\FuelGradeOptions.cs" />

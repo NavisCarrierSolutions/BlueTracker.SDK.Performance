@@ -9,9 +9,9 @@ namespace BlueTracker.SDK.Performance.Report
     public class Discharge
     {
         /// <summary>
-        /// List of fresh water discharges.
+        /// List of oily water discharges.
         /// </summary>
-        [JsonProperty(PropertyName = "freshWater")]
-        public List<FreshWaterDischarge> FreshWater { get; set; }
+        [JsonProperty(PropertyName = "oilyWater")]
+        public List<OilyWaterDischarge> OilyWater { get; set; }
     }
 }
