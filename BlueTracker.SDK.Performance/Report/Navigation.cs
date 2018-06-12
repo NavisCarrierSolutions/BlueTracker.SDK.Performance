@@ -1,3 +1,4 @@
+using System;
 using BlueTracker.SDK.Performance.Core;
 using Newtonsoft.Json;
 
@@ -73,5 +74,11 @@ namespace BlueTracker.SDK.Performance.Report
         /// </summary>
         [JsonProperty(PropertyName = "draft")]
         public Draft Draft { get; set; }
+
+        /// <summary>
+        /// Estimated time of arrival according to ship's master.
+        /// </summary>
+        [JsonProperty(PropertyName = "mastersEta")]
+        public DateTimeOffset? MastersEta { get; set; }
     }
 }
