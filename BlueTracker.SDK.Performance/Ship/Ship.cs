@@ -63,5 +63,10 @@ namespace BlueTracker.SDK.Performance.Ship
         /// Id of SFOC curves.
         /// </summary>
         public int? SfocCurveId { get; set; }
+
+        /// <summary>
+        /// Id of average SFOC curves of auxiliary engines (AE).
+        /// </summary>
+        public int? AeSfocCurveId { get; set; }
     }
 }
