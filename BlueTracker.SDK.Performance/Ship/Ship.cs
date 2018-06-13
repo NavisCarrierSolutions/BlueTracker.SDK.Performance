@@ -60,7 +60,7 @@ namespace BlueTracker.SDK.Performance.Ship
         public int? ConsumptionCurveId { get; set; }
 
         /// <summary>
-        /// Id of SFOC curves.
+        /// Id of main engine SFOC curve.
         /// </summary>
         public int? SfocCurveId { get; set; }
 
