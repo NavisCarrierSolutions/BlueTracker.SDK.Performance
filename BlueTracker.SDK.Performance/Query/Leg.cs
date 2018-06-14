@@ -33,6 +33,11 @@ namespace BlueTracker.SDK.Performance.Query
         public ShipShort Ship { get; set; }
 
         /// <summary>
+        /// Id of Voyage
+        /// </summary>
+        public int? VoyageId { get; set; }
+
+        /// <summary>
         /// Voyage info.
         /// </summary>
         [JsonProperty("voyage")]
