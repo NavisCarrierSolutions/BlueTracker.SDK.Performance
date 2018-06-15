@@ -50,7 +50,7 @@ namespace BlueTracker.SDK.Performance.Clients
         /// <param name="start">Start time of query</param>
         /// <param name="end">End time of query</param>
         /// <returns>Query result with samples.</returns>
-        public DateLimitedSearchResult<Sample.Sample> Query(string sourceName, int imoNumber, DateTime? start = null, DateTime? end = null)
+        public DateLimitedSearchResult<Sample.Sample> Query(string sourceName, int imoNumber, DateTime? start = null, DateTime? end = null, int page = 0, int pageSize = 20)
         {
             var url = $"api/v1/onboardSamples/sources/{sourceName}/{imoNumber}";
 
@@ -60,6 +60,8 @@ namespace BlueTracker.SDK.Performance.Clients
                 url += $"?start={start:O}";
             else if (end != null)
                 url += $"?end={end:O}";
+
+            url += $"?page={page}?pageSize={pageSize}";
 
             return GetObject<DateLimitedSearchResult<Sample.Sample>>(url);
         }
