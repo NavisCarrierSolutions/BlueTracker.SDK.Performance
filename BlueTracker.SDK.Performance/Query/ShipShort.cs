@@ -2,6 +2,9 @@
 
 namespace BlueTracker.SDK.Performance.Query
 {
+    /// <summary>
+    /// Ship Base Data Short
+    /// </summary>
     public class ShipShort
     {
         /// <summary>
@@ -45,5 +48,17 @@ namespace BlueTracker.SDK.Performance.Query
         /// </summary>
         [JsonProperty("shipClassName")]
         public string ShipClassName { get; set; }
+
+        /// <summary>
+        /// Name of owner associated with ship.
+        /// </summary>
+        [JsonProperty("ownerName")]
+        public string OwnerName { get; set; }
+
+        /// <summary>
+        /// UN/LOCODE of port of registry.
+        /// </summary>
+        [JsonProperty("portOfRegistryUnloc")]
+        public string PortOfRegistryUnloc { get; set; }
     }
 }

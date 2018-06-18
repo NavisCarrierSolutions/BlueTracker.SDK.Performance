@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
 using BlueTracker.SDK.Performance.Enums;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace BlueTracker.SDK.Performance.Ship
 {
@@ -14,17 +16,22 @@ namespace BlueTracker.SDK.Performance.Ship
         public double? DesignDraft { get; set; }
 
         /// <summary>
+        /// Scantling draft of the ship
+        /// </summary>
+        public double? ScantlingDraft { get; set; }
+
+        /// <summary>
         /// Ships width from Port to Starboard
         /// </summary>
         public double? ShipWidth { get; set; }
 
         /// <summary>
-        /// Length of ship over all.
+        /// Length over all
         /// </summary>
         public double? LengthOverAll { get; set; }
 
         /// <summary>
-        /// Length between perpendiculars.
+        /// Length between perpendiculars
         /// </summary>
         public double? LengthBetweenPerpendiculars { get; set; }
 
@@ -46,11 +53,13 @@ namespace BlueTracker.SDK.Performance.Ship
         /// <summary>
         /// Type of Bow
         /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
         public BowType? BowType { get; set; }
 
         /// <summary>
         /// Type of Super Structure
         /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
         public SuperStructureType? SuperStructureType { get; set; }
 
         /// <summary>
