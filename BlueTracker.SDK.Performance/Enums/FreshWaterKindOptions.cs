@@ -11,9 +11,9 @@
         Undef = 0,
 
         /// <summary>
-        /// Fresh water for domestic usage.
+        /// Fresh water for drinking usage.
         /// </summary>
-        Domestic = 1,
+        Drinking = 1,
 
         /// <summary>
         /// Fresh water for boiler usage.
