@@ -119,6 +119,8 @@
     <Compile Include="Enums\CharterPartyType.cs" />
     <Compile Include="Enums\ConsumptionCurveType.cs" />
     <Compile Include="Enums\ExcludedIssues.cs" />
+    <Compile Include="Enums\FreshWaterConsumptionKindOptions.cs" />
+    <Compile Include="Enums\OilyWaterDischargeMethods.cs" />
     <Compile Include="Enums\FreshWaterKindOptions.cs" />
     <Compile Include="Enums\HullEventType.cs" />
     <Compile Include="Enums\HullInterruptionType.cs" />
@@ -190,9 +192,12 @@
     <Compile Include="Report\Boiler.cs" />
     <Compile Include="Report\Cargo.cs" />
     <Compile Include="Report\Consumption.cs" />
+    <Compile Include="Report\Discharge.cs" />
     <Compile Include="Report\Engine.cs" />
     <Compile Include="Report\Environment.cs" />
     <Compile Include="Enums\EventType.cs" />
+    <Compile Include="Report\FreshWaterConsumption.cs" />
+    <Compile Include="Report\OilyWaterDischarge.cs" />
     <Compile Include="Report\FreshWaterQuantity.cs" />
     <Compile Include="Report\FuelConsumer.cs" />
     <Compile Include="Enums\FuelGradeOptions.cs" />
@@ -200,9 +205,11 @@
     <Compile Include="Report\FuelQuantity.cs" />
     <Compile Include="Report\General.cs" />
     <Compile Include="Report\InternalCombustionEngine.cs" />
+    <Compile Include="Report\LubOilConsumption.cs" />
     <Compile Include="Report\LubOilQuantity.cs" />
     <Compile Include="Report\MainEngine.cs" />
     <Compile Include="Report\Navigation.cs" />
+    <Compile Include="Report\OtherConsumption.cs" />
     <Compile Include="Report\PerformanceReport.cs" />
     <Compile Include="Core\Position.cs" />
     <Compile Include="Enums\StateOptions.cs" />
