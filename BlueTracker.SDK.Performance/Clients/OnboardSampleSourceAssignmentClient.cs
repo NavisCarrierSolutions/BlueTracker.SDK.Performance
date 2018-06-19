@@ -36,6 +36,12 @@ namespace BlueTracker.SDK.Performance.Clients
             return GetObject<List<OnboardSampleSourceAssignment>>($"/api/v1/ships/{imoNumber}/onboardSampleSourceAssignments");
         }
 
+        /// <summary>
+        /// Creates an OnboardSampleSourceAssignment between a ship and a OnboardSampleSource
+        /// </summary>
+        /// <param name="imoNumber">imo number of ship</param>
+        /// <param name="sourceName">name of OnboardSampleSource</param>
+        /// <returns>created assignment</returns>
         public OnboardSampleSourceAssignment Post(int imoNumber, string sourceName)
         {
             return PostEmpty<OnboardSampleSourceAssignment>(
