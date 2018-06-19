@@ -104,5 +104,11 @@ namespace BlueTracker.SDK.Performance.Report
         /// </summary>
         [JsonProperty(PropertyName = "rob")]
         public ROB ROB { get; set; }
+
+        /// <summary>
+        /// Fluid quantities discharged.
+        /// </summary>
+        [JsonProperty(PropertyName = "discharge")]
+        public Discharge Discharge { get; set; }
     }
 }
