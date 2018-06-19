@@ -119,13 +119,10 @@
     <Compile Include="Enums\CharterPartyType.cs" />
     <Compile Include="Enums\ConsumptionCurveType.cs" />
     <Compile Include="Enums\ExcludedIssues.cs" />
-<<<<<<< HEAD
     <Compile Include="Enums\HullCoatingPreparation.cs" />
     <Compile Include="Enums\HullCoatingSupplier.cs" />
     <Compile Include="Enums\HullCoatingType.cs" />
-=======
     <Compile Include="Enums\FreshWaterKindOptions.cs" />
->>>>>>> master
     <Compile Include="Enums\HullEventType.cs" />
     <Compile Include="Enums\HullInterruptionType.cs" />
     <Compile Include="Enums\HullModelType.cs" />
