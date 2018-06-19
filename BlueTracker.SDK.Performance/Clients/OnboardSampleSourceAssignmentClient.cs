@@ -35,5 +35,11 @@ namespace BlueTracker.SDK.Performance.Clients
         {
             return GetObject<List<OnboardSampleSourceAssignment>>($"/api/v1/ships/{imoNumber}/onboardSampleSourceAssignments");
         }
+
+        public OnboardSampleSourceAssignment Post(int imoNumber, string sourceName)
+        {
+            return PostEmpty<OnboardSampleSourceAssignment>(
+                $"/api/v1/ships/{imoNumber}/onboardSampleSourceAssignments?sourceName={sourceName}");
+        }
     }
 }
