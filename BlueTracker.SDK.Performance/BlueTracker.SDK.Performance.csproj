@@ -119,6 +119,9 @@
     <Compile Include="Enums\CharterPartyType.cs" />
     <Compile Include="Enums\ConsumptionCurveType.cs" />
     <Compile Include="Enums\ExcludedIssues.cs" />
+    <Compile Include="Enums\HullCoatingPreparation.cs" />
+    <Compile Include="Enums\HullCoatingSupplier.cs" />
+    <Compile Include="Enums\HullCoatingType.cs" />
     <Compile Include="Enums\FreshWaterConsumptionKindOptions.cs" />
     <Compile Include="Enums\OilyWaterDischargeMethods.cs" />
     <Compile Include="Enums\FreshWaterKindOptions.cs" />
