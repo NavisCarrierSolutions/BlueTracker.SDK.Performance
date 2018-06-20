@@ -170,5 +170,17 @@ namespace BlueTracker.SDK.Performance.Clients
         {
             return PostObject<List<PerformanceReport>, List<Report.PerformanceReport>>(reports, "/api/v1/reports/batch");
         }
+
+        /// <summary>
+        /// Gets an Report by customId and imoNumber.
+        /// </summary>
+        /// <param name="customId">Custom Id of an report</param>
+        /// <param name="imoNumber"></param>
+        /// <returns>The performance report.</returns>
+        public PerformanceReport GetPerformanceReportByCustomId(string customId, int imoNumber)
+        {
+            var uri = $"api/v1/reports/{customId}/{imoNumber}";
+            return GetObject<PerformanceReport>(uri);
+        }
     }
 }
