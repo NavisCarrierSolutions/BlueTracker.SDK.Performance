@@ -179,7 +179,7 @@ namespace BlueTracker.SDK.Performance.Clients
         /// <returns>The performance report.</returns>
         public PerformanceReport GetPerformanceReportByCustomId(string customId, int imoNumber)
         {
-            var uri = $"api/v1/reports/{customId}/{imoNumber}";
+            var uri = $"/api/v1/reports/{customId}/{imoNumber}";
             return GetObject<PerformanceReport>(uri);
         }
     }
