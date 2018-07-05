@@ -11,7 +11,7 @@ namespace BlueCloud.DTO.Report
     public class LubOilQuantity
     {
         /// <summary>
-        /// Circulation oil aggregate type.
+        /// Aggregate type.
         /// </summary>
         [JsonProperty(PropertyName = "aggregate")]
         [JsonConverter(typeof(StringEnumConverter))]
