@@ -28,6 +28,11 @@
         /// <summary>
         /// Propeller cleaning
         /// </summary>
-        PropellerCleaning = 4
+        PropellerCleaning = 4,
+        
+        /// <summary>
+        /// Dry docking
+        /// </summary>
+        DryDocking = 5
     }
 }
