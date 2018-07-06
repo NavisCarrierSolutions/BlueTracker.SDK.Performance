@@ -29,10 +29,15 @@
         /// Propeller cleaning
         /// </summary>
         PropellerCleaning = 4,
-        
+
         /// <summary>
-        /// Dry docking
+        /// Dry dock start
         /// </summary>
-        DryDocking = 5
+        DryDockStart = 5,
+
+        /// <summary>
+        /// Dry dock end
+        /// </summary>
+        DryDockEnd = 6
     }
 }
