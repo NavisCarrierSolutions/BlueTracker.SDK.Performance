@@ -3,15 +3,15 @@ using BlueTracker.SDK.Performance.Enums;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-namespace BlueCloud.DTO.Report
+namespace BlueTracker.SDK.Performance.Report
 {
     /// <summary>
-    /// Lub oil ROB quantities.
+    /// Provides information about consumed luboil.
     /// </summary>
-    public class LubOilQuantity
+    public class LubOilConsumption
     {
         /// <summary>
-        /// Aggregate type.
+        /// Consuming aggregate type.
         /// </summary>
         [JsonProperty(PropertyName = "aggregate")]
         [JsonConverter(typeof(StringEnumConverter))]
@@ -25,10 +25,16 @@ namespace BlueCloud.DTO.Report
         public LubOilKindOptions Kind { get; set; }
 
         /// <summary>
-        /// Amount of luboil remain on board. (litres)
+        /// Volume of luboil consumption. (litres)
         /// </summary>
-        [JsonProperty(PropertyName = "amount")]
-        public double? Amount { get; set; }
+        [JsonProperty(PropertyName = "volume")]
+        public double? Volume { get; set; }
+
+        /// <summary>
+        /// Density of luboil.
+        /// </summary>
+        [JsonProperty(PropertyName = "density")]
+        public double? Density { get; set; }
 
         /// <summary>
         /// Luboil type details.

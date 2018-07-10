@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 using BlueTracker.SDK.Performance.Enums;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
@@ -76,6 +77,78 @@ namespace BlueTracker.SDK.Performance.Query
         /// </summary>
         [JsonProperty("remarks")]
         public string Remarks { get; set; }
+
+        /// <summary>
+        /// Vertical sides type.
+        /// </summary>
+        [JsonProperty("verticalSidesType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public HullCoatingType? VerticalSidesType { get; set; }
+
+        /// <summary>
+        /// Vertical sides product description.
+        /// </summary>
+        [JsonProperty("verticalSidesProduct")]
+        public string VerticalSidesProduct { get; set; }
+
+        /// <summary>
+        /// Vertical sides supplier.
+        /// </summary>
+        [JsonProperty("verticalSidesSupplier")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public HullCoatingSupplier? VerticalSidesSupplier { get; set; }
+
+        /// <summary>
+        /// Vertical sides thickness in μm.
+        /// </summary>
+        [JsonProperty("verticalSidesThickness")]
+        public double? VerticalSidesThickness { get; set; }
+
+        /// <summary>
+        /// Vertical sides preparation method.
+        /// </summary>
+        [JsonProperty("verticalSidesPreparation")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public HullCoatingPreparation? VerticalSidesPreparation { get; set; }
+
+        /// <summary>
+        /// Flat bottom type.
+        /// </summary>
+        [JsonProperty("flatBottomType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public HullCoatingType? FlatBottomType { get; set; }
+
+        /// <summary>
+        /// Flat bottom product description.
+        /// </summary>
+        [JsonProperty("flatBottomProduct")]
+        public string FlatBottomProduct { get; set; }
+
+        /// <summary>
+        /// Flat bottom supplier.
+        /// </summary>
+        [JsonProperty("flatBottomSupplier")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public HullCoatingSupplier? FlatBottomSupplier { get; set; }
+
+        /// <summary>
+        /// Flat bottom thickness in μm.
+        /// </summary>
+        [JsonProperty("flatBottomThickness")]
+        public double? FlatBottomThickness { get; set; }
+
+        /// <summary>
+        /// Flat bottom preparation method.
+        /// </summary>
+        [JsonProperty("flatBottomPreparation")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public HullCoatingPreparation? FlatBottomPreparation { get; set; }
+
+        /// <summary>
+        /// General hull coating comments.
+        /// </summary>
+        [JsonProperty("hullCoatingComments")]
+        public string HullCoatingComments { get; set; }
 
         /// <summary>
         /// Timestamp when hull event was created.
