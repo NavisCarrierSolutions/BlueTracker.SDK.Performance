@@ -5,8 +5,18 @@ using Newtonsoft.Json.Converters;
 
 namespace BlueCloud.DTO.Report
 {
+    /// <summary>
+    /// Lub oil ROB quantities.
+    /// </summary>
     public class LubOilQuantity
     {
+        /// <summary>
+        /// Aggregate type.
+        /// </summary>
+        [JsonProperty(PropertyName = "aggregate")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public AggregateOptions Aggregate { get; set; }
+
         /// <summary>
         /// Kind of luboil. (enumeration)
         /// </summary>
