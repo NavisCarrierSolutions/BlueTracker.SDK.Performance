@@ -99,5 +99,19 @@ namespace BlueTracker.SDK.Performance.Clients
             var route = $"/api/v1/ships/{imoNumber}/batchMode";
             return PostEmpty<Query.Ship>(route);
         }
+
+        /// <summary>
+        /// Deletes a ship or some data associated with a ship. What will be deleted depends on the specified deletion level.
+        /// </summary>
+        /// <param name="imoNumber">IMO number of the ship.</param>
+        /// <param name="deletionLevel">Determines which data associated with a ship shall be deleted.</param>
+        /// <returns>
+        /// The deleted ship class.
+        /// </returns>
+        public Query.Ship Delete(int imoNumber, ShipDeletionLevels deletionLevel)
+        {
+            var route = $"/api/v1/ships/{imoNumber}/deletionlevels/{deletionLevel}";
+            return DeleteObject<Query.Ship>(route);
+        }
     }
 }

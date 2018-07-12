@@ -119,5 +119,18 @@ namespace BlueTracker.SDK.Performance.Clients
         {
             return PutObject<HullInterruption, HullInterruptionData>(hullInterruptionData, $"/api/v1/hullInterruptions/{id}");
         }
+
+        /// <summary>
+        /// Deletes a hull interruption.
+        /// </summary>
+        /// <param name="id">ID identifying the hull interruption.</param>
+        /// <returns>
+        /// The deleted hull interruption.
+        /// </returns>
+        public HullInterruption Delete(int id)
+        {
+            var route = $"/api/v1/hullInterruptions/{id}";
+            return DeleteObject<HullInterruption>(route);
+        }
     }
 }

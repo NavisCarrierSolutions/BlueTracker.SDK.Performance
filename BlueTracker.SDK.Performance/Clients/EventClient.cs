@@ -127,5 +127,18 @@ namespace BlueTracker.SDK.Performance.Clients
         {
             return PostObject<List<Event>, List<EventData>>(eventData, "/api/v1/events/batch");
         }
+
+        /// <summary>
+        /// Deletes an event.
+        /// </summary>
+        /// <param name="eventId">ID identifying the event.</param>
+        /// <returns>
+        /// The deleted event.
+        /// </returns>
+        public Event Delete(int eventId)
+        {
+            var route = $"/api/v1/events/{eventId}";
+            return DeleteObject<Event>(route);
+        }
     }
 }
