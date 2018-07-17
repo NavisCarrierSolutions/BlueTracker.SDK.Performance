@@ -1,5 +1,4 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations;
 using BlueTracker.SDK.Performance.Enums;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
@@ -26,14 +25,12 @@ namespace BlueTracker.SDK.Performance.Post
         /// <summary>
         /// 7-digit IMO-number of ship relating to hull event.
         /// </summary>
-        [Required]
         [JsonProperty("imoNumber")]
         public int ImoNumber { get; set; }
 
         /// <summary>
         /// Hull event time stamp in local time.
         /// </summary>
-        [Required]
         [JsonProperty("timeStamp")]
         public DateTime TimeStamp { get; set; }
 
