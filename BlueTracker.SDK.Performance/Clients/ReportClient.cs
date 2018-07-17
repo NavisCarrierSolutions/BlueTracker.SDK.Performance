@@ -182,5 +182,18 @@ namespace BlueTracker.SDK.Performance.Clients
             var uri = $"/api/v1/reports/{customId}/{imoNumber}";
             return GetObject<PerformanceReport>(uri);
         }
+
+        /// <summary>
+        /// Deletes the performance report with the specified id.
+        /// </summary>
+        /// <param name="reportId">ID identifying the performance report.</param>
+        /// <returns>
+        /// The deleted performance report.
+        /// </returns>
+        public PerformanceReport Delete(int reportId)
+        {
+            var route = $"/api/v1/reports/{reportId}";
+            return DeleteObject<PerformanceReport>(route);
+        }
     }
 }
