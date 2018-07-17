@@ -130,6 +130,7 @@
     <Compile Include="Enums\HullModelType.cs" />
     <Compile Include="Enums\LubOilKindOptions.cs" />
     <Compile Include="Enums\OnboardSampleSourceType.cs" />
+    <Compile Include="Enums\ShipDeletionLevels.cs" />
     <Compile Include="Post\ConsumptionCurve.cs" />
     <Compile Include="Post\EventData.cs" />
     <Compile Include="Post\HullEventData.cs" />

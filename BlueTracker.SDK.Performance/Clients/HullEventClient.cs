@@ -119,5 +119,18 @@ namespace BlueTracker.SDK.Performance.Clients
         {
             return PutObject<HullEvent, HullEventData>(hullEventData, $"/api/v1/hullEvents/{id}");
         }
+
+        /// <summary>
+        /// Deletes a hull event.
+        /// </summary>
+        /// <param name="hullEventId">ID identifying the hull event.</param>
+        /// <returns>
+        /// The deleted hull event.
+        /// </returns>
+        public HullEvent Delete(int hullEventId)
+        {
+            var route = $"/api/v1/hullEvents/{hullEventId}";
+            return DeleteObject<HullEvent>(route);
+        }
     }
 }
