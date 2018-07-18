@@ -36,6 +36,7 @@ namespace BlueTracker.SDK.Performance.Core
             _authorization = authorization;
 
             _httpClient.BaseAddress = new Uri(_serverAddress);
+            _httpClient.DefaultRequestHeaders.Authorization = GetAuthHeader();
         }
 
         protected TR PostObject<TR, TI>(TI postObject, string route)
@@ -63,10 +64,6 @@ namespace BlueTracker.SDK.Performance.Core
                 var readTask = sendTask.Result.Content.ReadAsStringAsync();
                 readTask.Wait();
                 content = readTask.Result;
-            }
-            catch (WebException e)
-            {
-                throw e;
             }
             catch (Exception ex)
             {
@@ -200,10 +197,6 @@ namespace BlueTracker.SDK.Performance.Core
                 readTask.Wait();
                 content = readTask.Result;
             }
-            catch (WebException e)
-            {
-                throw e;
-            }
             catch (Exception ex)
             {
                 throw new Exception($"Failed to communicate with BlueCloud API on {_serverAddress}.", ex);
@@ -229,34 +222,37 @@ namespace BlueTracker.SDK.Performance.Core
         protected JObject GetJson(string route)
         {
             var requestString = CombineRoute(route);
-            var request = WebRequest.Create(requestString);
-            request.Method = "GET";
-            request.Headers.Add("Authorization", "ApiKey " + _authorization);
 
-            string content;
+            string content = null;
 
             try
             {
-                var response = (HttpWebResponse) request.GetResponse();
-                var responseStream = response.GetResponseStream();
+                var response = _httpClient.GetAsync(requestString);
 
-                if (responseStream == null)
-                    return null;
+                response.Wait();
 
-                using (var reader = new StreamReader(responseStream))
+                var responseMessage = response.Result;
+                if (responseMessage.IsSuccessStatusCode)
                 {
-                    content = reader.ReadToEnd();
+                    var responseStreamTask = responseMessage.Content.ReadAsStreamAsync();
+                    responseStreamTask.Wait();
+
+                    var responseStream = responseStreamTask.Result;
+
+                    if (responseStream == null)
+                        return null;
+
+                    using (var reader = new StreamReader(responseStream))
+                    {
+                        content = reader.ReadToEnd();
+                    }
                 }
 
-                if (response.StatusCode != HttpStatusCode.OK)
+                if (responseMessage.StatusCode != HttpStatusCode.OK)
                 {
-                    throw new HttpException((int) response.StatusCode,
-                        $"Failed to retrieve data with code {response.StatusCode}. Message: {content}");
+                    throw new HttpException((int)responseMessage.StatusCode,
+                        $"Failed to retrieve data with code {responseMessage.StatusCode}. Message: {content}");
                 }
-            }
-            catch (WebException e)
-            {
-                throw e;
             }
             catch (Exception ex)
             {
@@ -276,34 +272,37 @@ namespace BlueTracker.SDK.Performance.Core
         protected T GetObject<T>(string route)
         {
             var requestString = CombineRoute(route);
-            var request = WebRequest.Create(requestString);
-            request.Method = "GET";
-            request.Headers.Add("Authorization", "ApiKey " + _authorization);
 
-            string content;
+            string content = null;
 
             try
             {
-                var response = (HttpWebResponse) request.GetResponse();
-                var responseStream = response.GetResponseStream();
+                var response = _httpClient.GetAsync(requestString);
+                
+                response.Wait();
 
-                if (responseStream == null)
-                    return default(T);
-
-                using (var reader = new StreamReader(responseStream))
+                var responseMessage = response.Result;
+                if (responseMessage.IsSuccessStatusCode)
                 {
-                    content = reader.ReadToEnd();
+                    var responseStreamTask = responseMessage.Content.ReadAsStreamAsync();
+                    responseStreamTask.Wait();
+
+                    var responseStream = responseStreamTask.Result;
+
+                    if (responseStream == null)
+                        return default(T);
+
+                    using (var reader = new StreamReader(responseStream))
+                    {
+                        content = reader.ReadToEnd();
+                    }
                 }
 
-                if (response.StatusCode != HttpStatusCode.OK)
+                if (responseMessage.StatusCode != HttpStatusCode.OK)
                 {
-                    throw new HttpException((int)response.StatusCode,
-                        $"Failed to retrieve data with code {response.StatusCode}. Message: {content}");
+                    throw new HttpException((int)responseMessage.StatusCode,
+                        $"Failed to retrieve data with code {responseMessage.StatusCode}. Message: {content}");
                 }
-            }
-            catch (WebException)
-            {
-                throw;
             }
             catch (Exception ex)
             {
