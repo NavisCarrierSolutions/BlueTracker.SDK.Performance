@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Configuration;
 using System.IO;
-using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using System.Security.Authentication;
-using System.Web;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
@@ -23,10 +19,22 @@ namespace BlueTracker.SDK.Performance.Core
 
         private const string DefaultServerAddress = "https://api.bluetracker.one";
 
-        protected ApiWrapper(string serverAddress = null, string authorization = null)
+        protected ApiWrapper(string serverAddress, string authorization)
         {
-            _serverAddress = string.IsNullOrEmpty(serverAddress) ? GetServerAddress() : serverAddress;
-            _authorization = string.IsNullOrEmpty(authorization) ? GetApiKey() : authorization;
+            if (string.IsNullOrEmpty(authorization))
+            {
+                throw new ArgumentNullException(nameof(authorization));
+            }
+
+            _serverAddress = serverAddress;
+
+            if (string.IsNullOrEmpty(_serverAddress))
+            {
+                _serverAddress = DefaultServerAddress;
+            }
+
+            _authorization = authorization;
+
             _httpClient.BaseAddress = new Uri(_serverAddress);
         }
 
@@ -323,28 +331,6 @@ namespace BlueTracker.SDK.Performance.Core
             var requestString = _serverAddress.TrimEnd('/') + "/" + route.TrimStart('/');
 
             return requestString;
-        }
-
-        private static string GetServerAddress()
-        {
-            var appsettings = ConfigurationManager.AppSettings;
-
-            if (appsettings.AllKeys.Contains("BlueCloud_ServerAddress") &&
-                !string.IsNullOrEmpty(appsettings["BlueCloud_ServerAddress"]))
-                return appsettings["BlueCloud_ServerAddress"];
-
-            return DefaultServerAddress;
-        }
-
-        private static string GetApiKey()
-        {
-            var appsettings = ConfigurationManager.AppSettings;
-
-            if (appsettings.AllKeys.Contains("BlueCloud_ApiKey") && !string.IsNullOrEmpty(appsettings["BlueCloud_ApiKey"]))
-                return appsettings["BlueCloud_ApiKey"];
-
-            throw new AuthenticationException(
-                "Could not establish authorization. BlueCloudApiKey not found in app settings.");
         }
 
         private AuthenticationHeaderValue GetAuthHeader() => new AuthenticationHeaderValue("ApiKey", _authorization);
