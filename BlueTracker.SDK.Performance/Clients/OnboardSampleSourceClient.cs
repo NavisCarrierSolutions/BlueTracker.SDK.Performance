@@ -55,5 +55,15 @@ namespace BlueTracker.SDK.Performance.Clients
         {
             return GetObject<OnboardSampleSource>($"/api/v1/onboardSamples/sources/{sourceId}");
         }
+
+        /// <summary>
+        /// Creates an OnboardSampleSource with name
+        /// </summary>
+        /// <param name="sourceName"></param>
+        /// <returns></returns>
+        public OnboardSampleSource Create(string sourceName)
+        {
+            return PostEmpty<OnboardSampleSource>($"/api/v1/onboardSamples/sources?sourceName={sourceName}");
+        }
     }
 }
