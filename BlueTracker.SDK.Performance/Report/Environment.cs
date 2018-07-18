@@ -33,6 +33,12 @@ namespace BlueTracker.SDK.Performance.Report
         public int? SeaState { get; set; }
 
         /// <summary>
+        /// Douglas sea scale. (Douglas)
+        /// </summary>
+        [JsonProperty(PropertyName = "douglasSeaScale")]
+        public int? DouglasSeaScale { get; set; }
+
+        /// <summary>
         /// Details of waves.
         /// </summary>
         [JsonProperty(PropertyName = "wave")]
