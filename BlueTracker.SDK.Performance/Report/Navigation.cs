@@ -82,9 +82,15 @@ namespace BlueTracker.SDK.Performance.Report
         public DateTimeOffset? MastersEta { get; set; }
 
         /// <summary>
-        /// Estimated arrival port.
+        /// UN-LOCODE of arrival port (5-char code).
         /// </summary>
-        [JsonProperty(PropertyName = "arrivalPort")]
-        public string ArrivalPort { get; set; }
+        [JsonProperty(PropertyName = "arrivalPortUnloc")]
+        public string ArrivalPortUnloc { get; set; }
+
+        /// <summary>
+        /// Name of arrival port.
+        /// </summary>
+        [JsonProperty(PropertyName = "arrivalPortName")]
+        public string ArrivalPortName { get; set; }
     }
 }
