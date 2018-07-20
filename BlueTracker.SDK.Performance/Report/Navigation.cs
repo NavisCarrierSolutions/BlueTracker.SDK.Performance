@@ -80,5 +80,11 @@ namespace BlueTracker.SDK.Performance.Report
         /// </summary>
         [JsonProperty(PropertyName = "mastersEta")]
         public DateTimeOffset? MastersEta { get; set; }
+
+        /// <summary>
+        /// Estimated arrival port.
+        /// </summary>
+        [JsonProperty(PropertyName = "arrivalPort")]
+        public string ArrivalPort { get; set; }
     }
 }
