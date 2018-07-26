@@ -1,5 +1,4 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations;
 using BlueTracker.SDK.Performance.Enums;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;

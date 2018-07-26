@@ -23,7 +23,7 @@ namespace BlueTracker.SDK.Performance.Clients
         /// service address. If the service address is neither specified as constructor parameter,
         /// nor in the app settings, the default service address will be used.
         /// </remarks>
-        public HullEventClient(string serverAddress = null, string authorization = null)
+        public HullEventClient(string serverAddress, string authorization)
             : base(serverAddress, authorization)
         {
         }
