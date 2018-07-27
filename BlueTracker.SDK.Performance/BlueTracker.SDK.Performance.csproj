@@ -3,7 +3,7 @@
     <TargetFramework>netstandard1.5</TargetFramework>
     <Company>Kalmar Germany GmbH</Company>
     <Description>BlueTracker public API wrapper.</Description>
-    <Copyright>Copyright ©  2016</Copyright>
+    <Copyright>Copyright © 2016</Copyright>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
