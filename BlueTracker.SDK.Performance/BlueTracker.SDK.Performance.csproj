@@ -2,8 +2,19 @@
   <PropertyGroup>
     <TargetFramework>netstandard1.5</TargetFramework>
     <Company>Kalmar Germany GmbH</Company>
-    <Description>BlueTracker public API wrapper.</Description>
-    <Copyright>Copyright ©  2016</Copyright>
+    <Description>Wrapper for BlueTracker One public API</Description>
+    <Copyright>Copyright © 2018</Copyright>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/NavisCarrierSolutions/BlueTracker.SDK.Performance/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/NavisCarrierSolutions/BlueTracker.SDK.Performance</PackageProjectUrl>
+    <Authors>Kalmar Germany GmbH</Authors>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>4.0.0</Version>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\netstandard1.5\BlueTracker.SDK.Performance.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>bin\Debug\netstandard1.5\BlueTracker.SDK.Performance.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />

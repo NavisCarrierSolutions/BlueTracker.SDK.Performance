@@ -19,6 +19,10 @@ namespace BlueTracker.SDK.Performance.Core
 
         private const string DefaultServerAddress = "https://api.bluetracker.one";
 
+        protected ApiWrapper(string authorization) : this(null, authorization)
+        {
+        }
+
         protected ApiWrapper(string serverAddress, string authorization)
         {
             if (string.IsNullOrEmpty(authorization))

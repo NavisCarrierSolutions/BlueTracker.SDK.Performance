@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BlueTracker.SDK.Performance
+namespace BlueTracker.SDK.Performance.Core
 {
     public class HttpException : Exception
     {
@@ -11,7 +11,7 @@ namespace BlueTracker.SDK.Performance
 
         /// <inheritdoc />
         /// <summary>
-        /// Creates a new instance of the <see cref="T:BlueTracker.SDK.Performance.HttpException" /> class.
+        /// Creates a new instance of the <see cref="T:BlueTracker.SDK.Performance.Core.HttpException" /> class.
         /// </summary>
         /// <param name="statusCode">Status code of error.</param>
         /// <param name="message">Message providing more information about the error.</param>
