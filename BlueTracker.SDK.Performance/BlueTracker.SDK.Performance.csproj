@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>net45;netstandard1.3;netstandard1.5;netstandard2.0</TargetFrameworks>
+    <TargetFrameworks>net45;netstandard1.5;</TargetFrameworks>
     <Company>Kalmar Germany GmbH</Company>
     <Description>Wrapper for BlueTracker One public API</Description>
     <Copyright>Copyright © 2018</Copyright>
@@ -17,9 +17,9 @@
     <DocumentationFile>bin\Debug\netstandard1.5\BlueTracker.SDK.Performance.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
   </ItemGroup>
-  <ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
     <Reference Include="System.Net.Http" />
   </ItemGroup>
 </Project>
