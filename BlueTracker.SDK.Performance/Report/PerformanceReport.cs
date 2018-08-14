@@ -110,5 +110,11 @@ namespace BlueTracker.SDK.Performance.Report
         /// </summary>
         [JsonProperty(PropertyName = "discharge")]
         public Discharge Discharge { get; set; }
+
+        /// <summary>
+        /// Custom data fields.
+        /// </summary>
+        [JsonProperty(PropertyName = "custom")]
+        public object Custom { get; set; }
     }
 }
