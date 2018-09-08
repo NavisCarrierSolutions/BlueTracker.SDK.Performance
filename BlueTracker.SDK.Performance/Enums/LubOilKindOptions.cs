@@ -8,12 +8,12 @@
         Undef,
 
         /// <summary>
-        /// Luboil for lubricating the engine main parts.
+        /// Luboil for lubricating engine main parts.
         /// </summary>
         Circulation,
 
         /// <summary>
-        /// Luboil of lubricating the cylinder liner (two-stoke engines).
+        /// Luboil for lubricating cylinder liner (two-stoke engines).
         /// </summary>
         Cylinder
     }
