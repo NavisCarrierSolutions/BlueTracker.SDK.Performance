@@ -1,4 +1,4 @@
-﻿namespace BlueTracker.SDK.Performance.Processing.Core
+﻿namespace BlueTracker.SDK.Performance.Processing.Reports
 {
     public class Cargo
     {

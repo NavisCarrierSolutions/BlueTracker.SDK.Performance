@@ -1,5 +1,5 @@
 ﻿using System;
-using BlueTracker.SDK.Performance.Processing.Core;
+using BlueTracker.SDK.Performance.Core;
 
 namespace BlueTracker.SDK.Performance.Processing.Reports
 {
