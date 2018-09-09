@@ -1,9 +1,9 @@
 ﻿using System;
-using BlueTracker.SDK.Performance.Enums;
+using BlueTracker.SDK.Performance.Model.Enums;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-namespace BlueTracker.SDK.Performance.Processing.Reports
+namespace BlueTracker.SDK.Performance.Model.Processing.Reports
 {
     public class PerformanceReport
     {

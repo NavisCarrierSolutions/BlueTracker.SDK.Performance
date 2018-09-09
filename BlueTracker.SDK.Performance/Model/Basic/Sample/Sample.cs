@@ -1,7 +1,7 @@
 ﻿using System;
 using Newtonsoft.Json;
 
-namespace BlueTracker.SDK.Performance.Sample
+namespace BlueTracker.SDK.Performance.Model.Basic.Sample
 {
     /// <summary>
     /// Onboard sample.

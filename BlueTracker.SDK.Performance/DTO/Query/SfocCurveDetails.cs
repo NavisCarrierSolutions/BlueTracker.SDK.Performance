@@ -1,8 +1,8 @@
 ﻿using System;
-using BlueTracker.SDK.Performance.Core;
+using BlueTracker.SDK.Performance.Model.Common;
 using Newtonsoft.Json;
 
-namespace BlueTracker.SDK.Performance.Query
+namespace BlueTracker.SDK.Performance.DTO.Query
 {
     /// <summary>
     /// Details of sfoc curve

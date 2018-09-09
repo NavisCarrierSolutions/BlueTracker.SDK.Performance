@@ -1,7 +1,7 @@
 ﻿using System;
 using Newtonsoft.Json;
 
-namespace BlueTracker.SDK.Performance.Query
+namespace BlueTracker.SDK.Performance.DTO.Query
 {
     public class LegShort
     {

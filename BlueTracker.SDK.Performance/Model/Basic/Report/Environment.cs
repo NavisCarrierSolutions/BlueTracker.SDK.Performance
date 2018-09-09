@@ -1,7 +1,7 @@
-﻿using BlueTracker.SDK.Performance.Core;
+﻿using BlueTracker.SDK.Performance.Model.Common;
 using Newtonsoft.Json;
 
-namespace BlueTracker.SDK.Performance.Report
+namespace BlueTracker.SDK.Performance.Model.Basic.Report
 {
     /// <summary>
     /// Details of the vessel environment conditions (weather etc.).

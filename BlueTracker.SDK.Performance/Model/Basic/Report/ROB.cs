@@ -1,8 +1,7 @@
 ﻿using System.Collections.Generic;
-using BlueCloud.DTO.Report;
 using Newtonsoft.Json;
 
-namespace BlueTracker.SDK.Performance.Report
+namespace BlueTracker.SDK.Performance.Model.Basic.Report
 {
     public class ROB
     {

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace BlueTracker.SDK.Performance.Processing.Reports
+namespace BlueTracker.SDK.Performance.Model.Processing.Reports
 {
     public abstract class FuelConsumer : Aggregate
     {

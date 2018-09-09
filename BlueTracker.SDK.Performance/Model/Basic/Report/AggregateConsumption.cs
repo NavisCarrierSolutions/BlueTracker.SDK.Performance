@@ -1,8 +1,8 @@
-﻿using BlueTracker.SDK.Performance.Enums;
+﻿using BlueTracker.SDK.Performance.Model.Enums;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-namespace BlueTracker.SDK.Performance.Report
+namespace BlueTracker.SDK.Performance.Model.Basic.Report
 {
     public class AggregateConsumption : Consumption
     {

@@ -1,9 +1,9 @@
-﻿using BlueTracker.SDK.Performance.Core;
-using BlueTracker.SDK.Performance.Enums;
+﻿using BlueTracker.SDK.Performance.Model.Common;
+using BlueTracker.SDK.Performance.Model.Enums;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-namespace BlueTracker.SDK.Performance.Report
+namespace BlueTracker.SDK.Performance.Model.Basic.Report
 {
     /// <summary>
     /// Represents the fuel consumption of a fuel by a fuel consumer. You can either use "Amount" or a combination of "Volume" and "Density". If both is provided the value of "Amount" is used

@@ -1,4 +1,4 @@
-﻿namespace BlueTracker.SDK.Performance.Report
+﻿namespace BlueTracker.SDK.Performance.Model.Basic.Report
 {
     /// <summary>
     /// Auxilliary Boiler of vessel, used for steam generation.

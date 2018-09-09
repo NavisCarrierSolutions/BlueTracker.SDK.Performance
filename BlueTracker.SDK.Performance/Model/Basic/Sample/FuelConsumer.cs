@@ -1,6 +1,6 @@
 using Newtonsoft.Json;
 
-namespace BlueTracker.SDK.Performance.Sample
+namespace BlueTracker.SDK.Performance.Model.Basic.Sample
 {
     /// <inheritdoc />
     /// <summary>

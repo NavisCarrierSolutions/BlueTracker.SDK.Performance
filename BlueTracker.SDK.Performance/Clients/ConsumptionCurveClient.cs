@@ -1,6 +1,5 @@
 using BlueTracker.SDK.Performance.Core;
-using BlueTracker.SDK.Performance.Post;
-using BlueTracker.SDK.Performance.Query;
+using BlueTracker.SDK.Performance.DTO.Query;
 
 namespace BlueTracker.SDK.Performance.Clients
 {
@@ -46,10 +45,10 @@ namespace BlueTracker.SDK.Performance.Clients
         /// <returns>
         /// The consumption curve.
         /// </returns>
-        public Query.ConsumptionCurve GetSpecific(int id)
+        public ConsumptionCurve GetSpecific(int id)
         {
             var route = $"/api/v1/consumptionCurves/{id}";
-            var result = GetObject<Query.ConsumptionCurve>(route);
+            var result = GetObject<ConsumptionCurve>(route);
             return result;
         }
 
@@ -75,10 +74,10 @@ namespace BlueTracker.SDK.Performance.Clients
         /// <returns>
         /// The newly created consumption curve.
         /// </returns>
-        public Query.ConsumptionCurve Create(Post.ConsumptionCurve consumptionCurve)
+        public ConsumptionCurve Create(DTO.Post.ConsumptionCurve consumptionCurve)
         {
             const string route = "/api/v1/consumptionCurves";
-            return PostObject<Query.ConsumptionCurve, Post.ConsumptionCurve>(consumptionCurve, route);
+            return PostObject<ConsumptionCurve, DTO.Post.ConsumptionCurve>(consumptionCurve, route);
         }
 
         /// <summary>
@@ -89,10 +88,10 @@ namespace BlueTracker.SDK.Performance.Clients
         /// <returns>
         /// The updated consumption curve.
         /// </returns>
-        public Query.ConsumptionCurve Update(int id, Post.ConsumptionCurve consumptionCurve)
+        public ConsumptionCurve Update(int id, DTO.Post.ConsumptionCurve consumptionCurve)
         {
             var route = $"/api/v1/consumptionCurves/{id}";
-            return PutObject<Query.ConsumptionCurve, Post.ConsumptionCurve>(consumptionCurve, route);
+            return PutObject<ConsumptionCurve, DTO.Post.ConsumptionCurve>(consumptionCurve, route);
         }
 
         /// <summary>

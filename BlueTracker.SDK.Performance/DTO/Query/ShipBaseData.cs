@@ -1,6 +1,6 @@
 using System;
 
-namespace BlueTracker.SDK.Performance.Query
+namespace BlueTracker.SDK.Performance.DTO.Query
 {
     /// <summary>
     /// Ship base data definition.
@@ -40,6 +40,6 @@ namespace BlueTracker.SDK.Performance.Query
         /// <summary>
         /// Base data details (actual base data).
         /// </summary>
-        public Performance.Ship.Ship Details { get; set; }
+        public Model.Basic.Ship.Ship Details { get; set; }
     }
 }

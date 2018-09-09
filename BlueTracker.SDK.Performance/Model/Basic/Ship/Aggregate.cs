@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace BlueTracker.SDK.Performance.Ship
+namespace BlueTracker.SDK.Performance.Model.Basic.Ship
 {
     /// <summary>
     /// Aggregate.

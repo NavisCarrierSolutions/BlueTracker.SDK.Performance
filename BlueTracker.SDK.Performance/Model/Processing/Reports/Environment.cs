@@ -1,6 +1,6 @@
-﻿using BlueTracker.SDK.Performance.Core;
+﻿using BlueTracker.SDK.Performance.Model.Common;
 
-namespace BlueTracker.SDK.Performance.Processing.Reports
+namespace BlueTracker.SDK.Performance.Model.Processing.Reports
 {
     public class Environment
     {

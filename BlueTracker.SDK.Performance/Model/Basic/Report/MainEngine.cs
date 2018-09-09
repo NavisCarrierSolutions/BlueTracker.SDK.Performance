@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace BlueTracker.SDK.Performance.Report
+namespace BlueTracker.SDK.Performance.Model.Basic.Report
 {
     /// <summary>
     /// Main Engine of the vessel used for propulsion, which may be fitted with a shaft generator.

@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace BlueTracker.SDK.Performance.Post
+namespace BlueTracker.SDK.Performance.DTO.Post
 {
     /// <summary>
     /// A ship owner.

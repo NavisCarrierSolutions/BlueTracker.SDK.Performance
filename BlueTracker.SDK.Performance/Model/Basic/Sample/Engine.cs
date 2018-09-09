@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using BlueTracker.SDK.Performance.Enums;
+using BlueTracker.SDK.Performance.Model.Enums;
 using Newtonsoft.Json;
 
-namespace BlueTracker.SDK.Performance.Sample
+namespace BlueTracker.SDK.Performance.Model.Basic.Sample
 {
     /// <summary>
     /// Engine related data.

@@ -1,4 +1,4 @@
-﻿namespace BlueTracker.SDK.Performance.Core
+﻿namespace BlueTracker.SDK.Performance.Model.Common
 {
     /// <summary>
     /// Operational reference point for engine.

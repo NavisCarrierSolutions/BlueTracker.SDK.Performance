@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using BlueTracker.SDK.Performance.Enums;
+using BlueTracker.SDK.Performance.Model.Enums;
 using Newtonsoft.Json;
 
-namespace BlueTracker.SDK.Performance.Report
+namespace BlueTracker.SDK.Performance.Model.Basic.Report
 {
     /// <summary>
     /// Represents the engine area of a vessel.

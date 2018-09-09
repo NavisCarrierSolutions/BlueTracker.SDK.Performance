@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
-using BlueTracker.SDK.Performance.Core;
-using BlueTracker.SDK.Performance.Enums;
+using BlueTracker.SDK.Performance.Model.Common;
+using BlueTracker.SDK.Performance.Model.Enums;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-namespace BlueTracker.SDK.Performance.Post
+namespace BlueTracker.SDK.Performance.DTO.Post
 {
     /// <summary>
     /// A hull model.

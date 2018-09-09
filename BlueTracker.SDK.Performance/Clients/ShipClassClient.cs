@@ -1,4 +1,6 @@
 ﻿using BlueTracker.SDK.Performance.Core;
+using BlueTracker.SDK.Performance.DTO.Post;
+using BlueTracker.SDK.Performance.DTO.Query;
 
 namespace BlueTracker.SDK.Performance.Clients
 {
@@ -42,10 +44,10 @@ namespace BlueTracker.SDK.Performance.Clients
         /// <returns>
         /// The ship class.
         /// </returns>
-        public Query.ShipClass GetSpecific(int id)
+        public ShipClass GetSpecific(int id)
         {
             var route = $"/api/v1/shipClasses/{id}";
-            var ret = GetObject<Query.ShipClass>(route);
+            var ret = GetObject<ShipClass>(route);
             return ret;
         }
 
@@ -57,10 +59,10 @@ namespace BlueTracker.SDK.Performance.Clients
         /// <returns>
         /// A paged list of ship classes.
         /// </returns>
-        public PagedSearchResult<Query.ShipClassShort> GetAll(int page = 0, int pageSize = 20)
+        public PagedSearchResult<ShipClassShort> GetAll(int page = 0, int pageSize = 20)
         {
             var route = $"/api/v1/shipClasses?page={page}&pageSize={pageSize}";
-            var ret = GetObject<PagedSearchResult<Query.ShipClassShort>>(route);
+            var ret = GetObject<PagedSearchResult<ShipClassShort>>(route);
             return ret;
         }
 
@@ -71,10 +73,10 @@ namespace BlueTracker.SDK.Performance.Clients
         /// <returns>
         /// The newly created ship class.
         /// </returns>
-        public Query.ShipClass Create(Post.ShipClassData shipClass)
+        public ShipClass Create(ShipClassData shipClass)
         {
             const string route = "/api/v1/shipClasses";
-            return PostObject<Query.ShipClass, Post.ShipClassData>(shipClass, route);
+            return PostObject<ShipClass, ShipClassData>(shipClass, route);
         }
 
         /// <summary>
@@ -85,10 +87,10 @@ namespace BlueTracker.SDK.Performance.Clients
         /// <returns>
         /// The updated ship class.
         /// </returns>
-        public Query.ShipClass Update(int id, Post.ShipClassData shipClass)
+        public ShipClass Update(int id, ShipClassData shipClass)
         {
             var route = $"/api/v1/shipClasses/{id}";
-            return PutObject<Query.ShipClass, Post.ShipClassData>(shipClass, route);
+            return PutObject<ShipClass, ShipClassData>(shipClass, route);
         }
 
         /// <summary>
@@ -98,10 +100,10 @@ namespace BlueTracker.SDK.Performance.Clients
         /// <returns>
         /// The deleted ship class.
         /// </returns>
-        public Query.ShipClass Delete(int id)
+        public ShipClass Delete(int id)
         {
             var route = $"/api/v1/shipClasses/{id}";
-            return DeleteObject<Query.ShipClass>(route);
+            return DeleteObject<ShipClass>(route);
         }
     }
 }

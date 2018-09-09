@@ -1,4 +1,4 @@
-﻿namespace BlueTracker.SDK.Performance.Enums
+﻿namespace BlueTracker.SDK.Performance.Model.Enums
 {
     /// <summary>
     /// Types of onboard sample sources.

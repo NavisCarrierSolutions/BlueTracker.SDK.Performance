@@ -1,5 +1,5 @@
 ﻿// ReSharper disable InconsistentNaming
-namespace BlueTracker.SDK.Performance.Enums
+namespace BlueTracker.SDK.Performance.Model.Enums
 {
     /// <summary>
     /// Known fuel grades according ISO 8217.

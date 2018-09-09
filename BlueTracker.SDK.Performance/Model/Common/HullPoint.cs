@@ -1,4 +1,4 @@
-﻿namespace BlueTracker.SDK.Performance.Core
+﻿namespace BlueTracker.SDK.Performance.Model.Common
 {
     /// <summary>
     /// Values describing a point in hull model.

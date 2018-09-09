@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using BlueTracker.SDK.Performance.Enums;
+using BlueTracker.SDK.Performance.Model.Enums;
 
-namespace BlueTracker.SDK.Performance.Processing.Reports
+namespace BlueTracker.SDK.Performance.Model.Processing.Reports
 {
     public class Engine
     {

@@ -1,9 +1,9 @@
-﻿using BlueTracker.SDK.Performance.Core;
-using BlueTracker.SDK.Performance.Enums;
+﻿using BlueTracker.SDK.Performance.Model.Common;
+using BlueTracker.SDK.Performance.Model.Enums;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-namespace BlueCloud.DTO.Report
+namespace BlueTracker.SDK.Performance.Model.Basic.Report
 {
     public class FuelQuantity
     {

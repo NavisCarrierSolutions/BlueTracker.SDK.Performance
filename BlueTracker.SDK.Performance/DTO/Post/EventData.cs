@@ -1,9 +1,8 @@
 using System;
-using BlueTracker.SDK.Performance.Enums;
-using BlueTracker.SDK.Performance.Report;
+using BlueTracker.SDK.Performance.Model.Enums;
 using Newtonsoft.Json;
 
-namespace BlueTracker.SDK.Performance.Post
+namespace BlueTracker.SDK.Performance.DTO.Post
 {
     /// <summary>
     /// A navigation or organizational event.

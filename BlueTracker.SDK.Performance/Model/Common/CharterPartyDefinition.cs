@@ -1,6 +1,6 @@
-﻿using BlueTracker.SDK.Performance.Enums;
+﻿using BlueTracker.SDK.Performance.Model.Enums;
 
-namespace BlueTracker.SDK.Performance.Core
+namespace BlueTracker.SDK.Performance.Model.Common
 {
     /// <summary>
     /// Definition of consumption (charter) party

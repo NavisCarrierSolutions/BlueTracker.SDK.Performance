@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace BlueTracker.SDK.Performance.Query
+namespace BlueTracker.SDK.Performance.DTO.Query
 {
     /// <summary>
     /// OnboardSampleSourceValueRange represents a time range for a vessel (identified by ImoNumber) at which onboard sample values are available

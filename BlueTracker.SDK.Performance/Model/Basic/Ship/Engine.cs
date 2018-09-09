@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace BlueTracker.SDK.Performance.Ship
+namespace BlueTracker.SDK.Performance.Model.Basic.Ship
 {
     /// <summary>
     /// Engine related ship data.

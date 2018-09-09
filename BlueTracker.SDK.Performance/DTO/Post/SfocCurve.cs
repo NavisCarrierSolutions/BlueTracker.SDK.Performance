@@ -1,7 +1,7 @@
-﻿using BlueTracker.SDK.Performance.Core;
+﻿using BlueTracker.SDK.Performance.Model.Common;
 using Newtonsoft.Json;
 
-namespace BlueTracker.SDK.Performance.Post
+namespace BlueTracker.SDK.Performance.DTO.Post
 {
     /// <summary>
     /// Tzhe sfoc curve

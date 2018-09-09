@@ -1,6 +1,6 @@
 ﻿using System.Runtime.Serialization;
 
-namespace BlueTracker.SDK.Performance.Enums
+namespace BlueTracker.SDK.Performance.Model.Enums
 {
     /// <summary>
     /// Operation state of the vessel.

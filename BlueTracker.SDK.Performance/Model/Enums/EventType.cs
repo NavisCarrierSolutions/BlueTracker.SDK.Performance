@@ -1,6 +1,6 @@
 using Newtonsoft.Json;
 
-namespace BlueTracker.SDK.Performance.Enums
+namespace BlueTracker.SDK.Performance.Model.Enums
 {
     /// <summary>
     /// Types of navigational events.

@@ -1,5 +1,6 @@
 using BlueTracker.SDK.Performance.Core;
-using BlueTracker.SDK.Performance.Post;
+using BlueTracker.SDK.Performance.DTO.Post;
+using BlueTracker.SDK.Performance.DTO.Query;
 
 namespace BlueTracker.SDK.Performance.Clients
 {
@@ -42,10 +43,10 @@ namespace BlueTracker.SDK.Performance.Clients
         /// <returns>
         /// The hull model.
         /// </returns>
-        public Query.HullModel GetSpecific(int id)
+        public HullModel GetSpecific(int id)
         {
             var route = $"/api/v1/hullModels/{id}";
-            var ret = GetObject<Query.HullModel>(route);
+            var ret = GetObject<HullModel>(route);
             return ret;
         }
 
@@ -57,10 +58,10 @@ namespace BlueTracker.SDK.Performance.Clients
         /// <returns>
         /// A paged list of hull model metadata.
         /// </returns>
-        public PagedSearchResult<Query.HullModel> GetAll(int page = 0, int pageSize = 20)
+        public PagedSearchResult<HullModel> GetAll(int page = 0, int pageSize = 20)
         {
             var route = $"/api/v1/hullModels?page={page}&pageSize={pageSize}";
-            var ret = GetObject<PagedSearchResult<Query.HullModel>>(route);
+            var ret = GetObject<PagedSearchResult<HullModel>>(route);
             return ret;
         }
 
@@ -71,10 +72,10 @@ namespace BlueTracker.SDK.Performance.Clients
         /// <returns>
         /// The newly created hull model.
         /// </returns>
-        public Query.HullModel Create(HullModelData hullModel)
+        public HullModel Create(HullModelData hullModel)
         {
             const string route = "/api/v1/hullModels";
-            return PostObject<Query.HullModel, HullModelData>(hullModel, route);
+            return PostObject<HullModel, HullModelData>(hullModel, route);
         }
 
         /// <summary>
@@ -85,10 +86,10 @@ namespace BlueTracker.SDK.Performance.Clients
         /// <returns>
         /// The updated hull model.
         /// </returns>
-        public Query.HullModel Update(int id, HullModelData hullModel)
+        public HullModel Update(int id, HullModelData hullModel)
         {
             var route = $"/api/v1/hullModels/{id}";
-            return PutObject<Query.HullModel, HullModelData>(hullModel, route);
+            return PutObject<HullModel, HullModelData>(hullModel, route);
         }
 
         /// <summary>
@@ -98,10 +99,10 @@ namespace BlueTracker.SDK.Performance.Clients
         /// <returns>
         /// The deleted hull model.
         /// </returns>
-        public Query.HullModel Delete(int id)
+        public HullModel Delete(int id)
         {
             var route = $"/api/v1/hullModels/{id}";
-            return DeleteObject<Query.HullModel>(route);
+            return DeleteObject<HullModel>(route);
         }
     }
 }

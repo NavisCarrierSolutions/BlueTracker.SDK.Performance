@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using BlueTracker.SDK.Performance.Core;
-using BlueTracker.SDK.Performance.Query;
+using BlueTracker.SDK.Performance.DTO.Query;
 using Newtonsoft.Json.Linq;
 
 namespace BlueTracker.SDK.Performance.Clients
@@ -120,10 +120,10 @@ namespace BlueTracker.SDK.Performance.Clients
         /// </summary>
         /// <param name="reportId">ID of the report.</param>
         /// <returns>The detailed report object.</returns>
-        public Report.PerformanceReport GetOriginal(int reportId)
+        public Model.Processing.Reports.PerformanceReport GetOriginal(int reportId)
         {
             var route = $"/api/v1/reports/{reportId}/original";
-            var ret = GetObject<Report.PerformanceReport>(route);
+            var ret = GetObject<Model.Processing.Reports.PerformanceReport>(route);
             return ret;
         }
 
@@ -160,9 +160,9 @@ namespace BlueTracker.SDK.Performance.Clients
         /// <returns>
         /// The report metadata object which was created for the report.
         /// </returns>
-        public PerformanceReport CreateOrUpdate(Report.PerformanceReport report)
+        public PerformanceReport CreateOrUpdate(Model.Processing.Reports.PerformanceReport report)
         {
-            return PostObject<PerformanceReport, Report.PerformanceReport>(report, "/api/v1/reports");
+            return PostObject<PerformanceReport, Model.Processing.Reports.PerformanceReport>(report, "/api/v1/reports");
         }
 
         /// <summary>
@@ -176,9 +176,9 @@ namespace BlueTracker.SDK.Performance.Clients
         /// Uploads of multiple items must refer to the same IMO number. The maximum number
         /// of items is 25. Further it is required to enable the batch mode for the ship.
         /// </remarks>
-        public List<PerformanceReport> CreateOrUpdate(List<Report.PerformanceReport> reports)
+        public List<PerformanceReport> CreateOrUpdate(List<Model.Processing.Reports.PerformanceReport> reports)
         {
-            return PostObject<List<PerformanceReport>, List<Report.PerformanceReport>>(reports, "/api/v1/reports/batch");
+            return PostObject<List<PerformanceReport>, List<Model.Processing.Reports.PerformanceReport>>(reports, "/api/v1/reports/batch");
         }
 
         /// <summary>

@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace BlueTracker.SDK.Performance.Core
+namespace BlueTracker.SDK.Performance.Model.Common
 {
     /// <summary>
     /// Generic height and direction (true/relative) description.

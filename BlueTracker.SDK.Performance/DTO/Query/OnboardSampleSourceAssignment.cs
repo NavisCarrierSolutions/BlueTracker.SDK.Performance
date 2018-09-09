@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BlueTracker.SDK.Performance.Query
+namespace BlueTracker.SDK.Performance.DTO.Query
 {
     /// <summary>
     ///     Assignment of a vessel to a onboard sample source
