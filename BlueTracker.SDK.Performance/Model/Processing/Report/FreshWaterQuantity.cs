@@ -2,7 +2,7 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-namespace BlueTracker.SDK.Performance.Model.Processing.Reports
+namespace BlueTracker.SDK.Performance.Model.Processing.Report
 {
     public class FreshWaterQuantity
     {

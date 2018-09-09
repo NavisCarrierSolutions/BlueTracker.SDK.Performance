@@ -1,7 +1,7 @@
 ﻿using System;
 using BlueTracker.SDK.Performance.Model.Common;
 
-namespace BlueTracker.SDK.Performance.Model.Processing.Reports
+namespace BlueTracker.SDK.Performance.Model.Processing.Report
 {
     public class Navigation
     {

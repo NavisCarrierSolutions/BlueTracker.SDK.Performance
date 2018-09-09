@@ -1,4 +1,4 @@
-﻿namespace BlueTracker.SDK.Performance.Model.Processing.Reports
+﻿namespace BlueTracker.SDK.Performance.Model.Processing.Report
 {
     public abstract class InternalCombustionEngine : FuelConsumer
     {

@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using BlueTracker.SDK.Performance.Core;
 using BlueTracker.SDK.Performance.DTO.Query;
+using BlueTracker.SDK.Performance.Model.Processing.Report;
 using Newtonsoft.Json.Linq;
+using PerformanceReport = BlueTracker.SDK.Performance.DTO.Query.PerformanceReport;
 
 namespace BlueTracker.SDK.Performance.Clients
 {
@@ -134,10 +136,10 @@ namespace BlueTracker.SDK.Performance.Clients
         /// <returns>
         /// A JSON object, which represents the fully processed report details.
         /// </returns>
-        public Model.Processing.Reports.PerformanceReportDetails GetResult(int reportId)
+        public PerformanceReportDetails GetResult(int reportId)
         {
             var route = $"/api/v1/reports/{reportId}/result";
-            var ret = GetObject<Model.Processing.Reports.PerformanceReportDetails>(route);
+            var ret = GetObject<PerformanceReportDetails>(route);
             return ret;
         }
 

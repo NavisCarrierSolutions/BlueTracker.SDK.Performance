@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Newtonsoft.Json;
 
-namespace BlueTracker.SDK.Performance.Model.Processing.Reports
+namespace BlueTracker.SDK.Performance.Model.Processing.Report
 {
     public class OtherConsumption
     {

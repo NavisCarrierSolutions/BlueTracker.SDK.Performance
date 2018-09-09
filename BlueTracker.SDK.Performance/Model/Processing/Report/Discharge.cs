@@ -2,7 +2,7 @@
 using BlueTracker.SDK.Performance.Model.Enums;
 using Newtonsoft.Json;
 
-namespace BlueTracker.SDK.Performance.Model.Processing.Reports
+namespace BlueTracker.SDK.Performance.Model.Processing.Report
 {
     public class Discharge
     {

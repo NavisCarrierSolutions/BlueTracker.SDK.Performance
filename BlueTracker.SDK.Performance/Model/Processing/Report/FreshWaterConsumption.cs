@@ -2,13 +2,13 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-namespace BlueTracker.SDK.Performance.Model.Processing.Reports
+namespace BlueTracker.SDK.Performance.Model.Processing.Report
 {
-    public class OilyWaterDischarge
+    public class FreshWaterConsumption
     {
-        [JsonProperty(PropertyName = "method")]
+        [JsonProperty(PropertyName = "kind")]
         [JsonConverter(typeof(StringEnumConverter))]
-        public OilyWaterDischargeMethods Method { get; set; }
+        public FreshWaterConsumptionKindOptions Kind { get; set; }
 
         [JsonProperty(PropertyName = "volume")]
         public double? Volume { get; set; }
