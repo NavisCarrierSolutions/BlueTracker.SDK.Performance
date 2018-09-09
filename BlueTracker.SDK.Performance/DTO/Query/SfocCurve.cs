@@ -7,7 +7,7 @@ namespace BlueTracker.SDK.Performance.DTO.Query
     /// <summary>
     /// Details of sfoc curve
     /// </summary>
-    public class SfocCurveDetails
+    public class SfocCurve
     {
         /// <summary>
         /// The id

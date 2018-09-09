@@ -43,7 +43,7 @@ namespace BlueTracker.SDK.Performance.Clients
         /// </summary>
         /// <param name="imoNumber">7-digit IMO-number of ship.</param>
         /// <returns>A list of ship base data definitions.</returns>
-        public IList<ShipBaseDataShort> GetAll(int imoNumber)
+        public List<ShipBaseDataShort> GetAll(int imoNumber)
         {
             var requestString = $"/api/v1/ships/{imoNumber}/baseData";
 
@@ -111,14 +111,14 @@ namespace BlueTracker.SDK.Performance.Clients
         /// <param name="baseData">Base data definition.</param>
         /// <param name="effectiveFrom">Timestamp from which the definition is effective.</param>
         /// <returns>The updated definition.</returns>
-        public ShipBaseData Update(int id, int imoNumber, ShipBaseData baseData, DateTime? effectiveFrom = null)
+        public ShipBaseData Update(int id, int imoNumber, Model.Basic.Ship.Ship baseData, DateTime? effectiveFrom = null)
         {
             var requestString = $"/api/v1/ships/{imoNumber}/baseData/{id}";
             if (effectiveFrom != null)
             {
                 requestString = $"{requestString}?effectiveFrom={effectiveFrom:yyyy-MM-ddTHH:mm}";
             }
-            var result = PostObject<ShipBaseData, ShipBaseData>(baseData, requestString);
+            var result = PostObject<ShipBaseData, Model.Basic.Ship.Ship>(baseData, requestString);
 
             return result;
         }

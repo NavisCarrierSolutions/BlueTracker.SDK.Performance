@@ -6,7 +6,7 @@ namespace BlueTracker.SDK.Performance.DTO.Post
     /// <summary>
     /// Tzhe sfoc curve
     /// </summary>
-    public class SfocCurve
+    public class SfocCurveData
     {
         /// <summary>
         /// The name of sfoc curve

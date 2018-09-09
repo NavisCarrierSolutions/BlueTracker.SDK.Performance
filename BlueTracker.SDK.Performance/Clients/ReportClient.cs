@@ -120,10 +120,10 @@ namespace BlueTracker.SDK.Performance.Clients
         /// </summary>
         /// <param name="reportId">ID of the report.</param>
         /// <returns>The detailed report object.</returns>
-        public Model.Processing.Reports.PerformanceReport GetOriginal(int reportId)
+        public Model.Basic.Report.PerformanceReport GetOriginal(int reportId)
         {
             var route = $"/api/v1/reports/{reportId}/original";
-            var ret = GetObject<Model.Processing.Reports.PerformanceReport>(route);
+            var ret = GetObject<Model.Basic.Report.PerformanceReport>(route);
             return ret;
         }
 
@@ -134,10 +134,10 @@ namespace BlueTracker.SDK.Performance.Clients
         /// <returns>
         /// A JSON object, which represents the fully processed report details.
         /// </returns>
-        public JObject GetResult(int reportId)
+        public Model.Processing.Reports.PerformanceReportDetails GetResult(int reportId)
         {
             var route = $"/api/v1/reports/{reportId}/result";
-            var ret = GetJson(route);
+            var ret = GetObject<Model.Processing.Reports.PerformanceReportDetails>(route);
             return ret;
         }
 
@@ -160,9 +160,9 @@ namespace BlueTracker.SDK.Performance.Clients
         /// <returns>
         /// The report metadata object which was created for the report.
         /// </returns>
-        public PerformanceReport CreateOrUpdate(Model.Processing.Reports.PerformanceReport report)
+        public PerformanceReport CreateOrUpdate(Model.Basic.Report.PerformanceReport report)
         {
-            return PostObject<PerformanceReport, Model.Processing.Reports.PerformanceReport>(report, "/api/v1/reports");
+            return PostObject<PerformanceReport, Model.Basic.Report.PerformanceReport>(report, "/api/v1/reports");
         }
 
         /// <summary>
@@ -176,9 +176,9 @@ namespace BlueTracker.SDK.Performance.Clients
         /// Uploads of multiple items must refer to the same IMO number. The maximum number
         /// of items is 25. Further it is required to enable the batch mode for the ship.
         /// </remarks>
-        public List<PerformanceReport> CreateOrUpdate(List<Model.Processing.Reports.PerformanceReport> reports)
+        public List<PerformanceReport> CreateOrUpdate(List<Model.Basic.Report.PerformanceReport> reports)
         {
-            return PostObject<List<PerformanceReport>, List<Model.Processing.Reports.PerformanceReport>>(reports, "/api/v1/reports/batch");
+            return PostObject<List<PerformanceReport>, List<Model.Basic.Report.PerformanceReport>>(reports, "/api/v1/reports/batch");
         }
 
         /// <summary>

@@ -7,7 +7,7 @@ namespace BlueTracker.SDK.Performance.DTO.Post
     /// <summary>
     /// The consumption curve
     /// </summary>
-    public class ConsumptionCurve
+    public class ConsumptionCurveData
     {
         /// <summary>
         /// The name of the consumption curve
