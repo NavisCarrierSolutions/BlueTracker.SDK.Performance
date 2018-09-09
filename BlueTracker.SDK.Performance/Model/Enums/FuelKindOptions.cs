@@ -2,68 +2,93 @@
 namespace BlueTracker.SDK.Performance.Model.Enums
 {
     /// <summary>
-    /// Known fuel kinds.
+    /// Known fuel types.
     /// </summary>
     public enum FuelKindOptions
     {
         /// <summary>
-        /// Undefined fuel type. Use this if the kind of fuel is unknown or not included.
+        /// Undefined
         /// </summary>
         Undef,
 
         /// <summary>
-        /// Heavy Fuel Oil (unspecific sulfur content).
+        /// HFO (Heavy Fuel Oil)
         /// </summary>
         HFO,
 
         /// <summary>
-        /// Heavy Fuel Oil (high sulfur content).
+        /// HFOHS (Heavy Fuel Oil Heavy Sulphur)
         /// </summary>
         HFOHS,
 
         /// <summary>
-        /// Heavy Fuel Oil (low sulfur content).
+        /// HFOLS (Heavy Fuel Oil Low Sulphur)
         /// </summary>
         HFOLS,
 
         /// <summary>
-        /// Heavy Fuel Oil (very low sulfur content).
+        /// HFOLLS (Heavy Fuel Oil Low Low Sulphur)
         /// </summary>
         HFOLLS,
 
         /// <summary>
-        /// Marine Diesel Oil (unspecific sulfur content).
+        /// Marine Diesel Oil
         /// </summary>
         MDO,
 
         /// <summary>
-        /// Marine Diesel Oil (high sulfur content).
+        /// Marine Diesel Oil Heavy Sulphur
         /// </summary>
         MDOHS,
 
         /// <summary>
-        /// Marine Diesel Oil(low sulfur content).
+        /// Marine Diesel Oil Low Sulphur
         /// </summary>
         MDOLS,
 
         /// <summary>
-        /// Marine Diesel Oil (very low sulfur content).
+        /// Marine Diesel Oil Low Low Sulphur
         /// </summary>
         MDOLLS,
 
         /// <summary>
-        /// Marine Gas Oil (unspecific sulfur content).
+        /// Marine Gasoil
         /// </summary>
         MGO,
 
         /// <summary>
-        /// Marine Gas Oil (low sulfur content).
+        /// Marine Gasoil Low Sulphur
         /// </summary>
         MGOLS,
 
         /// <summary>
-        /// Marine Gas Oil (very low sulfur content).
+        /// Marine Gasoil Low Low Sulphur
         /// </summary>
-        MGOLLS
+        MGOLLS,
+
+        /// <summary>
+        /// Liquefied Natural Gase
+        /// </summary>
+        LNG,
+
+        /// <summary>
+        /// Liquefied Petroleum Gas (Propane)
+        /// </summary>
+        Propane,
+
+        /// <summary>
+        /// Liquefied Petroleum Gas (Butane)
+        /// </summary>
+        Butane,
+
+        /// <summary>
+        /// Methanol
+        /// </summary>
+        Methanol,
+
+        /// <summary>
+        /// Ethanol
+        /// </summary>
+        Ethanol
     }
 }
