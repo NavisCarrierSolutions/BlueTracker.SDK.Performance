@@ -1,5 +1,5 @@
 ﻿using BlueTracker.SDK.Performance.Core;
-using BlueTracker.SDK.Performance.Query;
+using BlueTracker.SDK.Performance.DTO.Query;
 
 namespace BlueTracker.SDK.Performance.Clients
 {
@@ -58,10 +58,10 @@ namespace BlueTracker.SDK.Performance.Clients
         /// <returns>
         /// The newly created or updated base data object.
         /// </returns>
-        public ShipClassBaseData CreateOrUpdate(int id, Ship.Ship shipClassBaseData)
+        public ShipClassBaseData CreateOrUpdate(int id, Model.Basic.Ship.Ship shipClassBaseData)
         {
             var route = $"/api/v1/shipClasses/{id}/baseData";
-            var ret = PostObject<ShipClassBaseData, Ship.Ship>(shipClassBaseData, route);
+            var ret = PostObject<ShipClassBaseData, Model.Basic.Ship.Ship>(shipClassBaseData, route);
             return ret;
         }
 

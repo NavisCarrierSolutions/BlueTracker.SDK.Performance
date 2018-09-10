@@ -1,7 +1,7 @@
 ﻿using BlueTracker.SDK.Performance.Core;
-using BlueTracker.SDK.Performance.Enums;
-using BlueTracker.SDK.Performance.Post;
-using BlueTracker.SDK.Performance.Query;
+using BlueTracker.SDK.Performance.DTO.Post;
+using BlueTracker.SDK.Performance.DTO.Query;
+using BlueTracker.SDK.Performance.Model.Enums;
 
 namespace BlueTracker.SDK.Performance.Clients
 {
@@ -43,10 +43,10 @@ namespace BlueTracker.SDK.Performance.Clients
         /// </summary>
         /// <param name="imoNumber">IMO number of the ship.</param>
         /// <returns>The ship object.</returns>
-        public Query.Ship GetSpecific(int imoNumber)
+        public Ship GetSpecific(int imoNumber)
         {
             var route = $"/api/v1/ships/{imoNumber}";
-            var ret = GetObject<Query.Ship>(route);
+            var ret = GetObject<Ship>(route);
             return ret;
         }
 
@@ -71,9 +71,9 @@ namespace BlueTracker.SDK.Performance.Clients
         /// <returns>
         /// The newly created ship object.
         /// </returns>
-        public Query.Ship CreateOrUpdate(ShipData shipData)
+        public Ship CreateOrUpdate(ShipData shipData)
         {
-            return PostObject<Query.Ship, ShipData>(shipData, "/api/v1/ships");
+            return PostObject<Ship, ShipData>(shipData, "/api/v1/ships");
         }
 
         /// <summary>
@@ -87,10 +87,10 @@ namespace BlueTracker.SDK.Performance.Clients
         /// This is useful, if big amounts of items needs to be pushed. When the batch mode is disabled, a full
         /// re-calculation is triggered.
         /// </remarks>
-        public Query.Ship SetBatchMode(int imoNumber, bool enableBatchMode)
+        public Ship SetBatchMode(int imoNumber, bool enableBatchMode)
         {
             var route = $"/api/v1/ships/{imoNumber}/batchMode";
-            return PostObject<Query.Ship, bool>(enableBatchMode, route);
+            return PostObject<Ship, bool>(enableBatchMode, route);
         }
 
         /// <summary>
@@ -104,10 +104,10 @@ namespace BlueTracker.SDK.Performance.Clients
         /// feed state will be set to <see cref="FeedState.Calculation"/>. When the job is done, the ship feed 
         /// state will be set back to <see cref="FeedState.Online"/>.
         /// </remarks>
-        public Query.Ship Calculate(int imoNumber)
+        public Ship Calculate(int imoNumber)
         {
             var route = $"/api/v1/ships/{imoNumber}/batchMode";
-            return PostEmpty<Query.Ship>(route);
+            return PostEmpty<Ship>(route);
         }
 
         /// <summary>
@@ -118,10 +118,10 @@ namespace BlueTracker.SDK.Performance.Clients
         /// <returns>
         /// The deleted ship class.
         /// </returns>
-        public Query.Ship Delete(int imoNumber, ShipDeletionLevels deletionLevel)
+        public Ship Delete(int imoNumber, ShipDeletionLevels deletionLevel)
         {
             var route = $"/api/v1/ships/{imoNumber}/deletionlevels/{deletionLevel}";
-            return DeleteObject<Query.Ship>(route);
+            return DeleteObject<Ship>(route);
         }
     }
 }
