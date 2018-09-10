@@ -15,6 +15,16 @@
         /// <summary>
         /// Luboil for lubricating cylinder liner (two-stoke engines).
         /// </summary>
-        Cylinder
+        Cylinder,
+
+        /// <summary>
+        /// LS luboil of lubricating the cylinder liner (two-stoke engines).
+        /// </summary>
+        CylinderLS,
+
+        /// <summary>
+        /// HS luboil of lubricating the cylinder liner (two-stoke engines).
+        /// </summary>
+        CylinderHS
     }
 }
