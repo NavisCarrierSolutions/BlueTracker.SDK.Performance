@@ -31,6 +31,8 @@ namespace BlueTracker.SDK.Performance.Model.Processing.Report
 
         public DateTimeOffset? MastersEta { get; set; }
 
+        public double? DistanceToGo { get; set; }
+
         public string ArrivalPortUnloc { get; set; }
 
         public string ArrivalPortName { get; set; }

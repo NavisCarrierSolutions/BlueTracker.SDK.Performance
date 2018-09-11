@@ -82,6 +82,12 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Report
         public DateTimeOffset? MastersEta { get; set; }
 
         /// <summary>
+        /// Remaining distance to the arrival port. (miles)
+        /// </summary>
+        [JsonProperty(PropertyName = "distanceToGo")]
+        public double? DistanceToGo { get; set; }
+
+        /// <summary>
         /// UN-LOCODE of arrival port (5-char code).
         /// </summary>
         [JsonProperty(PropertyName = "arrivalPortUnloc")]
