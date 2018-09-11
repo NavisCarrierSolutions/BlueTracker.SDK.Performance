@@ -18,12 +18,12 @@
         Cylinder,
 
         /// <summary>
-        /// LS luboil of lubricating the cylinder liner (two-stoke engines).
+        /// Low-sulphur luboil of lubricating the cylinder liner (two-stoke engines).
         /// </summary>
         CylinderLS,
 
         /// <summary>
-        /// HS luboil of lubricating the cylinder liner (two-stoke engines).
+        /// High-sulphur luboil of lubricating the cylinder liner (two-stoke engines).
         /// </summary>
         CylinderHS
     }
