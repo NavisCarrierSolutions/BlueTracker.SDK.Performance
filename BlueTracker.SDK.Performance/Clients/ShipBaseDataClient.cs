@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using BlueTracker.SDK.Performance.Core;
-using BlueTracker.SDK.Performance.Query;
+using BlueTracker.SDK.Performance.DTO.Query;
 
 namespace BlueTracker.SDK.Performance.Clients
 {
@@ -14,16 +14,26 @@ namespace BlueTracker.SDK.Performance.Clients
         /// <summary>
         /// Creates a new ShipBaseDataClient instance.
         /// </summary>
+        /// <param name="authorization">The API token.</param>
+        /// <remarks>
+        /// The key BlueCloud_ApiKey is used to specify the API token.
+        /// </remarks>
+        public ShipBaseDataClient(string authorization) :
+            base(authorization)
+        {
+        }
+
+        /// <summary>
+        /// Creates a new ShipBaseDataClient instance.
+        /// </summary>
         /// <param name="serverAddress">The server address.</param>
         /// <param name="authorization">The API token.</param>
         /// <remarks>
-        /// Instead of specifying the server address and the API token with constructur parameters,
-        /// they can be set in the appSettings section of the app.config. The key BlueCloud_ApiKey
-        /// is used to specify the API token, the key BlueCloud_ServerAddress is used to set the
-        /// service address. If the service address is neither specified as constructor parameter,
-        /// nor in the app settings, the default service address will be used.
+        /// The key BlueCloud_ApiKey is used to specify the API token, the key BlueCloud_ServerAddress is used to set the
+        /// service address. If the service address is not specified as constructor parameter,
+        /// the default service address will be used.
         /// </remarks>
-        public ShipBaseDataClient(string serverAddress = null, string authorization = null) :
+        public ShipBaseDataClient(string serverAddress, string authorization) :
             base(serverAddress, authorization)
         {
         }
@@ -33,7 +43,7 @@ namespace BlueTracker.SDK.Performance.Clients
         /// </summary>
         /// <param name="imoNumber">7-digit IMO-number of ship.</param>
         /// <returns>A list of ship base data definitions.</returns>
-        public IList<ShipBaseDataShort> GetAll(int imoNumber)
+        public List<ShipBaseDataShort> GetAll(int imoNumber)
         {
             var requestString = $"/api/v1/ships/{imoNumber}/baseData";
 
@@ -49,7 +59,7 @@ namespace BlueTracker.SDK.Performance.Clients
         /// <param name="baseData">Base data definition.</param>
         /// <param name="effectiveFrom">Timestamp from which the definition is effective.</param>
         /// <returns>The newly created or updated definition.</returns>
-        public ShipBaseData CreateOrUpdate(int imoNumber, Ship.Ship baseData, DateTime? effectiveFrom = null)
+        public ShipBaseData CreateOrUpdate(int imoNumber, Model.Basic.Ship.Ship baseData, DateTime? effectiveFrom = null)
         {
             var requestString = $"/api/v1/ships/{imoNumber}/baseData";
 
@@ -58,7 +68,7 @@ namespace BlueTracker.SDK.Performance.Clients
                 requestString = $"{requestString}?effectiveFrom={effectiveFrom:yyyy-MM-ddTHH:mm}";
             }
 
-            var result = PostObject<ShipBaseData, Ship.Ship>(baseData, requestString);
+            var result = PostObject<ShipBaseData, Model.Basic.Ship.Ship>(baseData, requestString);
 
             return result;
         }
@@ -69,11 +79,11 @@ namespace BlueTracker.SDK.Performance.Clients
         /// <param name="imoNumber">7-digit IMO-number of ship.</param>
         /// <param name="effectiveOn">Effective date and time.</param>
         /// <returns>A ship base data definition.</returns>
-        public Ship.Ship GetByDate(int imoNumber, DateTime effectiveOn)
+        public Model.Basic.Ship.Ship GetByDate(int imoNumber, DateTime effectiveOn)
         {
             var requestString = $"/api/v1/ships/{imoNumber}/baseData/{effectiveOn:yyyy-MM-ddTHH:mm}";
 
-            var result = GetObject<Ship.Ship>(requestString);
+            var result = GetObject<Model.Basic.Ship.Ship>(requestString);
 
             return result;
         }
@@ -101,14 +111,14 @@ namespace BlueTracker.SDK.Performance.Clients
         /// <param name="baseData">Base data definition.</param>
         /// <param name="effectiveFrom">Timestamp from which the definition is effective.</param>
         /// <returns>The updated definition.</returns>
-        public ShipBaseData Update(int id, int imoNumber, ShipBaseData baseData, DateTime? effectiveFrom = null)
+        public ShipBaseData Update(int id, int imoNumber, Model.Basic.Ship.Ship baseData, DateTime? effectiveFrom = null)
         {
             var requestString = $"/api/v1/ships/{imoNumber}/baseData/{id}";
             if (effectiveFrom != null)
             {
                 requestString = $"{requestString}?effectiveFrom={effectiveFrom:yyyy-MM-ddTHH:mm}";
             }
-            var result = PostObject<ShipBaseData, ShipBaseData>(baseData, requestString);
+            var result = PostObject<ShipBaseData, Model.Basic.Ship.Ship>(baseData, requestString);
 
             return result;
         }

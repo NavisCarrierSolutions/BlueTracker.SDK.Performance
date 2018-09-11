@@ -1,4 +1,6 @@
 ﻿using BlueTracker.SDK.Performance.Core;
+using BlueTracker.SDK.Performance.DTO.Post;
+using BlueTracker.SDK.Performance.DTO.Query;
 
 namespace BlueTracker.SDK.Performance.Clients
 {
@@ -11,16 +13,26 @@ namespace BlueTracker.SDK.Performance.Clients
         /// <summary>
         /// Creates a new TagClient instance.
         /// </summary>
+        /// <param name="authorization">The API token.</param>
+        /// <remarks>
+        /// The key BlueCloud_ApiKey is used to specify the API token.
+        /// </remarks>
+        public TagClient(string authorization)
+            : base(authorization)
+        {
+        }
+
+        /// <summary>
+        /// Creates a new TagClient instance.
+        /// </summary>
         /// <param name="serverAddress">The server address.</param>
         /// <param name="authorization">The API token.</param>
         /// <remarks>
-        /// Instead of specifying the server address and the API token with constructur parameters,
-        /// they can be set in the appSettings section of the app.config. The key BlueCloud_ApiKey
-        /// is used to specify the API token, the key BlueCloud_ServerAddress is used to set the
-        /// service address. If the service address is neither specified as constructor parameter,
-        /// nor in the app settings, the default service address will be used.
+        /// The key BlueCloud_ApiKey is used to specify the API token, the key BlueCloud_ServerAddress is used to set the
+        /// service address. If the service address is not specified as constructor parameter,
+        /// the default service address will be used.
         /// </remarks>
-        public TagClient(string serverAddress = null, string authorization = null) 
+        public TagClient(string serverAddress, string authorization) 
             : base(serverAddress, authorization)
         {
         }
@@ -32,10 +44,10 @@ namespace BlueTracker.SDK.Performance.Clients
         /// <returns>
         /// The tag.
         /// </returns>
-        public Query.Tag GetSpecific(int id)
+        public Tag GetSpecific(int id)
         {
             var route = $"/api/v1/tags/{id}";
-            var ret = GetObject<Query.Tag>(route);
+            var ret = GetObject<Tag>(route);
             return ret;
         }
 
@@ -47,10 +59,10 @@ namespace BlueTracker.SDK.Performance.Clients
         /// <returns>
         /// A paged list of tags.
         /// </returns>
-        public PagedSearchResult<Query.Tag> GetAll(int page = 0, int pageSize = 20)
+        public PagedSearchResult<Tag> GetAll(int page = 0, int pageSize = 20)
         {
             var route = $"/api/v1/tags?page={page}&pageSize={pageSize}";
-            var ret = GetObject<PagedSearchResult<Query.Tag>>(route);
+            var ret = GetObject<PagedSearchResult<Tag>>(route);
             return ret;
         }
 
@@ -61,10 +73,10 @@ namespace BlueTracker.SDK.Performance.Clients
         /// <returns>
         /// The newly created tag.
         /// </returns>
-        public Query.Tag Create(Post.TagData tagData)
+        public Tag Create(TagData tagData)
         {
             const string route = "/api/v1/tags";
-            return PostObject<Query.Tag, Post.TagData>(tagData, route);
+            return PostObject<Tag, TagData>(tagData, route);
         }
 
         /// <summary>
@@ -75,10 +87,10 @@ namespace BlueTracker.SDK.Performance.Clients
         /// <returns>
         /// The updated tag.
         /// </returns>
-        public Query.Tag Update(int id, Post.TagData tagData)
+        public Tag Update(int id, TagData tagData)
         {
             var route = $"/api/v1/tags/{id}";
-            return PutObject<Query.Tag, Post.TagData>(tagData, route);
+            return PutObject<Tag, TagData>(tagData, route);
         }
 
         /// <summary>
@@ -88,10 +100,10 @@ namespace BlueTracker.SDK.Performance.Clients
         /// <returns>
         /// The deleted tag.
         /// </returns>
-        public Query.Tag Delete(int id)
+        public Tag Delete(int id)
         {
             var route = $"/api/v1/tags/{id}";
-            return DeleteObject<Query.Tag>(route);
+            return DeleteObject<Tag>(route);
         }
 
         /// <summary>
@@ -100,10 +112,10 @@ namespace BlueTracker.SDK.Performance.Clients
         /// <param name="id">ID of tag to be attached.</param>
         /// <param name="imoNumber">IMO number of ship.</param>
         /// <returns>The newly created association.</returns>
-        public Query.ShipTag TagShip(int id, int imoNumber)
+        public ShipTag TagShip(int id, int imoNumber)
         {
             var route = $"/api/v1/tags/{id}/ships/{imoNumber}";
-            return PutObject<Query.ShipTag, object>(null, route);
+            return PutObject<ShipTag, object>(null, route);
         }
 
         /// <summary>
@@ -112,10 +124,10 @@ namespace BlueTracker.SDK.Performance.Clients
         /// <param name="id">ID of the tag to be detached.</param>
         /// <param name="imoNumber">IMO number of ship.</param>
         /// <returns>The removed association.</returns>
-        public Query.ShipTag UntagShip(int id, int imoNumber)
+        public ShipTag UntagShip(int id, int imoNumber)
         {
             var route = $"/api/v1/tags/{id}/ships/{imoNumber}";
-            return DeleteObject<Query.ShipTag>(route);
+            return DeleteObject<ShipTag>(route);
         }
     }
 }

@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using BlueTracker.SDK.Performance.Core;
-using BlueTracker.SDK.Performance.Query;
 
 namespace BlueTracker.SDK.Performance.Clients
 {
@@ -15,16 +14,26 @@ namespace BlueTracker.SDK.Performance.Clients
         /// <summary>
         /// Creates a new SampleClient instance.
         /// </summary>
+        /// <param name="authorization">The API token.</param>
+        /// <remarks>
+        /// The key BlueCloud_ApiKey is used to specify the API token. 
+        /// </remarks>
+        public OnboardSampleValueClient(string authorization) :
+            base(authorization)
+        {
+        }
+
+        /// <summary>
+        /// Creates a new SampleClient instance.
+        /// </summary>
         /// <param name="serverAddress">The server address.</param>
         /// <param name="authorization">The API token.</param>
         /// <remarks>
-        /// Instead of specifying the server address and the API token with constructur parameters,
-        /// they can be set in the appSettings section of the app.config. The key BlueCloud_ApiKey
-        /// is used to specify the API token, the key BlueCloud_ServerAddress is used to set the
-        /// service address. If the service address is neither specified as constructor parameter,
-        /// nor in the app settings, the default service address will be used.
+        /// The key BlueCloud_ApiKey is used to specify the API token, the key BlueCloud_ServerAddress is used to set the
+        /// service address. If the service address is not specified as constructor parameter,
+        /// the default service address will be used.
         /// </remarks>
-        public OnboardSampleValueClient(string serverAddress = null, string authorization = null) :
+        public OnboardSampleValueClient(string serverAddress, string authorization) :
             base(serverAddress, authorization)
         {
         }
@@ -36,9 +45,9 @@ namespace BlueTracker.SDK.Performance.Clients
         /// <param name="sourceName">Name of the sample source.</param>
         /// <param name="imoNumber">IMO number of the ship.</param>
         /// <returns>The count of data posted</returns>
-        public int PostSample(string sourceName, int imoNumber, params Sample.Sample[] samples)
+        public int PostSample(string sourceName, int imoNumber, params Model.Basic.Sample.Sample[] samples)
         {
-            return PostObject<int, List<Sample.Sample>>(samples.ToList(),
+            return PostObject<int, List<Model.Basic.Sample.Sample>>(samples.ToList(),
                 $"api/v1/onboardSamples/sources/{sourceName}/{imoNumber}");
         }
 
@@ -50,7 +59,7 @@ namespace BlueTracker.SDK.Performance.Clients
         /// <param name="start">Start time of query</param>
         /// <param name="end">End time of query</param>
         /// <returns>Query result with samples.</returns>
-        public List<Sample.Sample> Query(string sourceName, int imoNumber, DateTime? start = null, DateTime? end = null)
+        public List<Model.Basic.Sample.Sample> Query(string sourceName, int imoNumber, DateTime? start = null, DateTime? end = null)
         {
             var url = $"api/v1/onboardSamples/sources/{sourceName}/{imoNumber}";
 
@@ -61,7 +70,7 @@ namespace BlueTracker.SDK.Performance.Clients
             else if (end != null)
                 url += $"?end={end:O}";
 
-            return GetObject<List<Sample.Sample>>(url);
+            return GetObject<List<Model.Basic.Sample.Sample>>(url);
         }
     }
 }

@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Configuration;
 using System.IO;
-using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using System.Security.Authentication;
-using System.Web;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
@@ -23,11 +19,28 @@ namespace BlueTracker.SDK.Performance.Core
 
         private const string DefaultServerAddress = "https://api.bluetracker.one";
 
-        protected ApiWrapper(string serverAddress = null, string authorization = null)
+        protected ApiWrapper(string authorization) : this(null, authorization)
         {
-            _serverAddress = string.IsNullOrEmpty(serverAddress) ? GetServerAddress() : serverAddress;
-            _authorization = string.IsNullOrEmpty(authorization) ? GetApiKey() : authorization;
+        }
+
+        protected ApiWrapper(string serverAddress, string authorization)
+        {
+            if (string.IsNullOrEmpty(authorization))
+            {
+                throw new ArgumentNullException(nameof(authorization));
+            }
+
+            _serverAddress = serverAddress;
+
+            if (string.IsNullOrEmpty(_serverAddress))
+            {
+                _serverAddress = DefaultServerAddress;
+            }
+
+            _authorization = authorization;
+
             _httpClient.BaseAddress = new Uri(_serverAddress);
+            _httpClient.DefaultRequestHeaders.Authorization = GetAuthHeader();
         }
 
         protected TR PostObject<TR, TI>(TI postObject, string route)
@@ -55,10 +68,6 @@ namespace BlueTracker.SDK.Performance.Core
                 var readTask = sendTask.Result.Content.ReadAsStringAsync();
                 readTask.Wait();
                 content = readTask.Result;
-            }
-            catch (WebException e)
-            {
-                throw e;
             }
             catch (Exception ex)
             {
@@ -192,10 +201,6 @@ namespace BlueTracker.SDK.Performance.Core
                 readTask.Wait();
                 content = readTask.Result;
             }
-            catch (WebException e)
-            {
-                throw e;
-            }
             catch (Exception ex)
             {
                 throw new Exception($"Failed to communicate with BlueCloud API on {_serverAddress}.", ex);
@@ -221,34 +226,37 @@ namespace BlueTracker.SDK.Performance.Core
         protected JObject GetJson(string route)
         {
             var requestString = CombineRoute(route);
-            var request = WebRequest.Create(requestString);
-            request.Method = "GET";
-            request.Headers.Add("Authorization", "ApiKey " + _authorization);
 
-            string content;
+            string content = null;
 
             try
             {
-                var response = (HttpWebResponse) request.GetResponse();
-                var responseStream = response.GetResponseStream();
+                var response = _httpClient.GetAsync(requestString);
 
-                if (responseStream == null)
-                    return null;
+                response.Wait();
 
-                using (var reader = new StreamReader(responseStream))
+                var responseMessage = response.Result;
+                if (responseMessage.IsSuccessStatusCode)
                 {
-                    content = reader.ReadToEnd();
+                    var responseStreamTask = responseMessage.Content.ReadAsStreamAsync();
+                    responseStreamTask.Wait();
+
+                    var responseStream = responseStreamTask.Result;
+
+                    if (responseStream == null)
+                        return null;
+
+                    using (var reader = new StreamReader(responseStream))
+                    {
+                        content = reader.ReadToEnd();
+                    }
                 }
 
-                if (response.StatusCode != HttpStatusCode.OK)
+                if (responseMessage.StatusCode != HttpStatusCode.OK)
                 {
-                    throw new HttpException((int) response.StatusCode,
-                        $"Failed to retrieve data with code {response.StatusCode}. Message: {content}");
+                    throw new HttpException((int)responseMessage.StatusCode,
+                        $"Failed to retrieve data with code {responseMessage.StatusCode}. Message: {content}");
                 }
-            }
-            catch (WebException e)
-            {
-                throw e;
             }
             catch (Exception ex)
             {
@@ -268,34 +276,37 @@ namespace BlueTracker.SDK.Performance.Core
         protected T GetObject<T>(string route)
         {
             var requestString = CombineRoute(route);
-            var request = WebRequest.Create(requestString);
-            request.Method = "GET";
-            request.Headers.Add("Authorization", "ApiKey " + _authorization);
 
-            string content;
+            string content = null;
 
             try
             {
-                var response = (HttpWebResponse) request.GetResponse();
-                var responseStream = response.GetResponseStream();
+                var response = _httpClient.GetAsync(requestString);
+                
+                response.Wait();
 
-                if (responseStream == null)
-                    return default(T);
-
-                using (var reader = new StreamReader(responseStream))
+                var responseMessage = response.Result;
+                if (responseMessage.IsSuccessStatusCode)
                 {
-                    content = reader.ReadToEnd();
+                    var responseStreamTask = responseMessage.Content.ReadAsStreamAsync();
+                    responseStreamTask.Wait();
+
+                    var responseStream = responseStreamTask.Result;
+
+                    if (responseStream == null)
+                        return default(T);
+
+                    using (var reader = new StreamReader(responseStream))
+                    {
+                        content = reader.ReadToEnd();
+                    }
                 }
 
-                if (response.StatusCode != HttpStatusCode.OK)
+                if (responseMessage.StatusCode != HttpStatusCode.OK)
                 {
-                    throw new HttpException((int)response.StatusCode,
-                        $"Failed to retrieve data with code {response.StatusCode}. Message: {content}");
+                    throw new HttpException((int)responseMessage.StatusCode,
+                        $"Failed to retrieve data with code {responseMessage.StatusCode}. Message: {content}");
                 }
-            }
-            catch (WebException)
-            {
-                throw;
             }
             catch (Exception ex)
             {
@@ -323,28 +334,6 @@ namespace BlueTracker.SDK.Performance.Core
             var requestString = _serverAddress.TrimEnd('/') + "/" + route.TrimStart('/');
 
             return requestString;
-        }
-
-        private static string GetServerAddress()
-        {
-            var appsettings = ConfigurationManager.AppSettings;
-
-            if (appsettings.AllKeys.Contains("BlueCloud_ServerAddress") &&
-                !string.IsNullOrEmpty(appsettings["BlueCloud_ServerAddress"]))
-                return appsettings["BlueCloud_ServerAddress"];
-
-            return DefaultServerAddress;
-        }
-
-        private static string GetApiKey()
-        {
-            var appsettings = ConfigurationManager.AppSettings;
-
-            if (appsettings.AllKeys.Contains("BlueCloud_ApiKey") && !string.IsNullOrEmpty(appsettings["BlueCloud_ApiKey"]))
-                return appsettings["BlueCloud_ApiKey"];
-
-            throw new AuthenticationException(
-                "Could not establish authorization. BlueCloudApiKey not found in app settings.");
         }
 
         private AuthenticationHeaderValue GetAuthHeader() => new AuthenticationHeaderValue("ApiKey", _authorization);

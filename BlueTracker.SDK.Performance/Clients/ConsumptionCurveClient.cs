@@ -1,6 +1,6 @@
 using BlueTracker.SDK.Performance.Core;
-using BlueTracker.SDK.Performance.Post;
-using BlueTracker.SDK.Performance.Query;
+using BlueTracker.SDK.Performance.DTO.Post;
+using BlueTracker.SDK.Performance.DTO.Query;
 
 namespace BlueTracker.SDK.Performance.Clients
 {
@@ -13,16 +13,28 @@ namespace BlueTracker.SDK.Performance.Clients
         /// <summary>
         /// Creates a new ConsumptionCurveClient instance.
         /// </summary>
+        /// <param name="authorization">The API token.</param>
+        /// <remarks>
+        /// The key BlueCloud_ApiKey
+        /// is used to specify the API token.
+        /// </remarks>
+        public ConsumptionCurveClient(string authorization) :
+            base(authorization)
+        {
+        }
+
+        /// <summary>
+        /// Creates a new ConsumptionCurveClient instance.
+        /// </summary>
         /// <param name="serverAddress">The server address.</param>
         /// <param name="authorization">The API token.</param>
         /// <remarks>
-        /// Instead of specifying the server address and the API token with constructur parameters,
-        /// they can be set in the appSettings section of the app.config. The key BlueCloud_ApiKey
+        /// The key BlueCloud_ApiKey
         /// is used to specify the API token, the key BlueCloud_ServerAddress is used to set the
-        /// service address. If the service address is neither specified as constructor parameter,
-        /// nor in the app settings, the default service address will be used.
+        /// service address. If the service address is not specified as constructor parameter,
+        /// the default service address will be used.
         /// </remarks>
-        public ConsumptionCurveClient(string serverAddress = null, string authorization = null) :
+        public ConsumptionCurveClient(string serverAddress, string authorization) :
             base(serverAddress, authorization)
         {
         }
@@ -34,10 +46,10 @@ namespace BlueTracker.SDK.Performance.Clients
         /// <returns>
         /// The consumption curve.
         /// </returns>
-        public Query.ConsumptionCurve GetSpecific(int id)
+        public ConsumptionCurve GetSpecific(int id)
         {
             var route = $"/api/v1/consumptionCurves/{id}";
-            var result = GetObject<Query.ConsumptionCurve>(route);
+            var result = GetObject<ConsumptionCurve>(route);
             return result;
         }
 
@@ -63,10 +75,10 @@ namespace BlueTracker.SDK.Performance.Clients
         /// <returns>
         /// The newly created consumption curve.
         /// </returns>
-        public Query.ConsumptionCurve Create(Post.ConsumptionCurve consumptionCurve)
+        public ConsumptionCurve Create(ConsumptionCurveData consumptionCurve)
         {
             const string route = "/api/v1/consumptionCurves";
-            return PostObject<Query.ConsumptionCurve, Post.ConsumptionCurve>(consumptionCurve, route);
+            return PostObject<ConsumptionCurve, ConsumptionCurveData>(consumptionCurve, route);
         }
 
         /// <summary>
@@ -77,10 +89,10 @@ namespace BlueTracker.SDK.Performance.Clients
         /// <returns>
         /// The updated consumption curve.
         /// </returns>
-        public Query.ConsumptionCurve Update(int id, Post.ConsumptionCurve consumptionCurve)
+        public ConsumptionCurve Update(int id, ConsumptionCurveData consumptionCurve)
         {
             var route = $"/api/v1/consumptionCurves/{id}";
-            return PutObject<Query.ConsumptionCurve, Post.ConsumptionCurve>(consumptionCurve, route);
+            return PutObject<ConsumptionCurve, ConsumptionCurveData>(consumptionCurve, route);
         }
 
         /// <summary>

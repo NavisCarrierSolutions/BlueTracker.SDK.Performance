@@ -1,6 +1,6 @@
 using BlueTracker.SDK.Performance.Core;
-using BlueTracker.SDK.Performance.Post;
-using BlueTracker.SDK.Performance.Query;
+using BlueTracker.SDK.Performance.DTO.Post;
+using BlueTracker.SDK.Performance.DTO.Query;
 
 namespace BlueTracker.SDK.Performance.Clients
 {
@@ -13,16 +13,26 @@ namespace BlueTracker.SDK.Performance.Clients
         /// <summary>
         /// Creates a new SfocCurveClient instance.
         /// </summary>
+        /// <param name="authorization">The API token.</param>
+        /// <remarks>
+        /// The key BlueCloud_ApiKey is used to specify the API token.
+        /// </remarks>
+        public SfocCurveClient(string authorization) :
+            base(authorization)
+        {
+        }
+
+        /// <summary>
+        /// Creates a new SfocCurveClient instance.
+        /// </summary>
         /// <param name="serverAddress">The server address.</param>
         /// <param name="authorization">The API token.</param>
         /// <remarks>
-        /// Instead of specifying the server address and the API token with constructur parameters,
-        /// they can be set in the appSettings section of the app.config. The key BlueCloud_ApiKey
-        /// is used to specify the API token, the key BlueCloud_ServerAddress is used to set the
-        /// service address. If the service address is neither specified as constructor parameter,
-        /// nor in the app settings, the default service address will be used.
+        /// The key BlueCloud_ApiKey is used to specify the API token, the key BlueCloud_ServerAddress is used to set the
+        /// service address. If the service address is not specified as constructor parameter,
+        /// the default service address will be used.
         /// </remarks>
-        public SfocCurveClient(string serverAddress = null, string authorization = null) :
+        public SfocCurveClient(string serverAddress, string authorization) :
             base(serverAddress, authorization)
         {
         }
@@ -34,10 +44,10 @@ namespace BlueTracker.SDK.Performance.Clients
         /// <returns>
         /// The sfoc curve.
         /// </returns>
-        public SfocCurveDetails GetSpecific(int id)
+        public SfocCurve GetSpecific(int id)
         {
             var route = $"/api/v1/sfocCurves/{id}";
-            var result = GetObject<SfocCurveDetails>(route);
+            var result = GetObject<SfocCurve>(route);
             return result;
         }
 
@@ -63,10 +73,10 @@ namespace BlueTracker.SDK.Performance.Clients
         /// <returns>
         /// The newly created sfoc curve.
         /// </returns>
-        public SfocCurveDetails Create(SfocCurve sfocCurve)
+        public SfocCurve Create(SfocCurveData sfocCurve)
         {
             const string route = "/api/v1/sfocCurves";
-            return PostObject<SfocCurveDetails, SfocCurve>(sfocCurve, route);
+            return PostObject<SfocCurve, SfocCurveData>(sfocCurve, route);
         }
 
         /// <summary>
@@ -77,10 +87,10 @@ namespace BlueTracker.SDK.Performance.Clients
         /// <returns>
         /// The updated sfoc curve.
         /// </returns>
-        public SfocCurveDetails Update(int id, SfocCurve sfocCurve)
+        public SfocCurve Update(int id, SfocCurveData sfocCurve)
         {
             var route = $"/api/v1/sfocCurves/{id}";
-            return PutObject<SfocCurveDetails, SfocCurve>(sfocCurve, route);
+            return PutObject<SfocCurve, SfocCurveData>(sfocCurve, route);
         }
 
         /// <summary>

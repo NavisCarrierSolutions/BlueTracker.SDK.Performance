@@ -1,5 +1,5 @@
 ﻿using BlueTracker.SDK.Performance.Core;
-using BlueTracker.SDK.Performance.Query;
+using BlueTracker.SDK.Performance.DTO.Query;
 
 namespace BlueTracker.SDK.Performance.Clients
 {
@@ -12,16 +12,26 @@ namespace BlueTracker.SDK.Performance.Clients
         /// <summary>
         /// Creates a new ShipClassBaseDataClient instance.
         /// </summary>
+        /// <param name="authorization">The API token.</param>
+        /// <remarks>
+        /// The key BlueCloud_ApiKey is used to specify the API token.
+        /// </remarks>
+        public ShipClassBaseDataClient(string authorization) :
+            base(authorization)
+        {
+        }
+
+        /// <summary>
+        /// Creates a new ShipClassBaseDataClient instance.
+        /// </summary>
         /// <param name="serverAddress">The server address.</param>
         /// <param name="authorization">The API token.</param>
         /// <remarks>
-        /// Instead of specifying the server address and the API token with constructur parameters,
-        /// they can be set in the appSettings section of the app.config. The key BlueCloud_ApiKey
-        /// is used to specify the API token, the key BlueCloud_ServerAddress is used to set the
-        /// service address. If the service address is neither specified as constructor parameter,
-        /// nor in the app settings, the default service address will be used.
+        /// The key BlueCloud_ApiKey is used to specify the API token, the key BlueCloud_ServerAddress is used to set the
+        /// service address. If the service address is not specified as constructor parameter,
+        /// the default service address will be used.
         /// </remarks>
-        public ShipClassBaseDataClient(string serverAddress = null, string authorization = null) :
+        public ShipClassBaseDataClient(string serverAddress, string authorization) :
             base(serverAddress, authorization)
         {
         }
@@ -48,10 +58,10 @@ namespace BlueTracker.SDK.Performance.Clients
         /// <returns>
         /// The newly created or updated base data object.
         /// </returns>
-        public ShipClassBaseData CreateOrUpdate(int id, Ship.Ship shipClassBaseData)
+        public ShipClassBaseData CreateOrUpdate(int id, Model.Basic.Ship.Ship shipClassBaseData)
         {
             var route = $"/api/v1/shipClasses/{id}/baseData";
-            var ret = PostObject<ShipClassBaseData, Ship.Ship>(shipClassBaseData, route);
+            var ret = PostObject<ShipClassBaseData, Model.Basic.Ship.Ship>(shipClassBaseData, route);
             return ret;
         }
 
