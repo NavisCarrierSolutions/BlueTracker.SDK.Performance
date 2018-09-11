@@ -1,7 +1,7 @@
 ﻿using System;
 using BlueTracker.SDK.Performance.Core;
-using BlueTracker.SDK.Performance.Post;
-using BlueTracker.SDK.Performance.Query;
+using BlueTracker.SDK.Performance.DTO.Post;
+using BlueTracker.SDK.Performance.DTO.Query;
 
 namespace BlueTracker.SDK.Performance.Clients
 {

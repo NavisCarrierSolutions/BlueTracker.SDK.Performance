@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using BlueTracker.SDK.Performance.Core;
-using BlueTracker.SDK.Performance.Query;
+using BlueTracker.SDK.Performance.DTO.Query;
 
 namespace BlueTracker.SDK.Performance.Clients
 {
