@@ -32,6 +32,11 @@ namespace BlueTracker.SDK.Performance.Model.Enums
         HFOLLS,
 
         /// <summary>
+        /// LFO (Light Fuel Oil (RMA30,RMB30,RMD80))
+        /// </summary>
+        LFO,
+
+        /// <summary>
         /// Marine Diesel Oil
         /// </summary>
         MDO,
