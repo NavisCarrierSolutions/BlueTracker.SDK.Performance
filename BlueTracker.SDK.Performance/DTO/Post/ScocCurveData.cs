@@ -1,30 +1,35 @@
-﻿using BlueTracker.SDK.Performance.Model.Common;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using BlueTracker.SDK.Performance.Model.Common;
 using Newtonsoft.Json;
 
 namespace BlueTracker.SDK.Performance.DTO.Post
 {
     /// <summary>
-    /// The sfoc curve
+    /// The scoc curve
     /// </summary>
-    public class SfocCurveData
+    public class ScocCurveData
     {
         /// <summary>
-        /// The name of sfoc curve
+        /// The name of scoc curve
         /// </summary>
         [JsonProperty("name")]
         public string Name { get; set; }
 
         /// <summary>
-        /// The description of sfoc curve
+        /// The description of scoc curve
         /// </summary>
         [JsonProperty("description")]
         public string Description { get; set; }
 
         /// <summary>
-        /// The definition of sfoc curve
+        /// The definition of scoc curve
         /// </summary>
         [JsonProperty("definition")]
-        public SfocCurveDefinition Definition { get; set; }
+        public ScocCurveDefinition Definition { get; set; }
 
         /// <summary>
         /// Reason of change
