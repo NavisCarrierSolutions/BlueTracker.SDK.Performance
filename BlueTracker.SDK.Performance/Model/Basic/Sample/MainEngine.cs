@@ -55,5 +55,11 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Sample
         /// </summary>
         [JsonProperty(PropertyName = "shaftRpm")]
         public double? ShaftRpm { get; set; }
+
+        /// <summary>
+        /// Cylinder Pressure Measurement Interface
+        /// </summary>
+        [JsonProperty(PropertyName = "pmi")]
+        public PmiEngine Pmi { get; set; }
     }
 }
