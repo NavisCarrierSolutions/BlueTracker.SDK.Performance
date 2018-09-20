@@ -8,18 +8,6 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Sample
     /// </summary>
     public class MainEngine: InternalCombustionEngine
     {
-        ///// <summary>
-        ///// Fuel flow details
-        ///// </summary>
-        //[JsonProperty(PropertyName = "fuelFlow")]
-        //public FuelFlow FuelFlow { get; set; }
-
-        /// <summary>
-        /// Efficiency of generator
-        /// </summary>
-        [JsonProperty(PropertyName = "generatorEfficiency")]
-        public double? GeneratorEfficiency { get; set; }
-
         /// <summary>
         /// Power of generator (Unit: kW)
         /// </summary>
