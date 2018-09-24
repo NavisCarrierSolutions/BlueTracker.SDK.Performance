@@ -9,30 +9,6 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Sample
     public class PmiEngine
     {
         /// <summary>
-        /// Number of cylinders
-        /// </summary>
-        [JsonProperty(PropertyName = "numberOfCylinders")]
-        public int NumberOfCylinders { get; set; }
-
-        /// <summary>
-        /// Bore diameter of cylinders (meter)
-        /// </summary>
-        [JsonProperty(PropertyName = "cylinderBore")]
-        public double? CylinderBore { get; set; }
-
-        /// <summary>
-        /// Length of cylinder connection rod (meter)
-        /// </summary>
-        [JsonProperty(PropertyName = "connectionRodLength")]
-        public double? ConnectionRodLength { get; set; }
-
-        /// <summary>
-        /// Length of cylinder stroke (meter)
-        /// </summary>
-        [JsonProperty(PropertyName = "strokeLength")]
-        public double? StrokeLength { get; set; }
-
-        /// <summary>
         /// Average P(i) indicated pressure (pascal)
         /// </summary>
         [JsonProperty(PropertyName = "avgIndicatedPressure")]
