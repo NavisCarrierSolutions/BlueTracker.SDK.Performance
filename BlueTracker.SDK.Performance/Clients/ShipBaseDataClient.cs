@@ -122,5 +122,19 @@ namespace BlueTracker.SDK.Performance.Clients
 
             return result;
         }
+
+        /// <summary>
+        /// Delete a ship base data definition.
+        /// </summary>
+        /// <param name="imoNumber">7-digit IMO-number of ship.</param>
+        /// <param name="id">ID identifying the ship base data definition.</param>
+        /// <returns>The deleted definition.</returns>
+        public ShipBaseData Delete(int imoNumber, int id)
+        {
+            var requestString = $"/api/v1/ships/{imoNumber}/baseData/{id}";
+            var result = DeleteObject<ShipBaseData>(requestString);
+
+            return result;
+        }
     }
 }
