@@ -112,7 +112,7 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Report
         public Bunker Bunker { get; set; }
 
         /// <summary>
-        /// Fluid quantities gained or lost.
+        /// Fluid quantities Gain/Loss.
         /// </summary>
         [JsonProperty(PropertyName = "gainLoss")]
         public GainLoss GainLoss { get; set; }
