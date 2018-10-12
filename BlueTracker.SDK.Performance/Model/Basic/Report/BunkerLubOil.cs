@@ -5,13 +5,10 @@ using Newtonsoft.Json.Converters;
 
 namespace BlueTracker.SDK.Performance.Model.Basic.Report
 {
-    /// <summary>
-    /// Lub oil ROB quantities.
-    /// </summary>
-    public class LubOilQuantity
+    public class BunkerLubOil
     {
         /// <summary>
-        /// Aggregate type.
+        /// Circulation oil aggregate type.
         /// </summary>
         [JsonProperty(PropertyName = "aggregate")]
         [JsonConverter(typeof(StringEnumConverter))]
@@ -25,7 +22,7 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Report
         public LubOilKindOptions Kind { get; set; }
 
         /// <summary>
-        /// Amount of luboil. (litres)
+        /// Amount of luboil bunkered. (litres)
         /// </summary>
         [JsonProperty(PropertyName = "amount")]
         public double? Amount { get; set; }
@@ -35,5 +32,11 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Report
         /// </summary>
         [JsonProperty(PropertyName = "type")]
         public LubOilType Type { get; set; }
+
+        /// <summary>
+        /// Bunker delivery note number.
+        /// </summary>
+        [JsonProperty("bdnNumber")]
+        public string BdnNumber { get; set; }
     }
 }
