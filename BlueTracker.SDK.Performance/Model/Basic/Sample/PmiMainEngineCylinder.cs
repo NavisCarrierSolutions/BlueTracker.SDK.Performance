@@ -6,14 +6,8 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Sample
     /// <summary>
     /// PMI information for a cylinder
     /// </summary>
-    public class PmiCylinder
+    public class PmiMainEngineCylinder
     {
-        /// <summary>
-        /// Cylinder Number
-        /// </summary>
-        [JsonProperty(PropertyName = "cylinderNumber")]
-        public int CylinderNumber { get; set; }
-
         /// <summary>
         /// P(i) indicated pressure (pascal)
         /// </summary>

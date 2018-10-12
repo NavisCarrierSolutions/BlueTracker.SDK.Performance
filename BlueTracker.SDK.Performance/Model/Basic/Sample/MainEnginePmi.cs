@@ -6,7 +6,7 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Sample
     /// <summary>
     /// Cylinder Pressure Measurement Interface
     /// </summary>
-    public class PmiEngine
+    public class MainEnginePmi
     {
         /// <summary>
         /// Average P(i) indicated pressure (pascal)
@@ -36,6 +36,6 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Sample
         /// List of cylinder PMI information (1-n cylinders)
         /// </summary>
         [JsonProperty(PropertyName = "cylinders")]
-        public List<PmiCylinder> Cylinders { get; set; }
+        public List<PmiMainEngineCylinder> Cylinders { get; set; }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using System.Collections.Generic;
+using Newtonsoft.Json;
 
 namespace BlueTracker.SDK.Performance.Model.Basic.Sample
 {
@@ -45,9 +46,14 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Sample
         public double? ShaftRpm { get; set; }
 
         /// <summary>
-        /// Cylinder Pressure Measurement Interface
+        /// Cylinder Pressure Measurement Interface 
         /// </summary>
         [JsonProperty(PropertyName = "pmi")]
-        public PmiEngine Pmi { get; set; }
+        public MainEnginePmi Pmi { get; set; }
+
+        /// <summary>
+        /// List of information for cylinders
+        /// </summary>
+        public List<MainEngineCylinder> Cylinders { get; set; }
     }
 }
