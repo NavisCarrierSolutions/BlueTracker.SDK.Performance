@@ -31,11 +31,5 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Sample
         /// </summary>
         [JsonProperty(PropertyName = "avgAvgScavengingAirPressure")]
         public double? AvgScavengingAirPressure { get; set; }
-
-        /// <summary>
-        /// List of cylinder PMI information (1-n cylinders)
-        /// </summary>
-        [JsonProperty(PropertyName = "cylinders")]
-        public List<PmiMainEngineCylinder> Cylinders { get; set; }
     }
 }
