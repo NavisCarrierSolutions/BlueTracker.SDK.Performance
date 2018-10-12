@@ -50,7 +50,7 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Report
         public double? GeneratedGeneratorEnergy { get; set; }
 
         /// <summary>
-        /// Pitch of propeller. (Unit: m)
+        /// Pitch of propeller. (Unit: %)
         /// </summary>
         [JsonProperty(PropertyName = "propellerPitch")]
         public double? PropellerPitch { get; set; }
