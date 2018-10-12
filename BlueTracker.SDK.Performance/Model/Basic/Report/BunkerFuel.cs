@@ -5,7 +5,7 @@ using Newtonsoft.Json.Converters;
 
 namespace BlueTracker.SDK.Performance.Model.Basic.Report
 {
-    public class FuelQuantity
+    public class BunkerFuel
     {
         /// <summary>
         /// Kind of fuel. (enumeration)
@@ -15,7 +15,7 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Report
         public FuelKindOptions Kind { get; set; }
 
         /// <summary>
-        /// Amount of fuel. (tons)
+        /// Amount of fuel bunkered. (tons)
         /// </summary>
         [JsonProperty(PropertyName = "amount")]
         public double? Amount { get; set; }
@@ -25,5 +25,11 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Report
         /// </summary>
         [JsonProperty(PropertyName = "type")]
         public FuelType Type { get; set; }
+
+        /// <summary>
+        /// Bunker delivery note number.
+        /// </summary>
+        [JsonProperty("bdnNumber")]
+        public string BdnNumber { get; set; }
     }
 }
