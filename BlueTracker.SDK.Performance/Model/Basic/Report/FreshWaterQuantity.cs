@@ -14,7 +14,7 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Report
         public FreshWaterKindOptions Kind { get; set; }
 
         /// <summary>
-        /// Amount of fresh water remain on board. (litres)
+        /// Amount of fresh water. (litres)
         /// </summary>
         [JsonProperty(PropertyName = "amount")]
         public double? Amount { get; set; }

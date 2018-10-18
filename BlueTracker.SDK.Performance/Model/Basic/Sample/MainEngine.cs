@@ -28,7 +28,7 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Sample
         public double? Power { get; set; }
 
         /// <summary>
-        /// Propeller pitch. (meters)
+        /// Propeller pitch. (%)
         /// </summary>
         [JsonProperty(PropertyName = "propellerPitch")]
         public double? PropellerPitch { get; set; }

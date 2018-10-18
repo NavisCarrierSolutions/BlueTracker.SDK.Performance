@@ -106,6 +106,18 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Report
         public ROB ROB { get; set; }
 
         /// <summary>
+        /// Fluid quantities bunkered.
+        /// </summary>
+        [JsonProperty(PropertyName = "bunker")]
+        public Bunker Bunker { get; set; }
+
+        /// <summary>
+        /// Fluid quantities Gain/Loss.
+        /// </summary>
+        [JsonProperty(PropertyName = "gainLoss")]
+        public GainLoss GainLoss { get; set; }
+
+        /// <summary>
         /// Fluid quantities discharged.
         /// </summary>
         [JsonProperty(PropertyName = "discharge")]
