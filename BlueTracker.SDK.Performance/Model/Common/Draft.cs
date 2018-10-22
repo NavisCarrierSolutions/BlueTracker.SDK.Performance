@@ -29,7 +29,7 @@ namespace BlueTracker.SDK.Performance.Model.Common
         /// Midship draft starboardside. (meters)
         /// </summary>
         [JsonProperty(PropertyName = "midStarboard")]
-        public double? MidStarboardside { get; set; }
+        public double? MidStarboard { get; set; }
 
         /// <summary>
         /// Draft aft.
