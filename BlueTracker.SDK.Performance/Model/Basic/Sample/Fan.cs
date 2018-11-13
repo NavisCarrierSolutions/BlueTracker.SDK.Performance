@@ -1,28 +1,25 @@
-﻿using Newtonsoft.Json;
+﻿using BlueTracker.SDK.Performance.Model.Enums;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace BlueTracker.SDK.Performance.Model.Basic.Sample
 {
     /// <summary>
     /// Represents a fan in the sense of air moving device
     /// </summary>
-    public abstract class Fan : ElectricalDevice
+    public abstract class Fan : ElectricalMotor
     {
         /// <summary>
-        /// Set to true if fan is blowing air in (supplying air)
+        /// Direction of fan operation (exhaust/supply).
         /// </summary>
-        [JsonProperty("supplySignal")]
-        public bool? SupplySignal { get; set; }
+        [JsonProperty("direction")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public FanDirectionOptions? Direction { get; set; }
 
         /// <summary>
-        /// Set to true if fan is sucking air to blow out (venting)
-        /// </summary>
-        [JsonProperty("exhaustSignal")]
-        public bool? ExhaustSignal { get; set; }
-
-        /// <summary>
-        /// Speed of fan in (RPM)
+        /// Speed of fan in (RPM).
         /// </summary>
         [JsonProperty("speed")]
-        public int? Speed { get; set; }
+        public double? Speed { get; set; }
     }
 }

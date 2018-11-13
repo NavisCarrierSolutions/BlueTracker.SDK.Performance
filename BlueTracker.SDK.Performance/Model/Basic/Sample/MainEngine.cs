@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 
 namespace BlueTracker.SDK.Performance.Model.Basic.Sample
 {
@@ -10,7 +9,7 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Sample
     public class MainEngine: InternalCombustionEngine
     {
         /// <summary>
-        /// Power of generator (Unit: kW)
+        /// Power produced by shaft generator. (kW)
         /// </summary>
         [JsonProperty(PropertyName = "generatorPower")]
         public double? GeneratorPower { get; set; }
@@ -40,20 +39,9 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Sample
         public double? ShaftPower { get; set; }
 
         /// <summary>
-        /// RPMs of shaft (Unit 1/min)
+        /// RPM of engine.
         /// </summary>
         [JsonProperty(PropertyName = "shaftRpm")]
         public double? ShaftRpm { get; set; }
-
-        /// <summary>
-        /// Cylinder Pressure Measurement Interface 
-        /// </summary>
-        [JsonProperty(PropertyName = "pmi")]
-        public MainEnginePmi Pmi { get; set; }
-
-        /// <summary>
-        /// List of information for cylinders
-        /// </summary>
-        public List<MainEngineCylinder> Cylinders { get; set; }
     }
 }

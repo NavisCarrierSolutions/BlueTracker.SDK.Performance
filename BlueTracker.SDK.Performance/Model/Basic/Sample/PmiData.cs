@@ -1,41 +1,34 @@
-﻿using System.Collections.Generic;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 
 namespace BlueTracker.SDK.Performance.Model.Basic.Sample
 {
     /// <summary>
-    /// PMI information for a cylinder
+    /// Cylinder pressure measurement interface
     /// </summary>
-    public class PmiMainEngineCylinder
+    public class PmiData
     {
         /// <summary>
         /// P(i) indicated pressure (pascal)
         /// </summary>
-        [JsonProperty(PropertyName = "indicatedPressure")]
+        [JsonProperty(PropertyName = "IndicatedPressure")]
         public double? IndicatedPressure { get; set; }
 
         /// <summary>
         /// P(comp) compression pressure (pascal)
         /// </summary>
-        [JsonProperty(PropertyName = "compressionPressure")]
+        [JsonProperty(PropertyName = "CompressionPressure")]
         public double? CompressionPressure { get; set; }
 
         /// <summary>
         /// P(max) maximum pressure (pascal)
         /// </summary>
-        [JsonProperty(PropertyName = "maximumPressure")]
+        [JsonProperty(PropertyName = "MaximumPressure")]
         public double? MaximumPressure { get; set; }
 
         /// <summary>
         /// P(scav) scavenging air pressure (pascal)
         /// </summary>
-        [JsonProperty(PropertyName = "scavengingAirPressure")]
+        [JsonProperty(PropertyName = "ScavengingAirPressure")]
         public double? ScavengingAirPressure { get; set; }
-        
-        /// <summary>
-        /// List of pressure values (pascal)
-        /// </summary>
-        [JsonProperty(PropertyName = "pressureValues")]
-        public List<PmiDegreePressureValue> PressureValues { get; set; }
     }
 }

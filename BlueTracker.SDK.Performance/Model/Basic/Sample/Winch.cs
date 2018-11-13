@@ -3,7 +3,7 @@
     /// <summary>
     /// Represents a winch
     /// </summary>
-    public class Winch : ElectricalDevice
+    public class Winch : ElectricalMotor
     {
     }
 }
