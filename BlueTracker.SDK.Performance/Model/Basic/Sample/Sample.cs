@@ -1,5 +1,5 @@
-﻿using System;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
+using System;
 
 namespace BlueTracker.SDK.Performance.Model.Basic.Sample
 {
@@ -48,5 +48,11 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Sample
         /// </summary>
         [JsonProperty(PropertyName = "engine")]
         public Engine Engine { get; set; }
+
+        /// <summary>
+        /// Deck equipment
+        /// </summary>
+        [JsonProperty(PropertyName = "deckEquipment")]
+        public DeckEquipment DeckEquipment { get; set; }
     }
 }
