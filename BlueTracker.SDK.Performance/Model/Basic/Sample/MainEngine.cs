@@ -8,20 +8,8 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Sample
     /// </summary>
     public class MainEngine: InternalCombustionEngine
     {
-        ///// <summary>
-        ///// Fuel flow details
-        ///// </summary>
-        //[JsonProperty(PropertyName = "fuelFlow")]
-        //public FuelFlow FuelFlow { get; set; }
-
         /// <summary>
-        /// Efficiency of generator
-        /// </summary>
-        [JsonProperty(PropertyName = "generatorEfficiency")]
-        public double? GeneratorEfficiency { get; set; }
-
-        /// <summary>
-        /// Power of generator (Unit: kW)
+        /// Power produced by shaft generator. (kW)
         /// </summary>
         [JsonProperty(PropertyName = "generatorPower")]
         public double? GeneratorPower { get; set; }
@@ -51,7 +39,7 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Sample
         public double? ShaftPower { get; set; }
 
         /// <summary>
-        /// RPMs of shaft (Unit 1/min)
+        /// RPM of engine.
         /// </summary>
         [JsonProperty(PropertyName = "shaftRpm")]
         public double? ShaftRpm { get; set; }

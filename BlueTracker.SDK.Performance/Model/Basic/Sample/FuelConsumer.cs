@@ -9,9 +9,21 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Sample
     public class FuelConsumer : Aggregate
     {
         /// <summary>
-        /// The fuel flow at time stamp
+        /// Fuel flow of aggregate.
         /// </summary>
-        [JsonProperty(PropertyName = "fuelFlow")]
-        public FuelFlow FuelFlow { get; set; }
+        [JsonProperty(PropertyName = "supplyFuelFlow")]
+        public FuelFlow SupplyFuelFlow { get; set; }
+
+        /// <summary>
+        /// Fuel flow of aggregate.
+        /// </summary>
+        [JsonProperty(PropertyName = "returnFuelFlow")]
+        public FuelFlow ReturnFuelFlow { get; set; }
+
+        /// <summary>
+        /// Fuel flow of aggregate.
+        /// </summary>
+        [JsonProperty(PropertyName = "consumptionFuelFlow")]
+        public FuelFlow ConsumptionFuelFlow { get; set; }
     }
 }

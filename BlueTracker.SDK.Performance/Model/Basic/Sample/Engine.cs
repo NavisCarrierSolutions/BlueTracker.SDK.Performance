@@ -28,13 +28,13 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Sample
         public List<MainEngine> MainEngines { get; set; }
 
         /// <summary>
-        /// A list of Auxilliary Engines, which are installed on the vessel.
+        /// A list of Auxiliary Engines, which are installed on the vessel.
         /// </summary>
         [JsonProperty(PropertyName = "auxEngines")]
         public List<AuxEngine> AuxEngines { get; set; }
 
         /// <summary>
-        /// A list of Auxilliary Boilers, which are installed on the vessel.
+        /// A list of Auxiliary Boilers, which are installed on the vessel.
         /// </summary>
         [JsonProperty(PropertyName = "boilers")]
         public List<Boiler> Boilers { get; set; }
