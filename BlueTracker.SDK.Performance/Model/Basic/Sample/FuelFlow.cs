@@ -15,19 +15,25 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Sample
         /// </summary>
         [JsonProperty(PropertyName = "kind")]
         [JsonConverter(typeof(StringEnumConverter))]
-        public FuelKindOptions? FuelKind { get; set; }
+        public FuelKindOptions Kind { get; set; }
 
         /// <summary>
         /// Detailed description of the fuel type used.
         /// </summary>
         [JsonProperty(PropertyName = "type")]
-        public FuelType FuelType { get;set; }
+        public FuelType Type { get; set; }
 
         /// <summary>
-        /// Temperature of fuel. (°C)
+        /// Fuel temperature at flow meter. (°C)
         /// </summary>
         [JsonProperty(PropertyName = "temp")]
         public double? Temp { get; set; }
+
+        /// <summary>
+        /// The fuel oil inlet temperature of the fuel. (°C)
+        /// </summary>
+        [JsonProperty(PropertyName = "inletTemp")]
+        public double? InletTemp { get; set; }
 
         /// <summary>
         /// Actual density of fuel. (kg/m3)

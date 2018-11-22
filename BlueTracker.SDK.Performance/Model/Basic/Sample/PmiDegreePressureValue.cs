@@ -12,6 +12,7 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Sample
         /// </summary>
         [JsonProperty(PropertyName = "degree")]
         public float Degree { get; set; }
+
         /// <summary>
         /// Pressure (pascal)
         /// </summary>
