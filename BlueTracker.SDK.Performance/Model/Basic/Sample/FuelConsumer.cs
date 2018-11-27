@@ -24,6 +24,6 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Sample
         /// Used to support old schema, currently named ConsumptionFuelFlow
         /// </summary>
         [JsonProperty(PropertyName = "fuelFlow")]
-        private FuelFlow FuelFlow { get; set; }
+        public FuelFlow FuelFlow { get; set; }
     }
 }
