@@ -10,6 +10,13 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Sample
     public abstract class Fan : ElectricalMotor
     {
         /// <summary>
+        /// Running level Low, Mid, High for fans.
+        /// </summary>
+        [JsonProperty("runningLevel")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public RunningLevelOptions? RunningLevel { get; set; }
+
+        /// <summary>
         /// Direction of fan operation (exhaust/supply).
         /// </summary>
         [JsonProperty("direction")]

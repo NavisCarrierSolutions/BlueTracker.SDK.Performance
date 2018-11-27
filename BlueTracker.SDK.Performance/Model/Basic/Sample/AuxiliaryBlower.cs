@@ -1,9 +1,9 @@
 ﻿namespace BlueTracker.SDK.Performance.Model.Basic.Sample
 {
     /// <summary>
-    /// Represents a passage way fan
+    /// Auxiliary blower
     /// </summary>
-    public class PassageWayFan : Fan
+    public class AuxiliaryBlower : ElectricalMotor
     {
     }
 }
