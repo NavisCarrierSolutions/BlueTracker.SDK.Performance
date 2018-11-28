@@ -2,7 +2,7 @@
 
 namespace BlueTracker.SDK.Performance.Model.Basic.Sample
 {
-    public abstract class Cylinder
+    public class Cylinder
     {
         /// <summary>
         /// Cylinder number
