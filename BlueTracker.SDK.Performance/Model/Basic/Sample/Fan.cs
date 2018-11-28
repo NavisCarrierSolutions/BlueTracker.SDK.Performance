@@ -7,7 +7,7 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Sample
     /// <summary>
     /// Represents a fan in the sense of air moving device
     /// </summary>
-    public abstract class Fan : ElectricalMotor
+    public class Fan : ElectricalMotor
     {
         /// <summary>
         /// Running level Low, Mid, High for fans.
