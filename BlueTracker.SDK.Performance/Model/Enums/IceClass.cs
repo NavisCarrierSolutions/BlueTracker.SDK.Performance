@@ -42,6 +42,26 @@ namespace BlueTracker.SDK.Performance.Model.Enums
         /// <summary>
         /// PC7S
         /// </summary>
-        PC7S = 7
+        PC7 = 7,
+        /// <summary>
+        /// PC7S
+        /// </summary>
+        PC7S = 8,
+        /// <summary>
+        /// IA
+        /// </summary>
+        IA = 9,
+        /// <summary>
+        /// IA_SUPER
+        /// </summary>
+        IA_SUPER = 10,
+        /// <summary>
+        /// IB
+        /// </summary>
+        IB = 11,
+        /// <summary>
+        /// IC
+        /// </summary>
+        IC = 12,
     }
 }
