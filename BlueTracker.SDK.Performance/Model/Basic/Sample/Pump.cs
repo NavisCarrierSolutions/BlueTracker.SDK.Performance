@@ -5,66 +5,30 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Sample
     /// <summary>
     /// A pump
     /// </summary>
-    public class Pump
+    public class Pump : ElectricalMotor
     {
         /// <summary>
-        /// Running signal
-        /// </summary>
-        [JsonProperty(PropertyName = "runningSignal")]
-        public bool? RunningSignal { get; set; }
-
-        /// <summary>
-        /// Power consumption
-        /// </summary>
-        [JsonProperty(PropertyName = "powerConsumption")]
-        public double? PowerConsumption { get; set; }
-
-        /// <summary>
-        /// Energy
-        /// </summary>
-        [JsonProperty(PropertyName = "energy")]
-        public double? Energy { get; set; }
-
-        /// <summary>
-        /// Current
-        /// </summary>
-        [JsonProperty(PropertyName = "current")]
-        public double? Current { get; set; }
-
-        /// <summary>
-        /// Voltage
-        /// </summary>
-        [JsonProperty(PropertyName = "voltage")]
-        public double? Voltage { get; set; }
-
-        /// <summary>
-        /// Frequency
+        /// Frequency (Hz)
         /// </summary>
         [JsonProperty(PropertyName = "frequency")]
         public double? Frequency { get; set; }
-
+        
         /// <summary>
-        /// Running hours
+        /// Temperature (°C)
         /// </summary>
-        [JsonProperty(PropertyName = "runningHours")]
-        public double? RunningHours { get; set; }
-
-        /// <summary>
-        /// Temperature
-        /// </summary>
-        [JsonProperty(PropertyName = "temperature")]
+        [JsonProperty(PropertyName = "temp")]
         public double? Temperature { get; set; }
 
         /// <summary>
-        /// Inlet pressure
+        /// Inlet pressure (bar)
         /// </summary>
-        [JsonProperty(PropertyName = "inletPressure")]
-        public double? InletPressure { get; set; }
+        [JsonProperty(PropertyName = "inletPress")]
+        public double? InletPress { get; set; }
 
         /// <summary>
-        /// Oulet pressure
+        /// Outlet pressure (bar)
         /// </summary>
-        [JsonProperty(PropertyName = "ouletPressure")]
-        public double? OuletPressure { get; set; }
+        [JsonProperty(PropertyName = "outletPress")]
+        public double? OutletPress { get; set; }
     }
 }

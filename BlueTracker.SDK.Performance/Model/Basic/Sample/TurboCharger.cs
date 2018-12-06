@@ -8,13 +8,13 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Sample
     public class TurboCharger
     {
         /// <summary>
-        /// Speed
+        /// Speed (rpm)
         /// </summary>
         [JsonProperty(PropertyName = "speed")]
         public double? Speed { get; set; }
 
         /// <summary>
-        /// Exhaust gas temperature
+        /// Exhaust gas temperature (°C)
         /// </summary>
         [JsonProperty(PropertyName = "exhaustGasTemp")]
         public double? ExhaustGasTemp { get; set; }

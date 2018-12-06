@@ -21,5 +21,11 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Sample
         /// </summary>
         [JsonProperty(PropertyName = "running")]
         public bool? Running { get; set; }
+
+        /// <summary>
+        /// Running hours since first usage.
+        /// </summary>
+        [JsonProperty("runningHours")]
+        public double? RunningHours { get; set; }
     }
 }

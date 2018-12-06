@@ -51,5 +51,11 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Sample
         /// </remarks>
         [JsonProperty(PropertyName = "fuelFlows")]
         public List<AggregateFuelFlow> FuelFlows { get; set; }
+
+        /// <summary>
+        /// A list of Auxiliary Systems
+        /// </summary>
+        [JsonProperty(PropertyName = "auxiliarySystems")]
+        public AuxiliarySystems AuxiliarySystems { get; set; }
     }
 }
