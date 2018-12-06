@@ -32,6 +32,13 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Ship
         public ShipType? ShipType { get; set; }
 
         /// <summary>
+        /// Ice class. (enumeration)
+        /// </summary>
+        /// <seealso cref="IceClass"/>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public IceClass? IceClass { get; set; }
+
+        /// <summary>
         /// Hull type. (enumeration)
         /// </summary>
         /// <seealso cref="Hull"/>

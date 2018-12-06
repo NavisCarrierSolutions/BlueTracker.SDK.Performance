@@ -66,6 +66,21 @@ namespace BlueTracker.SDK.Performance.Clients
         }
 
         /// <summary>
+        /// Udpates base data for a specific ship class.
+        /// </summary>
+        /// <param name="id">Id of ship class.</param>
+        /// <param name="shipClassBaseData">The detailed ship class base data object.</param>
+        /// <returns>
+        /// The updated base data object.
+        /// </returns>
+        public ShipClassBaseData Update(int id, Model.Basic.Ship.Ship shipClassBaseData)
+        {
+            var route = $"/api/v1/shipClasses/{id}/baseData";
+            var ret = PutObject<ShipClassBaseData, Model.Basic.Ship.Ship>(shipClassBaseData, route);
+            return ret;
+        }
+
+        /// <summary>
         /// Delete a ship class base data definition.
         /// </summary>
         /// <param name="id">ID of ship class.</param>
