@@ -9,9 +9,9 @@
     <PackageProjectUrl>https://github.com/NavisCarrierSolutions/BlueTracker.SDK.Performance</PackageProjectUrl>
     <Authors>Kalmar Germany GmbH</Authors>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>5.2.2</Version>
-    <AssemblyVersion>5.2.2.0</AssemblyVersion>
-    <FileVersion>5.2.2.0</FileVersion>
+    <Version>5.2.3</Version>
+    <AssemblyVersion>5.2.3.0</AssemblyVersion>
+    <FileVersion>5.2.3.0</FileVersion>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
