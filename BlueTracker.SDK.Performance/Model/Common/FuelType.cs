@@ -33,5 +33,11 @@ namespace BlueTracker.SDK.Performance.Model.Common
         /// </summary>
         [JsonProperty(PropertyName = "sulphur")]
         public double? Sulphur { get; set; }
+
+        /// <summary>
+        /// Co2 factor of fuel
+        /// </summary>
+        [JsonProperty(PropertyName = "co2Factor")]
+        public double? Co2Factor { get; set; }
     }
 }
