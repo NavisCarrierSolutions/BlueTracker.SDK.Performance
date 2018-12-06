@@ -54,5 +54,10 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Sample
         /// </summary>
         [JsonProperty(PropertyName = "deckEquipment")]
         public DeckEquipment DeckEquipment { get; set; }
+
+        /// <summary>
+        /// Tank data
+        /// </summary>
+        public Tanks Tanks { get; set; }
     }
 }

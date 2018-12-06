@@ -20,24 +20,45 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Sample
         public List<TurboCharger> TurboChargers { get; set; }
 
         /// <summary>
-        /// Cooling low temperature water pumps
-        /// </summary>
-        public List<Pump> CoolingPumpLts { get; set; }
-
-        /// <summary>
-        /// Cooling jacket water pumps
-        /// </summary>
-        public List<Pump> CoolingPumpJackets { get; set; }
-
-        /// <summary>
-        /// Circulation lube oil pumps
-        /// </summary>
-        public List<Pump> CircLubOilPumps { get; set; }
-
-        /// <summary>
         /// Cylinder pressure measurement interface 
         /// </summary>
         [JsonProperty(PropertyName = "pmi")]
-        public PmiData Pmi { get; set; }
+        public PmiAvgData Pmi { get; set; }
+
+        /// <summary>
+        /// Temperature of scavenging air before air cooler (°C)
+        /// </summary>
+        [JsonProperty(PropertyName = "scavengingAirTempBeforeAirCooler")]
+        public double? ScavengingAirTempBeforeAirCooler { get; set; }
+
+        /// <summary>
+        /// Temperature of scavenging air behind air cooler (°C)
+        /// </summary>
+        [JsonProperty(PropertyName = "scavengingAirTempBehindAirCooler")]
+        public double? ScavengingAirTempBehindAirCooler { get; set; }
+
+        /// <summary>
+        /// Jacket cooling water inlet temperature (°C)
+        /// </summary>
+        [JsonProperty(PropertyName = "jacketCoolingWaterInletTemp")]
+        public double? JacketCoolingWaterInletTemp { get; set; }
+
+        /// <summary>
+        /// Cooling water air cooler inlet temperature (°C)
+        /// </summary>
+        [JsonProperty(PropertyName = "coolingWaterAirCoolerInletTemp")]
+        public double? CoolingWaterAirCoolerInletTemp { get; set; }
+
+        /// <summary>
+        /// Cooling water air cooler outlet temperature (°C)
+        /// </summary>
+        [JsonProperty(PropertyName = "coolingWaterAirCoolerOutletTemp")]
+        public double? CoolingWaterAirCoolerOutletTemp { get; set; }
+
+        /// <summary>
+        /// Engine ready to start
+        /// </summary>
+        [JsonProperty(PropertyName = "readyToStart")]
+        public bool? ReadyToStart { get; set; }
     }
 }

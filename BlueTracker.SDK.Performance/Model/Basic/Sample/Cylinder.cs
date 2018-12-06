@@ -2,7 +2,7 @@
 
 namespace BlueTracker.SDK.Performance.Model.Basic.Sample
 {
-    public abstract class Cylinder
+    public class Cylinder
     {
         /// <summary>
         /// Cylinder number
@@ -11,27 +11,38 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Sample
         public int No { get; set; }
 
         /// <summary>
-        /// Jacket cooling water outlet temperature
+        /// Jacket cooling water outlet temperature (°C)
         /// </summary>
-        [JsonProperty(PropertyName = "jacketCoolingWaterOutletTemperature")]
-        public double? JacketCoolingWaterOutletTemperature { get; set; }
+        [JsonProperty(PropertyName = "jacketCoolingWaterOutletTemp")]
+        public double? JacketCoolingWaterOutletTemp { get; set; }
 
         /// <summary>
-        /// Exhaust gas temperature
+        /// Exhaust gas temperature (°C)
         /// </summary>
-        [JsonProperty(PropertyName = "exhaustGasTemperature")]
-        public double? ExhaustGasTemperature { get; set; }
+        [JsonProperty(PropertyName = "exhaustGasTemp")]
+        public double? ExhaustGasTemp { get; set; }
 
         /// <summary>
-        /// The deviation of the cylinder exhaust gas temperature from the exhaust gas temperature average over all cylinders
+        /// The deviation of the cylinder exhaust gas temperature from the exhaust gas temperature average over all cylinders (°C)
         /// </summary>
-        [JsonProperty(PropertyName = "exhaustGasTemperatureDeviation")]
-        public double? ExhaustGasTemperatureDeviation { get; set; }
+        [JsonProperty(PropertyName = "exhaustGasTempDeviation")]
+        public double? ExhaustGasTempDeviation { get; set; }
+
+        /// <summary>
+        /// Piston cooling oil outlet temperature (°C)
+        /// </summary>
+        [JsonProperty(PropertyName = "pistonCoolingOilOutletTemp")]
+        public double? PistonCoolingOilOutletTemp { get; set; }
 
         /// <summary>
         /// Cylinder pressure measurement interface
         /// </summary>
         [JsonProperty(PropertyName = "pmi")]
         public PmiCylinderData Pmi { get; set; }
+
+        /// <summary>
+        /// Cylinder lub oil flow
+        /// </summary>
+        public CylLubOilFlow CylLubOilFlow { get; set; }
     }
 }

@@ -10,12 +10,12 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Sample
         /// <summary>
         /// List of cargohold fans
         /// </summary>
-        public List<CargoHoldFan> CargoHoldFans { get; set; }
+        public List<Fan> CargoHoldFans { get; set; }
 
         /// <summary>
         /// List of passageway fans
         /// </summary>
-        public List<PassageWayFan> PassageWayFans { get; set; }
+        public List<Fan> PassageWayFans { get; set; }
 
         /// <summary>
         /// List of winches
