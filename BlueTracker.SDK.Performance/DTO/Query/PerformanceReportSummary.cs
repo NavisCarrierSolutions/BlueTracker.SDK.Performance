@@ -207,7 +207,7 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public double? EngineRoomTemp { get; set; }
 
         /// <summary>
-        /// Cooling water temperature. (°C)
+        /// Temperature of LT cooling water. (°C)
         /// </summary>
         public double? CoolingWaterTemp { get; set; }
 
