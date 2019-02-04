@@ -1,4 +1,5 @@
 ﻿using BlueTracker.SDK.Performance.Model.Enums;
+using Newtonsoft.Json;
 
 namespace BlueTracker.SDK.Performance.Model.Basic.Sample
 {
@@ -10,6 +11,7 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Sample
         /// <summary>
         /// Kind of lub oil
         /// </summary>
-        public LubOilKindOptions LubOilType { get; set; }
+        [JsonProperty(PropertyName = "lubOilKind")]
+        public LubOilKindOptions LubOilKind { get; set; }
     }
 }

@@ -7,12 +7,12 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Sample
         /// <summary>
         /// Water tanks
         /// </summary>
-        public List<Tank> Water { get; set; }
+        public List<Tank> WaterTanks { get; set; }
 
         /// <summary>
         /// Sludge tanks
         /// </summary>
-        public List<Tank> Sludge { get; set; }
+        public List<Tank> SludgeTanks { get; set; }
 
         /// <summary>
         /// Lub oil tanks
