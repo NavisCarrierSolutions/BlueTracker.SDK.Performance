@@ -17,11 +17,11 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Sample
         /// <summary>
         /// Lub oil tanks
         /// </summary>
-        public List<LubOilTank> LubOilTank { get; set; }
+        public List<LubOilTank> LubOilTanks { get; set; }
 
         /// <summary>
         /// Fuel oil tanks
         /// </summary>
-        public List<FuelOilTank> FuelOilTank { get; set; }
+        public List<FuelOilTank> FuelOilTanks { get; set; }
     }
 }
