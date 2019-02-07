@@ -5,6 +5,12 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Sample
     public class Tank
     {
         /// <summary>
+        ///     Number of tank
+        /// </summary>
+        [JsonProperty(PropertyName = "no", Order = 1)]
+        public int No { get; set; }
+
+        /// <summary>
         ///     Tank level (m)
         /// </summary>
         [JsonProperty(PropertyName = "level")]
