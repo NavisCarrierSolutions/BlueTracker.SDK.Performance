@@ -1,25 +1,41 @@
 ﻿using System.Collections.Generic;
+using Newtonsoft.Json;
 
 namespace BlueTracker.SDK.Performance.Model.Basic.Sample
 {
     /// <summary>
-    /// Pumps
+    ///     Pumps
     /// </summary>
     public class Pumps
     {
         /// <summary>
-        /// Sea water pumps
+        ///     Sea water pumps
         /// </summary>
-        public List<Pump> SeaWaterPumps { get; set; }
+        [JsonProperty("seaWaterPumps")]
+        public SeaWaterPumps SeaWaterPumps { get; set; }
 
         /// <summary>
-        /// Fresh water pumps
+        ///     Fresh water pumps
         /// </summary>
-        public List<Pump> FreshWaterPumps { get; set; }
+        [JsonProperty("freshWaterPumps")]
+        public FreshWaterPumps FreshWaterPumps { get; set; }
 
         /// <summary>
-        /// Fuel pumps
+        ///     Fuel pumps
         /// </summary>
-        public List<Pump> FuelPumps { get; set; }
+        [JsonProperty("fuelPumps")]
+        public FuelPumps FuelPumps { get; set; }
+
+        /// <summary>
+        ///     Lub oil pumps
+        /// </summary>
+        [JsonProperty("lubOilPumps")]
+        public LubOilPumps LubOilPumps { get; set; }
+
+        /// <summary>
+        ///     Oily water pumps
+        /// </summary>
+        [JsonProperty("oilyWaterPumps")]
+        public List<OilyWaterPump> OilyWaterPumps { get; set; }
     }
 }

@@ -3,7 +3,7 @@
 namespace BlueTracker.SDK.Performance.Model.Basic.Sample
 {
     /// <summary>
-    /// A turgo charger
+    ///     A turgo charger
     /// </summary>
     public class TurboCharger
     {
@@ -14,13 +14,13 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Sample
         public int No { get; set; }
 
         /// <summary>
-        /// Speed (rpm)
+        ///     Speed (rpm)
         /// </summary>
         [JsonProperty(PropertyName = "speed")]
         public double? Speed { get; set; }
 
         /// <summary>
-        /// Exhaust gas temperature (°C)
+        ///     Exhaust gas temperature (°C)
         /// </summary>
         [JsonProperty(PropertyName = "exhaustGasTemp")]
         public double? ExhaustGasTemp { get; set; }

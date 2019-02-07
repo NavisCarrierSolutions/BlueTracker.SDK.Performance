@@ -6,37 +6,37 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Sample
     public class Purifiers
     {
         /// <summary>
-        ///    MainEngine LubOil purifiers
+        ///     MainEngine LubOil purifiers
         /// </summary>
         [JsonProperty("meLubOil")]
         public List<Purifier> MeLubOil { get; set; }
 
         /// <summary>
-        ///    MainEngine Mgo purifiers
+        ///     MainEngine Mgo purifiers
         /// </summary>
         [JsonProperty("meMgo")]
         public List<Purifier> MeMgo { get; set; }
 
         /// <summary>
-        ///    MainEngine Hfo purifiers
+        ///     MainEngine Hfo purifiers
         /// </summary>
         [JsonProperty("meHfo")]
         public List<Purifier> MeHfo { get; set; }
 
         /// <summary>
-        ///    AuxEngine LubOil purifiers
+        ///     AuxEngine LubOil purifiers
         /// </summary>
         [JsonProperty("aeLubOil")]
         public List<Purifier> AeLubOil { get; set; }
 
         /// <summary>
-        ///    AuxEngine Mgo purifiers
+        ///     AuxEngine Mgo purifiers
         /// </summary>
         [JsonProperty("aeMgo")]
         public List<Purifier> AeMgo { get; set; }
 
         /// <summary>
-        ///    AuxEngine Hfo purifiers
+        ///     AuxEngine Hfo purifiers
         /// </summary>
         [JsonProperty("aeHfo")]
         public List<Purifier> AeHfo { get; set; }

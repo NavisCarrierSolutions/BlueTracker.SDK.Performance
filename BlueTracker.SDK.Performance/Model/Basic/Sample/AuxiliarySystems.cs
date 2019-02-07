@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 namespace BlueTracker.SDK.Performance.Model.Basic.Sample
 {
     /// <summary>
-    /// Auxiliary Systems
+    ///     Auxiliary Systems
     /// </summary>
     public class AuxiliarySystems
     {

@@ -4,12 +4,12 @@ using Newtonsoft.Json;
 namespace BlueTracker.SDK.Performance.Model.Basic.Sample
 {
     /// <summary>
-    /// Tank for fuel oil
+    ///     Tank for fuel oil
     /// </summary>
     public class FuelOilTank : Tank
     {
         /// <summary>
-        /// Kind of fuel
+        ///     Kind of fuel
         /// </summary>
         [JsonProperty(PropertyName = "type")]
         public FuelKindOptions FuelType { get; set; }

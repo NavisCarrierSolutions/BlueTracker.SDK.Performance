@@ -1,26 +1,28 @@
-﻿using Newtonsoft.Json;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using Newtonsoft.Json;
 
 namespace BlueTracker.SDK.Performance.Model.Basic.Sample
 {
     /// <inheritdoc />
     /// <summary>
-    /// A generic fuel consumer with internal combustion.
+    ///     A generic fuel consumer with internal combustion.
     /// </summary>
     public abstract class InternalCombustionEngine : FuelConsumer
     {
         /// <summary>
-        /// List of information for cylinders
+        ///     List of information for cylinders
         /// </summary>
+        [JsonProperty(PropertyName = "cylinders")]
         public List<Cylinder> Cylinders { get; set; }
 
         /// <summary>
-        /// List of information for turbo chargers
+        ///     List of information for turbo chargers
         /// </summary>
+        [JsonProperty(PropertyName = "turboChargers")]
         public List<TurboCharger> TurboChargers { get; set; }
 
         /// <summary>
-        /// Cylinder pressure measurement interface 
+        ///     Cylinder pressure measurement interface
         /// </summary>
         [JsonProperty(PropertyName = "pmi")]
         public PmiAvgData Pmi { get; set; }
