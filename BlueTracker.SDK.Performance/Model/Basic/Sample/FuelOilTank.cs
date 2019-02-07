@@ -11,7 +11,7 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Sample
         /// <summary>
         ///     Kind of fuel
         /// </summary>
-        [JsonProperty(PropertyName = "type")]
-        public FuelKindOptions FuelType { get; set; }
+        [JsonProperty(PropertyName = "fuelKind")]
+        public FuelKindOptions FuelKind { get; set; }
     }
 }
