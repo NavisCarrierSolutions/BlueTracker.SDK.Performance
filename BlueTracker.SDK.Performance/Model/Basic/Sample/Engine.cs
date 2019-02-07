@@ -10,13 +10,13 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Sample
     public class Engine
     {
         /// <summary>
-        /// Air temperature in engine room. (°C)
+        ///     Air temperatures in engine room. (°C)
         /// </summary>
-        [JsonProperty(PropertyName = "engineRoomTemp")]
-        public double? EngineRoomTemp { get; set; }
-
+        [JsonProperty(PropertyName = "engineRoomTemperatures")]
+        public List<double?> EngineRoomTemperatures { get; set; }
+        
         /// <summary>
-        /// Temperature of LT cooling water. (°C)
+        ///     Temperature of LT cooling water. (°C)
         /// </summary>
         [JsonProperty(PropertyName = "coolingWaterTemp")]
         public double? CoolingWaterTemp { get; set; }

@@ -28,6 +28,24 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Sample
         public double? Power { get; set; }
 
         /// <summary>
+        ///     Sea mode enabled? (true/false)
+        /// </summary>
+        [JsonProperty(PropertyName = "seaMode")]
+        public bool? SeaMode { get; set; }
+
+        /// <summary>
+        ///     Engine ind StandBy? (true/false)
+        /// </summary>
+        [JsonProperty(PropertyName = "standBy")]
+        public bool? StandBy { get; set; }
+
+        /// <summary>
+        ///     Turning gear engaged? (true/false)
+        /// </summary>
+        [JsonProperty(PropertyName = "turningGearEngaged")]
+        public bool? TurningGearEngaged { get; set; }
+
+        /// <summary>
         /// Propeller pitch. (%)
         /// </summary>
         [JsonProperty(PropertyName = "propellerPitch")]
@@ -44,6 +62,48 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Sample
         /// </summary>
         [JsonProperty(PropertyName = "shaftRpm")]
         public double? ShaftRpm { get; set; }
+
+        /// <summary>
+        ///     Torque of shaft. (kN)
+        /// </summary>
+        [JsonProperty(PropertyName = "shaftTorque")]
+        public double? ShaftTorque { get; set; }
+
+        /// <summary>
+        ///     Revolutions of shaft (#)
+        /// </summary>
+        [JsonProperty(PropertyName = "shaftRevolutionCounter")]
+        public int? ShaftRevolutionCounter { get; set; }
+
+        /// <summary>
+        ///     Energy counter of shaft. (kWh)
+        /// </summary>
+        [JsonProperty(PropertyName = "shaftEnergyCounter")]
+        public double? ShaftEnergyCounter { get; set; }
+
+        /// <summary>
+        ///     Temperature of luboil shaft bearing. (C°)
+        /// </summary>
+        [JsonProperty(PropertyName = "shaftBearingLubOilTemperature")]
+        public double? ShaftBearingLubOilTemperature { get; set; }
+
+        /// <summary>
+        ///     Temperature of stern tube bearing. (C°)
+        /// </summary>
+        [JsonProperty(PropertyName = "sternTubeBearingTemperature")]
+        public double? SternTubeBearingTemperature { get; set; }
+
+        /// <summary>
+        ///     Temperature of thrust bearing (C°)
+        /// </summary>
+        [JsonProperty(PropertyName = "thrustBearingTemperature")]
+        public double? ThrustBearingTemperature { get; set; }
+
+        /// <summary>
+        ///     Pressure of control air (bar)
+        /// </summary>
+        [JsonProperty(PropertyName = "controlAirPressure")]
+        public double? ControlAirPressure { get; set; }
 
         /// <summary>
         /// Auxiliary blowers

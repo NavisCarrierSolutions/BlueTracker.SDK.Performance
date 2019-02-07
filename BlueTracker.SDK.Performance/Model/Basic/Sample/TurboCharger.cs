@@ -8,6 +8,12 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Sample
     public class TurboCharger
     {
         /// <summary>
+        ///     Number (or position) of turbo charger
+        /// </summary>
+        [JsonProperty(PropertyName = "no", Order = 1)]
+        public int No { get; set; }
+
+        /// <summary>
         /// Speed (rpm)
         /// </summary>
         [JsonProperty(PropertyName = "speed")]
