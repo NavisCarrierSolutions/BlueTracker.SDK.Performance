@@ -29,7 +29,7 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Sample
         ///     Time stamp of sample.
         /// </summary>
         [JsonProperty(PropertyName = "timestampUtc")]
-        public DateTime? TimeStampUtc { get; set; }
+        public DateTime TimeStampUtc { get; set; }
 
         /// <summary>
         ///     Navigational data.
@@ -58,6 +58,7 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Sample
         /// <summary>
         ///     Tank data
         /// </summary>
+        [JsonProperty(PropertyName = "tanks")]
         public Tanks Tanks { get; set; }
     }
 }
