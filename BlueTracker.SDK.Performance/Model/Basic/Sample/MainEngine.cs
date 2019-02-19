@@ -108,11 +108,13 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Sample
         /// <summary>
         ///     Auxiliary blowers
         /// </summary>
+        [JsonProperty(PropertyName = "auxBlowers")]
         public List<AuxiliaryBlower> AuxBlowers { get; set; }
 
         /// <summary>
         ///     Cylinder lub oil flow
         /// </summary>
+        [JsonProperty(PropertyName = "cylLubOilFlow")]
         public CylLubOilFlow CylLubOilFlow { get; set; }
     }
 }

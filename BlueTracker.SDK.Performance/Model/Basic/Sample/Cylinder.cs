@@ -44,6 +44,7 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Sample
         /// <summary>
         ///     Cylinder lub oil flow
         /// </summary>
+        [JsonProperty(PropertyName = "cylLubOilFlow")]
         public CylLubOilFlow CylLubOilFlow { get; set; }
     }
 }
