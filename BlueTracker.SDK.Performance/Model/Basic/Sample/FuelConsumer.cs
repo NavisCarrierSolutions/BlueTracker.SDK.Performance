@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Newtonsoft.Json;
 
 namespace BlueTracker.SDK.Performance.Model.Basic.Sample
@@ -9,21 +10,15 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Sample
     public class FuelConsumer : Aggregate
     {
         /// <summary>
-        ///     Fuel flow of aggregate.
+        ///     FuelFlows
         /// </summary>
-        [JsonProperty(PropertyName = "supplyFuelFlow")]
-        public FuelFlow SupplyFuelFlow { get; set; }
+        [JsonProperty(PropertyName = "fuelFlows")]
+        public List<FuelFlow> FuelFlows { get; set; }
 
         /// <summary>
-        ///     Fuel flow of aggregate.
+        ///     FuelCounters
         /// </summary>
-        [JsonProperty(PropertyName = "returnFuelFlow")]
-        public FuelFlow ReturnFuelFlow { get; set; }
-
-        /// <summary>
-        ///     Used to support old schema, currently named ConsumptionFuelFlow
-        /// </summary>
-        [JsonProperty(PropertyName = "fuelFlow")]
-        public FuelFlow FuelFlow { get; set; }
+        [JsonProperty(PropertyName = "fuelCounters")]
+        public List<FuelCounter> FuelCounters { get; set; }
     }
 }
