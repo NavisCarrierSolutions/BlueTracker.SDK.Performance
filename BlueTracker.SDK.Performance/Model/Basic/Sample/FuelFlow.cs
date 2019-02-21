@@ -11,6 +11,13 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Sample
     public class FuelFlow
     {
         /// <summary>
+        ///     Type of fuel flow (Consumption, Supply, Return)
+        /// </summary>
+        [JsonProperty(PropertyName = "flowType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public FuelFlowOptions FlowType { get; set; }
+
+        /// <summary>
         ///     Kind of fuel in use.
         /// </summary>
         [JsonProperty(PropertyName = "kind")]
