@@ -6,12 +6,12 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Sample
 {
     /// <inheritdoc />
     /// <summary>
-    /// Fuel flow of an aggregate.
+    ///     Fuel flow of an aggregate.
     /// </summary>
     public class AggregateFuelFlow : FuelFlow
     {
         /// <summary>
-        /// Consuming aggregate type.
+        ///     Consuming aggregate type.
         /// </summary>
         [JsonProperty(PropertyName = "aggregate")]
         [JsonConverter(typeof(StringEnumConverter))]

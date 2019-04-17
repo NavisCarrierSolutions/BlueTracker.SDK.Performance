@@ -1,63 +1,64 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
+using Newtonsoft.Json;
 
 namespace BlueTracker.SDK.Performance.Model.Basic.Sample
 {
     /// <summary>
-    /// Onboard sample.
+    ///     Onboard sample.
     /// </summary>
     public class Sample
     {
         /// <summary>
-        /// IMO number of ship.
+        ///     IMO number of ship.
         /// </summary>
         [JsonProperty(PropertyName = "imoNumber")]
         public int ImoNumber { get; set; }
 
         /// <summary>
-        /// Custom ID.
+        ///     Custom ID.
         /// </summary>
         /// <remarks>
-        /// The custom ID can be used to identify a specific sample with an ID provided from the client.
-        /// If a sample is send with an already exsiting custom ID, the respective sample will be
-        /// replaced.
+        ///     The custom ID can be used to identify a specific sample with an ID provided from the client.
+        ///     If a sample is send with an already exsiting custom ID, the respective sample will be
+        ///     replaced.
         /// </remarks>
         [JsonProperty(PropertyName = "customId")]
         public string CustomId { get; set; }
 
         /// <summary>
-        /// Time stamp of sample.
+        ///     Time stamp of sample.
         /// </summary>
         [JsonProperty(PropertyName = "timestampUtc")]
-        public DateTime? TimeStampUtc { get; set; }
+        public DateTime TimeStampUtc { get; set; }
 
         /// <summary>
-        /// Navigational data.
+        ///     Navigational data.
         /// </summary>
         [JsonProperty(PropertyName = "navigation")]
         public Navigation Navigation { get; set; }
 
         /// <summary>
-        /// Environmental data.
+        ///     Environmental data.
         /// </summary>
         [JsonProperty(PropertyName = "environment")]
         public Environment Environment { get; set; }
 
         /// <summary>
-        /// Engine data.
+        ///     Engine data.
         /// </summary>
         [JsonProperty(PropertyName = "engine")]
         public Engine Engine { get; set; }
 
         /// <summary>
-        /// Deck equipment
+        ///     Deck equipment
         /// </summary>
         [JsonProperty(PropertyName = "deckEquipment")]
         public DeckEquipment DeckEquipment { get; set; }
 
         /// <summary>
-        /// Tank data
+        ///     Tank data
         /// </summary>
+        [JsonProperty(PropertyName = "tanks")]
         public Tanks Tanks { get; set; }
     }
 }

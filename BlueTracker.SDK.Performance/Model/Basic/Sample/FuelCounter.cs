@@ -8,7 +8,7 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Sample
     /// <summary>
     ///     Fuel flow of a fuel consumer.
     /// </summary>
-    public class FuelFlow
+    public class FuelCounter
     {
         /// <summary>
         ///     Type of fuel flow (Consumption, Supply, Return)
@@ -37,7 +37,7 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Sample
         public double? Temp { get; set; }
 
         /// <summary>
-        ///     The fuel oil inlet temperature of the fuel. (°C)
+        ///     Fuel temperature at engine inlet. (°C)
         /// </summary>
         [JsonProperty(PropertyName = "inletTemp")]
         public double? InletTemp { get; set; }
@@ -49,15 +49,9 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Sample
         public double? Density { get; set; }
 
         /// <summary>
-        ///     Volume flow of the consumed fuel. (l/h)
+        ///    The total volume count of the pulse per liter counter. (1 Pulse/liter)
         /// </summary>
-        [JsonProperty(PropertyName = "volumeFlow")]
-        public double? VolumeFlow { get; set; }
-
-        /// <summary>
-        ///     Mass flow of the consumed fuel. (kg/h)
-        /// </summary>
-        [JsonProperty(PropertyName = "massFlow")]
-        public double? MassFlow { get; set; }
+        [JsonProperty(PropertyName = "totalVolumeCount")]
+        public int TotalVolumeCount { get; set; }
     }
 }
