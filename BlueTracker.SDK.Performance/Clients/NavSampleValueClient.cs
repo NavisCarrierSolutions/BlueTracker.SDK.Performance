@@ -94,5 +94,19 @@ namespace BlueTracker.SDK.Performance.Clients
         {
             return PostObject<int, List<NavSampleData>>(navSampleData, $"/api/v1/ships/{imoNumber}/navSamples/{sourceName}");
         }
+
+        /// <summary>
+        /// Deletes the nav sample with the specified custom ID of the specified source for the ship with the specified IMO.
+        /// </summary>
+        /// <param name="sourceName">Name of the nav sample source.</param>
+        /// <param name="imoNumber">IMO number of the ship.</param>
+        /// <param name="customId">Custom ID.</param>
+        /// <returns></returns>
+        public NavSample Delete(string sourceName, int imoNumber, int customId)
+        {
+            var reqString = $"/api/v1/ships/{imoNumber}/navSamples/{sourceName}/{customId}";
+            return DeleteObject<NavSample>(reqString);
+        }
+
     }
 }
