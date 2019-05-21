@@ -21,6 +21,8 @@ namespace BlueTracker.SDK.Performance.Model.Processing.Report
 
         public double? SailedDistanceThroughWater { get; set; }
 
+        public double? Displacement { get; set; }
+
         public double? WaterDepth { get; set; }
 
         public double? WaterDepthBelowKeel { get; set; }
