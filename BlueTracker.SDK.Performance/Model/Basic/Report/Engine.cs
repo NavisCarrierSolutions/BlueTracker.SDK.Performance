@@ -22,22 +22,28 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Report
         public double? CoolingWaterTemp { get; set; }
 
         /// <summary>
-        /// Indication if main engines are operated with cut-off turbo chargers.
+        /// Indicates whether main engines are operated with cut-off turbo chargers.
         /// </summary>
         [JsonProperty(PropertyName = "isTcCutout")]
         public bool? IsTcCutout { get; set; }
 
         /// <summary>
-        /// Indication if main engines are operated in slow steaming.
+        /// Indicates whether main engines are operated in slow steaming.
         /// </summary>
         [JsonProperty(PropertyName = "isSlowSteaming")]
         public bool? IsSlowSteaming { get; set; }
 
         /// <summary>
-        /// Indication if main engines are operated in combinator mode.
+        /// Indicates whether main engines are operated in combinator mode.
         /// </summary>
         [JsonProperty(PropertyName = "isCombinatorMode")]
         public bool? IsCombinatorMode { get; set; }
+
+        /// <summary>
+        /// Indicates whether ship is on shore power supply.
+        /// </summary>
+        [JsonProperty(PropertyName = "isOnShorePowerSupply")]
+        public bool? IsOnShorePowerSupply { get; set; }
 
         /// <summary>
         /// A list of Main Engines, which are installed on the vessel.

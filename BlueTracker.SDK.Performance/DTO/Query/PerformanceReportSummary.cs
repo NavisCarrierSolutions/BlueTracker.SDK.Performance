@@ -232,6 +232,11 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public bool? IsCombinatorMode { get; set; }
 
         /// <summary>
+        /// Is ship on shore power supply.
+        /// </summary>
+        public bool? IsOnShorePowerSupply { get; set; }
+
+        /// <summary>
         /// Average shaft RPM. (1/min)
         /// </summary>
         public double? AverageShaftRpm { get; set; }
