@@ -302,6 +302,26 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public double? TotalSfocAeIso { get; set; }
 
         /// <summary>
+        /// Daily fuel oil consumption of main engines. (t/d)
+        /// </summary>
+        public double? DailyMeFoc { get; set; }
+
+        /// <summary>
+        /// Daily fuel oil consumption of auxiliary engines. (t/d)
+        /// </summary>
+        public double? DailyAeFoc { get; set; }
+
+        /// <summary>
+        /// Daily fuel oil consumption of auxiliary boilers. (t/d)
+        /// </summary>
+        public double? DailyAbFoc { get; set; }
+
+        /// <summary>
+        /// Daily fuel oil consumption of all engines and boilers. (t/d)
+        /// </summary>
+        public double? DailyTotalFoc { get; set; }
+
+        /// <summary>
         /// Sum of average aux engine power. (kW)
         /// </summary>
         public double? TotalAverageAePower { get; set; }
