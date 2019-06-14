@@ -236,20 +236,17 @@ namespace BlueTracker.SDK.Performance.Core
                 response.Wait();
 
                 var responseMessage = response.Result;
-                if (responseMessage.IsSuccessStatusCode)
+                var responseStreamTask = responseMessage.Content.ReadAsStreamAsync();
+                responseStreamTask.Wait();
+
+                var responseStream = responseStreamTask.Result;
+
+                if (responseStream == null)
+                    return null;
+
+                using (var reader = new StreamReader(responseStream))
                 {
-                    var responseStreamTask = responseMessage.Content.ReadAsStreamAsync();
-                    responseStreamTask.Wait();
-
-                    var responseStream = responseStreamTask.Result;
-
-                    if (responseStream == null)
-                        return null;
-
-                    using (var reader = new StreamReader(responseStream))
-                    {
-                        content = reader.ReadToEnd();
-                    }
+                    content = reader.ReadToEnd();
                 }
 
                 if (responseMessage.StatusCode != HttpStatusCode.OK)
@@ -286,20 +283,17 @@ namespace BlueTracker.SDK.Performance.Core
                 response.Wait();
 
                 var responseMessage = response.Result;
-                if (responseMessage.IsSuccessStatusCode)
+                var responseStreamTask = responseMessage.Content.ReadAsStreamAsync();
+                responseStreamTask.Wait();
+
+                var responseStream = responseStreamTask.Result;
+
+                if (responseStream == null)
+                    return default(T);
+
+                using (var reader = new StreamReader(responseStream))
                 {
-                    var responseStreamTask = responseMessage.Content.ReadAsStreamAsync();
-                    responseStreamTask.Wait();
-
-                    var responseStream = responseStreamTask.Result;
-
-                    if (responseStream == null)
-                        return default(T);
-
-                    using (var reader = new StreamReader(responseStream))
-                    {
-                        content = reader.ReadToEnd();
-                    }
+                    content = reader.ReadToEnd();
                 }
 
                 if (responseMessage.StatusCode != HttpStatusCode.OK)

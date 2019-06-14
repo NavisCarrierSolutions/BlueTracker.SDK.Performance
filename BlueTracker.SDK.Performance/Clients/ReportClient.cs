@@ -15,7 +15,7 @@ namespace BlueTracker.SDK.Performance.Clients
     public class ReportClient : ApiWrapper
     {
         /// <summary>
-        /// Create a new ReportClient intance.
+        /// Create a new ReportClient instance.
         /// </summary>
         /// <param name="authorization">The API token.</param>
         /// <remarks>
