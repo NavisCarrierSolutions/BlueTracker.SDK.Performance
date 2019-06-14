@@ -70,6 +70,12 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Report
         public double? WaterDepthBelowKeel { get; set; }
 
         /// <summary>
+        /// Actual displacement of the ship. (mt)
+        /// </summary>
+        [JsonProperty(PropertyName = "displacement")]
+        public double? Displacement { get; set; }
+
+        /// <summary>
         /// Draft details.
         /// </summary>
         [JsonProperty(PropertyName = "draft")]
