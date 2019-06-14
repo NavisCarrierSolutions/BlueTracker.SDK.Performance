@@ -102,6 +102,11 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public double? SailedDistanceThroughWater { get; set; }
 
         /// <summary>
+        /// Actual displacement of ship. (metric tons)
+        /// </summary>
+        public double? Displacement { get; set; }
+
+        /// <summary>
         /// Draft forward. (meters)
         /// </summary>
         public double? DraftFwd { get; set; }
