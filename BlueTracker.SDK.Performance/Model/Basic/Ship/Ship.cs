@@ -75,5 +75,15 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Ship
         /// Id of average SFOC curves of auxiliary engines (AE).
         /// </summary>
         public int? AeSfocCurveId { get; set; }
+
+        /// <summary>
+        /// Id of main engine (ME) SCOC curves.
+        /// </summary>
+        public int? ScocCurveId { get; set; }
+
+        /// <summary>
+        /// If the vessel has a scrubber installation the plausibility checks for sulfur content will be skipped
+        /// </summary>
+        public bool? ScrubberInstallation { get; set; }
     }
 }
