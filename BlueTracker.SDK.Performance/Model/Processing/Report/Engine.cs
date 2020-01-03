@@ -17,6 +17,8 @@ namespace BlueTracker.SDK.Performance.Model.Processing.Report
 
         public bool? IsOnShorePowerSupply { get; set; }
 
+        public bool? ScrubberInUse { get; set; }
+
         public double? TotalFoc { get; set; }
 
         public double? TotalFocIso { get; set; }
