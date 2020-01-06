@@ -237,6 +237,11 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public bool? IsOnShorePowerSupply { get; set; }
 
         /// <summary>
+        /// Is the scrubber in use.
+        /// </summary>
+        public bool? ScrubberInUse { get; set; }
+
+        /// <summary>
         /// Average shaft RPM. (1/min)
         /// </summary>
         public double? AverageShaftRpm { get; set; }

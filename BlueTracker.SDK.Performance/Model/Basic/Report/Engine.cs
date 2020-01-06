@@ -46,6 +46,12 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Report
         public bool? IsOnShorePowerSupply { get; set; }
 
         /// <summary>
+        /// Indicates whether the scrubber is in use.
+        /// </summary>
+        [JsonProperty(PropertyName = "scrubberInUse")]
+        public bool? ScrubberInUse { get; set; }
+
+        /// <summary>
         /// A list of Main Engines, which are installed on the vessel.
         /// </summary>
         [JsonProperty(PropertyName = "mainEngines")]
