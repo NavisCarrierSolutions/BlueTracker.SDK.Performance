@@ -39,7 +39,7 @@ namespace BlueTracker.SDK.Performance.Clients
         /// <summary>
         /// Get a sample source value ranges for source identified by name
         /// </summary>
-        /// <param name="sourceName">Name of sample source</param>
+        /// <param name="imoNumber">IMO number of ship.</param>
         /// <returns>List of all sample source value ranges</returns>
         public List<OnboardSampleSourceAssignment> GetAll(int imoNumber)
         {
