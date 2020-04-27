@@ -25,21 +25,21 @@ var ships = client.GetAll();
 ## Clients
 The package contains one client wrapper for each API resource. Each client contains methods to GET, POST, PUT and DELETE resources according to the API specification: https://api.bluetracker.one 
 
-- ``BlueTracker.SDK.Performance.Clients.ShipClient``
-- ``BlueTracker.SDK.Performance.Clients.ShipClassClient``
-- ``BlueTracker.SDK.Performance.Clients.ShipBaseDataClient``
-- ``BlueTracker.SDK.Performance.Clients.ShipClassBaseDataClient``
+- ``~~BlueTracker.SDK.Performance.Clients.ShipClient~~``
+- ``~~BlueTracker.SDK.Performance.Clients.ShipClassClient~~``
+- ``~~BlueTracker.SDK.Performance.Clients.ShipBaseDataClient~~``
+- ``~~BlueTracker.SDK.Performance.Clients.ShipClassBaseDataClient~~``
 - ``BlueTracker.SDK.Performance.Clients.LegClient``
 - ``BlueTracker.SDK.Performance.Clients.ReportClient``
 - ``BlueTracker.SDK.Performance.Clients.VoyageClient``
 - ``BlueTracker.SDK.Performance.Clients.EventClient``
-- ``BlueTracker.SDK.Performance.Clients.HullModelClient``
+- ``~~BlueTracker.SDK.Performance.Clients.HullModelClient~~``
 - ``BlueTracker.SDK.Performance.Clients.HullEventClient``
 - ``BlueTracker.SDK.Performance.Clients.HullInterruptionClient``
-- ``BlueTracker.SDK.Performance.Clients.OwnerClient``
+- ``~~BlueTracker.SDK.Performance.Clients.OwnerClient~~``
 - ``BlueTracker.SDK.Performance.Clients.TagClient``
-- ``BlueTracker.SDK.Performance.Clients.ConsumptionCurveClient``
-- ``BlueTracker.SDK.Performance.Clients.SfocCurveClient``
+- ``~~BlueTracker.SDK.Performance.Clients.ConsumptionCurveClient~~``
+- ``~~BlueTracker.SDK.Performance.Clients.SfocCurveClient~~``
 - ``BlueTracker.SDK.Performance.Clients.OnboardSampleSourceClient``
 - ``BlueTracker.SDK.Performance.Clients.OnboardSampleValueClient``
 - ``BlueTracker.SDK.Performance.Clients.OnboardSampleSourceValueRangeClient``
