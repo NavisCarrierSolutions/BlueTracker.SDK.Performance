@@ -2,9 +2,7 @@
 using System.Collections.Generic;
 using BlueTracker.SDK.Performance.Core;
 using BlueTracker.SDK.Performance.DTO.Query;
-using BlueTracker.SDK.Performance.Model.Enums;
 using BlueTracker.SDK.Performance.Model.Processing.Report;
-using Newtonsoft.Json.Linq;
 using PerformanceReport = BlueTracker.SDK.Performance.DTO.Query.PerformanceReport;
 
 namespace BlueTracker.SDK.Performance.Clients
@@ -28,7 +26,7 @@ namespace BlueTracker.SDK.Performance.Clients
         }
 
         /// <summary>
-        /// Create a new ReportClient intance.
+        /// Create a new ReportClient instance.
         /// </summary>
         /// <param name="serverAddress">The server address.</param>
         /// <param name="authorization">The API token.</param>
@@ -207,40 +205,6 @@ namespace BlueTracker.SDK.Performance.Clients
         {
             var route = $"/api/v1/reports/{reportId}";
             return DeleteObject<PerformanceReport>(route);
-        }
-
-        /// <summary>
-        /// Enables or disables the batch mode of the ships data interface.
-        /// </summary>
-        /// <param name="imoNumber">IMO number of the vessel.</param>
-        /// <param name="enableBatchMode">True to enable batch mode; false to disable batch mode.</param>
-        /// <returns>The ship object.</returns>
-        /// <remarks>
-        /// When batch mode is enabled, data items pushed to the vessel do not trigger an immediate re-calculation.
-        /// This is useful, if big amounts of items needs to be pushed. When the batch mode is disabled, a full
-        /// re-calculation is triggered.
-        /// </remarks>
-        public Ship SetBatchMode(int imoNumber, bool enableBatchMode)
-        {
-            var route = $"/api/v1/ships/{imoNumber}/batchMode";
-            return PostObject<Ship, bool>(enableBatchMode, route);
-        }
-
-        /// <summary>
-        /// Triggers a re-calculation of the ship model.
-        /// </summary>
-        /// <param name="imoNumber">IMO number of the ship.</param>
-        /// <returns>The ship object.</returns>
-        /// <remarks>
-        /// Calling this method, will put the ship to <see cref="FeedState.Pending"/> mode, and a re-calulcation
-        /// job is queued. The method call will then return. During execution of the re-calculation job, the ships
-        /// feed state will be set to <see cref="FeedState.Calculation"/>. When the job is done, the ship feed 
-        /// state will be set back to <see cref="FeedState.Online"/>.
-        /// </remarks>
-        public Ship Calculate(int imoNumber)
-        {
-            var route = $"/api/v1/ships/{imoNumber}/batchMode";
-            return PostEmpty<Ship>(route);
         }
     }
 }
