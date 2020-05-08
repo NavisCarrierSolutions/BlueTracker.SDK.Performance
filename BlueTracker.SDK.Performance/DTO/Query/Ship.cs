@@ -76,6 +76,23 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         /// </summary>
         [JsonProperty("isHidden")]
         public bool IsHidden { get; set; }
-       
+
+        /// <summary>
+        /// Class of the vessel.
+        /// </summary>
+        [JsonProperty("shipClass")]
+        public ShipClassShort ShipClass { get; set; }
+
+        /// <summary>
+        /// Class of the vessel.
+        /// </summary>
+        [JsonProperty("owner")]
+        public OwnerShort Owner { get; set; }
+
+        /// <summary>
+        /// Port of registry.
+        /// </summary>
+        [JsonProperty("portOfRegistry")]
+        public OwnerShort PortOfRegistry { get; set; }
     }
 }
