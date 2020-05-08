@@ -18,7 +18,7 @@ namespace BlueTracker.SDK.Performance.Core
         public int PageCount { get; set; }
 
         /// <summary>
-        /// Total number of itmes.
+        /// Total number of items.
         /// </summary>
         public int TotalCount { get; set; }
     }
