@@ -47,6 +47,12 @@ namespace BlueTracker.SDK.Performance.Model.Processing.Report
         [JsonProperty(PropertyName = "rob")]
         public ROB ROB { get; set; }
 
+        [JsonProperty(PropertyName = "bunker")]
+        public Bunker Bunker { get; set; }
+
+        [JsonProperty(PropertyName = "gainLoss")]
+        public GainLoss GainLoss { get; set; }
+
         [JsonProperty(PropertyName = "hull")]
         public Hull Hull { get; set; }
 

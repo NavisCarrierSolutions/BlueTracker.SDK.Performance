@@ -16,5 +16,11 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Report
         /// </summary>
         [JsonProperty(PropertyName = "lubOil")]
         public List<BunkerLubOil> LubOil { get; set; }
+
+        /// <summary>
+        /// List of fresh water bunkered.
+        /// </summary>
+        [JsonProperty(PropertyName = "freshWater")]
+        public List<BunkerFreshWater> FreshWater { get; set; }
     }
 }

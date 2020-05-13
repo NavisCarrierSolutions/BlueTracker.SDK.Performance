@@ -16,8 +16,8 @@
         Drinking = 1,
 
         /// <summary>
-        /// Fresh water for boiler usage.
+        /// Fresh water distilled.
         /// </summary>
-        Boiler = 2
+        Distilled = 2
     }
 }
