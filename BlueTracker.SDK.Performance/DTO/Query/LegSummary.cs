@@ -57,7 +57,7 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         /// </summary>
         public DateTimeOffset? ArrivalTime { get; set; }
 
-        /// <summary>
+         /// <summary>
         /// Name of captain.
         /// </summary>
         public string Captain { get; set; }
@@ -68,9 +68,14 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public string ChiefEng { get; set; }
 
         /// <summary>
-        /// Duration of leg. (days)
+        /// Duration of leg. (hours)
         /// </summary>
         public double? Duration { get; set; }
+
+        /// <summary>
+        /// Sailing time of leg. (hours)
+        /// </summary>
+        public double? SailingTime { get; set; }
 
         /// <summary>
         /// Sailed distance over ground. (nautical miles)
@@ -106,6 +111,16 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         /// Number of reefers.
         /// </summary>
         public int? CargoReefers { get; set; }
+
+        /// <summary>
+        /// Volume of cargo. (cubic meters)
+        /// </summary>
+        public double? CargoVolume { get; set; }
+
+        /// <summary>
+        /// Number of passengers.
+        /// </summary>
+        public int? CargoPassengers { get; set; }
 
         /// <summary>
         /// Total fuel oil consumption (tons)
@@ -148,6 +163,26 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public double? TotalFocAbIso { get; set; }
 
         /// <summary>
+        /// Total fuel oil consumption inert gas system. (metric tons)
+        /// </summary>
+        public double? TotalFocIgs { get; set; }
+
+        /// <summary>
+        /// Total fuel oil consumption inert gas system (ISO corrected). (metric tons)
+        /// </summary>
+        public double? TotalFocIgsIso { get; set; }
+
+        /// <summary>
+        /// Total fuel oil consumption incinerator. (metric tons)
+        /// </summary>
+        public double? TotalFocInc { get; set; }
+
+        /// <summary>
+        /// Total fuel oil consumption incinerator (ISO corrected). (metric tons)
+        /// </summary>
+        public double? TotalFocIncIso { get; set; }
+
+        /// <summary>
         /// Total CO2 emission. (tons)
         /// </summary>
         public double? TotalCo2 { get; set; }
@@ -168,6 +203,76 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public double? TotalCo2Ab { get; set; }
 
         /// <summary>
+        /// Total CO2 emission inert gas system. (tons)
+        /// </summary>
+        public double? TotalCo2Igs { get; set; }
+
+        /// <summary>
+        /// Total CO2 emission incinerator. (tons)
+        /// </summary>
+        public double? TotalCo2Inc { get; set; }
+
+        /// <summary>
+        /// Total heavy fuel oil consumption. (metric tons)
+        /// </summary>
+        public double? TotalFocHfo { get; set; }
+
+        /// <summary>
+        /// Total heavy fuel oil consumption high sulphur. (metric tons)
+        /// </summary>
+        public double? TotalFocHfoHs { get; set; }
+
+        /// <summary>
+        /// Total heavy fuel oil consumption low sulphur. (metric tons)
+        /// </summary>
+        public double? TotalFocHfoLs { get; set; }
+
+        /// <summary>
+        /// Total heavy fuel oil consumption ultra low sulphur. (metric tons)
+        /// </summary>
+        public double? TotalFocHfoLls { get; set; }
+
+        /// <summary>
+        /// Total light fuel oil consumption. (metric tons)
+        /// </summary>
+        public double? TotalFocLfo { get; set; }
+
+        /// <summary>
+        /// Total fuel oil consumption marine diesel oil. (metric tons)
+        /// </summary>
+        public double? TotalFocMdo { get; set; }
+
+        /// <summary>
+        /// Total fuel oil consumption marine gas oil. (metric tons)
+        /// </summary>
+        public double? TotalFocMgo { get; set; }
+
+        /// <summary>
+        /// Total fuel oil consumption propane. (metric tons)
+        /// </summary>
+        public double? TotalFocPropane { get; set; }
+
+        /// <summary>
+        /// Total fuel oil consumption butane. (metric tons)
+        /// </summary>
+        public double? TotalFocButane { get; set; }
+
+        /// <summary>
+        /// Total fuel oil consumption LNG. (metric tons)
+        /// </summary>
+        public double? TotalFocLng { get; set; }
+
+        /// <summary>
+        /// Total fuel oil consumption methanol. (metric tons)
+        /// </summary>
+        public double? TotalFocMethanol { get; set; }
+
+        /// <summary>
+        /// Total fuel oil consumption ethanol. (metric tons)
+        /// </summary>
+        public double? TotalFocEthanol { get; set; }
+
+        /// <summary>
         /// EEOI by TEU. (Grams CO2 per TEU and mile)
         /// </summary>
         public double? EeoiTeu { get; set; }
@@ -176,6 +281,106 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         /// EEOI by cargo weight. (Grams CO2 per cargo ton and mile)
         /// </summary>
         public double? EeoiWeight { get; set; }
+
+        /// <summary>
+        /// Total cylinder oil consumption (litres).
+        /// </summary>
+        public double? TotalCylinderOilConsumption { get; set; }
+
+        /// <summary>
+        /// Total main engine circulation lub oil consumption (litres).
+        /// </summary>
+        public double? TotalCirculationLubOilMeConsumption { get; set; }
+
+        /// <summary>
+        /// Total aux engine circulation lub oil consumption (litres).
+        /// </summary>
+        public double? TotalCirculationLubOilAeConsumption { get; set; }
+
+        /// <summary>
+        /// Total fresh water consumption with an undefined usage (cubic meters).
+        /// </summary>
+        public double? TotalFreshWaterConsumptionUndef { get; set; }
+
+        /// <summary>
+        /// Total domestic fresh water consumption (cubic meters).
+        /// </summary>
+        public double? TotalFreshWaterConsumptionDomestic { get; set; }
+
+        /// <summary>
+        /// Total boiler fresh water consumption (cubic meters).
+        /// </summary>
+        public double? TotalFreshWaterConsumptionBoiler { get; set; }
+
+        /// <summary>
+        /// Total fresh water consumption by washing (cubic meters).
+        /// </summary>
+        public double? TotalFreshWaterConsumptionWashing { get; set; }
+
+        /// <summary>
+        /// Total oily water discharged via an undefined method (cubic meters).
+        /// </summary>
+        public double? TotalOilyWaterDischargeUndef { get; set; }
+
+        /// <summary>
+        /// Total oily water discharged via an oily water separator (cubic meters).
+        /// </summary>
+        public double? TotalOilyWaterDischargeViaOws { get; set; }
+
+        /// <summary>
+        /// Total oily water discharged via an oil discharge monitoring equipment (cubic meters).
+        /// </summary>
+        public double? TotalOilyWaterDischargeViaOdme { get; set; }
+
+        /// <summary>
+        /// ME SOx Emissions (metric tons).
+        /// </summary>
+        public double? SoxEmissionsMe { get; set; }
+
+        /// <summary>
+        /// AE SOx Emissions (metric tons).
+        /// </summary>
+        public double? SoxEmissionsAe { get; set; }
+
+        /// <summary>
+        /// Boiler SOx Emissions (metric tons).
+        /// </summary>
+        public double? SoxEmissionsAb { get; set; }
+
+        /// <summary>
+        /// Total SOx Emissions (metric tons).
+        /// </summary>
+        public double? TotalSoxEmissions { get; set; }
+
+        /// <summary>
+        /// ME NOx Emissions (metric tons).
+        /// </summary>
+        public double? NoxEmissionsMe { get; set; }
+
+        /// <summary>
+        /// AE NOx Emissions (metric tons).
+        /// </summary>
+        public double? NoxEmissionsAe { get; set; }
+
+        /// <summary>
+        /// Boiler NOx Emissions (metric tons).
+        /// </summary>
+        public double? NoxEmissionsAb { get; set; }
+
+        /// <summary>
+        /// Total NOx Emissions (metric tons).
+        /// </summary>
+        public double? TotalNoxEmissions { get; set; }
+
+        /// <summary>
+        /// Bunkered fresh water (cubic meters)
+        /// </summary>
+        public double? BunkerFreshWaterBunkered { get; set; }
+
+        /// <summary>
+        /// Produced fresh water (cubic meters)
+        /// </summary>
+        public double? BunkerFreshWaterProduced { get; set; }
 
         /// <summary>
         /// Average estimation score. (%)
