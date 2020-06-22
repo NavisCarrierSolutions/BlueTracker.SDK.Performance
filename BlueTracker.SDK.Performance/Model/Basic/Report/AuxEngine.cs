@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using System.Collections.Generic;
+using Newtonsoft.Json;
 
 namespace BlueTracker.SDK.Performance.Model.Basic.Report
 {
@@ -18,5 +19,11 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Report
         /// </summary>
         [JsonProperty(PropertyName = "generatedGeneratorEnergy")]
         public double? GeneratedGeneratorEnergy { get; set; }
+
+        /// <summary>
+        /// Engine specific list of lub oil quantities consumed.
+        /// </summary>
+        [JsonProperty(PropertyName = "lubOilConsumptions")]
+        public List<LubOilConsumption> LubOilConsumptions { get; set; }
     }
 }
