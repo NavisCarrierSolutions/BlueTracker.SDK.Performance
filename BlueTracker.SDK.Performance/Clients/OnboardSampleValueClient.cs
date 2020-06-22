@@ -54,14 +54,13 @@ namespace BlueTracker.SDK.Performance.Clients
         /// <summary>
         /// Query a range of onboard samples for a ship from a sample source.
         /// </summary>
-        /// <param name="sourceName">Name of sample source.</param>
         /// <param name="imoNumber">IMO number of ship.</param>
         /// <param name="start">Start time of query</param>
         /// <param name="end">End time of query</param>
         /// <returns>Query result with samples.</returns>
-        public List<Model.Basic.Sample.Sample> Query(string sourceName, int imoNumber, DateTime? start = null, DateTime? end = null)
+        public List<Model.Basic.Sample.Sample> Query(int imoNumber, DateTime? start = null, DateTime? end = null)
         {
-            var url = $"api/v1/onboardSamples/sources/{sourceName}/{imoNumber}";
+            var url = $"api/v1/onboardSamples/{imoNumber}";
 
             if (start != null && end != null)
                 url += $"?start={start:O}&end={end:O}";
