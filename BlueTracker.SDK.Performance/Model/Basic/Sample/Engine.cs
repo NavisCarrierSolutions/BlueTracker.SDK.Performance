@@ -57,5 +57,11 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Sample
         /// </summary>
         [JsonProperty(PropertyName = "auxiliarySystems")]
         public AuxiliarySystems AuxiliarySystems { get; set; }
+
+        /// <summary>
+        ///     A list of Scrubber Systems
+        /// </summary>
+        [JsonProperty(PropertyName = "scrubberSystem")]
+        public ScrubberSystems ScrubberSystem { get; set; }
     }
 }
