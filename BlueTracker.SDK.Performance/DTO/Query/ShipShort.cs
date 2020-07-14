@@ -44,6 +44,12 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public string CallSign { get; set; }
 
         /// <summary>
+        /// Current change tracking version stamp.
+        /// </summary>
+        [JsonProperty("currentVersionStamp")]
+        public long CurrentVersionStamp { get; set; }
+
+        /// <summary>
         /// Name of ship class associated with ship.
         /// </summary>
         [JsonProperty("shipClassName")]

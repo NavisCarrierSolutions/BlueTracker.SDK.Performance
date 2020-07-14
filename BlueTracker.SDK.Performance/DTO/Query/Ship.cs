@@ -65,6 +65,18 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public string SecondEmailAddress { get; set; }
 
         /// <summary>
+        /// Time stamp of ship creation.
+        /// </summary>
+        [JsonProperty("createdOn")]
+        public DateTime CreatedOn { get; set; }
+
+        /// <summary>
+        /// Current change tracking version stamp.
+        /// </summary>
+        [JsonProperty("currentVersionStamp")]
+        public long CurrentVersionStamp { get; set; }
+
+        /// <summary>
         /// Feed state (data interface state).
         /// </summary>
         [JsonProperty("feedState")]
