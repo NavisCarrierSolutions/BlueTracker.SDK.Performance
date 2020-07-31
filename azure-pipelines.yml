@@ -14,8 +14,12 @@ jobs:
         Release-Any:
           Platform: 'Any CPU'
           BuildConfiguration: 'Release'
+    workspace:
+      clean: outputs
 
     steps:
+      - checkout: clean
+
       - task: GitVersion@5
         displayName: GitVersion
         inputs:
