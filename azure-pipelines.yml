@@ -94,4 +94,4 @@ jobs:
         displayName: 'Publish Artifact: drop'
         inputs:
           PathtoPublish: '$(build.artifactstagingdirectory)'
-        condition: and(succeededOrFailed(), eq(variables[Build.sourceBranch],'refs/heads/develop'))
+        condition: and(succeededOrFailed(), eq(variables['Build.sourceBranch'],'refs/heads/develop'))
