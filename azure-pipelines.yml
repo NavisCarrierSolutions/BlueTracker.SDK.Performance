@@ -1,0 +1,92 @@
+trigger:
+  batch: true
+  branches:
+    include:
+      - master
+      - develop
+
+jobs:
+  - job: Build
+    displayName: 'Build'
+    pool: "Fleet-Build"
+    strategy:
+      matrix:
+        Release-Any:
+          Platform: 'Any CPU'
+          BuildConfiguration: 'Release'
+
+    steps:
+      - task: GitVersion@5
+        displayName: GitVersion
+        inputs:
+          updateAssemblyInfo: true
+
+      - task: NuGetToolInstaller@1
+        displayName: 'Use NuGet 5.6.0'
+        inputs:
+          versionSpec: 5.6.0
+
+      - task: NuGetCommand@2
+        displayName: 'NuGet restore'
+        inputs:
+          restoreSolution: BlueTracker.SDK.sln
+
+      - task: VSBuild@1
+        displayName: 'Build solution BlueTracker.SDK.sln'
+        inputs:
+          solution: BlueTracker.SDK.sln
+          vsVersion: '16.0'
+          platform: '$(Platform)'
+          configuration: '$(BuildConfiguration)'
+          clean: true
+
+      - task: MSBuild@1
+        displayName: 'NuGet package'
+        inputs:
+          solution: BlueTracker.SDK.sln
+          msbuildVersion: '16.0'
+          platform: '$(Platform)'
+          configuration: '$(BuildConfiguration)'
+          msbuildArguments: '/t:pack /p:PackageOutputPath="$(Build.ArtifactStagingDirectory)" /p:NoPackageAnalysis=true /p:PackageVersion=$(GitVersion.FullSemVer)'
+          maximumCpuCount: true
+
+      - task: NuGetCommand@2
+        displayName: 'NuGet push'
+        inputs:
+          command: push
+          packagesToPush: '$(Build.ArtifactStagingDirectory)/*.nupkg'
+          publishVstsFeed: 'c69ffa3a-dc58-431c-afe0-12f465fcb265'
+        condition: and(succeeded(), eq(variable['Build.sourceBranch'], 'refs/heads/develop'))
+
+      - task: CopyFiles@2
+        displayName: 'Copy Files to Stage.'
+        inputs:
+          Contents: |
+            BlueTracker.SDK.Performance\*.nuspec
+            BlueTracker.SDK.Performance\bin\**
+            BlueTracker.SDK.Performance\obj\**
+          TargetFolder: '$(build.artifactstagingdirectory)'
+        condition: and(succeeded(), eq(variable['Build.sourceBranch'], 'refs/heads/master'))
+
+      - task: CopyFiles@2
+        displayName: 'Copy Files to Stage.'
+        inputs:
+          SourceFolder: BlueTracker.SDK.Performance
+          Contents: |
+            *.nuspec
+            bin\**
+            obj\**
+            TargetFolder: '$(build.artifactstagingdirectory)'
+        condition: and(succeededOrFailed(), eq(variable['Build.sourceBranch'], 'refs/heads/develop'))
+
+      - task: PublishBuildArtifacts@1
+        displayName: 'Publish Artifact: drop'
+        inputs:
+          PathtoPublish: '$(build.artifactstagingdirectory)'
+        condition: and(succeeded(), eq(variable['Build.sourceBranch'], 'refs/heads/master'))
+
+      - task: PublishBuildArtifacts@1
+        displayName: 'Publish Artifact: drop'
+        inputs:
+          PathtoPublish: '$(build.artifactstagingdirectory)'
+        condition: and(succeededOrFailed(), eq(variable[Build.sourceBranch],'refs/heads/develop'))
