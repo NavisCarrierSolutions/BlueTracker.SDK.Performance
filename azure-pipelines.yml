@@ -64,34 +64,24 @@ jobs:
         condition: and(succeeded(), eq(variables['Build.sourceBranch'], 'refs/heads/develop'))
 
       - task: CopyFiles@2
-        displayName: 'Copy Files to Stage.'
-        inputs:
-          Contents: |
-            BlueTracker.SDK.Performance\*.nuspec
-            BlueTracker.SDK.Performance\bin\**
-            BlueTracker.SDK.Performance\obj\**
-          TargetFolder: '$(build.artifactstagingdirectory)'
-        condition: and(succeeded(), eq(variables['Build.sourceBranch'], 'refs/heads/master'))
-
-      - task: CopyFiles@2
-        displayName: 'Copy Files to Stage.'
+        displayName: 'Copy Files to Stage'
         inputs:
           SourceFolder: BlueTracker.SDK.Performance
           Contents: |
             *.nuspec
             bin\**
             obj\**
-            TargetFolder: '$(build.artifactstagingdirectory)'
-        condition: and(succeededOrFailed(), eq(variables['Build.sourceBranch'], 'refs/heads/develop'))
+          TargetFolder: '$(build.artifactstagingdirectory)'
+        condition: succeededOrFailed()
 
       - task: PublishBuildArtifacts@1
-        displayName: 'Publish Artifact: drop'
+        displayName: 'Master: Publish Artifact'
         inputs:
           PathtoPublish: '$(build.artifactstagingdirectory)'
         condition: and(succeeded(), eq(variables['Build.sourceBranch'], 'refs/heads/master'))
 
       - task: PublishBuildArtifacts@1
-        displayName: 'Publish Artifact: drop'
+        displayName: 'Develop: Publish Artifact'
         inputs:
           PathtoPublish: '$(build.artifactstagingdirectory)'
         condition: and(succeededOrFailed(), eq(variables['Build.sourceBranch'],'refs/heads/develop'))
