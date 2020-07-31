@@ -2,8 +2,9 @@ trigger:
   batch: true
   branches:
     include:
+      - '*'
+    exclude:
       - master
-      - develop
 
 jobs:
   - job: Build
@@ -55,13 +56,14 @@ jobs:
           msbuildArguments: '/t:pack /p:PackageOutputPath="$(Build.ArtifactStagingDirectory)" /p:NoPackageAnalysis=true /p:PackageVersion=$(GitVersion.FullSemVer)'
           maximumCpuCount: true
 
+      # Trigger when called from build pipeline, NOT master
       - task: NuGetCommand@2
         displayName: 'NuGet push'
         inputs:
           command: push
           packagesToPush: '$(Build.ArtifactStagingDirectory)/*.nupkg'
           publishVstsFeed: 'c69ffa3a-dc58-431c-afe0-12f465fcb265'
-        condition: and(succeeded(), eq(variables['Build.sourceBranch'], 'refs/heads/develop'))
+        condition: and(succeeded(), ne(variables['Build.sourceBranch'], 'refs/heads/master'))
 
       - task: CopyFiles@2
         displayName: 'Copy Files to Stage'
@@ -74,14 +76,16 @@ jobs:
           TargetFolder: '$(build.artifactstagingdirectory)'
         condition: succeededOrFailed()
 
+      # Trigger when called from release pipeline, IS master
       - task: PublishBuildArtifacts@1
         displayName: 'Master: Publish Artifact'
         inputs:
           PathtoPublish: '$(build.artifactstagingdirectory)'
         condition: and(succeeded(), eq(variables['Build.sourceBranch'], 'refs/heads/master'))
 
+      # Trigger when called from build pipeline, NOT master
       - task: PublishBuildArtifacts@1
         displayName: 'Develop: Publish Artifact'
         inputs:
           PathtoPublish: '$(build.artifactstagingdirectory)'
-        condition: and(succeededOrFailed(), eq(variables['Build.sourceBranch'],'refs/heads/develop'))
+        condition: and(succeededOrFailed(), ne(variables['Build.sourceBranch'],'refs/heads/master'))
