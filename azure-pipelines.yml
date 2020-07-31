@@ -22,7 +22,7 @@ jobs:
         clean: true
 
       - task: GitVersion@5
-        displayName: GitVersion
+        displayName: 'GitVersion'
         inputs:
           updateAssemblyInfo: true
 
