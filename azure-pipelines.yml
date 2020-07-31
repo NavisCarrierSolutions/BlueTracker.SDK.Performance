@@ -8,7 +8,7 @@ trigger:
 jobs:
   - job: Build
     displayName: 'Build'
-    pool: "Fleet-Build"
+    pool: 'Fleet-Build'
     strategy:
       matrix:
         Release-Any:
