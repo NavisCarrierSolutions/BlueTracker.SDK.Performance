@@ -61,7 +61,7 @@ jobs:
           command: push
           packagesToPush: '$(Build.ArtifactStagingDirectory)/*.nupkg'
           publishVstsFeed: 'c69ffa3a-dc58-431c-afe0-12f465fcb265'
-        condition: and(succeeded(), eq(variable['Build.sourceBranch'], 'refs/heads/develop'))
+        condition: and(succeeded(), eq(variables['Build.sourceBranch'], 'refs/heads/develop'))
 
       - task: CopyFiles@2
         displayName: 'Copy Files to Stage.'
@@ -71,7 +71,7 @@ jobs:
             BlueTracker.SDK.Performance\bin\**
             BlueTracker.SDK.Performance\obj\**
           TargetFolder: '$(build.artifactstagingdirectory)'
-        condition: and(succeeded(), eq(variable['Build.sourceBranch'], 'refs/heads/master'))
+        condition: and(succeeded(), eq(variables['Build.sourceBranch'], 'refs/heads/master'))
 
       - task: CopyFiles@2
         displayName: 'Copy Files to Stage.'
@@ -82,16 +82,16 @@ jobs:
             bin\**
             obj\**
             TargetFolder: '$(build.artifactstagingdirectory)'
-        condition: and(succeededOrFailed(), eq(variable['Build.sourceBranch'], 'refs/heads/develop'))
+        condition: and(succeededOrFailed(), eq(variables['Build.sourceBranch'], 'refs/heads/develop'))
 
       - task: PublishBuildArtifacts@1
         displayName: 'Publish Artifact: drop'
         inputs:
           PathtoPublish: '$(build.artifactstagingdirectory)'
-        condition: and(succeeded(), eq(variable['Build.sourceBranch'], 'refs/heads/master'))
+        condition: and(succeeded(), eq(variables['Build.sourceBranch'], 'refs/heads/master'))
 
       - task: PublishBuildArtifacts@1
         displayName: 'Publish Artifact: drop'
         inputs:
           PathtoPublish: '$(build.artifactstagingdirectory)'
-        condition: and(succeededOrFailed(), eq(variable[Build.sourceBranch],'refs/heads/develop'))
+        condition: and(succeededOrFailed(), eq(variables[Build.sourceBranch],'refs/heads/develop'))
