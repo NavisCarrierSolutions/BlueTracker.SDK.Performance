@@ -80,7 +80,6 @@ stages:
 
   - stage: DeployToAzure
     displayName: 'Deploy to Azure DevOps'
-    condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
 
     jobs:
       - deployment: Deploy
