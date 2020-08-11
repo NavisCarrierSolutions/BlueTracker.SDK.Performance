@@ -57,15 +57,6 @@ stages:
               msbuildArguments: '/t:pack /p:PackageOutputPath="$(Build.ArtifactStagingDirectory)" /p:NoPackageAnalysis=true /p:PackageVersion=$(GitVersion.FullSemVer)'
               maximumCpuCount: true
 
-          # Trigger when called from build pipeline, NOT master
-          - task: NuGetCommand@2
-            displayName: 'NuGet push'
-            inputs:
-              command: push
-              packagesToPush: '$(Build.ArtifactStagingDirectory)/*.nupkg'
-              publishVstsFeed: 'c69ffa3a-dc58-431c-afe0-12f465fcb265'
-            condition: and(succeeded(), ne(variables['Build.sourceBranch'], 'refs/heads/master'))
-
           - task: CopyFiles@2
             displayName: 'Copy Files to Stage'
             inputs:
