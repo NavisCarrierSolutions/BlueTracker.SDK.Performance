@@ -132,4 +132,4 @@ stages:
                     command: push
                     packagesToPush: '$(System.DefaultWorkingDirectory)/build/drop/*.nupkg'
                     nuGetFeedType: external
-                    publishFeedCredentials: www.nuget.org
+                    publishFeedCredentials: www.nuget.org-API-key
