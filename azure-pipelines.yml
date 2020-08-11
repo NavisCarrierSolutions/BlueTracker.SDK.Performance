@@ -46,7 +46,6 @@ stages:
               vsVersion: '16.0'
               platform: '$(Platform)'
               configuration: '$(BuildConfiguration)'
-              clean: true
 
           - task: MSBuild@1
             displayName: 'NuGet package'
