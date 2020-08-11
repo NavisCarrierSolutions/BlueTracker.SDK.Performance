@@ -68,7 +68,7 @@ stages:
             displayName: 'Copy Files to Stage'
             inputs:
               SourceFolder: BlueTracker.SDK.Performance
-              Contents: '*.nuget'
+              Contents: '*.nupkg'
               TargetFolder: '$(build.artifactstagingdirectory)'
             condition: succeededOrFailed()
 
