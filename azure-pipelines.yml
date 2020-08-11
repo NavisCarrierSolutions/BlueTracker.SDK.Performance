@@ -61,26 +61,15 @@ stages:
             displayName: 'Copy Files to Stage'
             inputs:
               SourceFolder: BlueTracker.SDK.Performance
-              Contents: |
-                *.nuspec
-                bin\**
-                obj\**
+              Contents: '*.nuget'
               TargetFolder: '$(build.artifactstagingdirectory)'
             condition: succeededOrFailed()
 
-          # Trigger when called from release pipeline, IS master
           - task: PublishBuildArtifacts@1
             displayName: 'Master Branch: Publish Artifact'
             inputs:
               PathtoPublish: '$(build.artifactstagingdirectory)'
-            condition: and(succeeded(), eq(variables['Build.sourceBranch'], 'refs/heads/master'))
-
-          # Trigger when called from build pipeline, NOT master
-          - task: PublishBuildArtifacts@1
-            displayName: 'Any Branch: Publish Artifact'
-            inputs:
-              PathtoPublish: '$(build.artifactstagingdirectory)'
-            condition: and(succeededOrFailed(), ne(variables['Build.sourceBranch'],'refs/heads/master'))
+            #condition: and(succeeded(), eq(variables['Build.sourceBranch'], 'refs/heads/master'))
 
   - stage: DeployToAzure
     displayName: 'Deploy to Azure DevOps'
