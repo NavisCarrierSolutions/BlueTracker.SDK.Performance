@@ -5,6 +5,13 @@ trigger:
       - master
       - develop
 
+resources:
+  repositories:
+    - repository: GitHub
+      type: github
+      name: 'NavisCarrierSolutions/BlueTracker.SDK.Performance'
+      endpoint: 'GitHub connection'
+
 stages:
   - stage: Build
     jobs:
