@@ -100,7 +100,7 @@ stages:
                   displayName: 'NuGet push'
                   inputs:
                     command: push
-                    packagesToPush: '$(System.DefaultWorkingDirectory)/drop/*.nupkg'
+                    packagesToPush: '$(System.DefaultWorkingDirectory)\drop\*.nupkg'
                     publishVstsFeed: 'c69ffa3a-dc58-431c-afe0-12f465fcb265'
                     allowPackageConflicts: true
 
