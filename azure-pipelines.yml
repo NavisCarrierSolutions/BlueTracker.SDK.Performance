@@ -76,7 +76,6 @@ stages:
             displayName: 'Master Branch: Publish Artifact'
             inputs:
               PathtoPublish: '$(build.artifactstagingdirectory)'
-            #condition: and(succeeded(), eq(variables['Build.sourceBranch'], 'refs/heads/master'))
 
   - stage: DeployToAzure
     displayName: 'Deploy to Azure DevOps'
