@@ -2,90 +2,124 @@ trigger:
   batch: true
   branches:
     include:
-      - '*'
-    exclude:
       - master
+      - develop
 
-jobs:
-  - job: Build
-    displayName: 'Build'
-    pool: 'Fleet-Build'
-    strategy:
-      matrix:
-        Release-Any:
-          Platform: 'Any CPU'
-          BuildConfiguration: 'Release'
-    workspace:
-      clean: outputs
+resources:
+  repositories:
+    - repository: GitHub
+      type: github
+      name: 'NavisCarrierSolutions/BlueTracker.SDK.Performance'
+      endpoint: 'GitHub connection'
 
-    steps:
-      - checkout: self
-        clean: true
+stages:
+  - stage: Build
+    jobs:
+      - job: Build
+        displayName: 'Build'
+        pool: 'Fleet-Build'
+        strategy:
+          matrix:
+            Release-Any:
+              Platform: 'Any CPU'
+              BuildConfiguration: 'Release'
+        workspace:
+          clean: outputs
 
-      - task: GitVersion@5
-        displayName: 'GitVersion'
-        inputs:
-          updateAssemblyInfo: true
+        steps:
+          - checkout: self
+            clean: true
 
-      - task: NuGetToolInstaller@1
-        displayName: 'Use NuGet 5.6.0'
-        inputs:
-          versionSpec: 5.6.0
+          - task: GitVersion@5
+            displayName: 'GitVersion'
+            inputs:
+              updateAssemblyInfo: true
+              configFilePath: 'GitVersion.yml'
 
-      - task: NuGetCommand@2
-        displayName: 'NuGet restore'
-        inputs:
-          restoreSolution: BlueTracker.SDK.sln
+          - task: NuGetToolInstaller@1
+            displayName: 'Use NuGet 5.6.0'
+            inputs:
+              versionSpec: 5.6.0
 
-      - task: VSBuild@1
-        displayName: 'Build solution BlueTracker.SDK.sln'
-        inputs:
-          solution: BlueTracker.SDK.sln
-          vsVersion: '16.0'
-          platform: '$(Platform)'
-          configuration: '$(BuildConfiguration)'
-          clean: true
+          - task: NuGetCommand@2
+            displayName: 'NuGet restore'
+            inputs:
+              restoreSolution: BlueTracker.SDK.sln
 
-      - task: MSBuild@1
-        displayName: 'NuGet package'
-        inputs:
-          solution: BlueTracker.SDK.sln
-          msbuildVersion: '16.0'
-          platform: '$(Platform)'
-          configuration: '$(BuildConfiguration)'
-          msbuildArguments: '/t:pack /p:PackageOutputPath="$(Build.ArtifactStagingDirectory)" /p:NoPackageAnalysis=true /p:PackageVersion=$(GitVersion.FullSemVer)'
-          maximumCpuCount: true
+          - task: VSBuild@1
+            displayName: 'Build solution BlueTracker.SDK.sln'
+            inputs:
+              solution: BlueTracker.SDK.sln
+              vsVersion: '16.0'
+              platform: '$(Platform)'
+              configuration: '$(BuildConfiguration)'
 
-      # Trigger when called from build pipeline, NOT master
-      - task: NuGetCommand@2
-        displayName: 'NuGet push'
-        inputs:
-          command: push
-          packagesToPush: '$(Build.ArtifactStagingDirectory)/*.nupkg'
-          publishVstsFeed: 'c69ffa3a-dc58-431c-afe0-12f465fcb265'
-        condition: and(succeeded(), ne(variables['Build.sourceBranch'], 'refs/heads/master'))
+          - task: MSBuild@1
+            displayName: 'NuGet package'
+            inputs:
+              solution: BlueTracker.SDK.sln
+              msbuildVersion: '16.0'
+              platform: '$(Platform)'
+              configuration: '$(BuildConfiguration)'
+              msbuildArguments: '/t:pack /p:PackageOutputPath="$(Build.ArtifactStagingDirectory)" /p:NoPackageAnalysis=true /p:PackageVersion=$(GitVersion.FullSemVer)'
+              maximumCpuCount: true
 
-      - task: CopyFiles@2
-        displayName: 'Copy Files to Stage'
-        inputs:
-          SourceFolder: BlueTracker.SDK.Performance
-          Contents: |
-            *.nuspec
-            bin\**
-            obj\**
-          TargetFolder: '$(build.artifactstagingdirectory)'
-        condition: succeededOrFailed()
+          - task: PublishBuildArtifacts@1
+            displayName: 'Master Branch: Publish Artifact'
+            inputs:
+              PathtoPublish: '$(Build.Artifactstagingdirectory)'
 
-      # Trigger when called from release pipeline, IS master
-      - task: PublishBuildArtifacts@1
-        displayName: 'Master Branch: Publish Artifact'
-        inputs:
-          PathtoPublish: '$(build.artifactstagingdirectory)'
-        condition: and(succeeded(), eq(variables['Build.sourceBranch'], 'refs/heads/master'))
+  - stage: DeployToAzure
+    displayName: 'Deploy to Azure DevOps'
 
-      # Trigger when called from build pipeline, NOT master
-      - task: PublishBuildArtifacts@1
-        displayName: 'Any Branch: Publish Artifact'
-        inputs:
-          PathtoPublish: '$(build.artifactstagingdirectory)'
-        condition: and(succeededOrFailed(), ne(variables['Build.sourceBranch'],'refs/heads/master'))
+    jobs:
+      - deployment: Deploy
+        displayName: 'Deploying'
+        pool: 'Fleet-Build'
+        environment: azure
+
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+                - task: NuGetToolInstaller@1
+                  displayName: 'Use NuGet 5.6.0'
+                  inputs:
+                    versionSpec: 5.6.0
+                    checkLatest: true
+
+                - task: NuGetCommand@2
+                  displayName: 'NuGet push'
+                  inputs:
+                    command: push
+                    packagesToPush: '$(Pipeline.Workspace)\drop\*.nupkg'
+                    publishVstsFeed: 'c69ffa3a-dc58-431c-afe0-12f465fcb265'
+                    allowPackageConflicts: true
+
+  - stage: DeployToNuget
+    displayName: 'Deploy to Nuget.org'
+    condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
+
+    jobs:
+      - deployment: Deploy
+        displayName: 'Deploying'
+        pool: 'Fleet-Build'
+        environment: nuget
+
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+                - task: NuGetToolInstaller@1
+                  displayName: 'Use NuGet 5.6.0'
+                  inputs:
+                    versionSpec: 5.6.0
+                    checkLatest: true
+
+                - task: NuGetCommand@2
+                  displayName: 'NuGet push'
+                  inputs:
+                    command: push
+                    packagesToPush: '$(Pipeline.Workspace)\drop\*.nupkg'
+                    nuGetFeedType: external
+                    publishFeedCredentials: www.nuget.org-API-key
