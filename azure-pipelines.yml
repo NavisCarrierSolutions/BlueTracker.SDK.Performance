@@ -100,7 +100,7 @@ stages:
                   displayName: 'NuGet push'
                   inputs:
                     command: push
-                    packagesToPush: '$(build.artifactstagingdirectory)\*.nupkg'
+                    packagesToPush: '$(Pipeline.Workspace)\drop\*.nupkg'
                     publishVstsFeed: 'c69ffa3a-dc58-431c-afe0-12f465fcb265'
                     allowPackageConflicts: true
 
