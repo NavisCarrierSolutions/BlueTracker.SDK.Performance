@@ -287,9 +287,14 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public double? AverageShaftRpm { get; set; }
 
         /// <summary>
-        /// Average slip. (%)
+        /// Average slip through water. (%)
         /// </summary>
         public double? AverageSlip { get; set; }
+
+        /// <summary>
+        /// Average slip over ground. (%)
+        /// </summary>
+        public double? AverageSlipOverGround { get; set; }
 
         /// <summary>
         /// Total fuel oil consumption. (tons)
