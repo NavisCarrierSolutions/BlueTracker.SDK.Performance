@@ -27,7 +27,7 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Report
         public double? SeaWaterTemp { get; set; }
 
         /// <summary>
-        /// Sea state on Beaufort scale.
+        /// Wind force on Beaufort scale.
         /// </summary>
         [JsonProperty(PropertyName = "seaState")]
         public int? SeaState { get; set; }

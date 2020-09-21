@@ -13,7 +13,7 @@ namespace BlueTracker.SDK.Performance.Model.Common
         public Deviation Deviations { get; set; }
 
         /// <summary>
-        /// Sea state limit.
+        /// Wind force limit.
         /// </summary>
         public double? SeaState { get; set; }
 

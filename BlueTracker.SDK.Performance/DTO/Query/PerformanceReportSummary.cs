@@ -162,7 +162,7 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public double? SeaWaterTemp { get; set; }
 
         /// <summary>
-        /// Sea state. (Beaufort scale)
+        /// Wind force. (Beaufort scale)
         /// </summary>
         public int? SeaState { get; set; }
 
