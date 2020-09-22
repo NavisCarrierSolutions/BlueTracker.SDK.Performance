@@ -27,5 +27,11 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Sample
         /// </summary>
         [JsonProperty(PropertyName = "volume")]
         public double? Volume { get; set; }
+
+        /// <summary>
+        ///     Tank contents mass (t)
+        /// </summary>
+        [JsonProperty(PropertyName = "mass")]
+        public double? Mass { get; set; }
     }
 }
