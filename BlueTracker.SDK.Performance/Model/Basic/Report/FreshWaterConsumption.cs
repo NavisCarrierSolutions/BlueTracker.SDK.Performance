@@ -10,11 +10,11 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Report
     public class FreshWaterConsumption
     {
         /// <summary>
-        /// Kind of fresh water. (enumeration)
+        /// Purpose of fresh water. (enumeration)
         /// </summary>
-        [JsonProperty(PropertyName = "kind")]
+        [JsonProperty(PropertyName = "purpose")]
         [JsonConverter(typeof(StringEnumConverter))]
-        public FreshWaterConsumptionKindOptions Kind { get; set; }
+        public FreshWaterKindOptions Purpose { get; set; }
 
         /// <summary>
         /// Volume of fresh water (cubic metres).

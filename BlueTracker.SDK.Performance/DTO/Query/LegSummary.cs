@@ -298,24 +298,19 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public double? TotalCirculationLubOilAeConsumption { get; set; }
 
         /// <summary>
-        /// Total fresh water consumption with an undefined usage (cubic meters).
+        /// Total fresh water consumption with an undefined purpose (cubic meters).
         /// </summary>
         public double? TotalFreshWaterConsumptionUndef { get; set; }
 
         /// <summary>
-        /// Total domestic fresh water consumption (cubic meters).
+        /// Total distilled fresh water consumption (cubic meters).
         /// </summary>
-        public double? TotalFreshWaterConsumptionDomestic { get; set; }
+        public double? TotalFreshWaterConsumptionDistilled { get; set; }
 
         /// <summary>
-        /// Total boiler fresh water consumption (cubic meters).
+        /// Total drinking fresh water consumption (cubic meters).
         /// </summary>
-        public double? TotalFreshWaterConsumptionBoiler { get; set; }
-
-        /// <summary>
-        /// Total fresh water consumption by washing (cubic meters).
-        /// </summary>
-        public double? TotalFreshWaterConsumptionWashing { get; set; }
+        public double? TotalFreshWaterConsumptionDrinking { get; set; }
 
         /// <summary>
         /// Total oily water discharged via an undefined method (cubic meters).

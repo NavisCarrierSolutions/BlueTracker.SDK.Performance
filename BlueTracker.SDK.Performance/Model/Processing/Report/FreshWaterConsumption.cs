@@ -6,9 +6,9 @@ namespace BlueTracker.SDK.Performance.Model.Processing.Report
 {
     public class FreshWaterConsumption
     {
-        [JsonProperty(PropertyName = "kind")]
+        [JsonProperty(PropertyName = "purpose")]
         [JsonConverter(typeof(StringEnumConverter))]
-        public FreshWaterConsumptionKindOptions Kind { get; set; }
+        public FreshWaterKindOptions Purpose { get; set; }
 
         [JsonProperty(PropertyName = "volume")]
         public double? Volume { get; set; }
