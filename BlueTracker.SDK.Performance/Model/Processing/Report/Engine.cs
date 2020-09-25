@@ -51,6 +51,10 @@ namespace BlueTracker.SDK.Performance.Model.Processing.Report
 
         public double? TotalCylinderOilConsumption { get; set; }
 
+        public double? TotalCylinderHsLubOilConsumption { get; set; }
+
+        public double? TotalCylinderLsLubOilConsumption { get; set; }
+
         public List<MainEngine> MainEngines { get; set; }
 
         public List<AuxEngine> AuxEngines { get; set; }
