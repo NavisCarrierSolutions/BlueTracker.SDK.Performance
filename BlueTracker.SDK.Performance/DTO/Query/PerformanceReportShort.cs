@@ -22,5 +22,11 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         /// </summary>
         [JsonProperty("timeStamp")]
         public DateTimeOffset TimeStamp { get; set; }
+
+        /// <summary>
+        /// Version Stamp when the report was created or changed.
+        /// </summary>
+        [JsonProperty("versionStamp")]
+        public long VersionStamp { get; set; }
     }
 }
