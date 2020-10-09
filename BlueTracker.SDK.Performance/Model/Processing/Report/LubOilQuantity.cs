@@ -16,6 +16,9 @@ namespace BlueTracker.SDK.Performance.Model.Processing.Report
         [JsonProperty(PropertyName = "amount")]
         public double? Amount { get; set; }
 
+        [JsonProperty(PropertyName = "reason")]
+        public GainLossReason Reason { get; set; }
+
         [JsonProperty(PropertyName = "type")]
         public LubOilType Type { get; set; }
     }
