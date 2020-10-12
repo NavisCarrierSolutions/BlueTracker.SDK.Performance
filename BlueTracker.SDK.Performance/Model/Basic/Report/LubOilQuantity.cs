@@ -31,12 +31,6 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Report
         public double? Amount { get; set; }
 
         /// <summary>
-        /// Gain/Loss reason.
-        /// </summary>
-        [JsonProperty(PropertyName = "reason")]
-        public GainLossReason Reason { get; set; }
-
-        /// <summary>
         /// Lub oil type details.
         /// </summary>
         [JsonProperty(PropertyName = "type")]
