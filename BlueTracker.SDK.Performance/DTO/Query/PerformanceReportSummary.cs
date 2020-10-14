@@ -147,7 +147,7 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public double? Trim { get; set; }
 
         /// <summary>
-        /// Outside air temperature. (�C)
+        /// Outside air temperature. (°C)
         /// </summary>
         public double? AirTemp { get; set; }
 
@@ -157,7 +157,7 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public double? AirPress { get; set; }
 
         /// <summary>
-        /// Sea water temperature. (�C)
+        /// Sea water temperature. (°C)
         /// </summary>
         public double? SeaWaterTemp { get; set; }
 
@@ -165,6 +165,11 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         /// Sea state. (Beaufort scale)
         /// </summary>
         public int? SeaState { get; set; }
+
+        /// <summary>
+        /// Wind force. (Beaufort scale)
+        /// </summary>
+        public int? WindForce { get; set; }
 
         /// <summary>
         /// Douglas sea scale. (Douglas)
@@ -247,12 +252,12 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public double? BallastWeight { get; set; }
 
         /// <summary>
-        /// Engine room temperature. (�C)
+        /// Engine room temperature. (°C)
         /// </summary>
         public double? EngineRoomTemp { get; set; }
 
         /// <summary>
-        /// Temperature of LT cooling water. (�C)
+        /// Temperature of LT cooling water. (°C)
         /// </summary>
         public double? CoolingWaterTemp { get; set; }
 
@@ -277,9 +282,9 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public bool? IsOnShorePowerSupply { get; set; }
 
         /// <summary>
-        /// Is the scrubber in use?
+        /// Is ship running the scrubber in operation?
         /// </summary>
-        public bool? ScrubberInUse { get; set; }
+        public bool? IsOnScrubberMode { get; set; }
 
         /// <summary>
         /// Average shaft RPM. (1/min)
