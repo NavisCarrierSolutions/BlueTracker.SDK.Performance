@@ -14,6 +14,13 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Report
         public FreshWaterTypeOptions Type { get; set; }
 
         /// <summary>
+        /// Kind of fresh water. (enumeration)
+        /// </summary>
+        [JsonProperty(PropertyName = "freshWaterKind")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public FreshWaterKindOptions FreshWaterKind { get; set; }
+
+        /// <summary>
         /// Amount of fresh water. (cubic metres)
         /// </summary>
         [JsonProperty(PropertyName = "amount")]
