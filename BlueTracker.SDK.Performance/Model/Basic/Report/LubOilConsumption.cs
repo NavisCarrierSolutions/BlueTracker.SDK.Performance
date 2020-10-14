@@ -1,4 +1,5 @@
-﻿using BlueTracker.SDK.Performance.Model.Common;
+﻿using System;
+using BlueTracker.SDK.Performance.Model.Common;
 using BlueTracker.SDK.Performance.Model.Enums;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
@@ -21,7 +22,14 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Report
         /// Volume of lub oil consumption. (litres)
         /// </summary>
         [JsonProperty(PropertyName = "volume")]
+        [Obsolete("Legacy code, this will be removed in the future.")]
         public double? Volume { get; set; }
+
+        /// <summary>
+        /// Amount of lub oil consumption. (litres)
+        /// </summary>
+        [JsonProperty(PropertyName = "amount")]
+        public double? Amount { get; set; }
 
         /// <summary>
         /// Density of lub oil.
