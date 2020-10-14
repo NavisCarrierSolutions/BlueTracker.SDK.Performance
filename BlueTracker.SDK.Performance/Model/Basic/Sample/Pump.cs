@@ -30,5 +30,11 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Sample
         /// </summary>
         [JsonProperty(PropertyName = "outletPress")]
         public double? OutletPress { get; set; }
+
+        /// <summary>
+        ///     Flow (m3/h)
+        /// </summary>
+        [JsonProperty(PropertyName = "flow")]
+        public double? Flow { get; set; }
     }
 }
