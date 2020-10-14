@@ -18,6 +18,11 @@ namespace BlueTracker.SDK.Performance.Model.Common
         public double? SeaState { get; set; }
 
         /// <summary>
+        /// Wind force limit.
+        /// </summary>
+        public double? WindForce { get; set; }
+
+        /// <summary>
         /// Wind speed limit.
         /// </summary>
         public double? WindSpeed { get; set; }
