@@ -14,6 +14,8 @@ namespace BlueTracker.SDK.Performance.Model.Processing.Report
 
         public int? SeaState { get; set; }
 
+        public int? WindForce { get; set; }
+
         public int? DouglasSeaScale { get; set; }
 
         public double? ReferenceHeight { get; set; }
