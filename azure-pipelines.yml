@@ -80,7 +80,7 @@ stages:
         pool: 'Fleet-Build'
         environment: azure
         workspace:
-          clean: outputs
+          clean: all
 
         strategy:
           runOnce:
@@ -110,7 +110,7 @@ stages:
         pool: 'Fleet-Build'
         environment: nuget
         workspace:
-          clean: outputs
+          clean: all
 
         strategy:
           runOnce:
