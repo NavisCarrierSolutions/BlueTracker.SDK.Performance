@@ -11,6 +11,10 @@ resources:
       type: github
       name: 'NavisCarrierSolutions/BlueTracker.SDK.Performance'
       endpoint: 'GitHub connection'
+    - repository: PipelineTemplates
+      name: DevOps/Pipeline-Templates
+      type: git
+      endpoint: Pipeline-Templates # Service connectionname in the Azure DevOps GUI
 
 stages:
   - stage: Build
@@ -30,11 +34,9 @@ stages:
           - checkout: self
             clean: true
 
-          - task: GitVersion@5
-            displayName: 'GitVersion'
-            inputs:
+          - template: GitVersion/gitversion.v1.yml@PipelineTemplates
+            parameters:
               updateAssemblyInfo: true
-              configFilePath: 'GitVersion.yml'
 
           - task: NuGetToolInstaller@1
             displayName: 'Use NuGet 5.6.0'
@@ -77,6 +79,8 @@ stages:
         displayName: 'Deploying'
         pool: 'Fleet-Build'
         environment: azure
+        workspace:
+          clean: all
 
         strategy:
           runOnce:
@@ -105,6 +109,8 @@ stages:
         displayName: 'Deploying'
         pool: 'Fleet-Build'
         environment: nuget
+        workspace:
+          clean: all
 
         strategy:
           runOnce:
