@@ -100,6 +100,35 @@ stages:
                     publishVstsFeed: 'c69ffa3a-dc58-431c-afe0-12f465fcb265'
                     allowPackageConflicts: true
 
+  - stage: DeployToCloud
+    displayName: 'Deploy to NCVS-Cloud'
+
+    jobs:
+      - deployment: Deploy
+        displayName: 'Deploying'
+        pool: 'Fleet-Build'
+        environment: azure
+        workspace:
+          clean: all
+
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+                - task: NuGetToolInstaller@1
+                  displayName: 'Use NuGet 5.6.0'
+                  inputs:
+                    versionSpec: 5.6.0
+                    checkLatest: true
+
+                - task: NuGetCommand@2
+                  displayName: 'NuGet push'
+                  inputs:
+                    command: 'push'
+                    packagesToPush: '$(Pipeline.Workspace)\drop\*.nupkg'
+                    nuGetFeedType: 'external'
+                    publishFeedCredentials: 'NCVS-Cloud Shared'
+
   - stage: DeployToNuget
     displayName: 'Deploy to Nuget.org'
     condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
