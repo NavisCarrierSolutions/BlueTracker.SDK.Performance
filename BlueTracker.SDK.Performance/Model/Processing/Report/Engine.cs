@@ -27,7 +27,9 @@ namespace BlueTracker.SDK.Performance.Model.Processing.Report
 
         public double? AverageShaftRpm { get; set; }
 
-        public double? AverageSlip { get; set; }
+        public double? AverageSlipThroughWater { get; set; }
+
+        public double? AverageSlipOverGround { get; set; }
 
         public double? TotalAverageMePower { get; set; }
 
