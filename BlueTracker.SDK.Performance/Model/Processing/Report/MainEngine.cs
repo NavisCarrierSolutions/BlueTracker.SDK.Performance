@@ -24,6 +24,8 @@
 
         public double? PropellerPitch { get; set; }
 
-        public double? Slip { get; set; }
+        public double? SlipThroughWater { get; set; }
+
+        public double? SlipOverGround { get; set; }
     }
 }
