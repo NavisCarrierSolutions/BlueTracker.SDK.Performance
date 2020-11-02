@@ -1,4 +1,5 @@
-﻿using BlueTracker.SDK.Performance.Model.Common;
+﻿using System;
+using BlueTracker.SDK.Performance.Model.Common;
 using BlueTracker.SDK.Performance.Model.Enums;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
@@ -7,16 +8,16 @@ namespace BlueTracker.SDK.Performance.Model.Processing.Report
 {
     public class LubOilConsumption
     {
-        [JsonProperty(PropertyName = "aggregate")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public AggregateOptions Aggregate { get; set; }
-
         [JsonProperty(PropertyName = "kind")]
         [JsonConverter(typeof(StringEnumConverter))]
         public LubOilKindOptions Kind { get; set; }
 
         [JsonProperty(PropertyName = "volume")]
+        [Obsolete("Legacy code, this will be removed in the future.")]
         public double? Volume { get; set; }
+
+        [JsonProperty(PropertyName = "amount")]
+        public double? Amount { get; set; }
 
         [JsonProperty(PropertyName = "density")]
         public double? Density { get; set; }

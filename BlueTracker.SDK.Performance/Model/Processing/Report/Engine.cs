@@ -17,7 +17,7 @@ namespace BlueTracker.SDK.Performance.Model.Processing.Report
 
         public bool? IsOnShorePowerSupply { get; set; }
 
-        public bool? ScrubberInUse { get; set; }
+        public bool? IsOnScrubberMode { get; set; }
 
         public double? TotalFoc { get; set; }
 
@@ -27,7 +27,9 @@ namespace BlueTracker.SDK.Performance.Model.Processing.Report
 
         public double? AverageShaftRpm { get; set; }
 
-        public double? AverageSlip { get; set; }
+        public double? AverageSlipThroughWater { get; set; }
+
+        public double? AverageSlipOverGround { get; set; }
 
         public double? TotalAverageMePower { get; set; }
 
@@ -77,7 +79,7 @@ namespace BlueTracker.SDK.Performance.Model.Processing.Report
 
         public Dictionary<AggregateOptions, double?> TotalLubOilCirculationAggregate { get; set; }
 
-        public Dictionary<FreshWaterConsumptionKindOptions, double?> TotalFreshWaterConsumptionKind { get; set; }
+        public Dictionary<FreshWaterConsumptionPurposeOptions, double?> TotalFreshWaterConsumptionPurpose { get; set; }
 
         public Dictionary<FuelKindOptions, double?> TotalFocFuelKind { get; set; }
 
