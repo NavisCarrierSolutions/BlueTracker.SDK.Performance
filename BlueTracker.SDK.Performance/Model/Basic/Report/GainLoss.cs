@@ -9,12 +9,12 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Report
         /// List of fuel oil quantities Gain/Loss.
         /// </summary>
         [JsonProperty(PropertyName = "fuelOil")]
-        public List<FuelQuantity> FuelOil { get; set; }
+        public List<GainLossFuelQuantity> FuelOil { get; set; }
 
         /// <summary>
         /// List of lub oil quantities Gain/Loss.
         /// </summary>
         [JsonProperty(PropertyName = "lubOil")]
-        public List<LubOilQuantity> LubOil { get; set; }
+        public List<GainLossLubOilQuantity> LubOil { get; set; }
     }
 }

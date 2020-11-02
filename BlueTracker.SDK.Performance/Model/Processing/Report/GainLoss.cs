@@ -7,10 +7,10 @@ namespace BlueTracker.SDK.Performance.Model.Processing.Report
     public class GainLoss
     {
         [JsonProperty(PropertyName = "fuelOil")]
-        public List<FuelQuantity> FuelOil { get; set; }
+        public List<GainLossFuelQuantity> FuelOil { get; set; }
 
         [JsonProperty(PropertyName = "lubOil")]
-        public List<LubOilQuantity> LubOil { get; set; }
+        public List<GainLossLubOilQuantity> LubOil { get; set; }
 
         public Dictionary<FuelKindOptions, double?> TotalGainLossFuelOilKind { get; set; }
 
