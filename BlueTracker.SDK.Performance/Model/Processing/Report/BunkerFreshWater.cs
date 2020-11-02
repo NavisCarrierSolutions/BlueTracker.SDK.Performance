@@ -10,6 +10,10 @@ namespace BlueTracker.SDK.Performance.Model.Processing.Report
         [JsonConverter(typeof(StringEnumConverter))]
         public FreshWaterTypeOptions Type { get; set; }
 
+        [JsonProperty(PropertyName = "freshWaterKind")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public FreshWaterKindOptions FreshWaterKind { get; set; }
+
         [JsonProperty(PropertyName = "amount")]
         public double? Amount { get; set; }
     }

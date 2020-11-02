@@ -1,9 +1,6 @@
 ﻿namespace BlueTracker.SDK.Performance.Model.Enums
 {
-    /// <summary>
-    /// Fresh water consumption kinds.
-    /// </summary>
-    public enum FreshWaterConsumptionKindOptions
+    public enum FreshWaterConsumptionPurposeOptions
     {
         /// <summary>
         /// Undefined

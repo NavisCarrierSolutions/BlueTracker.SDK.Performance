@@ -8,10 +8,6 @@ namespace BlueTracker.SDK.Performance.Model.Processing.Report
 {
     public class LubOilConsumption
     {
-        [JsonProperty(PropertyName = "aggregate")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public AggregateOptions Aggregate { get; set; }
-
         [JsonProperty(PropertyName = "kind")]
         [JsonConverter(typeof(StringEnumConverter))]
         public LubOilKindOptions Kind { get; set; }

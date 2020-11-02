@@ -19,10 +19,10 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Report
         public LubOilKindOptions Kind { get; set; }
 
         /// <summary>
-        /// Volume of lub oil consumption. (litres)
+        /// Volume of lub oil consumption. (litres) (Obsolete please use amount)
         /// </summary>
         [JsonProperty(PropertyName = "volume")]
-        [Obsolete("Legacy code, this will be removed in the future.")]
+        [Obsolete("Use amount instead.")]
         public double? Volume { get; set; }
 
         /// <summary>
