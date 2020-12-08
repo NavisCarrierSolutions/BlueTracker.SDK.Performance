@@ -34,7 +34,7 @@ namespace BlueTracker.SDK.Performance.Clients
         }
 
         /// <summary>
-        /// Gets a specific charter party object.
+        /// Gets a specific charter party.
         /// </summary>
         /// <param name="id">ID of the charter party to retrieve.</param>
         /// <returns>The retrieved charter party object.</returns>
@@ -56,7 +56,7 @@ namespace BlueTracker.SDK.Performance.Clients
         /// <param name="page">The page number of the query. (Optional. Default: 0)</param>
         /// <param name="pageSize">The page size of the query. (Optional. Default: 20)</param>
         /// <returns>
-        /// A paged list of charter party objects for the specified IMO number within the specified time range.
+        /// A paged list of charter parties for the specified IMO number within the specified time range.
         /// </returns>
         public PagedSearchResult<CharterPartyShort> GetAll(int imoNumber, DateTime? start = null, DateTime? end = null, 
             CharterPartyState? state = null, int page = 0, int pageSize = 20)
@@ -91,7 +91,7 @@ namespace BlueTracker.SDK.Performance.Clients
         /// Updates the charter party with the specified id.
         /// </summary>
         /// <param name="id">Id of charter party to update.</param>
-        /// <param name="charterPartyData">The detailed hull event object.</param>
+        /// <param name="charterPartyData">The detailed charter party.</param>
         /// <returns>
         /// The updated charter party.
         /// </returns>
