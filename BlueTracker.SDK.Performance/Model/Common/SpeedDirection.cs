@@ -20,6 +20,18 @@ namespace BlueTracker.SDK.Performance.Model.Common
         public double? SpeedRel { get; set; }
 
         /// <summary>
+        /// True speed. (Unit: kn)
+        /// </summary>
+        [JsonProperty(PropertyName = "speedTrueKnots")]
+        public double? SpeedTrueKnots { get; set; }
+
+        /// <summary>
+        /// Relative speed. (Unit: kn)
+        /// </summary>
+        [JsonProperty(PropertyName = "speedRelKnots")]
+        public double? SpeedRelKnots { get; set; }
+
+        /// <summary>
         /// True direction (relative to north). (Unit: deg)
         /// </summary>
         [JsonProperty(PropertyName = "directionTrue")]
