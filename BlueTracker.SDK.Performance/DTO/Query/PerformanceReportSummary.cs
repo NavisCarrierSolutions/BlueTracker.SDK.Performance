@@ -202,9 +202,19 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public double? WindSpeedRel { get; set; }
 
         /// <summary>
-        /// True wind speed. (m/s) rel. to north)
+        /// True wind speed. (m/s rel. to north)
         /// </summary>
         public double? WindSpeedTrue { get; set; }
+
+        /// <summary>
+        /// Relative wind speed. (kn rel. to ship)
+        /// </summary>
+        public double? WindSpeedRelKnots { get; set; }
+
+        /// <summary>
+        /// True wind speed. (kn rel. to north)
+        /// </summary>
+        public double? WindSpeedTrueKnots { get; set; }
 
         /// <summary>
         /// Relative wind direction. (degrees rel. to ship)

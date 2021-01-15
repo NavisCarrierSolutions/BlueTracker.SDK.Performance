@@ -8,6 +8,6 @@
         Charter = 3,
         Engine = 4,
         DcsReporting = 5,
-        WorldMap = 6
+        General = 6
     }
 }
