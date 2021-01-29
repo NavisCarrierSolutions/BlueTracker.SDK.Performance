@@ -119,5 +119,12 @@ namespace BlueTracker.SDK.Performance.Model.Common
         [JsonProperty("focType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public CharterPartyFocType? FocType { get; set; }
+
+        /// <summary>
+        /// Gets or sets the weather source of the charter party.
+        /// </summary>
+        [JsonProperty("weatherSource")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public WeatherSourceOptions? WeatherSource { get; set; }
     }
 }
