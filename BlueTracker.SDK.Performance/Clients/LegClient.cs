@@ -56,13 +56,13 @@ namespace BlueTracker.SDK.Performance.Clients
         }
 
         /// <summary>
-        /// Gets the performance summary for a specific leg.
+        /// Gets the leg summary for the specified departure event id.
         /// </summary>
-        /// <param name="id">ID of the leg.</param>
+        /// <param name="eventId">Id of departure event to get leg summary for.</param>
         /// <returns>The leg performance summary.</returns>
-        public LegSummary GetSummary(int id)
+        public LegSummary GetSummary(int eventId)
         {
-            var route = $"/api/v1/legs/{id}/summary";
+            var route = $"/api/v1/legs/{eventId}/legSummary";
             var ret = GetObject<LegSummary>(route);
             return ret;
         }
