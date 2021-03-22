@@ -13,5 +13,10 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Report
         /// </summary>
         [JsonProperty(PropertyName = "oilyWater")]
         public List<OilyWaterDischarge> OilyWater { get; set; }
+
+        /// <summary>
+        /// List of waste disposals.
+        /// </summary>
+        public List<WasteDisposal> WasteDisposals { get; set; }
     }
 }

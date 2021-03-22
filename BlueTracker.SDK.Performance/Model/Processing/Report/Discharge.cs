@@ -9,6 +9,9 @@ namespace BlueTracker.SDK.Performance.Model.Processing.Report
         [JsonProperty("oilyWater")]
         public List<OilyWaterDischarge> OilyWater { get; set; }
 
+        [JsonProperty(PropertyName = "wasteDisposals")]
+        public List<WasteDisposal> WasteDisposals { get; set; }
+
         public Dictionary<OilyWaterDischargeMethods, double?> TotalOilyWaterDischargeMethod { get; set; }
     }
 }
