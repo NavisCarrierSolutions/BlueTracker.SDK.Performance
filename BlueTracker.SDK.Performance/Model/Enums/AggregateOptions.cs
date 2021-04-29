@@ -41,6 +41,13 @@ namespace BlueTracker.SDK.Performance.Model.Enums
         /// </summary>
         [EnumMember(Value = "incinerator")]
         [JsonProperty(PropertyName = "incinerator")]
-        Incinerator
+        Incinerator,
+
+        /// <summary>
+        /// Undefined
+        /// </summary>
+        [EnumMember(Value = "undefined")]
+        [JsonProperty(PropertyName = "undefined")]
+        Undefined
     }
 }
