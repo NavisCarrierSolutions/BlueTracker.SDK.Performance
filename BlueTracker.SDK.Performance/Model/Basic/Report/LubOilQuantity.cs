@@ -15,7 +15,7 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Report
         /// </summary>
         [JsonProperty(PropertyName = "aggregate")]
         [JsonConverter(typeof(StringEnumConverter))]
-        public AggregateOptions Aggregate { get; set; }
+        public LubOilAggregateOptions Aggregate { get; set; }
 
         /// <summary>
         /// Kind of lub oil. (enumeration)
