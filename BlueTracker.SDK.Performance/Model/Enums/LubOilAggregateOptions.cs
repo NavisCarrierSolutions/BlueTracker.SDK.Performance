@@ -1,12 +1,14 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.Serialization;
+using System.Text;
+using System.Threading.Tasks;
 using Newtonsoft.Json;
 
 namespace BlueTracker.SDK.Performance.Model.Enums
 {
-    /// <summary>
-    /// Types of aggregates.
-    /// </summary>
-    public enum AggregateOptions
+    public enum LubOilAggregateOptions
     {
         /// <summary>
         /// Main engine of a vessel (used for propulsion), which may be fitted with a shaft generator.
@@ -41,6 +43,11 @@ namespace BlueTracker.SDK.Performance.Model.Enums
         /// </summary>
         [EnumMember(Value = "incinerator")]
         [JsonProperty(PropertyName = "incinerator")]
-        Incinerator
+        Incinerator,
+
+        /// <summary>
+        /// Undefined
+        /// </summary>
+        Undefined
     }
 }
