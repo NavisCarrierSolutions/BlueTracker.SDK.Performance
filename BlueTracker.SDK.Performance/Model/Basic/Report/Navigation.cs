@@ -1,6 +1,8 @@
 using System;
 using BlueTracker.SDK.Performance.Model.Common;
+using BlueTracker.SDK.Performance.Model.Enums;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace BlueTracker.SDK.Performance.Model.Basic.Report
 {
@@ -104,5 +106,19 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Report
         /// </summary>
         [JsonProperty(PropertyName = "arrivalPortName")]
         public string ArrivalPortName { get; set; }
+
+        /// <summary>
+        /// Charter speed instruction.
+        /// </summary>
+        [JsonProperty(PropertyName = "charterSpeedInstruction")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public CharterSpeedInstruction? CharterSpeedInstruction { get; set; }
+
+        /// <summary>
+        /// Charter voyage status.
+        /// </summary>
+        [JsonProperty(PropertyName = "charterVoyageStatus")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public CharterVoyageStatus? CharterVoyageStatus { get; set; }
     }
 }

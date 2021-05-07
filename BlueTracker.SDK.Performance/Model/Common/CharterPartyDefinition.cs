@@ -1,4 +1,5 @@
-﻿using BlueTracker.SDK.Performance.Model.Enums;
+﻿using System.Collections.Generic;
+using BlueTracker.SDK.Performance.Model.Enums;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
@@ -126,5 +127,19 @@ namespace BlueTracker.SDK.Performance.Model.Common
         [JsonProperty("weatherSource")]
         [JsonConverter(typeof(StringEnumConverter))]
         public WeatherSourceOptions? WeatherSource { get; set; }
+
+        /// <summary>
+        /// Gets or sets the charter instructions of the charter party.
+        /// (Used only for charter party type ConsumptionCap).
+        /// </summary>
+        [JsonProperty("charterPartyInstruction")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public CharterPartyInstruction? CharterPartyInstruction { get; set; }
+
+        /// <summary>
+        /// List of cargo conditions (Used only for charter party type ConsumptionCap with multiple instructions).
+        /// </summary>
+        [JsonProperty("cargoConditions")]
+        public List<CargoCondition> CargoConditions { get; set; }
     }
 }
