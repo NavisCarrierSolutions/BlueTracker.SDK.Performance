@@ -64,6 +64,13 @@ namespace BlueTracker.SDK.Performance.Model.Common
         public double? SwellHeight { get; set; }
 
         /// <summary>
+        /// If set to true and the charter party evaluation is based on ground speed the current factor derived
+        /// from the global surface current model (HyCom) will be applied to reduce the speed for the compliance analysis.
+        /// </summary>
+        [JsonProperty("applyCurrentFactor")]
+        public bool? ApplyCurrentFactor { get; set; }
+
+        /// <summary>
         /// Issues to be excluded.
         /// </summary>
         [JsonProperty("excludedIssues")]
