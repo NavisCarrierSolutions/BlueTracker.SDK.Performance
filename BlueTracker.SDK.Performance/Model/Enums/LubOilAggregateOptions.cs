@@ -48,6 +48,8 @@ namespace BlueTracker.SDK.Performance.Model.Enums
         /// <summary>
         /// Undefined
         /// </summary>
+        [EnumMember(Value = "undefined")]
+        [JsonProperty(PropertyName = "undefined")]
         Undefined
     }
 }
