@@ -8,7 +8,7 @@ namespace BlueTracker.SDK.Performance.Model.Processing.Report
     public class LubOilQuantity
     {
         [JsonConverter(typeof(StringEnumConverter))]
-        public AggregateOptions Aggregate { get; set; }
+        public LubOilAggregateOptions Aggregate { get; set; }
 
         [JsonConverter(typeof(StringEnumConverter))]
         public LubOilKindOptions Kind { get; set; }
