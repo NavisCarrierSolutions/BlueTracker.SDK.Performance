@@ -8,6 +8,15 @@ namespace BlueTracker.SDK.Performance.DTO.Query
     public class OnboardSampleSourceValueRange
     {
         /// <summary>
+        /// SourceId
+        /// </summary>
+        public int SourceId { get; set; }
+
+        /// <summary>
+        /// SourceName
+        /// </summary>
+        public string SourceName { get; set; }
+        /// <summary>
         /// ImoNumber of vessel
         /// </summary>
         public int ImoNumber { get; set; }
