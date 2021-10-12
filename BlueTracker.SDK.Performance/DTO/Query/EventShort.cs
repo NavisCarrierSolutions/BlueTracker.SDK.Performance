@@ -49,5 +49,11 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         /// </summary>
         [JsonProperty("portName")]
         public string PortName { get; set; }
+
+        /// <summary>
+        /// Terminal code of port.
+        /// </summary>
+        [JsonProperty("portTerminalCode")]
+        public string PortTerminalCode { get; set; }
     }
 }

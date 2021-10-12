@@ -108,6 +108,12 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Report
         public string ArrivalPortName { get; set; }
 
         /// <summary>
+        /// Terminal code of arrival port.
+        /// </summary>
+        [JsonProperty(PropertyName = "arrivalPortTerminalCode")]
+        public string ArrivalPortTerminalCode { get; set; }
+
+        /// <summary>
         /// Charter speed instruction.
         /// </summary>
         [JsonProperty(PropertyName = "charterSpeedInstruction")]
