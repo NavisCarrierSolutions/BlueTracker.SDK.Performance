@@ -38,5 +38,7 @@ namespace BlueTracker.SDK.Performance.Model.Processing.Report
         public string ArrivalPortUnloc { get; set; }
 
         public string ArrivalPortName { get; set; }
+
+        public string ArrivalPortTerminalCode { get; set; }
     }
 }
