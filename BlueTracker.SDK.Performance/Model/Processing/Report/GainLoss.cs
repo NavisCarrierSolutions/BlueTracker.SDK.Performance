@@ -16,7 +16,7 @@ namespace BlueTracker.SDK.Performance.Model.Processing.Report
 
         public Dictionary<LubOilKindOptions, double?> TotalGainLossLubOilKind { get; set; }
 
-        public Dictionary<AggregateOptions, double?> TotalGainLossLubOilCirculationAggregate { get; set; }
+        public Dictionary<LubOilAggregateOptions, double?> TotalGainLossLubOilCirculationAggregate { get; set; }
 
         public double? TotalGainLossFuelOil { get; set; }
 
