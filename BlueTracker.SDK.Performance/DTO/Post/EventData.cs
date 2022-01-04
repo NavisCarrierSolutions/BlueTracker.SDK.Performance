@@ -16,7 +16,7 @@ namespace BlueTracker.SDK.Performance.DTO.Post
         public int Id { get; set; }
 
         /// <summary>
-        /// Custom ID of event (maximum lenght: 50).
+        /// Custom ID of event (maximum length: 50).
         /// </summary>
         [JsonProperty("customId")]
         public string CustomId { get; set; }
@@ -50,6 +50,12 @@ namespace BlueTracker.SDK.Performance.DTO.Post
         /// </summary>
         [JsonProperty("portName")]
         public string PortName { get; set; }
+
+        /// <summary>
+        /// Terminal code of port associated with the event.
+        /// </summary>
+        [JsonProperty("portTerminalCode")]
+        public string PortTerminalCode { get; set; }
 
         /// <summary>
         /// Type of event
