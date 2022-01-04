@@ -19,7 +19,7 @@ namespace BlueTracker.SDK.Performance.Model.Processing.Report
 
         public Dictionary<LubOilKindOptions, double?> TotalLubOilQuantityKind { get; set; }
 
-        public Dictionary<AggregateOptions, double?> TotalLubOilCirculationAggregate { get; set; }
+        public Dictionary<LubOilAggregateOptions, double?> TotalLubOilCirculationAggregate { get; set; }
 
         public Dictionary<FreshWaterKindOptions, double?> TotalFreshWaterQuantityKind { get; set; }
 
