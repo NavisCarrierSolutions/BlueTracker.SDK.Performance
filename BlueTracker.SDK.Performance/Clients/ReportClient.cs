@@ -155,13 +155,30 @@ namespace BlueTracker.SDK.Performance.Clients
         }
 
         /// <summary>
-        /// Creates or updates a report.
+        ///  Gets the performance summaries for a ship
         /// </summary>
-        /// <param name="report">The detailed report object.</param>
-        /// <returns>
-        /// The report metadata object which was created for the report.
-        /// </returns>
-        public PerformanceReport CreateOrUpdate(Model.Basic.Report.PerformanceReport report)
+        /// <param name="imoNumber">imo number of the ship</param>
+        /// <param name="start">OPTIONAL: start date</param>
+        /// <param name="end">OPTIONAL: end date</param>
+        /// <param name="page">Page</param>
+        /// <param name="pageSize">Page size</param>
+        /// <returns>Paged results</returns>
+        public PagedSearchResult<PerformanceReportSummary> GetSummaries(int imoNumber,
+            DateTime? start, DateTime? end, int page = 0, int pageSize = 20)
+        {
+            var route = $"/api/v1/ships/{imoNumber}/reportsummaries?&page={page}&pageSize={pageSize}&start={start:yyyy-MM-ddTHH:mm}&end={end:yyyy-MM-ddTHH:mm}";
+            var result = GetObject<PagedSearchResult<PerformanceReportSummary>>(route);
+            return result;
+        }
+
+        /// <summary>
+            /// Creates or updates a report.
+            /// </summary>
+            /// <param name="report">The detailed report object.</param>
+            /// <returns>
+            /// The report metadata object which was created for the report.
+            /// </returns>
+            public PerformanceReport CreateOrUpdate(Model.Basic.Report.PerformanceReport report)
         {
             return PostObject<PerformanceReport, Model.Basic.Report.PerformanceReport>(report, "/api/v1/reports");
         }
