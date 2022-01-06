@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using BlueTracker.SDK.Performance.Core;
 using BlueTracker.SDK.Performance.DTO.Query;
 
@@ -51,11 +52,12 @@ namespace BlueTracker.SDK.Performance.Clients
         /// </summary>
         /// <param name="imoNumber">imo number of ship</param>
         /// <param name="sourceName">name of OnboardSampleSource</param>
+        /// <param name="validFrom">DateTime from wich this assignment ist valid (time of first data)</param>
         /// <returns>created assignment</returns>
-        public OnboardSampleSourceAssignment Post(int imoNumber, string sourceName)
+        public OnboardSampleSourceAssignment Post(int imoNumber, string sourceName, DateTime validFrom)
         {
             return PostEmpty<OnboardSampleSourceAssignment>(
-                $"/api/v1/ships/{imoNumber}/onboardSampleSourceAssignments?sourceName={sourceName}");
+                $"/api/v1/ships/{imoNumber}/onboardSampleSourceAssignments?sourceName={sourceName}&validFrom={validFrom:yyyy-MM-ddTHH:mm}");
         }
     }
 }
