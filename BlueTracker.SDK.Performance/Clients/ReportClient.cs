@@ -166,6 +166,12 @@ namespace BlueTracker.SDK.Performance.Clients
         public PagedSearchResult<PerformanceReportSummary> GetSummaries(int imoNumber,
             DateTime? start, DateTime? end, int page = 0, int pageSize = 20)
         {
+            if (start == null)
+                start = DateTime.MinValue;
+
+            if (end == null)
+                end = DateTime.MaxValue;
+
             var route = $"/api/v1/ships/{imoNumber}/reportsummaries?&page={page}&pageSize={pageSize}&start={start:yyyy-MM-ddTHH:mm}&end={end:yyyy-MM-ddTHH:mm}";
             var result = GetObject<PagedSearchResult<PerformanceReportSummary>>(route);
             return result;
