@@ -22,9 +22,24 @@ namespace BlueTracker.SDK.Performance.DTO.Post
         public string CargoName { get; set; }
 
         /// <summary>
-        /// Contracting partner (charterer) for the cargo parcel.
+        /// Contracting partner (charterer) for the cargo parcel (short).
         /// </summary>
         public string CounterPartyName { get; set; }
+
+        /// <summary>
+        /// Contracting partner (charterer) for the cargo parcel (full).
+        /// </summary>
+        public string CounterPartyFullName { get; set; }
+
+        /// <summary>
+        /// Contracting partner custom ID or custom number
+        /// </summary>
+        public string CounterPartyCustomId { get; set; }
+
+        /// <summary>
+        /// Contract of affreightment id or custom number
+        /// </summary>
+        public string ContractOfAffreightmentCustomId { get; set; }
 
         /// <summary>
         /// Cargo parcel weight.
