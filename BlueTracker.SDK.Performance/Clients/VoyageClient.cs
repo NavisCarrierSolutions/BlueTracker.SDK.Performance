@@ -133,5 +133,28 @@ namespace BlueTracker.SDK.Performance.Clients
         {
             return PostObject<List<Voyage>, List<VoyageData>>(voyageData, "/api/v1/voyages/batch");
         }
+
+        /// <summary>
+        /// Gets the cargo parcel sequence for the voyage with the specified id.
+        /// </summary>
+        /// <param name="voyageId">Id of voyage to get cargo parcel sequence for.</param>
+        /// <returns>The parcel sequence</returns>
+        public CargoParcelSequence GetCargoParcelSequence(int voyageId)
+        {
+            var route = $"/api/v1/voyages/{voyageId}/parcelSequence";
+            return GetObject<CargoParcelSequence>(route);
+        }
+
+        /// <summary>
+        /// Gets the cargo parcel sequence for the voyage with the specified id.
+        /// </summary>
+        /// <param name="voyageId">Id of voyage to create cargo parcel sequence for.</param>
+        /// <param name="cargoParcelSequence">Describes the cargo parcel sequence to create.</param>
+        /// <returns>The parcel sequence</returns>
+        public CargoParcelSequence CreateCargoParcelSequence(int voyageId,
+            CargoParcelSequenceData cargoParcelSequence)
+        {
+            return PostObject<CargoParcelSequence, CargoParcelSequenceData>(cargoParcelSequence, $"/api/v1/voyages/{voyageId}/parcelSequence");
+        }
     }
 }
