@@ -14,7 +14,7 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Report
         public double? Power { get; set; }
 
         /// <summary>
-        /// Electrical energy - electrical energy consumption (kW/h)
+        /// Electrical energy - electrical energy consumption (kWh)
         /// </summary>
         [JsonProperty(PropertyName = "energy")]
         public double? Energy { get; set; }

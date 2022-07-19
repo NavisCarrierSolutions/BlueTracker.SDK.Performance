@@ -14,7 +14,7 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Report
         public double? Weight { get; set; }
 
         /// <summary>
-        /// Cargo volume. (m³)
+        /// Cargo volume. (mï¿½)
         /// </summary>
         [JsonProperty(PropertyName = "volume")]
         public double? Volume { get; set; }
@@ -60,7 +60,7 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Report
         public int? Reefers { get; set; }
 
         /// <summary>
-        /// Reefer electrical energy - electrical energy consumption (kW/h)
+        /// Reefer electrical energy - electrical energy consumption (kWh)
         /// </summary>
         [JsonProperty(PropertyName = "reeferEnergy")]
         public double? ReeferEnergy { get; set; }
