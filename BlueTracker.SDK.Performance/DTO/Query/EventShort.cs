@@ -14,6 +14,12 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public int Id { get; set; }
 
         /// <summary>
+        /// CustomId of the event.
+        /// </summary>
+        [JsonProperty("customId")]
+        public string CustomId { get; set; }
+
+        /// <summary>
         /// Timestamp of event (including offset to UTC.)
         /// </summary>
         [JsonProperty("timeStamp")]
