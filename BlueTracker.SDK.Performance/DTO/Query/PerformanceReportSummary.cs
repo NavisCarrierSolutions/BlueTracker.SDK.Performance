@@ -449,6 +449,11 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public CharterSpeedInstruction? CharterSpeedInstruction { get; set; }
 
         /// <summary>
+        ///     Charter speed instruction (knots).
+        /// </summary>
+        public double? CharterSpeedInstructionKnots { get; set; }
+        
+        /// <summary>
         ///     Charter voyage status.
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
