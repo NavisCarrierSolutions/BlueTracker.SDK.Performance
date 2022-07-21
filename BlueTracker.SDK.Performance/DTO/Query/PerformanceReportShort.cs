@@ -12,6 +12,12 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public int Id { get; set; }
 
         /// <summary>
+        /// Custom ID of report.
+        /// </summary>
+        [JsonProperty("customId")]
+        public string CustomId { get; set; }
+
+        /// <summary>
         /// 7-digit IMO-number of the ship.
         /// </summary>
         [JsonProperty("imoNumber")]
@@ -22,5 +28,17 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         /// </summary>
         [JsonProperty("timeStamp")]
         public DateTimeOffset TimeStamp { get; set; }
+
+        /// <summary>
+        /// Delete Flag.
+        /// </summary>
+        [JsonProperty("isDeleted")]
+        public bool IsDeleted { get; set; }
+
+        /// <summary>
+        /// Version stamp
+        /// </summary>
+        [JsonProperty("versionStamp")]
+        public long VersionStamp { get; set; }
     }
 }
