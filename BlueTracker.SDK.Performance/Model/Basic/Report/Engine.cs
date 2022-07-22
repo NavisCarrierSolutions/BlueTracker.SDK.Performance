@@ -64,10 +64,10 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Report
         public List<AuxEngine> AuxEngines { get; set; }
 
         /// <summary>
-        /// List of aux systems.
+        /// Aux systems.
         /// </summary>
         [JsonProperty(PropertyName = "auxiliarySystems")]
-        public List<AuxiliarySystem> AuxiliarySystems { get; set; }
+        public AuxiliarySystems AuxiliarySystems { get; set; }
 
         /// <summary>
         /// A list of Auxilliary Boilers, which are installed on the vessel.
