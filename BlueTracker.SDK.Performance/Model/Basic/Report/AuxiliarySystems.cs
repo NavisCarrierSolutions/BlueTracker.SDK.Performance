@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using System.Collections.Generic;
 
 namespace BlueTracker.SDK.Performance.Model.Basic.Report
 {
@@ -14,9 +15,9 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Report
         public Pumps Pumps { get; set; }
 
         /// <summary>
-        /// Sea water cooler system
+        /// Cooling systems
         /// </summary>
-        [JsonProperty("seaWaterCooler")]
-        public SeaWaterCooler SeaWaterCooler { get; set; }
+        [JsonProperty(PropertyName = "coolingSystems")]
+        public List<CoolingSystem> CoolingSystems { get; set; }
     }
 }
