@@ -5,7 +5,7 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Report
     /// <summary>
     /// Represents a pump.
     /// </summary>
-    public class Pump : ElectricalMotor
+    public class Pump : EnergyConsumer
     {
         /// <summary>
         /// Name of pump

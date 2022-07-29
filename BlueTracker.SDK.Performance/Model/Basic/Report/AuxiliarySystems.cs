@@ -12,7 +12,7 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Report
         /// Pumps
         /// </summary>
         [JsonProperty("pumps")]
-        public Pumps Pumps { get; set; }
+        public List<Pump> Pumps { get; set; }
 
         /// <summary>
         /// Cooling systems
