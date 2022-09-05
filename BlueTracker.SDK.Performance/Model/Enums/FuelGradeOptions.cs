@@ -27,6 +27,16 @@ namespace BlueTracker.SDK.Performance.Model.Enums
         DMC,
 
         /// <summary>
+        /// DFA
+        /// </summary>
+        DFA,
+
+        /// <summary>
+        /// DFB
+        /// </summary>
+        DFB,
+
+        /// <summary>
         /// RMA10
         /// </summary>
         RMA10,
@@ -99,6 +109,31 @@ namespace BlueTracker.SDK.Performance.Model.Enums
         /// <summary>
         /// IFO380
         /// </summary>
-        IFO380
+        IFO380,
+
+        /// <summary>
+        /// LNG
+        /// </summary>
+        LNG,
+
+        /// <summary>
+        /// Propane
+        /// </summary>
+        Propane,
+
+        /// <summary>
+        /// Butane
+        /// </summary>
+        Butane,
+
+        /// <summary>
+        /// Methanol
+        /// </summary>
+        Methanol,
+
+        /// <summary>
+        /// Ethanol
+        /// </summary>
+        Ethanol
     }
 }
