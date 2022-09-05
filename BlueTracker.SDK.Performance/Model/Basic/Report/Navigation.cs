@@ -114,11 +114,17 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Report
         public string ArrivalPortTerminalCode { get; set; }
 
         /// <summary>
-        /// Charter speed instruction.
+        /// Charter speed instruction (use this OR CharterSpeedInstructionKnots).
         /// </summary>
         [JsonProperty(PropertyName = "charterSpeedInstruction")]
         [JsonConverter(typeof(StringEnumConverter))]
         public CharterSpeedInstruction? CharterSpeedInstruction { get; set; }
+
+        /// <summary>
+        /// Charter speed instruction (knots) - (use this OR CharterSpeedInstruction).
+        /// </summary>
+        [JsonProperty(PropertyName = "charterSpeedInstructionKnots")]
+        public double? CharterSpeedInstructionKnots { get; set; }
 
         /// <summary>
         /// Charter voyage status.
