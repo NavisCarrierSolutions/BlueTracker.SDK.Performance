@@ -1,10 +1,7 @@
 ﻿using BlueTracker.SDK.Performance.Core;
 using BlueTracker.SDK.Performance.DTO.Query;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace BlueTracker.SDK.Performance.Clients
 {
@@ -33,6 +30,13 @@ namespace BlueTracker.SDK.Performance.Clients
         {
         }
 
+        /// <summary>
+        /// Get annual MRV emission reports for the specified year.
+        /// </summary>
+        /// <param name="year">Year to get reports for.</param>
+        /// <param name="shipImos">List of ship IMO numbers to get reports for.</param>
+        /// <param name="showEea">Whether to show EEA result.</param>
+        /// <returns></returns>
         public List<MrvAnnualReport> GetMrvEmissionReports(int year, int[] shipImos, bool showEea)
         {
             var requestString = $"/api/v1/emissionReports/mrv/{year}";
@@ -40,6 +44,34 @@ namespace BlueTracker.SDK.Performance.Clients
             var param = queryString.Length == 0 ? "?" : "&";
 
             return GetObject<List<MrvAnnualReport>>($"{requestString}{queryString}{param}showEea={showEea}");
+        }
+
+        /// <summary>
+        /// Get annual IMO DCS emission reports for the specified year.
+        /// </summary>
+        /// <param name="year">Year to get reports for.</param>
+        /// <param name="shipImos">List of ship IMO numbers to get reports for.</param>
+        /// <returns></returns>
+        public List<DcsReport> GetImoDcsEmissionReports(int year, int[] shipImos)
+        {
+            var requestString = $"/api/v1/emissionReports/imoDcs/{year}";
+            string queryString = GetQueryString(shipImos);
+
+            return GetObject<List<DcsReport>>($"{requestString}{queryString}");
+        }
+
+        /// <summary>
+        /// Get annual CII emission reports for the specified year.
+        /// </summary>
+        /// <param name="year">Yearto get reports for.</param>
+        /// <param name="shipImos">List of ship IMO numbers to get reports for.</param>
+        /// <returns></returns>
+        public List<CiiAnnualReport> GetCiiEmissionReports(int year, int[] shipImos)
+        {
+            var requestString = $"/api/v1/emissionReports/cii/{year}";
+            string queryString = GetQueryString(shipImos);
+
+            return GetObject<List<CiiAnnualReport>>($"{requestString}{queryString}");
         }
 
         private static string GetQueryString(int[] shipImos)
