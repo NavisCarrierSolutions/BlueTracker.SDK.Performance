@@ -58,5 +58,11 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Report
         /// </remarks>
         [JsonProperty(PropertyName = "reefers")]
         public int? Reefers { get; set; }
+
+        /// <summary>
+        /// Reefer electrical energy - electrical energy consumption (kWh)
+        /// </summary>
+        [JsonProperty(PropertyName = "reeferEnergy")]
+        public double? ReeferEnergy { get; set; }
     }
 }
