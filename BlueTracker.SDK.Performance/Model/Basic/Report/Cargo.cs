@@ -14,7 +14,7 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Report
         public double? Weight { get; set; }
 
         /// <summary>
-        /// Cargo volume. (m³)
+        /// Cargo volume. (mï¿½)
         /// </summary>
         [JsonProperty(PropertyName = "volume")]
         public double? Volume { get; set; }
