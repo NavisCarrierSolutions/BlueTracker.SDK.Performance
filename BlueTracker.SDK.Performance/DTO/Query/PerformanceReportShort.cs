@@ -18,9 +18,15 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public int ImoNumber { get; set; }
 
         /// <summary>
-        /// Time stamp of report (including UTC Offset).
+        /// Time stamp of report local time
         /// </summary>
-        [JsonProperty("timeStamp")]
-        public DateTimeOffset TimeStamp { get; set; }
+        [JsonProperty("timeStampLocal")]
+        public DateTime TimeStampLocal { get; set; }
+        
+        /// <summary>
+        /// Time stamp of report UTC.
+        /// </summary>
+        [JsonProperty("timeStampUtc")]
+        public DateTime TimeStampUtc { get; set; }
     }
 }
