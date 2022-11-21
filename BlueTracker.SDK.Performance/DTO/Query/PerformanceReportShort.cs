@@ -1,6 +1,7 @@
 ﻿using System;
 using BlueTracker.SDK.Performance.Model.Enums;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace BlueTracker.SDK.Performance.DTO.Query
 {
