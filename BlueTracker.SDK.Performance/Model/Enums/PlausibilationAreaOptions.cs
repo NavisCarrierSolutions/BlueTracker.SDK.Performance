@@ -8,6 +8,7 @@
         Charter = 3,
         Engine = 4,
         DcsReporting = 5,
-        General = 6
+        General = 6,
+        CiiReporting = 7
     }
 }

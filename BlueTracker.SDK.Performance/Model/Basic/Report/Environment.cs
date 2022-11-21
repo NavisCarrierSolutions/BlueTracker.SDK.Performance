@@ -61,5 +61,11 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Report
         /// </summary>
         [JsonProperty(PropertyName = "wind")]
         public SpeedDirection Wind { get; set; }
+
+        /// <summary>
+        /// Water flow data
+        /// </summary>
+        [JsonProperty(PropertyName = "current")]
+        public SpeedDirection Current { get; set; }
     }
 }
