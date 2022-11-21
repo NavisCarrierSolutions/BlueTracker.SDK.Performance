@@ -19,12 +19,6 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public string CustomId { get; set; }
 
         /// <summary>
-        /// Custom ID of report.
-        /// </summary>
-        [JsonProperty("customId")]
-        public string CustomId { get; set; }
-
-        /// <summary>
         /// 7-digit IMO-number of the ship.
         /// </summary>
         [JsonProperty("imoNumber")]
@@ -38,16 +32,20 @@ namespace BlueTracker.SDK.Performance.DTO.Query
 
         /// Time stamp of report (Local).
         /// </summary>
+        [JsonProperty("timeStampLocal")]
         public DateTime TimeStampLocal { get; set; }
 
         /// <summary>
         /// Time stamp of report (UTC).
         /// </summary>
+        [JsonProperty("timeStampUtc")]
         public DateTime TimeStampUtc { get; set; }
 
         /// <summary>
         /// State of ship
         /// </summary>
+        [JsonProperty("state")]
+        [JsonConverter(typeof(StringEnumConverter))]
         public StateOptions State { get; set; }
 
         /// <summary>
