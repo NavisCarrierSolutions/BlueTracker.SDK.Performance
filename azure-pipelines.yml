@@ -10,7 +10,7 @@ resources:
     - repository: GitHub
       type: github
       name: 'NavisCarrierSolutions/BlueTracker.SDK.Performance'
-      endpoint: 'GitHub connection'
+      endpoint: 'NavisCarrierSolutions'
     - repository: PipelineTemplates
       name: DevOps/Pipeline-Templates
       type: git

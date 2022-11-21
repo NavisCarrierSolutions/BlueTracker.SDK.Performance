@@ -1,4 +1,5 @@
 ﻿using System;
+using BlueTracker.SDK.Performance.Model.Enums;
 using Newtonsoft.Json;
 
 namespace BlueTracker.SDK.Performance.DTO.Query
@@ -10,6 +11,12 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         /// </summary>
         [JsonProperty("id")]
         public int Id { get; set; }
+        
+        /// <summary>
+        /// Custom ID of report.
+        /// </summary>
+        [JsonProperty("customId")]
+        public string CustomId { get; set; }
 
         /// <summary>
         /// 7-digit IMO-number of the ship.
@@ -20,13 +27,27 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         /// <summary>
         /// Time stamp of report local time
         /// </summary>
-        [JsonProperty("timeStampLocal")]
-        public DateTime TimeStampLocal { get; set; }
-        
+        public DateTimeOffset TimeStamp { get; set; }
+
         /// <summary>
-        /// Time stamp of report UTC.
+        ///     Time stamp of report (Local).
         /// </summary>
-        [JsonProperty("timeStampUtc")]
+        public DateTime TimeStampLocal { get; set; }
+
+        /// <summary>
+        /// Time stamp of report (UTC).
+        /// </summary>
         public DateTime TimeStampUtc { get; set; }
+
+        /// <summary>
+        /// State of ship
+        /// </summary>
+        public StateOptions State { get; set; }
+
+        /// <summary>
+        /// Version stamp
+        /// </summary>
+        [JsonProperty("versionStamp")]
+        public long VersionStamp { get; set; }
     }
 }
