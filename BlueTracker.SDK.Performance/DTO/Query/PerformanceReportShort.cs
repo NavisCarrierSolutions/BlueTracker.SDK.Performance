@@ -1,6 +1,7 @@
 ﻿using System;
 using BlueTracker.SDK.Performance.Model.Enums;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace BlueTracker.SDK.Performance.DTO.Query
 {
@@ -25,23 +26,27 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public int ImoNumber { get; set; }
 
         /// <summary>
-        /// Time stamp of report local time
+        /// Delete Flag.
         /// </summary>
-        public DateTimeOffset TimeStamp { get; set; }
+        [JsonProperty("isDeleted")]
+        public bool IsDeleted { get; set; }
 
-        /// <summary>
-        ///     Time stamp of report (Local).
+        /// Time stamp of report (Local).
         /// </summary>
+        [JsonProperty("timeStampLocal")]
         public DateTime TimeStampLocal { get; set; }
 
         /// <summary>
         /// Time stamp of report (UTC).
         /// </summary>
+        [JsonProperty("timeStampUtc")]
         public DateTime TimeStampUtc { get; set; }
 
         /// <summary>
         /// State of ship
         /// </summary>
+        [JsonProperty("state")]
+        [JsonConverter(typeof(StringEnumConverter))]
         public StateOptions State { get; set; }
 
         /// <summary>
