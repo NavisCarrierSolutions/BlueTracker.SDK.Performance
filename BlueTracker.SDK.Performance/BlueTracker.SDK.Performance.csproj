@@ -2,12 +2,12 @@
   <PropertyGroup>
     <TargetFrameworks>
       net45;netstandard1.5;netstandard1.6;netstandard2.0</TargetFrameworks>
-    <Company>Kalmar Germany GmbH</Company>
+    <Company>Navis Germany GmbH</Company>
     <Description>Wrapper for BlueTracker One public API</Description>
     <Copyright>Copyright © 2019</Copyright>
     <PackageLicenseUrl>https://raw.githubusercontent.com/NavisCarrierSolutions/BlueTracker.SDK.Performance/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/NavisCarrierSolutions/BlueTracker.SDK.Performance</PackageProjectUrl>
-    <Authors>Kalmar Germany GmbH</Authors>
+    <Authors>Navis Germany GmbH</Authors>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Version>9.0.1</Version>
     <AssemblyVersion>9.0.1.0</AssemblyVersion>
