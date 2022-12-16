@@ -1,14 +1,14 @@
-﻿using System;
-using BlueTracker.SDK.Performance.Model.Enums;
+﻿using BlueTracker.SDK.Performance.Model.Enums;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using System;
 
 namespace BlueTracker.SDK.Performance.DTO.Query
 {
     /// <summary>
-    /// Hull interruption DTO with fewer properties than the whole object.
+    /// Voyage interruption
     /// </summary>
-    public class HullInterruptionShort
+    public class VoyageInterruption
     {
         /// <summary>
         /// ID of hull interruption.
@@ -17,10 +17,22 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public int Id { get; set; }
 
         /// <summary>
-        /// 7-digit IMO-number of the ship.
+        /// Custom ID.
         /// </summary>
-        [JsonProperty("imoNumber")]
-        public int ImoNumber { get; set; }
+        [JsonProperty("customId")]
+        public string CustomId { get; set; }
+
+        /// <summary>
+        /// Ship info.
+        /// </summary>
+        [JsonProperty("ship")]
+        public ShipShort Ship { get; set; }
+
+        /// <summary>
+        /// Version Stamp when the hull interruption was created or changed.
+        /// </summary>
+        [JsonProperty("versionStamp")]
+        public long VersionStamp { get; set; }
 
         /// <summary>
         /// Start date of hull interruption (including offset to UTC.)
@@ -39,6 +51,12 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         /// </summary>
         [JsonProperty("type")]
         [JsonConverter(typeof(StringEnumConverter))]
-        public HullInterruptionType Type { get; set; }
+        public VoyageInterruptionType Type { get; set; }
+
+        /// <summary>
+        /// Remarks of hull interruption.
+        /// </summary>
+        [JsonProperty("remarks")]
+        public string Remarks { get; set; }
     }
 }
