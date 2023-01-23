@@ -66,5 +66,11 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         /// </summary>
         [JsonProperty("portOfRegistryUnloc")]
         public string PortOfRegistryUnloc { get; set; }
+
+        /// <summary>
+        /// Is the ship hidden?
+        /// </summary>
+        [JsonProperty("isHidden")]
+        public bool IsHidden { get; set; }
     }
 }
