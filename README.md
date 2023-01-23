@@ -35,7 +35,7 @@ The package contains one client wrapper for each API resource. Each client conta
 - ``BlueTracker.SDK.Performance.Clients.EventClient``
 - ~~``BlueTracker.SDK.Performance.Clients.HullModelClient``~~
 - ``BlueTracker.SDK.Performance.Clients.HullEventClient``
-- ``BlueTracker.SDK.Performance.Clients.HullInterruptionClient``
+- ~~``BlueTracker.SDK.Performance.Clients.HullInterruptionClient``~~
 - ~~``BlueTracker.SDK.Performance.Clients.OwnerClient``~~
 - ``BlueTracker.SDK.Performance.Clients.TagClient``
 - ~~``BlueTracker.SDK.Performance.Clients.ConsumptionCurveClient``~~
@@ -43,3 +43,4 @@ The package contains one client wrapper for each API resource. Each client conta
 - ``BlueTracker.SDK.Performance.Clients.OnboardSampleSourceClient``
 - ``BlueTracker.SDK.Performance.Clients.OnboardSampleValueClient``
 - ``BlueTracker.SDK.Performance.Clients.OnboardSampleSourceValueRangeClient``
+- ``BlueTracker.SDK.Performance.Clients.VoyageInterruptionClient``
