@@ -1,18 +1,18 @@
 ﻿namespace BlueTracker.SDK.Performance.Model.Enums
 {
     /// <summary>
-    /// Type of hull interruption.
+    /// Created by
     /// </summary>
-    public enum HullInterruptionType
+    public enum CreatedBy
     {
         /// <summary>
-        /// Unspecified.
+        /// Ship
         /// </summary>
-        Unspecified = 0,
+        Ship = 0,
 
         /// <summary>
-        /// Layup.
+        /// Shore
         /// </summary>
-        Layup = 1
+        Shore = 1
     }
 }
