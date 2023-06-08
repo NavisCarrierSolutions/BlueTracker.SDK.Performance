@@ -8,43 +8,23 @@
         Unspecified = 0,
 
         /// <summary>
-        /// Layup start
+        /// Layup
         /// </summary>
-        LayupStart = 1,
+        Layup = 1,
 
         /// <summary>
-        /// Layup end
+        /// Dry dock
         /// </summary>
-        LayupEnd = 2,
+        DryDock = 2,
 
         /// <summary>
-        /// Drydock start
+        /// Emergency
         /// </summary>
-        DryDockStart = 3,
+        Emergency = 3,
 
         /// <summary>
-        /// Drydock end
+        /// Ice
         /// </summary>
-        DryDockEnd = 4,
-
-        /// <summary>
-        /// Emergency start
-        /// </summary>
-        EmergencyStart = 5,
-
-        /// <summary>
-        /// Emergency end
-        /// </summary>
-        EmergencyEnd = 6,
-
-        /// <summary>
-        /// Ice start
-        /// </summary>
-        IceStart = 7,
-
-        /// <summary>
-        /// Ice end
-        /// </summary>
-        IceEnd = 8
+        Ice = 4
     }
 }
