@@ -126,6 +126,31 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public double? AbMgoSulphurContent { get; set; }
 
         /// <summary>
+        ///     Boiler FOC Methanol (%).
+        /// </summary>
+        public double? AbMethanolFoc { get; set; }
+
+        /// <summary>
+        ///     Boiler FOC LNG (%).
+        /// </summary>
+        public double? AbLngFoc { get; set; }
+
+        /// <summary>
+        ///     Boiler FOC BTL (%).
+        /// </summary>
+        public double? AbBtlFoc { get; set; }
+
+        /// <summary>
+        ///     Boiler FOC FAME (%).
+        /// </summary>
+        public double? AbFameFoc { get; set; }
+
+        /// <summary>
+        ///     Boiler FOC HVO (%).
+        /// </summary>
+        public double? AbHvoFoc { get; set; }
+
+        /// <summary>
         ///     Total FOC AE HFO
         /// </summary>
         public double? AeHfoFoc { get; set; }
@@ -239,6 +264,31 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         ///     Aux engine MGO sulphur content (%).
         /// </summary>
         public double? AeMgoSulphurContent { get; set; }
+
+        /// <summary>
+        ///     Aux engine FOC Methanol (%).
+        /// </summary>
+        public double? AeMethanolFoc { get; set; }
+
+        /// <summary>
+        ///     Aux engine FOC LNG (%).
+        /// </summary>
+        public double? AeLngFoc { get; set; }
+
+        /// <summary>
+        ///     Aux engine FOC FAME (%).
+        /// </summary>
+        public double? AeBtlFoc { get; set; }
+
+        /// <summary>
+        ///     Aux engine FOC FAME (%).
+        /// </summary>
+        public double? AeFameFoc { get; set; }
+
+        /// <summary>
+        ///     Aux engine FOC HVO (%).
+        /// </summary>
+        public double? AeHvoFoc { get; set; }
 
         /// <summary>
         ///     Annual efficiency ratio (AER).
@@ -361,6 +411,21 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         ///     Fuel oil methanol bunkered. (metric tons).
         /// </summary>
         public double? BunkerFuelMethanol { get; set; }
+
+        /// <summary>
+        ///     Biomass To Liquid bunkered. (metric tons).
+        /// </summary>
+        public double? BunkerFuelBtl { get; set; }
+
+        /// <summary>
+        ///     Fatty Acid Methyl Ester bunkered. (metric tons).
+        /// </summary>
+        public double? BunkerFuelFame { get; set; }
+
+        /// <summary>
+        ///     Hydrogen Vegetable Oil bunkered. (metric tons).
+        /// </summary>
+        public double? BunkerFuelHvo { get; set; }
 
         /// <summary>
         ///     Marine gas oil bunkered. (metric tons).
@@ -619,6 +684,21 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public double? GainLossFuelMethanol { get; set; }
 
         /// <summary>
+        ///     Biomass To Liquid gain/loss. (metric tons).
+        /// </summary>
+        public double? GainLossFuelBtl { get; set; }
+
+        /// <summary>
+        ///    Fatty Acid Methyl Ester gain/loss. (metric tons).
+        /// </summary>
+        public double? GainLossFuelFame { get; set; }
+
+        /// <summary>
+        ///    Hydrogen Vegetable Oil gain/loss. (metric tons).
+        /// </summary>
+        public double? GainLossFuelHvo { get; set; }
+
+        /// <summary>
         ///     Marine gas oil gain/loss. (metric tons)
         /// </summary>
         public double? GainLossFuelMgo { get; set; }
@@ -859,6 +939,32 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         /// </summary>
         public double? MeMgoSulphurContent { get; set; }
 
+
+        /// <summary>
+        ///       Main engine FOC Methanol (%).
+        /// </summary>
+        public double? MeMethanolFoc { get; set; }
+
+        /// <summary>
+        ///     Main engine FOC LNG (%).
+        /// </summary>
+        public double? MeLngFoc { get; set; }
+
+        /// <summary>
+        ///     Main engine FOC BTL (%).
+        /// </summary>
+        public double? MeBtlFoc { get; set; }
+
+        /// <summary>
+        ///     Main engine FOC FAME (%).
+        /// </summary>
+        public double? MeFameFoc { get; set; }
+
+        /// <summary>
+        ///     Main engine FOC HVO (%).
+        /// </summary>
+        public double? MeHvoFoc { get; set; }
+
         /// <summary>
         ///     Boiler NOx Emissions (t).
         /// </summary>
@@ -988,6 +1094,21 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         ///     Fuel oil methanol remain on board. (metric tons)
         /// </summary>
         public double? RobFuelMethanol { get; set; }
+
+        /// <summary>
+        ///     Biomass To Liquid remain on board. (metric tons)
+        /// </summary>
+        public double? RobFuelBtl { get; set; }
+
+        /// <summary>
+        ///    Fatty Acid Methyl Ester remain on board. (metric tons)
+        /// </summary>
+        public double? RobFuelFame { get; set; }
+
+        /// <summary>
+        ///     Hydrogen Vegetable Oil remain on board. (metric tons)
+        /// </summary>
+        public double? RobFuelHvo { get; set; }
 
         /// <summary>
         ///     Marine gas oil remain on board. (metric tons)
@@ -1338,6 +1459,21 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         ///     Total fuel oil consumption methanol. (metric tons)
         /// </summary>
         public double? TotalFocMethanol { get; set; }
+
+        /// <summary>
+        ///     Total fuel oil consumption Biomass To Liquid. (metric tons)
+        /// </summary>
+        public double? TotalFocBtl { get; set; }
+
+        /// <summary>
+        ///     Total fuel oil consumption Fatty Acid Methyl Ester. (metric tons)
+        /// </summary>
+        public double? TotalFocFame { get; set; }
+
+        /// <summary>
+        ///     Total fuel oil consumption Hydrogen Vegetable Oil. (metric tons)
+        /// </summary>
+        public double? TotalFocHvo { get; set; }
 
         /// <summary>
         ///     Total fuel oil consumption marine gas oil. (metric tons)
