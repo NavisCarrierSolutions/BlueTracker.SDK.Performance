@@ -17,7 +17,13 @@ namespace BlueTracker.SDK.Performance.DTO.Post
         public int Id { get; set; }
 
         /// <summary>
-        /// Custom ID of hull event (maximum lenght: 50).
+        /// Custom name of a hull event (maximum length: 50).
+        /// </summary>
+        [JsonProperty("name")]
+        public string Name { get; set; }
+
+        /// <summary>
+        /// Custom ID of hull event (maximum length: 50).
         /// </summary>
         [JsonProperty("customId")]
         public string CustomId { get; set; }

@@ -17,6 +17,12 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public int Id { get; set; }
 
         /// <summary>
+        /// Custom name of a hull event.
+        /// </summary>
+        [JsonProperty("name")]
+        public string Name { get; set; }
+
+        /// <summary>
         /// 7-digit IMO-number of the ship.
         /// </summary>
         [JsonProperty("imoNumber")]

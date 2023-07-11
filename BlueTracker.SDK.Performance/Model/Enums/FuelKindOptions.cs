@@ -94,6 +94,21 @@ namespace BlueTracker.SDK.Performance.Model.Enums
         /// <summary>
         /// Ethanol
         /// </summary>
-        Ethanol
+        Ethanol,
+
+        /// <summary>
+        /// Biomass To Liquid
+        /// </summary>
+        BTL,    // Biomass To Liquid
+
+        /// <summary>
+        /// Fatty Acid Methyl Ester
+        /// </summary>
+        FAME,   // Fatty Acid Methyl Ester
+
+        /// <summary>
+        /// Hydrogen Vegetable Oil
+        /// </summary>
+        HVO
     }
 }
