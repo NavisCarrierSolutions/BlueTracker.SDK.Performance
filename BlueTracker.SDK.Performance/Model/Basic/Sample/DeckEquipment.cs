@@ -31,5 +31,11 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Sample
         /// </summary>
         [JsonProperty("thrusters")]
         public List<Thruster> Thrusters { get; set; }
+
+        /// <summary>
+        ///     List of reefer junction boxes
+        /// </summary>
+        [JsonProperty("reeferEnergyJunctions")]
+        public List<ReeferJunctionBox> ReeferJunctionBoxes { get; set; }
     }
 }
