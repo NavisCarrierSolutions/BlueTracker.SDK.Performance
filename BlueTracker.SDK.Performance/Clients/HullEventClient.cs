@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using BlueTracker.SDK.Performance.Core;
 using BlueTracker.SDK.Performance.DTO.Post;
 using BlueTracker.SDK.Performance.DTO.Query;
@@ -115,6 +116,18 @@ namespace BlueTracker.SDK.Performance.Clients
         public HullEvent CreateOrUpdate(HullEventData hullEventData)
         {
             return PostObject<HullEvent, HullEventData>(hullEventData, "/api/v1/hullEvents");
+        }
+
+        /// <summary>
+        /// Creates or updates multiple hull events.
+        /// </summary>
+        /// <param name="hullEventData">List of hull event objects to be updated or created.</param>
+        /// <returns>
+        /// The newly created or updated hull events.
+        /// </returns>
+        public List<HullEvent> CreateOrUpdate(List<HullEventData> hullEventData)
+        {   
+            return PostObject<List<HullEvent>, List<HullEventData>>(hullEventData, "/api/v1/hullEvents/batch");
         }
 
         /// <summary>
