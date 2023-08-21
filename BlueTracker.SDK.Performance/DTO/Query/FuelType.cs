@@ -17,5 +17,11 @@ namespace BlueTracker.SDK.Performance.DTO.Query
 
         public bool SulphurEstimated { get; set; }
         public double? Co2Factor { get; set; }
+
+        /// <summary>
+        /// Bio fuel details.
+        /// </summary>
+        [JsonProperty(PropertyName = "bioFuelBlendDetails")]
+        public BioFuelBlend BioFuelBlendDetails { get; set; }
     }
 }
