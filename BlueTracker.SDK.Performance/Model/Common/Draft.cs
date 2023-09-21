@@ -36,5 +36,21 @@ namespace BlueTracker.SDK.Performance.Model.Common
         /// </summary>
         [JsonProperty(PropertyName = "aft")]
         public double? Aft { get; set; }
+
+        /// <summary>
+        /// Mean draft (meters).
+        /// </summary>
+        public double? MeanDraft
+        {
+            get
+            {
+                if (Fwd == null || Aft == null)
+                {
+                    return null;
+                }
+
+                return (Fwd + Aft) / 2.0;
+            }
+        }
     }
 }
