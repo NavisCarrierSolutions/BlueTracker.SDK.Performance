@@ -41,6 +41,11 @@ namespace BlueTracker.SDK.Performance.Model.Common
         public double? Co2Factor { get; set; }
 
         /// <summary>
+        /// Bio fuel details.
+        /// </summary>
+        [JsonProperty(PropertyName = "bioFuelBlendDetails")]
+        public BioFuelBlend BioFuelBlendDetails { get; set; }
+
         /// Kinematic viscosity. (cSt)
         /// </summary>
         [JsonProperty(PropertyName = "kinematicViscosity")]
