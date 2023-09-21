@@ -17,5 +17,7 @@ namespace BlueTracker.SDK.Performance.DTO.Query
 
         public bool SulphurEstimated { get; set; }
         public double? Co2Factor { get; set; }
+        public double? KinematicViscosity { get; set; }
+
     }
 }
