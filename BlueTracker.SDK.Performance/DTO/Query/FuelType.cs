@@ -23,5 +23,7 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         /// </summary>
         [JsonProperty(PropertyName = "bioFuelBlendDetails")]
         public BioFuelBlend BioFuelBlendDetails { get; set; }
+
+        public double? KinematicViscosity { get; set; }
     }
 }
