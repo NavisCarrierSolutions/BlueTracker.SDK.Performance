@@ -753,7 +753,6 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         /// </summary>
         public int Id { get; set; }
 
-
         /// <summary>
         ///     Is engine in combinator mode?
         /// </summary>
@@ -765,9 +764,9 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public bool? IsOnScrubberMode { get; set; }
 
         /// <summary>
-        ///     Is ship on shore power supply?
+        ///     Shore energy supplied - electrical energy from shore (kWh)
         /// </summary>
-        public bool? IsOnShorePowerSupply { get; set; }
+        public bool? ShoreEnergyReceived { get; set; }
 
         /// <summary>
         ///     Received power from shore. (kWh)
