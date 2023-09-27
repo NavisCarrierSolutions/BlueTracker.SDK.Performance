@@ -109,6 +109,11 @@ namespace BlueTracker.SDK.Performance.Model.Enums
         /// <summary>
         /// Hydrogen Vegetable Oil
         /// </summary>
-        HVO
+        HVO,
+
+        /// <summary>
+        /// Bio fuel blended with fossil fuel.
+        /// </summary>
+        BioFuelBlend
     }
 }

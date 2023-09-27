@@ -134,6 +134,16 @@ namespace BlueTracker.SDK.Performance.Model.Enums
         /// <summary>
         /// Ethanol
         /// </summary>
-        Ethanol
+        Ethanol,
+
+        /// <summary>
+        /// DMZ
+        /// </summary>
+        DMZ,
+
+        /// <summary>
+        /// DFZ
+        /// </summary>
+        DFZ
     }
 }
