@@ -10,6 +10,8 @@
 
         Minor = 3,
 
-        Major = 4
+        Major = 4,
+
+        Acknowledged = 5
     }
 }
