@@ -1,7 +1,7 @@
-using System;
 using BlueTracker.SDK.Performance.Model.Enums;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using System;
 
 namespace BlueTracker.SDK.Performance.DTO.Query
 {
@@ -488,6 +488,11 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public int? CargoReefers { get; set; }
 
         /// <summary>
+        ///     Consumed Reefer Energy (kWh)
+        /// </summary>
+        public double? CargoReeferEnergy { get; set; }
+
+        /// <summary>
         ///     Number of empty TEU.
         /// </summary>
         public double? CargoTeuEmpty { get; set; }
@@ -517,7 +522,7 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         ///     Charter speed instruction (knots).
         /// </summary>
         public double? CharterSpeedInstructionKnots { get; set; }
-        
+
         /// <summary>
         ///     Charter voyage status.
         /// </summary>
@@ -528,6 +533,21 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         ///     Name of chief engineer.
         /// </summary>
         public string ChiefEng { get; set; }
+
+        /// <summary>
+        ///     Cii Required value
+        /// </summary>
+        public double? CiiRequired { get; set; }
+
+        /// <summary>
+        /// Actual CII
+        /// </summary>
+        public double? CiiCorrected { get; set; }
+
+        /// <summary>
+        /// CII YearToDate
+        /// </summary>
+        public double? CiiYearToDate { get; set; }
 
         /// <summary>
         ///     Completeness score. (%)
