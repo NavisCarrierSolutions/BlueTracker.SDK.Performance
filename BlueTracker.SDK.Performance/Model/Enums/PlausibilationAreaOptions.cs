@@ -9,6 +9,7 @@
         Engine = 4,
         DcsReporting = 5,
         General = 6,
-        CiiReporting = 7
+        CiiReporting = 7,
+        Macs3ConnectedLoadingConditions = 8
     }
 }
