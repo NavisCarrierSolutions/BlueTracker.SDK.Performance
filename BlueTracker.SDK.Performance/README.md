@@ -45,3 +45,4 @@ The package contains one client wrapper for each API resource. Each client conta
 - ``BlueTracker.SDK.Performance.Clients.OnboardSampleSourceValueRangeClient``
 - ``BlueTracker.SDK.Performance.Clients.NavSampleSourceClient``
 - ``BlueTracker.SDK.Performance.Clients.NavSampleValueClient``
+- ``BlueTracker.SDK.Performance.Clients.SeaCargoCharterClient``
