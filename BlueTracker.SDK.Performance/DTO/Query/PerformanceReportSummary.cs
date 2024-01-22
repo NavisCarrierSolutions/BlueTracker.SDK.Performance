@@ -535,19 +535,59 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public string ChiefEng { get; set; }
 
         /// <summary>
-        ///     Cii Required value
+        /// CII of this report (g/t-nm CO2).
+        /// </summary>
+        public double? CurrentCii { get; set; }
+
+        /// <summary>
+        /// CII corrected of this report (g/t-nm CO2).
+        /// </summary>
+        public double? CurrentCiiCorrected { get; set; }
+
+        /// <summary>
+        /// Required CII as per the year of the report, ship type and deadweight of ship (g/t-nm CO2).
         /// </summary>
         public double? CiiRequired { get; set; }
 
         /// <summary>
-        /// Actual CII
+        /// Rating for the CII of this report (one of [A,B,C,D,E]).
         /// </summary>
-        public double? CiiCorrected { get; set; }
+        public string CiiRating { get; set; }
 
         /// <summary>
-        /// CII YearToDate
+        /// Rating for the corrected CII of this report (one of [A,B,C,D,E]).
         /// </summary>
-        public double? CiiYearToDate { get; set; }
+        public string CiiRatingCorrected { get; set; }
+
+        /// <summary>
+        /// Attained CII year to date (g/t-nm CO2).
+        /// </summary>
+        public double? CiiAttained { get; set; }
+
+        /// <summary>
+        /// Attained CII year to date (g/t-nm CO2).
+        /// </summary>
+        public double? CiiAttainedCorrected { get; set; }
+
+        /// <summary>
+        /// Rating for the attained year to date CII (one of [A,B,C,D,E]).
+        /// </summary>
+        public string CiiAttainedRating { get; set; }
+
+        /// <summary>
+        /// Rating for the attained year to date corrected CII (one of [A,B,C,D,E]).
+        /// </summary>
+        public string CiiAttainedRatingCorrected { get; set; }
+
+        /// <summary>
+        /// Average CII for the ship and the month of this report (g/t-nm CO2).
+        /// </summary>
+        public double? MonthlyCii { get; set; }
+
+        /// <summary>
+        /// Average corrected CII for the ship and the month of this report (g/t-nm CO2).
+        /// </summary>
+        public double? MonthlyCiiCorrected { get; set; }
 
         /// <summary>
         ///     Completeness score. (%)
