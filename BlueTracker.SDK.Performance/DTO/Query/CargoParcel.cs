@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BlueTracker.SDK.Performance.DTO.Query
 {
@@ -57,9 +53,14 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public string PolUnloc { get; set; }
 
         /// <summary>
-        /// Datetime of the departure event for the POL (port of loading).
+        /// UTC time of the departure event for the POL (port of loading).
         /// </summary>
-        public DateTimeOffset PolTimeStamp { get; set; }
+        public DateTimeOffset PolTimeStampUtc { get; set; }
+
+        /// <summary>
+        /// Offset in minutes to UTC time of the departure event.
+        /// </summary>
+        public double PolTimeStampLocalOffset { get; set; }
 
         /// <summary>
         /// UNLOCODE for the port of discharge.
@@ -67,8 +68,30 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public string PodUnloc { get; set; }
 
         /// <summary>
-        /// Datetime of the arrival event for the POD (port of discharge).
+        /// UTC time of the arrival event for the POD (port of discharge).
         /// </summary>
-        public DateTimeOffset PodTimeStamp { get; set; }
+        public DateTimeOffset PodTimeStampUtc { get; set; }
+
+        /// <summary>
+        /// Offset in minutes to UTC time of the arrival event.
+        /// </summary>
+        public double PodTimeStampLocalOffset { get; set; }
+
+        public int? VoyageId { get; set; }
+
+        /// <summary>
+        /// Name of voyage.
+        /// </summary>
+        public string VoyageName { get; set; }
+
+        /// <summary>
+        /// Gets or sets whether the parcel data can be linked to an existing voyage.
+        /// </summary>
+        public bool HasVoyage { get; set; }
+
+        /// <summary>
+        /// Gets or sets whether the parcel data can be linked to an existing leg.
+        /// </summary>
+        public bool HasLeg { get; set; }
     }
 }
