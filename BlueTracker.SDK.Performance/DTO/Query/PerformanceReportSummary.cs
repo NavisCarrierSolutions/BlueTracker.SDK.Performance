@@ -1675,6 +1675,201 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public double? TotalSoxEmissions { get; set; }
 
         /// <summary>
+        /// Total volume of waste disposal of category A plastic DisposalDistance Unspecified. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalCategoryAPlasticDistanceUnspecified { get; set; }
+
+        /// <summary>
+        /// Total volume of waste disposal of category B food waste DisposalDistance Unspecified. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalCategoryBFoodWasteDistanceUnspecified { get; set; }
+
+        /// <summary>
+        /// Total volume of waste disposal of category C domestic waste DisposalDistance Unspecified. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalCategoryCDomesticWasteDistanceUnspecified { get; set; }
+
+        /// <summary>
+        /// Total volume of waste disposal of category D cooking oil DisposalDistance Unspecified. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalCategoryDCookingOilDistanceUnspecified { get; set; }
+
+        /// <summary>
+        /// Total volume of waste disposal of category E incinerator ash DisposalDistance Unspecified. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalCategoryEIncineratorAshDistanceUnspecified { get; set; }
+
+        /// <summary>
+        /// Total volume of waste disposal of category F operational waste DisposalDistance Unspecified. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalCategoryFOperationalWasteDistanceUnspecified { get; set; }
+
+        /// <summary>
+        /// Total volume of waste disposal of category G animal carcass DisposalDistance Unspecified. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalCategoryGAnimalCarcassDistanceUnspecified { get; set; }
+
+        /// <summary>
+        /// Total volume of waste disposal of category H fishing gear DisposalDistance Unspecified (m3).
+        /// </summary>
+        public double? TotalWasteDisposalCategoryHFishingGearDistanceUnspecified { get; set; }
+
+        /// <summary>
+        /// Total volume of waste disposal of category I electronic waste DisposalDistance Unspecified. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalCategoryIElectronicWasteDistanceUnspecified { get; set; }
+
+        /// <summary>
+        /// Total volume of waste disposal of category J cargo residues (non HME) DisposalDistance Unspecified. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalCategoryJCargoResidueNonHmeDistanceUnspecified { get; set; }
+
+        /// <summary>
+        /// Total volume of waste disposal of category K cargo residues (HME) DisposalDistance Unspecified. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalCategoryKCargoResidueHmeDistanceUnspecified { get; set; }
+
+        /// <summary>
+        /// Total volume of waste disposal of sludge and oil residues DisposalDistance Unspecified. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalSludgeAndOilResidueDistanceUnspecified { get; set; }
+
+        /// <summary>
+        /// Total volume of waste disposal of undefined origin DisposalDistance Unspecified. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalUndefDistanceUnspecified { get; set; }
+
+        /// <summary>
+        /// Total volume of waste disposal of category A plastic DisposalDistance ThreeNauticalMiles. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalCategoryAPlasticDistance3nm { get; set; }
+
+        /// <summary>
+        /// Total volume of waste disposal of category B food waste DisposalDistance ThreeNauticalMiles. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalCategoryBFoodWasteDistance3nm { get; set; }
+
+        /// <summary>
+        /// Total volume of waste disposal of category C domestic waste DisposalDistance ThreeNauticalMiles. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalCategoryCDomesticWasteDistance3nm { get; set; }
+
+        /// <summary>
+        /// Total volume of waste disposal of category D cooking oil DisposalDistance ThreeNauticalMiles. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalCategoryDCookingOilDistance3nm { get; set; }
+
+        /// <summary>
+        /// Total volume of waste disposal of category E incinerator ash DisposalDistance ThreeNauticalMiles. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalCategoryEIncineratorAshDistance3nm { get; set; }
+
+        /// <summary>
+        /// Total volume of waste disposal of category F operational waste DisposalDistance ThreeNauticalMiles. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalCategoryFOperationalWasteDistance3nm { get; set; }
+
+        /// <summary>
+        /// Total volume of waste disposal of category G animal carcass DisposalDistance ThreeNauticalMiles. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalCategoryGAnimalCarcassDistance3nm { get; set; }
+
+        /// <summary>
+        /// Total volume of waste disposal of category H fishing gear DisposalDistance ThreeNauticalMiles (m3).
+        /// </summary>
+        public double? TotalWasteDisposalCategoryHFishingGearDistance3nm { get; set; }
+
+        /// <summary>
+        /// Total volume of waste disposal of category I electronic waste DisposalDistance ThreeNauticalMiles. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalCategoryIElectronicWasteDistance3nm { get; set; }
+
+        /// <summary>
+        /// Total volume of waste disposal of category J cargo residues (non HME) DisposalDistance ThreeNauticalMiles. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalCategoryJCargoResidueNonHmeDistance3nm { get; set; }
+
+        /// <summary>
+        /// Total volume of waste disposal of category K cargo residues (HME) DisposalDistance ThreeNauticalMiles. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalCategoryKCargoResidueHmeDistance3nm { get; set; }
+
+        /// <summary>
+        /// Total volume of waste disposal of sludge and oil residues DisposalDistance ThreeNauticalMiles. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalSludgeAndOilResidueDistance3nm { get; set; }
+
+        /// <summary>
+        /// Total volume of waste disposal of undefined origin DisposalDistance ThreeNauticalMiles. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalUndefDistance3nm { get; set; }
+
+        /// <summary>
+        /// Total volume of waste disposal of category A plastic DisposalDistance TwelveNauticalMiles. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalCategoryAPlasticDistance12nm { get; set; }
+
+        /// <summary>
+        /// Total volume of waste disposal of category B food waste DisposalDistance TwelveNauticalMiles. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalCategoryBFoodWasteDistance12nm { get; set; }
+
+        /// <summary>
+        /// Total volume of waste disposal of category C domestic waste DisposalDistance TwelveNauticalMiles. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalCategoryCDomesticWasteDistance12nm { get; set; }
+
+        /// <summary>
+        /// Total volume of waste disposal of category D cooking oil DisposalDistance TwelveNauticalMiles. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalCategoryDCookingOilDistance12nm { get; set; }
+
+        /// <summary>
+        /// Total volume of waste disposal of category E incinerator ash DisposalDistance TwelveNauticalMiles. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalCategoryEIncineratorAshDistance12nm { get; set; }
+
+        /// <summary>
+        /// Total volume of waste disposal of category F operational waste DisposalDistance TwelveNauticalMiles. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalCategoryFOperationalWasteDistance12nm { get; set; }
+
+        /// <summary>
+        /// Total volume of waste disposal of category G animal carcass DisposalDistance TwelveNauticalMiles. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalCategoryGAnimalCarcassDistance12nm { get; set; }
+
+        /// <summary>
+        /// Total volume of waste disposal of category H fishing gear (m3) DisposalDistance TwelveNauticalMiles.
+        /// </summary>
+        public double? TotalWasteDisposalCategoryHFishingGearDistance12nm { get; set; }
+
+        /// <summary>
+        /// Total volume of waste disposal of category I electronic waste DisposalDistance TwelveNauticalMiles. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalCategoryIElectronicWasteDistance12nm { get; set; }
+
+        /// <summary>
+        /// Total volume of waste disposal of category J cargo residues (non HME) DisposalDistance TwelveNauticalMiles. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalCategoryJCargoResidueNonHmeDistance12nm { get; set; }
+
+        /// <summary>
+        /// Total volume of waste disposal of category K cargo residues (HME) DisposalDistance TwelveNauticalMiles. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalCategoryKCargoResidueHmeDistance12nm { get; set; }
+
+        /// <summary>
+        /// Total volume of waste disposal of sludge and oil residues DisposalDistance TwelveNauticalMiles. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalSludgeAndOilResidueDistance12nm { get; set; }
+
+        /// <summary>
+        /// Total volume of waste disposal of undefined origin DisposalDistance TwelveNauticalMiles. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalUndefDistance12nm { get; set; }
+
+        /// <summary>
         ///     Transport efficiency. (Grams of fuel oil per cargo ton and mile)
         /// </summary>
         public double? TransportEfficiency { get; set; }
