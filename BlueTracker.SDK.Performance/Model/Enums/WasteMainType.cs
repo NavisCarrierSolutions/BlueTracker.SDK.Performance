@@ -68,6 +68,18 @@
         /// <summary>
         /// Sludge and oil residue.
         /// </summary>
-        SludgeAndOilResidue = 12
+        SludgeAndOilResidue = 12,
+
+        /// <summary>
+        /// Sewage
+        /// </summary>
+        Sewage = 13,
+
+        /// <summary>
+        /// ExhaustGasCleaningResidues
+        /// </summary>
+        ExhaustGasCleaningResidues = 14
+
+
     }
 }
