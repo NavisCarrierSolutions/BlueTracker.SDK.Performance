@@ -31,5 +31,17 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Report
         /// </summary>
         [JsonProperty("bdnNumber")]
         public string BdnNumber { get; set; }
+
+        /// <summary>
+        /// GHG intensity value 'E' (gCO2eq/MJ) represents greenhouse gas emissions per unit of energy for biofuels and e-fuels.
+        /// </summary>
+        [JsonProperty("ghgIntensityValue")]
+        public double? GhgIntensityValue { get; set; }
+
+        /// <summary>
+        /// Reference to recognized certification scheme (ISSC, RSB, etc.) or Unique number of the Proof of Sustainability. 
+        /// </summary>
+        [JsonProperty("posNumber")]
+        public string PosNumber { get; set; }
     }
 }

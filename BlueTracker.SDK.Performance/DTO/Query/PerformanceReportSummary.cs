@@ -804,6 +804,26 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public double? GainLossLubOilUndef { get; set; }
 
         /// <summary>
+        /// BTL average GHG intensity value 'E' (gCO2eq/MJ) represents greenhouse gas emissions per unit of energy for biofuels and e-fuels.
+        /// </summary>
+        public double? BunkerGhgIntensityBtl { get; set; }
+
+        /// <summary>
+        /// FAME average GHG intensity value 'E' (gCO2eq/MJ) represents greenhouse gas emissions per unit of energy for biofuels and e-fuels.
+        /// </summary>
+        public double? BunkerGhgIntensityFame { get; set; }
+
+        /// <summary>
+        /// HVO average GHG intensity value 'E' (gCO2eq/MJ) represents greenhouse gas emissions per unit of energy for biofuels and e-fuels.
+        /// </summary>
+        public double? BunkerGhgIntensityHvo { get; set; }
+
+        /// <summary>
+        /// Bio fuel blend average GHG intensity value 'E' (gCO2eq/MJ) represents greenhouse gas emissions per unit of energy for biofuels and e-fuels.
+        /// </summary>
+        public double? BunkerGhgIntensityBioFuelBlend { get; set; }
+
+        /// <summary>
         ///     Average heading of ship. (degrees)
         /// </summary>
         public double? Heading { get; set; }
@@ -1083,6 +1103,11 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         ///     Position longitude. (degrees)
         /// </summary>
         public double? PosLng { get; set; }
+
+        /// <summary>
+        /// Proof of Sustainability numbers comma separated.
+        /// </summary>
+        public string PosNumbers { get; set; }
 
         /// <summary>
         ///     Id of report
