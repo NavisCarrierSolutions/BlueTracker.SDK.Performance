@@ -30,6 +30,11 @@
         /// <summary>
         /// Calculation yielded an invalid result (e.g. NaN or infinity).
         /// </summary>
-        Invalid
+        Invalid,
+
+        /// <summary>
+        /// Indicates that the value is present and has not to be calculated.
+        /// </summary>
+        DataPresent
     }
 }

@@ -2386,6 +2386,81 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public double? TotalSoxEmissions { get; set; }
 
         /// <summary>
+        ///     Total volume of waste disposal of category A plastic. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalCategoryAPlastic { get; set; }
+
+        /// <summary>
+        ///     Total volume of waste disposal of category B food waste. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalCategoryBFoodWaste { get; set; }
+
+        /// <summary>
+        ///     Total volume of waste disposal of category C domestic waste. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalCategoryCDomesticWaste { get; set; }
+
+        /// <summary>
+        ///     Total volume of waste disposal of category D cooking oil. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalCategoryDCookingOil { get; set; }
+
+        /// <summary>
+        ///     Total volume of waste disposal of category E incinerator ash. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalCategoryEIncineratorAsh { get; set; }
+
+        /// <summary>
+        ///     Total volume of waste disposal of category F operational waste. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalCategoryFOperationalWaste { get; set; }
+
+        /// <summary>
+        ///     Total volume of waste disposal of category G animal carcass. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalCategoryGAnimalCarcass { get; set; }
+
+        /// <summary>
+        ///     Total volume of waste disposal of category H fishing gear (m3).
+        /// </summary>
+        public double? TotalWasteDisposalCategoryHFishingGear { get; set; }
+
+        /// <summary>
+        ///     Total volume of waste disposal of category I electronic waste. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalCategoryIElectronicWaste { get; set; }
+
+        /// <summary>
+        ///     Total volume of waste disposal of category J cargo residues (non HME). (m3)
+        /// </summary>
+        public double? TotalWasteDisposalCategoryJCargoResidueNonHme { get; set; }
+
+        /// <summary>
+        ///     Total volume of waste disposal of category K cargo residues (HME). (m3)
+        /// </summary>
+        public double? TotalWasteDisposalCategoryKCargoResidueHme { get; set; }
+
+        /// <summary>
+        ///     Total volume of waste disposal of sludge and oil residues. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalSludgeAndOilResidue { get; set; }
+
+        /// <summary>
+        /// Total volume of waste disposal of sewage. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalSewage { get; set; }
+
+        /// <summary>
+        /// Total volume of waste disposal of exhaust gas cleaning residues. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalExhaustGasCleaningResidues { get; set; }
+
+        /// <summary>
+        ///     Total volume of waste disposal of undefined origin. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalUndef { get; set; }
+
+        /// <summary>
         /// Total volume of waste disposal of category A plastic DisposalDistance Unspecified. (m3)
         /// </summary>
         public double? TotalWasteDisposalCategoryAPlasticDistanceUnspecified { get; set; }
@@ -2444,6 +2519,16 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         /// Total volume of waste disposal of sludge and oil residues DisposalDistance Unspecified. (m3)
         /// </summary>
         public double? TotalWasteDisposalSludgeAndOilResidueDistanceUnspecified { get; set; }
+
+        /// <summary>
+        /// Total volume of waste disposal of sewage DisposalDistance Unspecified. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalSewageDistanceUnspecified { get; set; }
+
+        /// <summary>
+        /// Total volume of waste disposal of exhaust gas cleaning residues DisposalDistance Unspecified. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalExhaustGasCleaningResiduesDistanceUnspecified { get; set; }
 
         /// <summary>
         /// Total volume of waste disposal of undefined origin DisposalDistance Unspecified. (m3)
@@ -2511,6 +2596,16 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public double? TotalWasteDisposalSludgeAndOilResidueDistance3nm { get; set; }
 
         /// <summary>
+        /// Total volume of waste disposal of sewage DisposalDistance ThreeNauticalMiles. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalSewageDistance3nm { get; set; }
+
+        /// <summary>
+        /// Total volume of waste disposal of exhaust gas cleaning residues DisposalDistance ThreeNauticalMiles. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalExhaustGasCleaningResiduesDistance3nm { get; set; }
+
+        /// <summary>
         /// Total volume of waste disposal of undefined origin DisposalDistance ThreeNauticalMiles. (m3)
         /// </summary>
         public double? TotalWasteDisposalUndefDistance3nm { get; set; }
@@ -2574,6 +2669,16 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         /// Total volume of waste disposal of sludge and oil residues DisposalDistance TwelveNauticalMiles. (m3)
         /// </summary>
         public double? TotalWasteDisposalSludgeAndOilResidueDistance12nm { get; set; }
+
+        /// <summary>
+        /// Total volume of waste disposal of sewage DisposalDistance TwelveNauticalMiles. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalSewageDistance12nm { get; set; }
+
+        /// <summary>
+        /// Total volume of waste disposal of exhaust gas cleaning residues DisposalDistance TwelveNauticalMiles. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalExhaustGasCleaningResiduesDistance12nm { get; set; }
 
         /// <summary>
         /// Total volume of waste disposal of undefined origin DisposalDistance TwelveNauticalMiles. (m3)
