@@ -258,7 +258,12 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         /// <summary>
         /// Boiler Methanol kinematic viscosity (cSt).
         /// </summary>
-        public double? AbMethanolViscosity { get; set; }
+        public double? AbMethanolKinematicViscosity { get; set; }
+
+        /// <summary>
+        /// Boiler Ethanol kinematic viscosity (cSt).
+        /// </summary>
+        public double? AbEthanolKinematicViscosity { get; set; }
 
         /// <summary>
         ///     Boiler Methanol LCV (kJ/kg).
@@ -636,6 +641,11 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         /// AE Methanol kinematic viscosity (cSt).
         /// </summary>
         public double? AeMethanolKinematicViscosity { get; set; }
+
+        /// <summary>
+        /// AE Ethanol kinematic viscosity (cSt).
+        /// </summary>
+        public double? AeEthanolKinematicViscosity { get; set; }
 
         /// <summary>
         /// AE Methanol LCV (kJ/kg).
@@ -1612,6 +1622,11 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         /// ME Methanol kinematic viscosity (cSt).
         /// </summary>
         public double? MeMethanolKinematicViscosity { get; set; }
+
+        /// <summary>
+        /// ME Ethanol kinematic viscosity (cSt).
+        /// </summary>
+        public double? MeEthanolKinematicViscosity { get; set; }
 
         /// <summary>
         /// ME Methanol LCV (kJ/kg).
