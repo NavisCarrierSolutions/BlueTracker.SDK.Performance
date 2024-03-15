@@ -1074,6 +1074,16 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public double? MonthlyCiiCorrected { get; set; }
 
         /// <summary>
+        /// Rating of the CII value for the current month [A, B, C, D or E].
+        /// </summary>
+        public string MonthlyCiiRating { get; set; }
+
+        /// <summary>
+        /// Rating of the CII corrected value for the current month [A, B, C, D or E].
+        /// </summary>
+        public string MonthlyCiiCorrectedRating { get; set; }
+
+        /// <summary>
         ///     Completeness score. (%)
         /// </summary>
         public double? CompletenessScore { get; set; }
@@ -1286,6 +1296,26 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         ///     Undefined lub oil gain/loss. (litres)
         /// </summary>
         public double? GainLossLubOilUndef { get; set; }
+
+        /// <summary>
+        /// BTL average GHG intensity value 'E' (gCO2eq/MJ) represents greenhouse gas emissions per unit of energy for biofuels and e-fuels.
+        /// </summary>
+        public double? BunkerGhgIntensityBtl { get; set; }
+
+        /// <summary>
+        /// FAME average GHG intensity value 'E' (gCO2eq/MJ) represents greenhouse gas emissions per unit of energy for biofuels and e-fuels.
+        /// </summary>
+        public double? BunkerGhgIntensityFame { get; set; }
+
+        /// <summary>
+        /// HVO average GHG intensity value 'E' (gCO2eq/MJ) represents greenhouse gas emissions per unit of energy for biofuels and e-fuels.
+        /// </summary>
+        public double? BunkerGhgIntensityHvo { get; set; }
+
+        /// <summary>
+        /// Bio fuel blend average GHG intensity value 'E' (gCO2eq/MJ) represents greenhouse gas emissions per unit of energy for biofuels and e-fuels.
+        /// </summary>
+        public double? BunkerGhgIntensityBioFuelBlend { get; set; }
 
         /// <summary>
         ///     Average heading of ship. (degrees)
@@ -1811,6 +1841,11 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public double? PosLng { get; set; }
 
         /// <summary>
+        /// Proof of Sustainability numbers comma separated.
+        /// </summary>
+        public string PosNumbers { get; set; }
+
+        /// <summary>
         ///     Id of report
         /// </summary>
         public int ReportId { get; set; }
@@ -1881,6 +1916,21 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public double? RobFuelMdo { get; set; }
 
         /// <summary>
+        ///     Marine diesel oil high sulphur remain on board. (metric tons)
+        /// </summary>
+        public double? RobFuelMdoHs { get; set; }
+
+        /// <summary>
+        ///     Marine diesel oil low sulphur remain on board. (metric tons)
+        /// </summary>
+        public double? RobFuelMdoLs { get; set; }
+
+        /// <summary>
+        ///     Marine diesel oil ultra low sulphur remain on board. (metric tons)
+        /// </summary>
+        public double? RobFuelMdoLls { get; set; }
+
+        /// <summary>
         ///     Fuel oil methanol remain on board. (metric tons)
         /// </summary>
         public double? RobFuelMethanol { get; set; }
@@ -1904,6 +1954,16 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         ///     Marine gas oil remain on board. (metric tons)
         /// </summary>
         public double? RobFuelMgo { get; set; }
+
+        /// <summary>
+        ///     Marine gas oil low sulphur remain on board. (metric tons)
+        /// </summary>
+        public double? RobFuelMgoLs { get; set; }
+
+        /// <summary>
+        ///     Marine gas oil ultra low sulphur remain on board. (metric tons)
+        /// </summary>
+        public double? RobFuelMgoLls { get; set; }
 
         /// <summary>
         ///     Fuel oil propane remain on board. (metric tons)
