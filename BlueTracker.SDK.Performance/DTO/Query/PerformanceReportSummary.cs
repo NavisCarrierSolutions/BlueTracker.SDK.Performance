@@ -16,34 +16,14 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public double? AbHfoFoc { get; set; }
 
         /// <summary>
-        ///     Total FOC AB HFO HS
+        ///     Boiler HFO kinematic viscosity (cSt).
         /// </summary>
-        public double? AbHfoHsFoc { get; set; }
+        public double? AbHfoKinematicViscosity { get; set; }
 
         /// <summary>
-        ///     Boiler HFO HS sulphur content (%).
+        ///     Boiler HFO LCV (kJ/kg).
         /// </summary>
-        public double? AbHfoHsSulphurContent { get; set; }
-
-        /// <summary>
-        ///     Total FOC AB HFO LLS
-        /// </summary>
-        public double? AbHfoLlsFoc { get; set; }
-
-        /// <summary>
-        ///     Boiler HFO LLS sulphur content (%).
-        /// </summary>
-        public double? AbHfoLlsSulphurContent { get; set; }
-
-        /// <summary>
-        ///     Total FOC AB HFO LS
-        /// </summary>
-        public double? AbHfoLsFoc { get; set; }
-
-        /// <summary>
-        ///     Boiler HFO LS sulphur content (%).
-        /// </summary>
-        public double? AbHfoLsSulphurContent { get; set; }
+        public double? AbHfoLcv { get; set; }
 
         /// <summary>
         ///     Boiler HFO sulphur content (%).
@@ -51,44 +31,99 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public double? AbHfoSulphurContent { get; set; }
 
         /// <summary>
+        ///     Total FOC Boiler HFO HS (metric tons).
+        /// </summary>
+        public double? AbHfoHsFoc { get; set; }
+
+        /// <summary>
+        ///     Boiler HFO HS kinematic viscosity (cSt).
+        /// </summary>
+        public double? AbHfoHsKinematicViscosity { get; set; }
+
+        /// <summary>
+        ///     Boiler HFO HS LCV (kJ/kg).
+        /// </summary>
+        public double? AbHfoHsLcv { get; set; }
+
+        /// <summary>
+        ///     Boiler HFO HS sulphur content (%).
+        /// </summary>
+        public double? AbHfoHsSulphurContent { get; set; }
+
+        /// <summary>
+        ///     Total FOC Boiler HFO LLS (metric tons).
+        /// </summary>
+        public double? AbHfoLlsFoc { get; set; }
+
+        /// <summary>
+        ///     Boiler HFO LLS kinematic viscosity (cSt).
+        /// </summary>
+        public double? AbHfoLlsKinematicViscosity { get; set; }
+
+        /// <summary>
+        ///     Boiler HFO LLS LCV (kJ/kg).
+        /// </summary>
+        public double? AbHfoLlsLcv { get; set; }
+
+        /// <summary>
+        ///     Boiler HFO LLS sulphur content (%).
+        /// </summary>
+        public double? AbHfoLlsSulphurContent { get; set; }
+
+        /// <summary>
+        ///     Total FOC Boiler HFO LS (metric tons).
+        /// </summary>
+        public double? AbHfoLsFoc { get; set; }
+
+        /// <summary>
+        ///     Boiler HFO LS kinematic viscosity (cSt).
+        /// </summary>
+        public double? AbHfoLsKinematicViscosity { get; set; }
+
+        /// <summary>
+        ///     Boiler HFO LS LCV (kJ/kg).
+        /// </summary>
+        public double? AbHfoLsLcv { get; set; }
+
+        /// <summary>
+        ///     Boiler HFO LS sulphur content (%).
+        /// </summary>
+        public double? AbHfoLsSulphurContent { get; set; }
+
+        /// <summary>
+        ///     Total FOC Boiler LFO (metric tons).
+        /// </summary>
+        public double? AbLfoFoc { get; set; }
+
+        /// <summary>
+        ///     Boiler LFO kinematic viscosity (cSt).
+        /// </summary>
+        public double? AbLfoKinematicViscosity { get; set; }
+
+        /// <summary>
+        ///     Boiler LFO LCV (kJ/kg).
+        /// </summary>
+        public double? AbLfoLcv { get; set; }
+
+        /// <summary>
         ///     Boiler LFO sulphur content (%).
         /// </summary>
         public double? AbLfoSulphurContent { get; set; }
 
         /// <summary>
-        ///     Total FOC AB MDO
+        ///     Total FOC Boiler MDO (metric tons).
         /// </summary>
         public double? AbMdoFoc { get; set; }
 
         /// <summary>
-        ///     Total FOC AB MDO HS
+        ///     Boiler MDO kinematic viscosity (cSt).
         /// </summary>
-        public double? AbMdoHsFoc { get; set; }
+        public double? AbMdoKinematicViscosity { get; set; }
 
         /// <summary>
-        ///     Boiler MDO HS sulphur content (%).
+        ///     Boiler MDO LCV (kJ/kg).
         /// </summary>
-        public double? AbMdoHsSulphurContent { get; set; }
-
-        /// <summary>
-        ///     Total FOC AB MDO LLS
-        /// </summary>
-        public double? AbMdoLlsFoc { get; set; }
-
-        /// <summary>
-        ///     Boiler MDO LLS sulphur content (%).
-        /// </summary>
-        public double? AbMdoLlsSulphurContent { get; set; }
-
-        /// <summary>
-        ///     Total FOC AB MDO LS
-        /// </summary>
-        public double? AbMdoLsFoc { get; set; }
-
-        /// <summary>
-        ///     Boiler MDO LS sulphur content (%).
-        /// </summary>
-        public double? AbMdoLsSulphurContent { get; set; }
+        public double? AbMdoLcv { get; set; }
 
         /// <summary>
         ///     Boiler MDO sulphur content (%).
@@ -96,29 +131,79 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public double? AbMdoSulphurContent { get; set; }
 
         /// <summary>
-        ///     Total FOC AB MGO
+        ///     Total FOC Boiler MDO HS (metric tons).
+        /// </summary>
+        public double? AbMdoHsFoc { get; set; }
+
+        /// <summary>
+        ///     Boiler MDO HS kinematic viscosity (cSt).
+        /// </summary>
+        public double? AbMdoHsKinematicViscosity { get; set; }
+
+        /// <summary>
+        ///     Boiler MDO HS LCV (kJ/kg).
+        /// </summary>
+        public double? AbMdoHsLcv { get; set; }
+
+        /// <summary>
+        ///     Boiler MDO HS sulphur content (%).
+        /// </summary>
+        public double? AbMdoHsSulphurContent { get; set; }
+
+        /// <summary>
+        ///     Total FOC Boiler MDO LLS (metric tons).
+        /// </summary>
+        public double? AbMdoLlsFoc { get; set; }
+
+        /// <summary>
+        /// Boiler MDO LLS kinematic viscosity (cSt).
+        /// </summary>
+        public double? AbMdoLlsKinematicViscosity { get; set; }
+
+        /// <summary>
+        ///     Boiler MDO LLS LCV (kJ/kg).
+        /// </summary>
+        public double? AbMdoLlsLcv { get; set; }
+
+        /// <summary>
+        ///     Boiler MDO LLS sulphur content (%).
+        /// </summary>
+        public double? AbMdoLlsSulphurContent { get; set; }
+
+        /// <summary>
+        ///     Total FOC Boiler MDO LS (metric tons).
+        /// </summary>
+        public double? AbMdoLsFoc { get; set; }
+
+        /// <summary>
+        /// Boiler MDO LS kinematic viscosity (cSt).
+        /// </summary>
+        public double? AbMdoLsKinematicViscosity { get; set; }
+
+        /// <summary>
+        ///     Boiler MDO LS LCV (kJ/kg).
+        /// </summary>
+        public double? AbMdoLsLcv { get; set; }
+
+        /// <summary>
+        ///     Boiler MDO LS sulphur content (%).
+        /// </summary>
+        public double? AbMdoLsSulphurContent { get; set; }
+
+        /// <summary>
+        ///     Total FOC Boiler MGO (metric tons).
         /// </summary>
         public double? AbMgoFoc { get; set; }
 
         /// <summary>
-        ///     Total FOC AB MGO LLS
+        /// Boiler MGO kinematic viscosity (cSt).
         /// </summary>
-        public double? AbMgoLlsFoc { get; set; }
+        public double? AbMgoKinematicViscosity { get; set; }
 
         /// <summary>
-        ///     Boiler MGO LLS sulphur content (%).
+        ///     Boiler MGO LCV (kJ/kg).
         /// </summary>
-        public double? AbMgoLlsSulphurContent { get; set; }
-
-        /// <summary>
-        ///     Total FOC AB MGO LS
-        /// </summary>
-        public double? AbMgoLsFoc { get; set; }
-
-        /// <summary>
-        ///     Boiler MGO LS sulphur content (%).
-        /// </summary>
-        public double? AbMgoLsSulphurContent { get; set; }
+        public double? AbMgoLcv { get; set; }
 
         /// <summary>
         ///     Boiler MGO sulphur content (%).
@@ -126,169 +211,568 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public double? AbMgoSulphurContent { get; set; }
 
         /// <summary>
-        ///     Boiler FOC Methanol (%).
+        ///     Total FOC Boiler MGO LLS (metric tons).
+        /// </summary>
+        public double? AbMgoLlsFoc { get; set; }
+
+        /// <summary>
+        /// Boiler MGO LLS kinematic viscosity (cSt).
+        /// </summary>
+        public double? AbMgoLlsKinematicViscosity { get; set; }
+
+        /// <summary>
+        ///     Boiler MGO LLS LCV (kJ/kg).
+        /// </summary>
+        public double? AbMgoLlsLcv { get; set; }
+
+        /// <summary>
+        ///     Boiler MGO LLS sulphur content (%).
+        /// </summary>
+        public double? AbMgoLlsSulphurContent { get; set; }
+
+        /// <summary>
+        ///     Total FOC Boiler MGO LS (metric tons).
+        /// </summary>
+        public double? AbMgoLsFoc { get; set; }
+
+        /// <summary>
+        /// Boiler MGO LS kinematic viscosity (cSt).
+        /// </summary>
+        public double? AbMgoLsKinematicViscosity { get; set; }
+
+        /// <summary>
+        ///     Boiler MGO LS LCV (kJ/kg).
+        /// </summary>
+        public double? AbMgoLsLcv { get; set; }
+
+        /// <summary>
+        ///     Boiler MGO LS sulphur content (%).
+        /// </summary>
+        public double? AbMgoLsSulphurContent { get; set; }
+
+        /// <summary>
+        ///     Total FOC Boiler Methanol (metric tons).
         /// </summary>
         public double? AbMethanolFoc { get; set; }
 
         /// <summary>
-        ///     Boiler FOC LNG (%).
+        /// Boiler Methanol kinematic viscosity (cSt).
+        /// </summary>
+        public double? AbMethanolKinematicViscosity { get; set; }
+
+        /// <summary>
+        /// Boiler Ethanol kinematic viscosity (cSt).
+        /// </summary>
+        public double? AbEthanolKinematicViscosity { get; set; }
+
+        /// <summary>
+        ///     Boiler Methanol LCV (kJ/kg).
+        /// </summary>
+        public double? AbMethanolLcv { get; set; }
+
+        /// <summary>
+        ///     Boiler Methanol sulphur content (%).
+        /// </summary>
+        public double? AbMethanolSulphurContent { get; set; }
+
+        /// <summary>
+        ///     Total FOC Boiler LNG (metric tons).
         /// </summary>
         public double? AbLngFoc { get; set; }
 
         /// <summary>
-        ///     Boiler FOC BTL (%).
+        /// Boiler LNG kinematic viscosity (cSt).
+        /// </summary>
+        public double? AbLngKinematicViscosity { get; set; }
+
+        /// <summary>
+        ///     Boiler LNG LCV (kJ/kg).
+        /// </summary>
+        public double? AbLngLcv { get; set; }
+
+        /// <summary>
+        ///     Boiler LNG sulphur content (%).
+        /// </summary>
+        public double? AbLngSulphurContent { get; set; }
+
+        /// <summary>
+        ///     Total FOC Boiler BTL (metric tons).
         /// </summary>
         public double? AbBtlFoc { get; set; }
 
         /// <summary>
-        ///     Boiler FOC FAME (%).
+        /// Boiler BTL kinematic viscosity (cSt).
+        /// </summary>
+        public double? AbBtlKinematicViscosity { get; set; }
+
+        /// <summary>
+        ///     Boiler BTL LCV (kJ/kg).
+        /// </summary>
+        public double? AbBtlLcv { get; set; }
+
+        /// <summary>
+        ///     Boiler BTL sulphur content (%).
+        /// </summary>
+        public double? AbBtlSulphurContent { get; set; }
+
+        /// <summary>
+        ///     Total FOC Boiler FAME (metric tons).
         /// </summary>
         public double? AbFameFoc { get; set; }
 
         /// <summary>
-        ///     Boiler FOC HVO (%).
+        /// Boiler FAME kinematic viscosity (cSt).
+        /// </summary>
+        public double? AbFameKinematicViscosity { get; set; }
+
+        /// <summary>
+        ///     Boiler FAME LCV (kJ/kg).
+        /// </summary>
+        public double? AbFameLcv { get; set; }
+
+        /// <summary>
+        ///     Boiler FAME sulphur content (%).
+        /// </summary>
+        public double? AbFameSulphurContent { get; set; }
+
+        /// <summary>
+        ///     Total FOC Boiler HVO (metric tons).
         /// </summary>
         public double? AbHvoFoc { get; set; }
 
         /// <summary>
-        ///     Total FOC AE HFO
+        /// Boiler HVO kinematic viscosity (cSt).
+        /// </summary>
+        public double? AbHvoKinematicViscosity { get; set; }
+
+        /// <summary>
+        ///     Boiler HVO LCV (kJ/kg).
+        /// </summary>
+        public double? AbHvoLcv { get; set; }
+
+        /// <summary>
+        ///     Boiler HVO sulphur content (%).
+        /// </summary>
+        public double? AbHvoSulphurContent { get; set; }
+
+        /// <summary>
+        ///     Total FOC Boiler Bio Fuel Blend (metric tons).
+        /// </summary>
+        public double? AbBioFuelBlendFoc { get; set; }
+
+        /// <summary>
+        /// Boiler Bio Fuel Blend kinematic viscosity (cSt).
+        /// </summary>
+        public double? AbBioFuelBlendKinematicViscosity { get; set; }
+
+        /// <summary>
+        ///     Boiler Bio Fuel Blend LCV (kJ/kg).
+        /// </summary>
+        public double? AbBioFuelBlendLcv { get; set; }
+
+        /// <summary>
+        ///     Boiler Bio Fuel Blend sulphur content (%).
+        /// </summary>
+        public double? AbBioFuelBlendSulphurContent { get; set; }
+
+        /// <summary>
+        ///     Boiler average percentage of Bio Fuel in Blend (%).
+        /// </summary>
+        public double? AbAveragePercentageOfBioFuelInBlend { get; set; }
+
+        /// <summary>
+        ///     Most occuring Bio Fuel Kind in Boiler Bio Fuel Blends.
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public BioBlendOptions? AbMostOccurringBioFuelKindInBlend { get; set; }
+
+        /// <summary>
+        ///     Most occuring Fossil Fuel Kind in Boiler Bio Fuel Blends.
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public FossilBlendOptions? AbMostOccurringFossilFuelKindInBlend { get; set; }
+
+        /// <summary>
+        ///     Total FOC AE HFO (metric tons).
         /// </summary>
         public double? AeHfoFoc { get; set; }
 
         /// <summary>
-        ///     Total FOC AE HFO HS
+        /// AE HFO kinematic viscosity (cSt).
         /// </summary>
-        public double? AeHfoHsFoc { get; set; }
+        public double? AeHfoKinematicViscosity { get; set; }
 
         /// <summary>
-        ///     Aux engine HFO HS sulphur content (%).
+        /// AE HFO LCV (kJ/kg).
         /// </summary>
-        public double? AeHfoHsSulphurContent { get; set; }
+        public double? AeHfoLcv { get; set; }
 
         /// <summary>
-        ///     Total FOC AE HFO LLS
-        /// </summary>
-        public double? AeHfoLlsFoc { get; set; }
-
-        /// <summary>
-        ///     Aux engine HFO LLS sulphur content (%).
-        /// </summary>
-        public double? AeHfoLlsSulphurContent { get; set; }
-
-        /// <summary>
-        ///     Total FOC AE HFO LS
-        /// </summary>
-        public double? AeHfoLsFoc { get; set; }
-
-        /// <summary>
-        ///     Aux engine HFO LS sulphur content (%).
-        /// </summary>
-        public double? AeHfoLsSulphurContent { get; set; }
-
-        /// <summary>
-        ///     Aux engine HFO sulphur content (%).
+        ///     AE HFO sulphur content (%).
         /// </summary>
         public double? AeHfoSulphurContent { get; set; }
 
         /// <summary>
-        ///     Aux engine LFO sulphur content (%).
+        ///     Total FOC AE HFO HS (metric tons).
+        /// </summary>
+        public double? AeHfoHsFoc { get; set; }
+
+        /// <summary>
+        /// AE HFO HS kinematic viscosity (cSt).
+        /// </summary>
+        public double? AeHfoHsKinematicViscosity { get; set; }
+
+        /// <summary>
+        /// AE HFO HS LCV (kJ/kg).
+        /// </summary>
+        public double? AeHfoHsLcv { get; set; }
+
+        /// <summary>
+        ///     AE HFO HS sulphur content (%).
+        /// </summary>
+        public double? AeHfoHsSulphurContent { get; set; }
+
+        /// <summary>
+        ///     Total FOC AE HFO LLS (metric tons).
+        /// </summary>
+        public double? AeHfoLlsFoc { get; set; }
+
+        /// <summary>
+        /// AE HFO LLS kinematic viscosity (cSt).
+        /// </summary>
+        public double? AeHfoLlsKinematicViscosity { get; set; }
+
+        /// <summary>
+        /// AE HFO LLS LCV (kJ/kg).
+        /// </summary>
+        public double? AeHfoLlsLcv { get; set; }
+
+        /// <summary>
+        ///     AE HFO LLS sulphur content (%).
+        /// </summary>
+        public double? AeHfoLlsSulphurContent { get; set; }
+
+        /// <summary>
+        ///     Total FOC AE HFO LS (metric tons).
+        /// </summary>
+        public double? AeHfoLsFoc { get; set; }
+
+        /// <summary>
+        /// AE HFO LS kinematic viscosity (cSt).
+        /// </summary>
+        public double? AeHfoLsKinematicViscosity { get; set; }
+
+        /// <summary>
+        /// AE HFO LS LCV (kJ/kg).
+        /// </summary>
+        public double? AeHfoLsLcv { get; set; }
+
+        /// <summary>
+        /// AE HFO LS sulphur content (%).
+        /// </summary>
+        public double? AeHfoLsSulphurContent { get; set; }
+
+        /// <summary>
+        ///     Total FOC AE LFO (metric tons).
+        /// </summary>
+        public double? AeLfoFoc { get; set; }
+
+        /// <summary>
+        /// AE LFO kinematic viscosity (cSt).
+        /// </summary>
+        public double? AeLfoKinematicViscosity { get; set; }
+
+        /// <summary>
+        /// AE LFO LCV (kJ/kg).
+        /// </summary>
+        public double? AeLfoLcv { get; set; }
+
+        /// <summary>
+        /// AE LFO sulphur content (%).
         /// </summary>
         public double? AeLfoSulphurContent { get; set; }
 
         /// <summary>
-        ///     Total FOC AE MDO
+        /// Total FOC AE MDO (metric tons).
         /// </summary>
         public double? AeMdoFoc { get; set; }
 
         /// <summary>
-        ///     Total FOC AE MDO HS
+        /// AE MDO kinematic viscosity (cSt).
         /// </summary>
-        public double? AeMdoHsFoc { get; set; }
+        public double? AeMdoKinematicViscosity { get; set; }
 
         /// <summary>
-        ///     Aux engine MDO HS sulphur content (%).
+        /// AE MDO LCV (kJ/kg).
         /// </summary>
-        public double? AeMdoHsSulphurContent { get; set; }
+        public double? AeMdoLcv { get; set; }
 
         /// <summary>
-        ///     Total FOC AE MDO LLS
-        /// </summary>
-        public double? AeMdoLlsFoc { get; set; }
-
-        /// <summary>
-        ///     Aux engine MDO LLS sulphur content (%).
-        /// </summary>
-        public double? AeMdoLlsSulphurContent { get; set; }
-
-        /// <summary>
-        ///     Total FOC AE MDO LS
-        /// </summary>
-        public double? AeMdoLsFoc { get; set; }
-
-        /// <summary>
-        ///     Aux engine MDO LS sulphur content (%).
-        /// </summary>
-        public double? AeMdoLsSulphurContent { get; set; }
-
-        /// <summary>
-        ///     Aux engine MDO sulphur content (%).
+        /// AE MDO sulphur content (%).
         /// </summary>
         public double? AeMdoSulphurContent { get; set; }
 
         /// <summary>
-        ///     Total FOC AE MGO
+        /// Total FOC AE MDO HS (metric tons).
+        /// </summary>
+        public double? AeMdoHsFoc { get; set; }
+
+        /// <summary>
+        /// AE MDO HS kinematic viscosity (cSt).
+        /// </summary>
+        public double? AeMdoHsKinematicViscosity { get; set; }
+
+        /// <summary>
+        /// AE MDO HS LCV (kJ/kg).
+        /// </summary>
+        public double? AeMdoHsLcv { get; set; }
+
+        /// <summary>
+        /// AE MDO HS sulphur content (%).
+        /// </summary>
+        public double? AeMdoHsSulphurContent { get; set; }
+
+        /// <summary>
+        ///     Total FOC AE MDO LLS (metric tons).
+        /// </summary>
+        public double? AeMdoLlsFoc { get; set; }
+
+        /// <summary>
+        /// AE MDO LLS kinematic viscosity (cSt).
+        /// </summary>
+        public double? AeMdoLlsKinematicViscosity { get; set; }
+
+        /// <summary>
+        /// AE MDO LLS LCV (kJ/kg).
+        /// </summary>
+        public double? AeMdoLlsLcv { get; set; }
+
+        /// <summary>
+        /// AE MDO LLS sulphur content (%).
+        /// </summary>
+        public double? AeMdoLlsSulphurContent { get; set; }
+
+        /// <summary>
+        /// Total FOC AE MDO LS (metric tons).
+        /// </summary>
+        public double? AeMdoLsFoc { get; set; }
+
+        /// <summary>
+        /// AE MDO LS kinematic viscosity (cSt).
+        /// </summary>
+        public double? AeMdoLsKinematicViscosity { get; set; }
+
+        /// <summary>
+        /// AE MDO LS LCV (kJ/kg).
+        /// </summary>
+        public double? AeMdoLsLcv { get; set; }
+
+        /// <summary>
+        /// AE MDO LS sulphur content (%).
+        /// </summary>
+        public double? AeMdoLsSulphurContent { get; set; }
+
+        /// <summary>
+        /// Total FOC AE MGO (metric tons).
         /// </summary>
         public double? AeMgoFoc { get; set; }
 
         /// <summary>
-        ///     Total FOC AE MGO LLS
+        /// AE MGO kinematic viscosity (cSt).
         /// </summary>
-        public double? AeMgoLlsFoc { get; set; }
+        public double? AeMgoKinematicViscosity { get; set; }
 
         /// <summary>
-        ///     Aux engine MGO LLS sulphur content (%).
+        /// AE MGO LCV (kJ/kg).
         /// </summary>
-        public double? AeMgoLlsSulphurContent { get; set; }
+        public double? AeMgoLcv { get; set; }
 
         /// <summary>
-        ///     Total FOC AE MGO LS
-        /// </summary>
-        public double? AeMgoLsFoc { get; set; }
-
-        /// <summary>
-        ///     Aux engine MGO LS sulphur content (%).
-        /// </summary>
-        public double? AeMgoLsSulphurContent { get; set; }
-
-        /// <summary>
-        ///     Aux engine MGO sulphur content (%).
+        /// AE MGO sulphur content (%).
         /// </summary>
         public double? AeMgoSulphurContent { get; set; }
 
         /// <summary>
-        ///     Aux engine FOC Methanol (%).
+        /// Total FOC AE MGO LLS (metric tons).
+        /// </summary>
+        public double? AeMgoLlsFoc { get; set; }
+
+        /// <summary>
+        /// AE MGO LLS kinematic viscosity (cSt).
+        /// </summary>
+        public double? AeMgoLlsKinematicViscosity { get; set; }
+
+        /// <summary>
+        /// AE MGO LLS LCV (kJ/kg).
+        /// </summary>
+        public double? AeMgoLlsLcv { get; set; }
+
+        /// <summary>
+        /// AE MGO LLS sulphur content (%).
+        /// </summary>
+        public double? AeMgoLlsSulphurContent { get; set; }
+
+        /// <summary>
+        /// Total FOC AE MGO LS (metric tons).
+        /// </summary>
+        public double? AeMgoLsFoc { get; set; }
+
+        /// <summary>
+        /// AE MGO LS kinematic viscosity (cSt).
+        /// </summary>
+        public double? AeMgoLsKinematicViscosity { get; set; }
+
+        /// <summary>
+        /// AE MGO LS LCV (kJ/kg).
+        /// </summary>
+        public double? AeMgoLsLcv { get; set; }
+
+        /// <summary>
+        /// AE MGO LS sulphur content (%).
+        /// </summary>
+        public double? AeMgoLsSulphurContent { get; set; }
+
+        /// <summary>
+        /// Total FOC AE Methanol (metric tons).
         /// </summary>
         public double? AeMethanolFoc { get; set; }
 
         /// <summary>
-        ///     Aux engine FOC LNG (%).
+        /// AE Methanol kinematic viscosity (cSt).
+        /// </summary>
+        public double? AeMethanolKinematicViscosity { get; set; }
+
+        /// <summary>
+        /// AE Ethanol kinematic viscosity (cSt).
+        /// </summary>
+        public double? AeEthanolKinematicViscosity { get; set; }
+
+        /// <summary>
+        /// AE Methanol LCV (kJ/kg).
+        /// </summary>
+        public double? AeMethanolLcv { get; set; }
+
+        /// <summary>
+        /// AE Methanol sulphur content (%).
+        /// </summary>
+        public double? AeMethanolSulphurContent { get; set; }
+
+        /// <summary>
+        /// Total FOC AE LNG (metric tons).
         /// </summary>
         public double? AeLngFoc { get; set; }
 
         /// <summary>
-        ///     Aux engine FOC FAME (%).
+        /// AE LNG kinematic viscosity (cSt).
+        /// </summary>
+        public double? AeLngKinematicViscosity { get; set; }
+
+        /// <summary>
+        /// AE LNG LCV (kJ/kg).
+        /// </summary>
+        public double? AeLngLcv { get; set; }
+
+        /// <summary>
+        /// AE LNG sulphur content (%).
+        /// </summary>
+        public double? AeLngSulphurContent { get; set; }
+
+        /// <summary>
+        /// Total FOC AE BTL (metric tons). 
         /// </summary>
         public double? AeBtlFoc { get; set; }
 
         /// <summary>
-        ///     Aux engine FOC FAME (%).
+        /// AE BTL kinematic viscosity (cSt).
+        /// </summary>
+        public double? AeBtlKinematicViscosity { get; set; }
+
+        /// <summary>
+        /// AE BTL LCV (kJ/kg).
+        /// </summary>
+        public double? AeBtlLcv { get; set; }
+
+        /// <summary>
+        /// AE BTL sulphur content (%).
+        /// </summary>
+        public double? AeBtlSulphurContent { get; set; }
+
+        /// <summary>
+        /// Total FOC AE FAME (metric tons).
         /// </summary>
         public double? AeFameFoc { get; set; }
 
         /// <summary>
-        ///     Aux engine FOC HVO (%).
+        /// AE FAME kinematic viscosity (cSt).
+        /// </summary>
+        public double? AeFameKinematicViscosity { get; set; }
+
+        /// <summary>
+        /// AE FAME LCV (kJ/kg).
+        /// </summary>
+        public double? AeFameLcv { get; set; }
+
+        /// <summary>
+        /// AE FAME sulphur content (%).
+        /// </summary>
+        public double? AeFameSulphurContent { get; set; }
+
+        /// <summary>
+        /// Total FOC AE HVO (metric tons).
         /// </summary>
         public double? AeHvoFoc { get; set; }
+
+        /// <summary>
+        /// AE HVO kinematic viscosity (cSt).
+        /// </summary>
+        public double? AeHvoKinematicViscosity { get; set; }
+
+        /// <summary>
+        /// AE HVO LCV (kJ/kg).
+        /// </summary>
+        public double? AeHvoLcv { get; set; }
+
+        /// <summary>
+        /// AE HVO sulphur content (%).
+        /// </summary>
+        public double? AeHvoSulphurContent { get; set; }
+
+        /// <summary>
+        /// Total FOC AE Bio Fuel Blend (metric tons).
+        /// </summary>
+        public double? AeBioFuelBlendFoc { get; set; }
+
+        /// <summary>
+        /// AE LNG kinematic viscosity (cSt).
+        /// </summary>
+        public double? AeBioFuelBlendKinematicViscosity { get; set; }
+
+        /// <summary>
+        /// AE Bio Fuel Blend LCV (kJ/kg).
+        /// </summary>
+        public double? AeBioFuelBlendLcv { get; set; }
+
+        /// <summary>
+        /// AE Bio Fuel Blend sulphur content (%).
+        /// </summary>
+        public double? AeBioFuelBlendSulphurContent { get; set; }
+
+        /// <summary>
+        /// AE average percentage of bio fuel in blend.
+        /// </summary>
+        public double? AeAveragePercentageOfBioFuelInBlend { get; set; }
+
+        /// <summary>
+        /// AE most occurring bio fuel in blend.
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public BioBlendOptions? AeMostOccurringBioFuelKindInBlend { get; set; }
+
+        /// <summary>
+        /// AE most occuring fossil fuel in blend.
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public FossilBlendOptions? AeMostOccurringFossilFuelKindInBlend { get; set; }
 
         /// <summary>
         ///     Annual efficiency ratio (AER).
@@ -919,145 +1403,387 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public double? MeanDraft { get; set; }
 
         /// <summary>
-        ///     Total FOC ME HFO
+        ///     Total FOC ME HFO (metric tons).
         /// </summary>
         public double? MeHfoFoc { get; set; }
 
         /// <summary>
-        ///     Total FOC ME HFO HS
+        /// ME HFO kinematic viscosity (cSt).
         /// </summary>
-        public double? MeHfoHsFoc { get; set; }
+        public double? MeHfoKinematicViscosity { get; set; }
 
         /// <summary>
-        ///     Main engine HFO HS sulphur content (%).
+        /// ME HFO LCV (kJ/kg).
         /// </summary>
-        public double? MeHfoHsSulphurContent { get; set; }
+        public double? MeHfoLcv { get; set; }
 
         /// <summary>
-        ///     Total FOC ME HFO LLS
-        /// </summary>
-        public double? MeHfoLlsFoc { get; set; }
-
-        /// <summary>
-        ///     Main engine HFO LLS sulphur content (%).
-        /// </summary>
-        public double? MeHfoLlsSulphurContent { get; set; }
-
-        /// <summary>
-        ///     Total FOC ME HFO LS
-        /// </summary>
-        public double? MeHfoLsFoc { get; set; }
-
-        /// <summary>
-        ///     Main engine HFO LS sulphur content (%).
-        /// </summary>
-        public double? MeHfoLsSulphurContent { get; set; }
-
-        /// <summary>
-        ///     Main engine HFO sulphur content (%).
+        /// ME HFO sulphur content (%).
         /// </summary>
         public double? MeHfoSulphurContent { get; set; }
 
         /// <summary>
-        ///     Main engine HFO LFO sulphur content (%).
+        /// Total FOC ME HFO HS (metric tons).
+        /// </summary>
+        public double? MeHfoHsFoc { get; set; }
+
+        /// <summary>
+        /// ME HFO HS kinematic viscosity (cSt).
+        /// </summary>
+        public double? MeHfoHsKinematicViscosity { get; set; }
+
+        /// <summary>
+        /// ME HFO HS LCV (kJ/kg).
+        /// </summary>
+        public double? MeHfoHsLcv { get; set; }
+
+        /// <summary>
+        /// ME HFO HS sulphur content (%).
+        /// </summary>
+        public double? MeHfoHsSulphurContent { get; set; }
+
+        /// <summary>
+        /// Total FOC ME HFO LLS (metric tons).
+        /// </summary>
+        public double? MeHfoLlsFoc { get; set; }
+
+        /// <summary>
+        /// ME HFO LLS kinematic viscosity (cSt).
+        /// </summary>
+        public double? MeHfoLlsKinematicViscosity { get; set; }
+
+        /// <summary>
+        /// ME HFO LLS LCV (kJ/kg).
+        /// </summary>
+        public double? MeHfoLlsLcv { get; set; }
+
+        /// <summary>
+        /// ME HFO LLS sulphur content (%).
+        /// </summary>
+        public double? MeHfoLlsSulphurContent { get; set; }
+
+        /// <summary>
+        /// Total FOC ME HFO LS (metric tons).
+        /// </summary>
+        public double? MeHfoLsFoc { get; set; }
+
+        /// <summary>
+        /// ME HFO LS kinematic viscosity (cSt).
+        /// </summary>
+        public double? MeHfoLsKinematicViscosity { get; set; }
+
+        /// <summary>
+        /// ME HFO LS LCV (kJ/kg).
+        /// </summary>
+        public double? MeHfoLsLcv { get; set; }
+
+        /// <summary>
+        /// ME HFO LS sulphur content (%).
+        /// </summary>
+        public double? MeHfoLsSulphurContent { get; set; }
+
+        /// <summary>
+        /// Total FOC ME LFO (metric tons).
+        /// </summary>
+        public double? MeLfoFoc { get; set; }
+
+        /// <summary>
+        /// ME LFO kinematic viscosity (cSt).
+        /// </summary>
+        public double? MeLfoKinematicViscosity { get; set; }
+
+        /// <summary>
+        /// ME LFO LCV (kJ/kg).
+        /// </summary>
+        public double? MeLfoLcv { get; set; }
+
+        /// <summary>
+        /// ME LFO sulphur content (%).
         /// </summary>
         public double? MeLfoSulphurContent { get; set; }
 
         /// <summary>
-        ///     Total FOC ME MDO
+        /// Total FOC ME MDO (metric tons).
         /// </summary>
         public double? MeMdoFoc { get; set; }
 
         /// <summary>
-        ///     Total FOC ME MDO HS
+        /// ME MDO kinematic viscosity (cSt).
         /// </summary>
-        public double? MeMdoHsFoc { get; set; }
+        public double? MeMdoKinematicViscosity { get; set; }
 
         /// <summary>
-        ///     Main engine MDO HS sulphur content (%).
+        /// ME MDO LCV (kJ/kg).
         /// </summary>
-        public double? MeMdoHsSulphurContent { get; set; }
+        public double? MeMdoLcv { get; set; }
 
         /// <summary>
-        ///     Total FOC ME MDO LLS
-        /// </summary>
-        public double? MeMdoLlsFoc { get; set; }
-
-        /// <summary>
-        ///     Main engine MDO LLS sulphur content (%).
-        /// </summary>
-        public double? MeMdoLlsSulphurContent { get; set; }
-
-        /// <summary>
-        ///     Total FOC ME MDO LS
-        /// </summary>
-        public double? MeMdoLsFoc { get; set; }
-
-        /// <summary>
-        ///     Main engine MDO LS sulphur content (%).
-        /// </summary>
-        public double? MeMdoLsSulphurContent { get; set; }
-
-        /// <summary>
-        ///     Main engine MDO sulphur content (%).
+        /// ME MDO sulphur content (%).
         /// </summary>
         public double? MeMdoSulphurContent { get; set; }
 
         /// <summary>
-        ///     Total FOC ME MGO
+        /// Total FOC ME MDO HS (metric tons).
+        /// </summary>
+        public double? MeMdoHsFoc { get; set; }
+
+        /// <summary>
+        /// ME MDO HS kinematic viscosity (cSt).
+        /// </summary>
+        public double? MeMdoHsKinematicViscosity { get; set; }
+
+        /// <summary>
+        /// ME MDO HS LCV (kJ/kg).
+        /// </summary>
+        public double? MeMdoHsLcv { get; set; }
+
+        /// <summary>
+        /// ME MDO HS sulphur content (%).
+        /// </summary>
+        public double? MeMdoHsSulphurContent { get; set; }
+
+        /// <summary>
+        /// Total FOC ME MDO LLS (metric tons).
+        /// </summary>
+        public double? MeMdoLlsFoc { get; set; }
+
+        /// <summary>
+        /// ME MDO LLS kinematic viscosity (cSt).
+        /// </summary>
+        public double? MeMdoLlsKinematicViscosity { get; set; }
+
+        /// <summary>
+        /// ME MDO LLS LCV (kJ/kg).
+        /// </summary>
+        public double? MeMdoLlsLcv { get; set; }
+
+        /// <summary>
+        /// ME MDO LLS sulphur content (%).
+        /// </summary>
+        public double? MeMdoLlsSulphurContent { get; set; }
+
+        /// <summary>
+        /// Total FOC ME MDO LS (metric tons).
+        /// </summary>
+        public double? MeMdoLsFoc { get; set; }
+
+        /// <summary>
+        /// ME MDO LS kinematic viscosity (cSt).
+        /// </summary>
+        public double? MeMdoLsKinematicViscosity { get; set; }
+
+        /// <summary>
+        /// ME MDO LS LCV (kJ/kg).
+        /// </summary>
+
+        public double? MeMdoLsLcv { get; set; }
+
+        /// <summary>
+        /// ME MDO LS sulphur content (%).
+        /// </summary>
+        public double? MeMdoLsSulphurContent { get; set; }
+
+        /// <summary>
+        /// Total FOC ME MGO (metric tons).
         /// </summary>
         public double? MeMgoFoc { get; set; }
 
         /// <summary>
-        ///     Total FOC ME MGO LLS
+        /// ME MGO kinematic viscosity (cSt).
+        /// </summary>
+        public double? MeMgoKinematicViscosity { get; set; }
+
+        /// <summary>
+        /// ME MGO LCV (kJ/kg).
+        /// </summary>
+        public double? MeMgoLcv { get; set; }
+
+        /// <summary>
+        /// ME MGO sulphur content (%).
+        /// </summary>
+        public double? MeMgoSulphurContent { get; set; }
+
+        /// <summary>
+        /// Total FOC ME MGO LLS (metric tons).
         /// </summary>
         public double? MeMgoLlsFoc { get; set; }
 
         /// <summary>
-        ///     Main engine MGO LLS sulphur content (%).
+        /// ME MGO LLS kinematic viscosity (cSt).
+        /// </summary>
+        public double? MeMgoLlsKinematicViscosity { get; set; }
+
+        /// <summary>
+        /// ME MGO LLS LCV (kJ/kg).
+        /// </summary>
+        public double? MeMgoLlsLcv { get; set; }
+
+        /// <summary>
+        /// ME MGO LLS sulphur content (%).
         /// </summary>
         public double? MeMgoLlsSulphurContent { get; set; }
 
         /// <summary>
-        ///     Total FOC ME MGO LS
+        /// Total FOC ME MGO LS (metric tons).
         /// </summary>
         public double? MeMgoLsFoc { get; set; }
 
         /// <summary>
-        ///     Main engine MGO LS sulphur content (%).
+        /// ME MGO LS kinematic viscosity (cSt).
+        /// </summary>
+        public double? MeMgoLsKinematicViscosity { get; set; }
+
+        /// <summary>
+        /// ME MGO LS LCV (kJ/kg).
+        /// </summary>
+        public double? MeMgoLsLcv { get; set; }
+
+        /// <summary>
+        /// ME MGO LS sulphur content (%).
         /// </summary>
         public double? MeMgoLsSulphurContent { get; set; }
 
         /// <summary>
-        ///     Main engine MGO sulphur content (%).
-        /// </summary>
-        public double? MeMgoSulphurContent { get; set; }
-
-
-        /// <summary>
-        ///       Main engine FOC Methanol (%).
+        /// Total FOC ME Methanol (metric tons).
         /// </summary>
         public double? MeMethanolFoc { get; set; }
 
         /// <summary>
-        ///     Main engine FOC LNG (%).
+        /// ME Methanol kinematic viscosity (cSt).
+        /// </summary>
+        public double? MeMethanolKinematicViscosity { get; set; }
+
+        /// <summary>
+        /// ME Ethanol kinematic viscosity (cSt).
+        /// </summary>
+        public double? MeEthanolKinematicViscosity { get; set; }
+
+        /// <summary>
+        /// ME Methanol LCV (kJ/kg).
+        /// </summary>
+        public double? MeMethanolLcv { get; set; }
+
+        /// <summary>
+        /// ME Methanol sulphur content (%).
+        /// </summary>
+        public double? MeMethanolSulphurContent { get; set; }
+
+        /// <summary>
+        /// Total FOC ME LNG (metric tons).
         /// </summary>
         public double? MeLngFoc { get; set; }
 
         /// <summary>
-        ///     Main engine FOC BTL (%).
+        /// ME LNG kinematic viscosity (cSt).
+        /// </summary>
+        public double? MeLngKinematicViscosity { get; set; }
+
+        /// <summary>
+        /// ME LNG LCV (kJ/kg).
+        /// </summary>
+        public double? MeLngLcv { get; set; }
+
+        /// <summary>
+        /// ME LNG sulphur content (%).
+        /// </summary>
+        public double? MeLngSulphurContent { get; set; }
+
+        /// <summary>
+        /// Total FOC ME BTL (metric tons).
         /// </summary>
         public double? MeBtlFoc { get; set; }
 
         /// <summary>
-        ///     Main engine FOC FAME (%).
+        /// ME BTL kinematic viscosity (cSt).
+        /// </summary>
+        public double? MeBtlKinematicViscosity { get; set; }
+
+        /// <summary>
+        /// ME BTL LCV (kJ/kg).
+        /// </summary>
+        public double? MeBtlLcv { get; set; }
+
+        /// <summary>
+        /// ME BTL sulphur content (%).
+        /// </summary>
+        public double? MeBtlSulphurContent { get; set; }
+
+        /// <summary>
+        /// Total FOC ME FAME (metric tons).
         /// </summary>
         public double? MeFameFoc { get; set; }
 
         /// <summary>
-        ///     Main engine FOC HVO (%).
+        /// ME FAME kinematic viscosity (cSt).
+        /// </summary>
+        public double? MeFameKinematicViscosity { get; set; }
+
+        /// <summary>
+        /// ME FAME LCV (kJ/kg).
+        /// </summary>
+        public double? MeFameLcv { get; set; }
+
+        /// <summary>
+        /// ME FAME sulphur content (%).
+        /// </summary>
+        public double? MeFameSulphurContent { get; set; }
+
+        /// <summary>
+        /// Total FOC ME HVO (metric tons).
         /// </summary>
         public double? MeHvoFoc { get; set; }
+
+        /// <summary>
+        /// ME HVO kinematic viscosity (cSt).
+        /// </summary>
+        public double? MeHvoKinematicViscosity { get; set; }
+
+        /// <summary>
+        /// ME HVO LCV (kJ/kg).
+        /// </summary>
+        public double? MeHvoLcv { get; set; }
+
+        /// <summary>
+        /// ME HVO sulphur content (%).
+        /// </summary>
+        public double? MeHvoSulphurContent { get; set; }
+
+        /// <summary>
+        /// Total FOC ME Bio Fuel Blend (metric tons).
+        /// </summary>
+        public double? MeBioFuelBlendFoc { get; set; }
+
+        /// <summary>
+        /// ME MGO kinematic viscosity (cSt).
+        /// </summary>
+        public double? MeBioFuelBlendKinematicViscosity { get; set; }
+
+        /// <summary>
+        /// ME Bio Fuel Blend LCV (kJ/kg).
+        /// </summary>
+        public double? MeBioFuelBlendLcv { get; set; }
+
+        /// <summary>
+        /// ME Bio Fuel Blend sulphur content (%).
+        /// </summary>
+        public double? MeBioFuelBlendSulphurContent { get; set; }
+
+        /// <summary>
+        /// ME average percentage of bio fuel in blend.
+        /// </summary>
+        public double? MeAveragePercentageOfBioFuelInBlend { get; set; }
+
+        /// <summary>
+        /// ME most occurring Bio Fuel in blend.
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public BioBlendOptions? MeMostOccurringBioFuelKindInBlend { get; set; }
+
+        /// <summary>
+        /// ME most occurring Fossil Fuel in blend.
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public FossilBlendOptions? MeMostOccurringFossilFuelKindInBlend { get; set; }
 
         /// <summary>
         ///     Boiler NOx Emissions (t).
