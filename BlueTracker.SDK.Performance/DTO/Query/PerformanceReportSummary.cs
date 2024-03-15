@@ -590,6 +590,16 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public double? MonthlyCiiCorrected { get; set; }
 
         /// <summary>
+        /// Rating of the CII value for the current month [A, B, C, D or E].
+        /// </summary>
+        public string MonthlyCiiRating { get; set; }
+
+        /// <summary>
+        /// Rating of the CII corrected value for the current month [A, B, C, D or E].
+        /// </summary>
+        public string MonthlyCiiCorrectedRating { get; set; }
+
+        /// <summary>
         ///     Completeness score. (%)
         /// </summary>
         public double? CompletenessScore { get; set; }
@@ -1180,6 +1190,21 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public double? RobFuelMdo { get; set; }
 
         /// <summary>
+        ///     Marine diesel oil high sulphur remain on board. (metric tons)
+        /// </summary>
+        public double? RobFuelMdoHs { get; set; }
+
+        /// <summary>
+        ///     Marine diesel oil low sulphur remain on board. (metric tons)
+        /// </summary>
+        public double? RobFuelMdoLs { get; set; }
+
+        /// <summary>
+        ///     Marine diesel oil ultra low sulphur remain on board. (metric tons)
+        /// </summary>
+        public double? RobFuelMdoLls { get; set; }
+
+        /// <summary>
         ///     Fuel oil methanol remain on board. (metric tons)
         /// </summary>
         public double? RobFuelMethanol { get; set; }
@@ -1203,6 +1228,16 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         ///     Marine gas oil remain on board. (metric tons)
         /// </summary>
         public double? RobFuelMgo { get; set; }
+
+        /// <summary>
+        ///     Marine gas oil low sulphur remain on board. (metric tons)
+        /// </summary>
+        public double? RobFuelMgoLs { get; set; }
+
+        /// <summary>
+        ///     Marine gas oil ultra low sulphur remain on board. (metric tons)
+        /// </summary>
+        public double? RobFuelMgoLls { get; set; }
 
         /// <summary>
         ///     Fuel oil propane remain on board. (metric tons)
@@ -1700,6 +1735,81 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public double? TotalSoxEmissions { get; set; }
 
         /// <summary>
+        ///     Total volume of waste disposal of category A plastic. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalCategoryAPlastic { get; set; }
+
+        /// <summary>
+        ///     Total volume of waste disposal of category B food waste. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalCategoryBFoodWaste { get; set; }
+
+        /// <summary>
+        ///     Total volume of waste disposal of category C domestic waste. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalCategoryCDomesticWaste { get; set; }
+
+        /// <summary>
+        ///     Total volume of waste disposal of category D cooking oil. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalCategoryDCookingOil { get; set; }
+
+        /// <summary>
+        ///     Total volume of waste disposal of category E incinerator ash. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalCategoryEIncineratorAsh { get; set; }
+
+        /// <summary>
+        ///     Total volume of waste disposal of category F operational waste. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalCategoryFOperationalWaste { get; set; }
+
+        /// <summary>
+        ///     Total volume of waste disposal of category G animal carcass. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalCategoryGAnimalCarcass { get; set; }
+
+        /// <summary>
+        ///     Total volume of waste disposal of category H fishing gear (m3).
+        /// </summary>
+        public double? TotalWasteDisposalCategoryHFishingGear { get; set; }
+
+        /// <summary>
+        ///     Total volume of waste disposal of category I electronic waste. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalCategoryIElectronicWaste { get; set; }
+
+        /// <summary>
+        ///     Total volume of waste disposal of category J cargo residues (non HME). (m3)
+        /// </summary>
+        public double? TotalWasteDisposalCategoryJCargoResidueNonHme { get; set; }
+
+        /// <summary>
+        ///     Total volume of waste disposal of category K cargo residues (HME). (m3)
+        /// </summary>
+        public double? TotalWasteDisposalCategoryKCargoResidueHme { get; set; }
+
+        /// <summary>
+        ///     Total volume of waste disposal of sludge and oil residues. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalSludgeAndOilResidue { get; set; }
+
+        /// <summary>
+        /// Total volume of waste disposal of sewage. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalSewage { get; set; }
+
+        /// <summary>
+        /// Total volume of waste disposal of exhaust gas cleaning residues. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalExhaustGasCleaningResidues { get; set; }
+
+        /// <summary>
+        ///     Total volume of waste disposal of undefined origin. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalUndef { get; set; }
+
+        /// <summary>
         /// Total volume of waste disposal of category A plastic DisposalDistance Unspecified. (m3)
         /// </summary>
         public double? TotalWasteDisposalCategoryAPlasticDistanceUnspecified { get; set; }
@@ -1758,6 +1868,16 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         /// Total volume of waste disposal of sludge and oil residues DisposalDistance Unspecified. (m3)
         /// </summary>
         public double? TotalWasteDisposalSludgeAndOilResidueDistanceUnspecified { get; set; }
+
+        /// <summary>
+        /// Total volume of waste disposal of sewage DisposalDistance Unspecified. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalSewageDistanceUnspecified { get; set; }
+
+        /// <summary>
+        /// Total volume of waste disposal of exhaust gas cleaning residues DisposalDistance Unspecified. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalExhaustGasCleaningResiduesDistanceUnspecified { get; set; }
 
         /// <summary>
         /// Total volume of waste disposal of undefined origin DisposalDistance Unspecified. (m3)
@@ -1825,6 +1945,16 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public double? TotalWasteDisposalSludgeAndOilResidueDistance3nm { get; set; }
 
         /// <summary>
+        /// Total volume of waste disposal of sewage DisposalDistance ThreeNauticalMiles. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalSewageDistance3nm { get; set; }
+
+        /// <summary>
+        /// Total volume of waste disposal of exhaust gas cleaning residues DisposalDistance ThreeNauticalMiles. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalExhaustGasCleaningResiduesDistance3nm { get; set; }
+
+        /// <summary>
         /// Total volume of waste disposal of undefined origin DisposalDistance ThreeNauticalMiles. (m3)
         /// </summary>
         public double? TotalWasteDisposalUndefDistance3nm { get; set; }
@@ -1888,6 +2018,16 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         /// Total volume of waste disposal of sludge and oil residues DisposalDistance TwelveNauticalMiles. (m3)
         /// </summary>
         public double? TotalWasteDisposalSludgeAndOilResidueDistance12nm { get; set; }
+
+        /// <summary>
+        /// Total volume of waste disposal of sewage DisposalDistance TwelveNauticalMiles. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalSewageDistance12nm { get; set; }
+
+        /// <summary>
+        /// Total volume of waste disposal of exhaust gas cleaning residues DisposalDistance TwelveNauticalMiles. (m3)
+        /// </summary>
+        public double? TotalWasteDisposalExhaustGasCleaningResiduesDistance12nm { get; set; }
 
         /// <summary>
         /// Total volume of waste disposal of undefined origin DisposalDistance TwelveNauticalMiles. (m3)
