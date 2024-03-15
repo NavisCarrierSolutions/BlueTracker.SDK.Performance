@@ -590,6 +590,16 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public double? MonthlyCiiCorrected { get; set; }
 
         /// <summary>
+        /// Rating of the CII value for the current month [A, B, C, D or E].
+        /// </summary>
+        public string MonthlyCiiRating { get; set; }
+
+        /// <summary>
+        /// Rating of the CII corrected value for the current month [A, B, C, D or E].
+        /// </summary>
+        public string MonthlyCiiCorrectedRating { get; set; }
+
+        /// <summary>
         ///     Completeness score. (%)
         /// </summary>
         public double? CompletenessScore { get; set; }
