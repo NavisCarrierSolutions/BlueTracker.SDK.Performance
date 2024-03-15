@@ -1165,6 +1165,21 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public double? RobFuelMdo { get; set; }
 
         /// <summary>
+        ///     Marine diesel oil high sulphur remain on board. (metric tons)
+        /// </summary>
+        public double? RobFuelMdoHs { get; set; }
+
+        /// <summary>
+        ///     Marine diesel oil low sulphur remain on board. (metric tons)
+        /// </summary>
+        public double? RobFuelMdoLs { get; set; }
+
+        /// <summary>
+        ///     Marine diesel oil ultra low sulphur remain on board. (metric tons)
+        /// </summary>
+        public double? RobFuelMdoLls { get; set; }
+
+        /// <summary>
         ///     Fuel oil methanol remain on board. (metric tons)
         /// </summary>
         public double? RobFuelMethanol { get; set; }
@@ -1188,6 +1203,16 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         ///     Marine gas oil remain on board. (metric tons)
         /// </summary>
         public double? RobFuelMgo { get; set; }
+
+        /// <summary>
+        ///     Marine gas oil low sulphur remain on board. (metric tons)
+        /// </summary>
+        public double? RobFuelMgoLs { get; set; }
+
+        /// <summary>
+        ///     Marine gas oil ultra low sulphur remain on board. (metric tons)
+        /// </summary>
+        public double? RobFuelMgoLls { get; set; }
 
         /// <summary>
         ///     Fuel oil propane remain on board. (metric tons)
