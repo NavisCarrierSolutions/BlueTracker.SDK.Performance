@@ -2136,6 +2136,16 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public double? TotalBunkerFuelOil { get; set; }
 
         /// <summary>
+        /// Total amount of biofuel bunkered. (metric tons)
+        /// </summary>
+        public double? TotalBunkerBioFuelAmount { get; set; }
+
+        /// <summary>
+        /// Total amount of fossil fuel bunkered. (metric tons)
+        /// </summary>
+        public double? TotalBunkerFossilFuelAmount { get; set; }
+
+        /// <summary>
         ///     Total circulation oil bunkered. (litres)
         /// </summary>
         public double? TotalBunkerLubOilCirculation { get; set; }

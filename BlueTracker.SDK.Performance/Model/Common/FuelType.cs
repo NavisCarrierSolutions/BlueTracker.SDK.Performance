@@ -46,6 +46,7 @@ namespace BlueTracker.SDK.Performance.Model.Common
         [JsonProperty(PropertyName = "bioFuelBlendDetails")]
         public BioFuelBlend BioFuelBlendDetails { get; set; }
 
+        /// <summary>
         /// Kinematic viscosity. (cSt)
         /// </summary>
         [JsonProperty(PropertyName = "kinematicViscosity")]
