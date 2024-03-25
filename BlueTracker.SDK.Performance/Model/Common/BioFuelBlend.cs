@@ -7,21 +7,35 @@ namespace BlueTracker.SDK.Performance.Model.Common
     public class BioFuelBlend
     {
         /// <summary>
-        /// Bio fuel used in blend. (enumeration)
+        /// Biofuel used in blend. (enumeration)
         /// </summary>
         [JsonProperty(PropertyName = "bioBlend")]
         [JsonConverter(typeof(StringEnumConverter))]
         public BioBlendOptions BioBlend { get; set; }
+
         /// <summary>
         /// Fossil fuel used in blend. (enumeration)
         /// </summary>
         [JsonProperty(PropertyName = "fossilBlend")]
         [JsonConverter(typeof(StringEnumConverter))]
         public FossilBlendOptions FossilBlend { get; set; }
+
         /// <summary>
-        /// The percentage of bio fuel used in blend. (%)
+        /// The percentage of biofuel used in blend. (%)
         /// </summary>
         [JsonProperty(PropertyName = "percentageOfBioFuelInBlend")]
         public double? PercentageOfBioFuelInBlend { get; set; }
+
+        /// <summary>
+        /// Amount of biofuel in blend. (mt)
+        /// </summary>
+        [JsonProperty(PropertyName = "bioBlendAmount")]
+        public double? BioBlendAmount { get; set; }
+
+        /// <summary>
+        /// Amount of fossil fuel in blend. (mt)
+        /// </summary>
+        [JsonProperty(PropertyName = "fossilBlendAmount")]
+        public double? FossilBlendAmount { get; set; }
     }
 }
