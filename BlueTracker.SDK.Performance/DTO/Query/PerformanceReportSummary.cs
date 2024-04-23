@@ -907,6 +907,11 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public double? BunkerFuelFame { get; set; }
 
         /// <summary>
+        ///     Fuel oil Bio Fuel Blend bunkered. (metric tons).
+        /// </summary>
+        public double? BunkerFuelBioFuelBlend { get; set; }
+
+        /// <summary>
         ///     Hydrogen Vegetable Oil bunkered. (metric tons).
         /// </summary>
         public double? BunkerFuelHvo { get; set; }
