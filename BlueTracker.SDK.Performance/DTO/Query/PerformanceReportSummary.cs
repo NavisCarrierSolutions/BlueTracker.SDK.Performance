@@ -2066,6 +2066,11 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public double? SpeedLossUncorrected { get; set; }
 
         /// <summary>
+        /// Power increase due to hull fowling (%).
+        /// </summary>
+        public double? PowerIncrease { get; set; }
+
+        /// <summary>
         ///     Operational state of ship.
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
