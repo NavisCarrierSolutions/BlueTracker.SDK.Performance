@@ -1846,6 +1846,21 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public double? PosLng { get; set; }
 
         /// <summary>
+        /// Bunker delivery note numbers comma separated. (All of them - Fuel and Lub oil)
+        /// </summary>
+        public string BdnNumbers { get; set; }
+
+        /// <summary>
+        /// BDNs Fuel only
+        /// </summary>
+        public string BdnNumbersFuel { get; set; }
+
+        /// <summary>
+        /// BDNs LubOil only
+        /// </summary>
+        public string BdnNumbersLubOil { get; set; }
+
+        /// <summary>
         /// Proof of Sustainability numbers comma separated.
         /// </summary>
         public string PosNumbers { get; set; }
