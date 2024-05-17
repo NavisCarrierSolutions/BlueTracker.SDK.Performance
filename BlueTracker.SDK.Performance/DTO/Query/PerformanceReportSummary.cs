@@ -1338,9 +1338,14 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public bool? IsOnScrubberMode { get; set; }
 
         /// <summary>
+        ///     Is ship on shore power supply?
+        /// </summary>
+        public bool? IsOnShorePowerSupply { get; set; }
+
+        /// <summary>
         ///     Shore energy supplied - electrical energy from shore (kWh)
         /// </summary>
-        public bool? ShoreEnergyReceived { get; set; }
+        public double? ShoreEnergyReceived { get; set; }
 
         /// <summary>
         ///     Is ship operated in slow steaming?
