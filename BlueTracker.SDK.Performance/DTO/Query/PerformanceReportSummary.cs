@@ -1343,11 +1343,6 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public bool? ShoreEnergyReceived { get; set; }
 
         /// <summary>
-        ///     Received power from shore. (kWh)
-        /// </summary>
-        public double? ShorePowerSupplyReceived { get; set; }
-
-        /// <summary>
         ///     Is ship operated in slow steaming?
         /// </summary>
         public bool? IsSlowSteaming { get; set; }
