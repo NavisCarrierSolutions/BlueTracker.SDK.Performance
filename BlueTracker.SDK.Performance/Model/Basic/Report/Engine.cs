@@ -46,10 +46,9 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Report
         public bool? IsOnShorePowerSupply { get; set; }
 
         /// <summary>
-        ///     Received power from shore. (kWh)
+        ///     Shore energy supplied - electrical energy from shore (kWh)
         /// </summary>
-        [JsonProperty(PropertyName = "shorePowerSupplyReceived")]
-        public double? ShorePowerSupplyReceived { get; set; }
+        public double? ShoreEnergyReceived { get; set; }
 
         /// <summary>
         /// Indicates whether ship is running the scrubber in operation.
