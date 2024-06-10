@@ -12,6 +12,8 @@
 
         Major = 4,
 
-        Acknowledged = 5
+        Acknowledged = 5,
+
+        Completeness = 6
     }
 }
