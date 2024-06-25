@@ -2466,6 +2466,16 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public double? TotalRunningHoursMe { get; set; }
 
         /// <summary>
+        ///     Total aux engine running hours.
+        /// </summary>
+        public double? TotalRunningHoursAe { get; set; }
+
+        /// <summary>
+        ///     Total boiler running hours.
+        /// </summary>
+        public double? TotalRunningHoursAb { get; set; }
+
+        /// <summary>
         ///     Specific Cylinder Oil consumption SCOC (g/kWh)
         /// </summary>
         public double? TotalScocMe { get; set; }
