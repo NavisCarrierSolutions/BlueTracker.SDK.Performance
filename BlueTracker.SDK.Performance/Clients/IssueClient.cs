@@ -33,13 +33,13 @@ namespace BlueTracker.SDK.Performance.Clients
         /// Get report issues for a particular ship in a specified time range (maximum 180 days per request).
         /// </summary>
         /// <param name="imo">IMO number of ship to get issues for.</param>
-        /// <param name="startDate">Start of time range to query.</param>
-        /// <param name="endDate">End of time range to query.</param>
+        /// <param name="from">The beginning of the time range (inclusive). Expected to be in UTC.</param>
+        /// <param name="to">The end of the time range (inclusive). Expected to be in UTC.</param>
         /// <param name="issueType">Issue type to filter by.</param>
         /// <returns></returns>
-        public List<PerformanceReportIssueItem> GetIssuesForShip(int imo, DateTime startDate, DateTime endDate, IssueType issueType)
+        public List<PerformanceReportIssueItem> GetIssuesForShip(int imo, DateTime from, DateTime to, IssueType issueType)
         {
-            return GetObject<List<PerformanceReportIssueItem>>($"/api/v1/ships/{imo}/issues?startDate={startDate:yyyy-MM-ddTHH:mm}&endDate={endDate:yyyy-MM-ddTHH:mm}&issueType={issueType}");
+            return GetObject<List<PerformanceReportIssueItem>>($"/api/v1/ships/{imo}/issues?from={from:yyyy-MM-ddTHH:mm}&to={to:yyyy-MM-ddTHH:mm}&issueType={issueType}");
         }
     }
 }
