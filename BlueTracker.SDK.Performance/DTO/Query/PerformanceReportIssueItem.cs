@@ -40,14 +40,19 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public EventType? Event { get; set; }
 
         /// <summary>
+        /// State of the issue.
+        /// </summary>
+        public string State { get; set; }
+
+        /// <summary>
         /// Plausibility state of the issue.
         /// </summary>
-        public PlausibilityResultOptions State { get; set; }
+        public PlausibilityResultOptions PlausibilityResult { get; set; }
 
         /// <summary>
         /// Completeness state of the issue.
         /// </summary>
-        public CompletenessResultOptions? CompletenessState { get; set; }
+        public CompletenessResultOptions? CompletenessResult { get; set; }
 
         /// <summary>
         /// List of affected areas.
