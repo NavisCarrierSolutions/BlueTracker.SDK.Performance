@@ -3,8 +3,6 @@
 
 dsfdsf
 
-
-
 # BlueTracker.SDK.Performance
 This project is a C# wrapper of the Bluetracker REST API. It is used to easily query and modify Bluetracker entities in C#.
 
