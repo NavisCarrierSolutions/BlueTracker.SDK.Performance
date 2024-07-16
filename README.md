@@ -21,7 +21,7 @@ Query all ships:
 ```C#
 var ships = client.GetAll();
 ```
-temp
+
 ## Clients
 The package contains one client wrapper for each API resource. Each client contains methods to GET, POST, PUT and DELETE resources according to the API specification: https://api.bluetracker.one 
 
