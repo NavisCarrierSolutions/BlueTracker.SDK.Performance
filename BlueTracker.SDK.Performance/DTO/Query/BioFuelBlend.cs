@@ -7,7 +7,7 @@ namespace BlueTracker.SDK.Performance.DTO.Query
     public class BioFuelBlend
     {
         /// <summary>
-        /// Bio fuel used in blend. (enumeration)
+        /// Biofuel used in blend. (enumeration)
         /// </summary>
         [JsonProperty(PropertyName = "bioBlend")]
         [JsonConverter(typeof(StringEnumConverter))]
@@ -19,9 +19,32 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         [JsonConverter(typeof(StringEnumConverter))]
         public FossilBlendOptions FossilBlend { get; set; }
         /// <summary>
-        /// The percentage of bio fuel used in blend. (%)
+        /// The percentage of biofuel used in blend. (%)
         /// </summary>
         [JsonProperty(PropertyName = "percentageOfBioFuelInBlend")]
         public double? PercentageOfBioFuelInBlend { get; set; }
+        /// <summary>
+        /// AmountTotal of biofuel in blend. (mt)
+        /// </summary>
+        [JsonProperty(PropertyName = "bioBlendAmount")]
+        public double? BioBlendAmount { get; set; }
+
+        /// <summary>
+        /// Volume of biofuel in blend. (m3)
+        /// </summary>
+        [JsonProperty(PropertyName = "bioBlendVolume")]
+        public double? BioBlendVolume { get; set; }
+
+        /// <summary>
+        /// AmountTotal of fossil fuel in blend. (mt)
+        /// </summary>
+        [JsonProperty(PropertyName = "fossilBlendAmount")]
+        public double? FossilBlendAmount { get; set; }
+
+        /// <summary>
+        /// Volume of fossil fuel in blend. (m3)
+        /// </summary>
+        [JsonProperty(PropertyName = "fossilBlendVolume")]
+        public double? FossilBlendVolume { get; set; }
     }
 }

@@ -1323,6 +1323,46 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public double? BunkerGhgIntensityBioFuelBlend { get; set; }
 
         /// <summary>
+        /// Lower calorific value of BTL under EU scheme. (kJ/kg)
+        /// </summary>
+        public double? BunkerLcvEuBtl { get; set; }
+
+        /// <summary>
+        /// Lower calorific value of FAME under EU scheme. (kJ/kg)
+        /// </summary>
+        public double? BunkerLcvEuFame { get; set; }
+
+        /// <summary>
+        /// Lower calorific value of HVO under EU scheme. (kJ/kg)
+        /// </summary>
+        public double? BunkerLcvEuHvo { get; set; }
+
+        /// <summary>
+        /// Lower calorific value of Biofuel Blend under EU scheme. (kJ/kg)
+        /// </summary>
+        public double? BunkerLcvEuBioFuelBlend { get; set; }
+
+        /// <summary>
+        /// Lower calorific value of BTL under IMO scheme. (kJ/kg)
+        /// </summary>
+        public double? BunkerLcvImoBtl { get; set; }
+
+        /// <summary>
+        /// Lower calorific value of FAME under IMO scheme. (kJ/kg)
+        /// </summary>
+        public double? BunkerLcvImoFame { get; set; }
+
+        /// <summary>
+        /// Lower calorific value of HVO under IMO scheme. (kJ/kg)
+        /// </summary>
+        public double? BunkerLcvImoHvo { get; set; }
+
+        /// <summary>
+        /// Lower calorific value of Biofuel Blend under IMO scheme. (kJ/kg)
+        /// </summary>
+        public double? BunkerLcvImoBioFuelBlend { get; set; }
+
+        /// <summary>
         ///     Average heading of ship. (degrees)
         /// </summary>
         public double? Heading { get; set; }
