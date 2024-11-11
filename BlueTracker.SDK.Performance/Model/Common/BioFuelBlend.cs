@@ -33,7 +33,7 @@ namespace BlueTracker.SDK.Performance.Model.Common
         /// Volume of biofuel in blend. (m3)
         /// </summary>
         [JsonProperty(PropertyName = "bioBlendVolume")]
-        public double? BioBlendVolume { get; set; }
+        public double? BioBlendVolume { get; set; } // todo
 
         /// <summary>
         /// AmountTotal of fossil fuel in blend. (mt)
@@ -45,6 +45,6 @@ namespace BlueTracker.SDK.Performance.Model.Common
         /// Volume of fossil fuel in blend. (m3)
         /// </summary>
         [JsonProperty(PropertyName = "fossilBlendVolume")]
-        public double? FossilBlendVolume { get; set; }
+        public double? FossilBlendVolume { get; set; } // todo
     }
 }
