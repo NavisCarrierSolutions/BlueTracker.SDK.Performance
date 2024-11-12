@@ -114,6 +114,16 @@ namespace BlueTracker.SDK.Performance.Model.Enums
         /// <summary>
         /// Bio fuel blended with fossil fuel.
         /// </summary>
-        BioFuelBlend
+        BioFuelBlend,
+
+        /// <summary>
+        /// LFO Low Sulphur
+        /// </summary>
+        LFOLS,
+
+        /// <summary>
+        /// LFO Low Low Sulphur
+        /// </summary>
+        LFOLLS
     }
 }

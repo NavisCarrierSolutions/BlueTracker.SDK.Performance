@@ -9,6 +9,13 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         [JsonConverter(typeof(StringEnumConverter))]
         public FuelGradeOptions? Grade { get; set; }
 
+        /// <summary>
+        /// Fuel grade options according ISO 8217 - 2024.
+        /// </summary>
+        [JsonProperty(PropertyName = "isoGradeOptions2024")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public IsoGradeOptions2024? IsoGradeOptions2024 { get; set; }
+
         public double? Density { get; set; }
 
         public double? LCV { get; set; }
