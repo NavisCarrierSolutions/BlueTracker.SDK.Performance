@@ -3,13 +3,13 @@
     public enum FuelCategory
     {
         /// <summary>
-        /// Destillate
+        /// Distillate
         /// </summary>
-        Destillate,
+        Distillate = 0,
 
         /// <summary>
         /// Residual
         /// </summary>
-        Residual
+        Residual = 1
     }
 }
