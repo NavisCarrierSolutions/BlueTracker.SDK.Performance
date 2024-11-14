@@ -10,6 +10,11 @@
         /// <summary>
         /// Residual
         /// </summary>
-        Residual = 1
+        Residual = 1,
+
+        /// <summary>
+        /// Bio fuel blend
+        /// </summary>
+        BioFuelBlend = 2
     }
 }
