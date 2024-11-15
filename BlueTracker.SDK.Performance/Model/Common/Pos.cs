@@ -13,7 +13,7 @@ namespace BlueTracker.SDK.Performance.Model.Common
         /// <summary>
         /// Bio component of the fuel.
         /// </summary>
-        public BioBlendOptions? BioComponent { get; set; }
+        public BioBlendOptions BioComponent { get; set; }
 
         /// <summary>
         /// Amount of bio component in the fuel. (tons)
@@ -23,7 +23,7 @@ namespace BlueTracker.SDK.Performance.Model.Common
         /// <summary>
         /// Measurement unit of the bio component.
         /// </summary>
-        public ComponentMeasurementUnit? BioMeasure { get; set; }
+        public ComponentMeasurementUnit BioMeasure { get; set; }
 
         /// <summary>
         /// Bio grade of the fuel.
@@ -33,7 +33,7 @@ namespace BlueTracker.SDK.Performance.Model.Common
         /// <summary>
         /// Fossil component of the fuel.
         /// </summary>
-        public FossilBlendOptions? FossilComponent { get; set; }
+        public FossilBlendOptions FossilComponent { get; set; }
 
         /// <summary>
         /// Fossil component amount in the fuel. (tons)
@@ -43,7 +43,7 @@ namespace BlueTracker.SDK.Performance.Model.Common
         /// <summary>
         /// Measurement unit of the fossil component.
         /// </summary>
-        public ComponentMeasurementUnit? FossilMeasure { get; set; }
+        public ComponentMeasurementUnit FossilMeasure { get; set; }
 
         /// <summary>
         /// Fossil grade of the fuel.
