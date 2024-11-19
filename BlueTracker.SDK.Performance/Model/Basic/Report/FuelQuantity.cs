@@ -8,6 +8,16 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Report
     public class FuelQuantity
     {
         /// <summary>
+        /// Unique ID of bunker charge in reporting system.
+        /// </summary>
+        public string BunkerChargeId { get; set; }
+
+        /// <summary>
+        /// Unique name of bunker charge.
+        /// </summary>
+        public string BunkerChargeName { get; set; }
+
+        /// <summary>
         /// Kind of fuel. (enumeration)
         /// </summary>
         [JsonProperty(PropertyName = "kind")]

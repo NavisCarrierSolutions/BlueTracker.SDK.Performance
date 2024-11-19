@@ -132,5 +132,41 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Report
         [JsonProperty(PropertyName = "charterVoyageStatus")]
         [JsonConverter(typeof(StringEnumConverter))]
         public CharterVoyageStatus? CharterVoyageStatus { get; set; }
+
+        /// <summary>
+        /// When the pilot left the ship.
+        /// </summary>
+        [JsonProperty("pilotOff")]
+        public DateTime? PilotOff { get; set; }
+
+        /// <summary>
+        /// When the pilot boarded the ship.
+        /// </summary>
+        [JsonProperty("pilotOn")]
+        public DateTime? PilotOn { get; set; }
+
+        /// <summary>
+        /// Time to pilot station next port (hrs).
+        /// </summary>
+        [JsonProperty("timeToPilotStationNextPort")]
+        public double? TimeToPilotStationNextPort { get; set; }
+
+        /// <summary>
+        /// Average speed to pilot station (knots).
+        /// </summary>
+        [JsonProperty("averageSpeedToPilotStation")]
+        public double? AverageSpeedToPilotStation { get; set; }
+
+        /// <summary>
+        /// Timestamp when the last line of the ship was taken away.
+        /// </summary>
+        [JsonProperty("lastLineAway")]
+        public DateTime? LastLineAway { get; set; }
+
+        /// <summary>
+        /// Timestamp when the first lines were sent ashore.
+        /// </summary>
+        [JsonProperty("firstLineAshore")]
+        public DateTime? FirstLineAshore { get; set; }
     }
 }

@@ -17,6 +17,13 @@ namespace BlueTracker.SDK.Performance.Model.Common
         public FuelGradeOptions? Grade { get; set; }
 
         /// <summary>
+        /// Fuel grade options according ISO 8217 - 2024.
+        /// </summary>
+        [JsonProperty(PropertyName = "isoGradeOptions2024")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public IsoGradeOptions2024? IsoGradeOptions2024 { get; set; }
+
+        /// <summary>
         /// Density of fuel (Unit: kg/m3)
         /// </summary>
         [JsonProperty(PropertyName = "density")]

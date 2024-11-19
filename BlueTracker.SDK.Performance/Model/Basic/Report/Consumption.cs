@@ -46,5 +46,15 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Report
         /// </summary>
         [JsonProperty(PropertyName = "type")]
         public FuelType Type { get; set; }
+
+        /// <summary>
+        /// Unique ID of bunker charge in reporting system.
+        /// </summary>
+        public string BunkerChargeId { get; set; }
+
+        /// <summary>
+        /// Unique name of bunker charge.
+        /// </summary>
+        public string BunkerChargeName { get; set; }
     }
 }
