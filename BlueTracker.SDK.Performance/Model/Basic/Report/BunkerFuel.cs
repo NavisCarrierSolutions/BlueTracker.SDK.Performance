@@ -57,7 +57,7 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Report
         /// <summary>
         /// Reference to recognized certification schemes (ISSC, RSB, etc.) or Unique numbers of the Proof of Sustainability. 
         /// </summary>
-        [JsonProperty("posNumber")]
+        [JsonProperty("posNumbers")]
         public List<Pos> PosNumbers { get; set; }
     }
 }
