@@ -37,6 +37,12 @@ namespace BlueTracker.SDK.Performance.Model.Processing.Report
         public List<Pos> PosNumbers { get; set; }
 
         /// <summary>
+        /// Indicates whether no POS certificate has been issued.
+        /// </summary>
+        [JsonProperty("noPosIssued")]
+        public bool? NoPosIssued { get; set; }
+
+        /// <summary>
         /// Energy content of the biofuel. (MJ)
         /// </summary>
         public double? BioEnergy { get; set; }
