@@ -59,5 +59,11 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Report
         /// </summary>
         [JsonProperty("posNumbers")]
         public List<Pos> PosNumbers { get; set; }
+
+        /// <summary>
+        /// Indicates whether no POS certificate has been issued.
+        /// </summary>
+        [JsonProperty("noPosIssued")]
+        public bool? NoPosIssued { get; set; }
     }
 }

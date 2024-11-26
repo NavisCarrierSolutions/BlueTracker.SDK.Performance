@@ -15,6 +15,11 @@
         /// <summary>
         /// Bio fuel blend
         /// </summary>
-        BioFuelBlend = 2
+        BioFuelBlend = 2,
+
+        /// <summary>
+        /// Gases and alcohols
+        /// </summary>
+        GasAlcohol = 3
     }
 }
