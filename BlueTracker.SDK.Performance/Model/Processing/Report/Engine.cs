@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using BlueTracker.SDK.Performance.Model.Enums;
 
 namespace BlueTracker.SDK.Performance.Model.Processing.Report
@@ -16,6 +17,12 @@ namespace BlueTracker.SDK.Performance.Model.Processing.Report
         public bool? IsCombinatorMode { get; set; }
 
         public bool? IsOnShorePowerSupply { get; set; }
+
+        public DateTime? StartOnShorePowerSupply { get; set; }
+
+        public DateTime? EndOnShorePowerSupply { get; set; }
+
+        public ReasonForNotConnecting? ReasonForNotConnecting { get; set; }
 
         public bool? IsOnScrubberMode { get; set; }
 
