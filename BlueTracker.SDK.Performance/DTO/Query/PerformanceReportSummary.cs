@@ -1390,12 +1390,12 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         /// <summary>
         /// Timestamp of start of on shore power supply
         /// </summary>
-        public DateTime? StartOnShorePowerSupply { get; set; }
+        public DateTimeOffset? StartOnShorePowerSupply { get; set; }
 
         /// <summary>
         /// Timestamp of end of on shore power supply
         /// </summary>
-        public DateTime? EndOnShorePowerSupply { get; set; }
+        public DateTimeOffset? EndOnShorePowerSupply { get; set; }
 
         /// <summary>
         ///     Reason for not connecting to shore

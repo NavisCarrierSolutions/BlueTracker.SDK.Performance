@@ -18,9 +18,9 @@ namespace BlueTracker.SDK.Performance.Model.Processing.Report
 
         public bool? IsOnShorePowerSupply { get; set; }
 
-        public DateTime? StartOnShorePowerSupply { get; set; }
+        public DateTimeOffset? StartOnShorePowerSupply { get; set; }
 
-        public DateTime? EndOnShorePowerSupply { get; set; }
+        public DateTimeOffset? EndOnShorePowerSupply { get; set; }
 
         public ReasonForNotConnecting? ReasonForNotConnecting { get; set; }
 
