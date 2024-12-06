@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using BlueTracker.SDK.Performance.Model.Enums;
 using Newtonsoft.Json;
 
@@ -44,6 +45,24 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Report
         /// </summary>
         [JsonProperty(PropertyName = "isOnShorePowerSupply")]
         public bool? IsOnShorePowerSupply { get; set; }
+
+        /// <summary>
+        /// Timestamp of start of on shore power supply
+        /// </summary>
+        [JsonProperty(PropertyName = "startOnShorePowerSupply")]
+        public DateTimeOffset? StartOnShorePowerSupply { get; set; }
+
+        /// <summary>
+        /// Timestamp of end of on shore power supply
+        /// </summary>
+        [JsonProperty(PropertyName = "endOnShorePowerSupply")]
+        public DateTimeOffset? EndOnShorePowerSupply { get; set; }
+
+        /// <summary>
+        ///     Reason for not connecting to shore
+        /// </summary>
+        [JsonProperty(PropertyName = "reasonForNotConnecting")]
+        public ReasonForNotConnecting? ReasonForNotConnecting { get; set; }
 
         /// <summary>
         ///     Shore energy supplied - electrical energy from shore (kWh)
