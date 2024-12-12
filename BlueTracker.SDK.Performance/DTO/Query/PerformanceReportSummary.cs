@@ -2526,6 +2526,11 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public double? TotalRunningHoursAe { get; set; }
 
         /// <summary>
+        /// Total shaft generator running hours (hours).
+        /// </summary>
+        public double? TotalRunningHoursShaftGenerator { get; set; }
+
+        /// <summary>
         ///     Total boiler running hours.
         /// </summary>
         public double? TotalRunningHoursAb { get; set; }
