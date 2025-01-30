@@ -1388,6 +1388,21 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public bool? IsOnShorePowerSupply { get; set; }
 
         /// <summary>
+        /// Timestamp of start of on shore power supply
+        /// </summary>
+        public DateTimeOffset? StartOnShorePowerSupply { get; set; }
+
+        /// <summary>
+        /// Timestamp of end of on shore power supply
+        /// </summary>
+        public DateTimeOffset? EndOnShorePowerSupply { get; set; }
+
+        /// <summary>
+        ///     Reason for not connecting to shore
+        /// </summary>
+        public ReasonForNotConnecting? ReasonForNotConnecting { get; set; }
+
+        /// <summary>
         ///     Shore energy supplied - electrical energy from shore (kWh)
         /// </summary>
         public double? ShoreEnergyReceived { get; set; }
