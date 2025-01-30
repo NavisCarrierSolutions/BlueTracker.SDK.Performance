@@ -46,5 +46,10 @@ namespace BlueTracker.SDK.Performance.Model.Processing.Report
         /// Energy content of the biofuel. (MJ)
         /// </summary>
         public double? BioEnergy { get; set; }
+
+        /// <summary>
+        /// Indicates whether this is an initial bunker charge. If yes, the system will not use this charge in ROB calculations.
+        /// </summary>
+        public bool Initial { get; set; }
     }
 }
