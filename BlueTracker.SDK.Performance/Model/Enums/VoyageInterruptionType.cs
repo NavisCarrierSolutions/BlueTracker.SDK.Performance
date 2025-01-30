@@ -25,6 +25,16 @@
         /// <summary>
         /// Ice
         /// </summary>
-        Ice = 4
+        Ice = 4,
+
+        /// <summary>
+        /// Maiden trip (voyage from new-building site to first load port).
+        /// </summary>
+        MaidenTrip = 5,
+
+        /// <summary>
+        /// Scrap trip (voyage from last discharge port to scrap site).
+        /// </summary>
+        ScrapTrip = 6
     }
 }
