@@ -65,5 +65,10 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Report
         /// </summary>
         [JsonProperty("noPosIssued")]
         public bool? NoPosIssued { get; set; }
+
+        /// <summary>
+        /// Indicates whether this is an initial bunker charge.
+        /// </summary>
+        public bool Initial { get; set; }
     }
 }
