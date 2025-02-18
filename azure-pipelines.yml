@@ -52,7 +52,6 @@ stages:
             displayName: 'Build solution BlueTracker.SDK.sln'
             inputs:
               solution: BlueTracker.SDK.sln
-              vsVersion: '16.0'
               platform: '$(Platform)'
               configuration: '$(BuildConfiguration)'
 
@@ -60,7 +59,6 @@ stages:
             displayName: 'NuGet package'
             inputs:
               solution: BlueTracker.SDK.sln
-              msbuildVersion: '16.0'
               platform: '$(Platform)'
               configuration: '$(BuildConfiguration)'
               msbuildArguments: '/t:pack /p:PackageOutputPath="$(Build.ArtifactStagingDirectory)" /p:NoPackageAnalysis=true /p:PackageVersion=$(GitVersion.FullSemVer)'
