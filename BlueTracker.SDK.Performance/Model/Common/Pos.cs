@@ -1,5 +1,7 @@
 ﻿using System;
 using BlueTracker.SDK.Performance.Model.Enums;
+using Newtonsoft.Json.Converters;
+using Newtonsoft.Json;
 
 namespace BlueTracker.SDK.Performance.Model.Common
 {
@@ -13,6 +15,8 @@ namespace BlueTracker.SDK.Performance.Model.Common
         /// <summary>
         /// Bio component of the fuel.
         /// </summary>
+        [JsonProperty(PropertyName = "bioComponent")]
+        [JsonConverter(typeof(StringEnumConverter))]
         public BioBlendOptions BioComponent { get; set; }
 
         /// <summary>
@@ -23,6 +27,8 @@ namespace BlueTracker.SDK.Performance.Model.Common
         /// <summary>
         /// Measurement unit of the bio component.
         /// </summary>
+        [JsonProperty(PropertyName = "bioMeasure")]
+        [JsonConverter(typeof(StringEnumConverter))]
         public ComponentMeasurementUnit BioMeasure { get; set; }
 
         /// <summary>
@@ -33,6 +39,8 @@ namespace BlueTracker.SDK.Performance.Model.Common
         /// <summary>
         /// Fossil component of the fuel.
         /// </summary>
+        [JsonProperty(PropertyName = "fossilComponent")]
+        [JsonConverter(typeof(StringEnumConverter))]
         public FossilBlendOptions FossilComponent { get; set; }
 
         /// <summary>
@@ -43,6 +51,8 @@ namespace BlueTracker.SDK.Performance.Model.Common
         /// <summary>
         /// Measurement unit of the fossil component.
         /// </summary>
+        [JsonProperty(PropertyName = "fossilMeasure")]
+        [JsonConverter(typeof(StringEnumConverter))]
         public ComponentMeasurementUnit FossilMeasure { get; set; }
 
         /// <summary>

@@ -53,6 +53,16 @@
         /// <summary>
         /// Marine gas oil Low Low Sulphur
         /// </summary>
-        MGOLLS = 12
+        MGOLLS = 12,
+
+        /// <summary>
+        /// LFO Low Sulphur
+        /// </summary>
+        LFOLS = 13,
+
+        /// <summary>
+        /// LFO Low Low Sulphur
+        /// </summary>
+        LFOLLS = 14
     }
 }
