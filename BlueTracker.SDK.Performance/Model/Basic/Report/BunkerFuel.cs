@@ -69,6 +69,7 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Report
         /// <summary>
         /// Indicates whether this is an initial bunker charge.
         /// </summary>
+        [JsonProperty("initial")]
         public bool Initial { get; set; }
     }
 }

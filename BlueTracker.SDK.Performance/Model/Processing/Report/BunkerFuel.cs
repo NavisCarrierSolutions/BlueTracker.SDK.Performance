@@ -50,6 +50,7 @@ namespace BlueTracker.SDK.Performance.Model.Processing.Report
         /// <summary>
         /// Indicates whether this is an initial bunker charge. If yes, the system will not use this charge in ROB calculations.
         /// </summary>
+        [JsonProperty("initial")]
         public bool Initial { get; set; }
     }
 }
