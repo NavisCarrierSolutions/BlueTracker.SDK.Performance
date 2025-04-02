@@ -11,17 +11,14 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Report
         /// <summary>
         /// Unique ID of bunker charge in reporting system.
         /// </summary>
+        [JsonProperty(PropertyName = "bunkerChargeId")]
         public string BunkerChargeId { get; set; }
 
         /// <summary>
         /// Unique name of bunker charge.
         /// </summary>
+        [JsonProperty(PropertyName = "bunkerChargeName")]
         public string BunkerChargeName { get; set; }
-
-        /// <summary>
-        /// Fuel Category eg Residual or Distillate
-        /// </summary>
-        public FuelCategory FuelCategory { get; set; }
 
         /// <summary>
         /// Kind of fuel. (enumeration)
@@ -29,6 +26,13 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Report
         [JsonProperty(PropertyName = "kind")]
         [JsonConverter(typeof(StringEnumConverter))]
         public FuelKindOptions Kind { get; set; }
+
+        /// <summary>
+        /// Fuel Category eg Residual or Distillate
+        /// </summary>
+        [JsonProperty(PropertyName = "fuelCategory")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public FuelCategory FuelCategory { get; set; }
 
         /// <summary>
         /// Amount of fuel bunkered. (tons)
@@ -49,12 +53,6 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Report
         public string BdnNumber { get; set; }
 
         /// <summary>
-        /// GHG intensity value 'E' (gCO2eq/MJ) represents greenhouse gas emissions per unit of energy for biofuels and e-fuels.
-        /// </summary>
-        [JsonProperty("ghgIntensityValue")]
-        public double? GhgIntensityValue { get; set; }
-
-        /// <summary>
         /// Reference to recognized certification schemes (ISSC, RSB, etc.) or Unique numbers of the Proof of Sustainability. 
         /// </summary>
         [JsonProperty("posNumbers")]
@@ -71,5 +69,18 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Report
         /// </summary>
         [JsonProperty("initial")]
         public bool Initial { get; set; }
+
+        /// <summary>
+        /// The percentage of biofuel used in blend. (%)
+        /// </summary>
+        [JsonProperty(PropertyName = "percentageOfBioFuelInBlend")]
+        public double? PercentageOfBioFuelInBlend { get; set; }
+
+        /// <summary>
+        /// Fossil component of biofuel blend.
+        /// </summary>
+        [JsonProperty(PropertyName = "fossilComponent")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public FossilBlendOptions? FossilComponent { get; set; }
     }
 }
