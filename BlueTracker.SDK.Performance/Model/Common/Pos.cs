@@ -2,6 +2,7 @@
 using BlueTracker.SDK.Performance.Model.Enums;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json;
+using System.Collections.Generic;
 
 namespace BlueTracker.SDK.Performance.Model.Common
 {
@@ -10,6 +11,7 @@ namespace BlueTracker.SDK.Performance.Model.Common
         /// <summary>
         /// Identifier of the Proof of Sustainability.
         /// </summary>
+        [JsonProperty(PropertyName = "uid")]
         public Guid Uid { get; set; }
 
         /// <summary>
@@ -22,6 +24,7 @@ namespace BlueTracker.SDK.Performance.Model.Common
         /// <summary>
         /// Amount of bio component in the fuel. (tons)
         /// </summary>
+        [JsonProperty(PropertyName = "bioComponentAmount")]
         public double? BioComponentAmount { get; set; }
 
         /// <summary>
@@ -34,50 +37,43 @@ namespace BlueTracker.SDK.Performance.Model.Common
         /// <summary>
         /// Bio grade of the fuel.
         /// </summary>
+        [JsonProperty(PropertyName = "fameBioGrade")]
         public double? FameBioGrade { get; set; }
-
-        /// <summary>
-        /// Fossil component of the fuel.
-        /// </summary>
-        [JsonProperty(PropertyName = "fossilComponent")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public FossilBlendOptions FossilComponent { get; set; }
-
-        /// <summary>
-        /// Fossil component amount in the fuel. (tons)
-        /// </summary>
-        public double? FossilComponentAmount { get; set; }
-
-        /// <summary>
-        /// Measurement unit of the fossil component.
-        /// </summary>
-        [JsonProperty(PropertyName = "fossilMeasure")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public ComponentMeasurementUnit FossilMeasure { get; set; }
 
         /// <summary>
         /// Fossil grade of the fuel.
         /// </summary>
+        [JsonProperty(PropertyName = "fossilGrade")]
         public double? FossilGrade { get; set; }
 
         /// <summary>
         /// Energy content of the fuel. (MJ)
         /// </summary>
+        [JsonProperty(PropertyName = "energy")]
         public double? Energy { get; set; }
 
         /// <summary>
         /// GHG emissions factor. (gCO2eq/MJ)
         /// </summary>
+        [JsonProperty(PropertyName = "eFactor")]
         public double? EFactor { get; set; }
 
         /// <summary>
         /// Indicates whether the Red II regulation has been applied.
         /// </summary>
+        [JsonProperty(PropertyName = "redTwoApplied")]
         public bool RedTwoApplied { get; set; }
 
         /// <summary>
         /// Unique number of the Proof of Sustainability certificate.
         /// </summary>
+        [JsonProperty(PropertyName = "posNumber")]
         public string PosNumber { get; set; }
+
+        /// <summary>
+        /// Files associated with the Proof of Sustainability certificates.
+        /// </summary>
+        [JsonProperty(PropertyName = "files")]
+        public List<string> Files { get; set; }
     }
 }

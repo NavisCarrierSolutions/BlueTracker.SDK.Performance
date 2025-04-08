@@ -10,57 +10,48 @@ namespace BlueTracker.SDK.Performance.Model.Common
     public class FuelType
     {
         /// <summary>
-        /// Fuel grade according ISO 8217.
+        /// Fuel grade. (enumeration)
         /// </summary>
         [JsonProperty(PropertyName = "grade")]
         [JsonConverter(typeof(StringEnumConverter))]
         public FuelGradeOptions? Grade { get; set; }
 
         /// <summary>
-        /// Fuel grade options according ISO 8217 - 2024.
+        /// Fuel grade. (enumeration)
         /// </summary>
         [JsonProperty(PropertyName = "isograde2024")]
         [JsonConverter(typeof(StringEnumConverter))]
         public IsoGradeOptions2024? IsoGrade2024 { get; set; }
 
         /// <summary>
-        /// Density of fuel (Unit: kg/m3)
+        /// ISO version of fuel grade.
+        /// </summary>
+        [JsonProperty("isoVersion")]
+        public string IsoVersion { get; set; }
+
+        /// <summary>
+        /// Density of fuel at 15°C. (kg/m3)
         /// </summary>
         [JsonProperty(PropertyName = "density")]
         public double? Density { get; set; }
 
         /// <summary>
-        /// Lower Calorific Value of fuel (Unit: kJ/kg)
+        /// Lower calorific value of fuel. (kJ/kg)
         /// </summary>
         [JsonProperty(PropertyName = "lcv")]
         public double? LCV { get; set; }
 
         /// <summary>
-        /// Sulphur content of fuel (Unit: %)
+        /// Sulfur content of fuel. (%)
         /// </summary>
         [JsonProperty(PropertyName = "sulphur")]
         public double? Sulphur { get; set; }
-
-        [JsonProperty(PropertyName = "sulphurEstimated")]
-        public bool SulphurEstimated { get; set; }
 
         /// <summary>
         /// Co2 factor of fuel
         /// </summary>
         [JsonProperty(PropertyName = "co2Factor")]
         public double? Co2Factor { get; set; }
-
-        /// <summary>
-        /// Energy content. (MJ)
-        /// </summary>
-        [JsonProperty(PropertyName = "energyContent")]
-        public double? EnergyContent { get; set; }
-
-        /// <summary>
-        /// Bio fuel details.
-        /// </summary>
-        [JsonProperty(PropertyName = "bioFuelBlendDetails")]
-        public BioFuelBlend BioFuelBlendDetails { get; set; }
 
         /// <summary>
         /// Kinematic viscosity. (cSt)
