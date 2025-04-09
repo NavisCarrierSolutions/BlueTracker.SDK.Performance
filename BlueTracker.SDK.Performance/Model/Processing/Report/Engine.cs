@@ -24,11 +24,19 @@ namespace BlueTracker.SDK.Performance.Model.Processing.Report
 
         public ReasonForNotConnecting? ReasonForNotConnecting { get; set; }
 
+        public double? ShoreEnergyReceived { get; set; }
+
+        public double? TimeOnShorePowerSupply { get; set; }
+
         public bool? IsOnScrubberMode { get; set; }
 
         public double? TotalFoc { get; set; }
 
         public double? TotalFocIso { get; set; }
+
+        public double? DailyTotalFoc { get; set; }
+
+        public double? DailyTotalFocIso { get; set; }
 
         public double? TotalCo2 { get; set; }
 
@@ -46,6 +54,8 @@ namespace BlueTracker.SDK.Performance.Model.Processing.Report
 
         public double? AverageRelativeAePower { get; set; }
 
+        public double? AverageRelativeAeGeneratorPower { get; set; }
+
         public double? TotalAverageShaftPower { get; set; }
 
         public double? TotalAverageElectricalPower { get; set; }
@@ -57,12 +67,36 @@ namespace BlueTracker.SDK.Performance.Model.Processing.Report
         public double? TotalGeneratedShaftEnergy { get; set; }
 
         public double? TotalGeneratedElectricalEnergy { get; set; }
+        public double? TotalConsumedPumpEnergy { get; set; }
+
+        public double? TotalConsumedCoolingSystemEnergy { get; set; }
+        public double? TotalScocMe { get; set; }
 
         public double? TotalCylinderOilConsumption { get; set; }
 
         public double? TotalCylinderHsLubOilConsumption { get; set; }
 
         public double? TotalCylinderLsLubOilConsumption { get; set; }
+        public double? TotalCylinderUniversalLubOilConsumption { get; set; }
+
+        public double? TotalRunningHoursMe { get; set; }
+
+        public double? TotalRunningHoursAe { get; set; }
+
+        public double? TotalRunningHoursAb { get; set; }
+
+        public double? TotalRunningHoursShaftGenerator { get; set; }
+
+        public double? TotalSoxEmissions { get; set; }
+
+        public double? TotalNoxEmissions { get; set; }
+
+        public double? TotalMeDistance { get; set; }
+        public double? TotalFocFeIso { get; set; }
+        public double? SgcCorrectedMe { get; set; }
+        public double? SgcCorrectedAe { get; set; }
+        public double? TotalGeneratedShaftGeneratorEnergyMe { get; set; }
+        public double? TotalGeneratedShaftGeneratorPowerMe { get; set; }
 
         public List<MainEngine> MainEngines { get; set; }
 

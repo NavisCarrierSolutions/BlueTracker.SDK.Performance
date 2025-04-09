@@ -2481,6 +2481,16 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public double? TotalGeneratedShaftEnergy { get; set; }
 
         /// <summary>
+        /// Total generated energy taken from main engine shaft generator. (kWh)
+        /// </summary>
+        public double? TotalGeneratedShaftGeneratorEnergyMe { get; set; }
+
+        /// <summary>
+        /// Total generated power of main engine shaft generator. (kW)
+        /// </summary>
+        public double? TotalGeneratedShaftGeneratorPowerMe { get; set; }
+
+        /// <summary>
         ///     Total NOx Emissions (t).
         /// </summary>
         public double? TotalNoxEmissions { get; set; }
