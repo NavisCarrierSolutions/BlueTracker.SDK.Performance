@@ -2935,5 +2935,325 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         ///     True wind speed. (kn rel. to north)
         /// </summary>
         public double? WindSpeedTrueKnots { get; set; }
+
+        /// <summary>
+        ///     Boiler Bio LNG sulphur content (%).
+        /// </summary>
+        public double? AbBioLngSulphurContent { get; set; }
+
+        /// <summary>
+        ///     Boiler E-LNG sulphur content (%).
+        /// </summary>
+        public double? AbELngSulphurContent { get; set; }
+
+        /// <summary>
+        ///     Boiler Bio Methanol sulphur content (%).
+        /// </summary>
+        public double? AbBioMethanolSulphurContent { get; set; }
+
+        /// <summary>
+        ///     Boiler E-Methanol sulphur content (%).
+        /// </summary>
+        public double? AbEMethanolSulphurContent { get; set; }
+
+        /// <summary>
+        ///     AE Bio LNG sulphur content (%).
+        /// </summary>
+        public double? AeBioLngSulphurContent { get; set; }
+
+        /// <summary>
+        ///     AE E-LNG sulphur content (%).
+        /// </summary>
+        public double? AeELngSulphurContent { get; set; }
+
+        /// <summary>
+        ///     AE Bio Methanol sulphur content (%).
+        /// </summary>
+        public double? AeBioMethanolSulphurContent { get; set; }
+
+        /// <summary>
+        ///     AE E-Methanol sulphur content (%).
+        /// </summary>
+        public double? AeEMethanolSulphurContent { get; set; }
+
+        /// <summary>
+        ///     ME Bio LNG sulphur content (%).
+        /// </summary>
+        public double? MeBioLngSulphurContent { get; set; }
+
+        /// <summary>
+        ///     ME E-LNG sulphur content (%).
+        /// </summary>
+        public double? MeELngSulphurContent { get; set; }
+
+        /// <summary>
+        ///     ME Bio Methanol sulphur content (%).
+        /// </summary>
+        public double? MeBioMethanolSulphurContent { get; set; }
+
+        /// <summary>
+        ///     ME E-Methanol sulphur content (%).
+        /// </summary>
+        public double? MeEMethanolSulphurContent { get; set; }
+
+        /// <summary>
+        ///     Boiler Bio LNG GCV (kJ/kg).
+        /// </summary>
+        public double? AbBioLngLcv { get; set; }
+
+        /// <summary>
+        ///     Boiler E-LNG GCV (kJ/kg).
+        /// </summary>
+        public double? AbELngLcv { get; set; }
+
+        /// <summary>
+        ///     Boiler Bio Methanol GCV (kJ/kg).
+        /// </summary>
+        public double? AbBioMethanolLcv { get; set; }
+
+        /// <summary>
+        ///     Boiler E-Methanol GCV (kJ/kg).
+        /// </summary>
+        public double? AbEMethanolLcv { get; set; }
+
+        /// <summary>
+        ///     AE Bio LNG GCV (kJ/kg).
+        /// </summary>
+        public double? AeBioLngLcv { get; set; }
+
+        /// <summary>
+        ///     AE E-LNG GCV (kJ/kg).
+        /// </summary>
+        public double? AeELngLcv { get; set; }
+
+        /// <summary>
+        ///     AE Bio Methanol GCV (kJ/kg).
+        /// </summary>
+        public double? AeBioMethanolLcv { get; set; }
+
+        /// <summary>
+        ///     AE E-Methanol GCV (kJ/kg).
+        /// </summary>
+        public double? AeEMethanolLcv { get; set; }
+
+        /// <summary>
+        ///     ME Bio LNG GCV (kJ/kg).
+        /// </summary>
+        public double? MeBioLngLcv { get; set; }
+
+        /// <summary>
+        ///     ME E-LNG GCV (kJ/kg).
+        /// </summary>
+        public double? MeELngLcv { get; set; }
+
+        /// <summary>
+        ///     ME Bio Methanol GCV (kJ/kg).
+        /// </summary>
+        public double? MeBioMethanolLcv { get; set; }
+
+        /// <summary>
+        ///     ME E-Methanol GCV (kJ/kg).
+        /// </summary>
+        public double? MeEMethanolLcv { get; set; }
+
+        /// <summary>
+        ///     Fuel oil Bio LNG bunkered. (metric tons).
+        /// </summary>
+        public double? BunkerFuelBioLng { get; set; }
+
+        /// <summary>
+        ///     Fuel oil E-LNG bunkered. (metric tons).
+        /// </summary>
+        public double? BunkerFuelELng { get; set; }
+
+        /// <summary>
+        ///     Fuel oil Bio Methanol bunkered. (metric tons).
+        /// </summary>
+        public double? BunkerFuelBioMethanol { get; set; }
+
+        /// <summary>
+        ///     Fuel oil E-Methanol bunkered. (metric tons).
+        /// </summary>
+        public double? BunkerFuelEMethanol { get; set; }
+
+        /// <summary>
+        ///     Fuel oil Bio LNG gain/loss. (metric tons).
+        /// </summary>
+        public double? GainLossFuelBioLng { get; set; }
+
+        /// <summary>
+        ///     Fuel oil E-LNG gain/loss. (metric tons).
+        /// </summary>
+        public double? GainLossFuelELng { get; set; }
+
+        /// <summary>
+        ///     Fuel oil Bio Methanol gain/loss. (metric tons).
+        /// </summary>
+        public double? GainLossFuelBioMethanol { get; set; }
+
+        /// <summary>
+        ///     Fuel oil E-Methanol gain/loss. (metric tons).
+        /// </summary>
+        public double? GainLossFuelEMethanol { get; set; }
+
+        /// <summary>
+        ///     Fuel oil Bio LNG remain on board. (metric tons)
+        /// </summary>
+        public double? RobFuelBioLng { get; set; }
+
+        /// <summary>
+        ///     Fuel oil E-LNG remain on board. (metric tons)
+        /// </summary>
+        public double? RobFuelELng { get; set; }
+
+        /// <summary>
+        ///     Fuel oil Bio Methanol remain on board. (metric tons)
+        /// </summary>
+        public double? RobFuelBioMethanol { get; set; }
+
+        /// <summary>
+        ///     Fuel oil E-Methanol remain on board. (metric tons)
+        /// </summary>
+        public double? RobFuelEMethanol { get; set; }
+
+        /// <summary>
+        ///     Total fuel oil consumption Bio LNG. (metric tons)
+        /// </summary>
+        public double? TotalFocBioLng { get; set; }
+
+        /// <summary>
+        ///     Total fuel oil consumption E-LNG. (metric tons)
+        /// </summary>
+        public double? TotalFocELng { get; set; }
+
+        /// <summary>
+        ///     Total fuel oil consumption Bio Methanol. (metric tons)
+        /// </summary>
+        public double? TotalFocBioMethanol { get; set; }
+
+        /// <summary>
+        ///     Total fuel oil consumption E-Methanol. (metric tons)
+        /// </summary>
+        public double? TotalFocEMethanol { get; set; }
+
+        /// <summary>
+        /// Boiler Bio LNG kinematic viscosity (cSt).
+        /// </summary>
+        public double? AbBioLngKinematicViscosity { get; set; }
+
+        /// <summary>
+        /// Boiler E-LNG kinematic viscosity (cSt).
+        /// </summary>
+        public double? AbELngKinematicViscosity { get; set; }
+
+        /// <summary>
+        /// Boiler Bio Methanol kinematic viscosity (cSt).
+        /// </summary>
+        public double? AbBioMethanolKinematicViscosity { get; set; }
+
+        /// <summary>
+        /// Boiler E-Methanol kinematic viscosity (cSt).
+        /// </summary>
+        public double? AbEMethanolKinematicViscosity { get; set; }
+
+        /// <summary>
+        /// AE Bio LNG kinematic viscosity (cSt).
+        /// </summary>
+        public double? AeBioLngKinematicViscosity { get; set; }
+
+        /// <summary>
+        /// AE E-LNG kinematic viscosity (cSt).
+        /// </summary>
+        public double? AeELngKinematicViscosity { get; set; }
+
+        /// <summary>
+        /// AE Bio Methanol kinematic viscosity (cSt).
+        /// </summary>
+        public double? AeBioMethanolKinematicViscosity { get; set; }
+
+        /// <summary>
+        /// AE E-Methanol kinematic viscosity (cSt).
+        /// </summary>
+        public double? AeEMethanolKinematicViscosity { get; set; }
+
+        /// <summary>
+        /// ME Bio LNG kinematic viscosity (cSt).
+        /// </summary>
+        public double? MeBioLngKinematicViscosity { get; set; }
+
+        /// <summary>
+        /// ME E-LNG kinematic viscosity (cSt).
+        /// </summary>
+        public double? MeELngKinematicViscosity { get; set; }
+
+        /// <summary>
+        /// ME Bio Methanol kinematic viscosity (cSt).
+        /// </summary>
+        public double? MeBioMethanolKinematicViscosity { get; set; }
+
+        /// <summary>
+        /// ME E-Methanol kinematic viscosity (cSt).
+        /// </summary>
+        public double? MeEMethanolKinematicViscosity { get; set; }
+
+        /// <summary>
+        ///     Total FOC Boiler Bio LNG (metric tons).
+        /// </summary>
+        public double? AbBioLngFoc { get; set; }
+
+        /// <summary>
+        ///     Total FOC Boiler E-LNG (metric tons).
+        /// </summary>
+        public double? AbELngFoc { get; set; }
+
+        /// <summary>
+        ///     Total FOC Boiler Bio Methanol (metric tons).
+        /// </summary>
+        public double? AbBioMethanolFoc { get; set; }
+
+        /// <summary>
+        ///     Total FOC Boiler E-Methanol (metric tons).
+        /// </summary>
+        public double? AbEMethanolFoc { get; set; }
+
+        /// <summary>
+        ///     Total FOC AE Bio LNG (metric tons).
+        /// </summary>
+        public double? AeBioLngFoc { get; set; }
+
+        /// <summary>
+        /// Total FOC AE E-LNG (metric tons).
+        /// </summary>
+        public double? AeELngFoc { get; set; }
+
+        /// <summary>
+        /// Total FOC AE Bio Methanol (metric tons).
+        /// </summary>
+        public double? AeBioMethanolFoc { get; set; }
+
+        /// <summary>
+        /// Total FOC AE E-Methanol (metric tons).
+        /// </summary>
+        public double? AeEMethanolFoc { get; set; }
+
+        /// <summary>
+        /// Total FOC ME Bio LNG (metric tons).
+        /// </summary>
+        public double? MeBioLngFoc { get; set; }
+
+        /// <summary>
+        /// Total FOC ME E-LNG (metric tons).
+        /// </summary>
+        public double? MeELngFoc { get; set; }
+
+        /// <summary>
+        /// Total FOC ME Bio Methanol (metric tons).
+        /// </summary>
+        public double? MeBioMethanolFoc { get; set; }
+
+        /// <summary>
+        /// Total FOC ME E-Methanol (metric tons).
+        /// </summary>
+        public double? MeEMethanolFoc { get; set; }
     }
 }
