@@ -3263,5 +3263,65 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         /// Total FOC ME E-Methanol (metric tons).
         /// </summary>
         public double? MeEMethanolFoc { get; set; }
+
+        /// <summary>
+        /// Lower calorific value of Bio LNG under EU scheme. (kJ/kg)
+        /// </summary>
+        public double? BunkerLcvEuBioLng { get; set; }
+
+        /// <summary>
+        /// Lower calorific value of E-LNG under EU scheme. (kJ/kg)
+        /// </summary>
+        public double? BunkerLcvEuELng { get; set; }
+
+        /// <summary>
+        /// Lower calorific value of Bio Methanol under EU scheme. (kJ/kg)
+        /// </summary>
+        public double? BunkerLcvEuBioMethanol { get; set; }
+
+        /// <summary>
+        /// Lower calorific value of E-Methanol under EU scheme. (kJ/kg)
+        /// </summary>
+        public double? BunkerLcvEuEMethanol { get; set; }
+
+        /// <summary>
+        /// Lower calorific value of Bio LNG under IMO scheme. (kJ/kg)
+        /// </summary>
+        public double? BunkerLcvImoBioLng { get; set; }
+
+        /// <summary>
+        /// Lower calorific value of E-LNG under IMO scheme. (kJ/kg)
+        /// </summary>
+        public double? BunkerLcvImoELng { get; set; }
+
+        /// <summary>
+        /// Lower calorific value of Bio Methanol under IMO scheme. (kJ/kg)
+        /// </summary>
+        public double? BunkerLcvImoBioMethanol { get; set; }
+
+        /// <summary>
+        /// Lower calorific value of E-Methanol under IMO scheme. (kJ/kg)
+        /// </summary>
+        public double? BunkerLcvImoEMethanol { get; set; }
+
+        /// <summary>
+        /// Bio LNG average GHG intensity value 'E' (gCO2eq/MJ) represents greenhouse gas emissions per unit of energy for biofuels and e-fuels.
+        /// </summary>
+        public double? BunkerGhgIntensityBioLng { get; set; }
+
+        /// <summary>
+        /// E-LNG average GHG intensity value 'E' (gCO2eq/MJ) represents greenhouse gas emissions per unit of energy for biofuels and e-fuels.
+        /// </summary>
+        public double? BunkerGhgIntensityELng { get; set; }
+
+        /// <summary>
+        /// Bio Methanol blend average GHG intensity value 'E' (gCO2eq/MJ) represents greenhouse gas emissions per unit of energy for biofuels and e-fuels.
+        /// </summary>
+        public double? BunkerGhgIntensityBioMethanol { get; set; }
+
+        /// <summary>
+        /// E-Methanol average GHG intensity value 'E' (gCO2eq/MJ) represents greenhouse gas emissions per unit of energy for biofuels and e-fuels.
+        /// </summary>
+        public double? BunkerGhgIntensityEMethanol { get; set; }
     }
 }
