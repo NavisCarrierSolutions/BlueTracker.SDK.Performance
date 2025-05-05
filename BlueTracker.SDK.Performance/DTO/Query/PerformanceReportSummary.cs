@@ -2176,13 +2176,11 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         /// <summary>
         ///     Time stamp of report (Local).
         /// </summary>
-        [JsonIgnore]
         public DateTime TimeStampLocal { get; set; }
 
         /// <summary>
         ///     Time stamp of report (UTC).
         /// </summary>
-        [JsonIgnore]
         public DateTime TimeStampUtc { get; set; }
 
         /// <summary>
