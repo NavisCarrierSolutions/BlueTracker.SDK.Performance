@@ -2176,13 +2176,11 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         /// <summary>
         ///     Time stamp of report (Local).
         /// </summary>
-        [JsonIgnore]
         public DateTime TimeStampLocal { get; set; }
 
         /// <summary>
         ///     Time stamp of report (UTC).
         /// </summary>
-        [JsonIgnore]
         public DateTime TimeStampUtc { get; set; }
 
         /// <summary>
@@ -2479,6 +2477,16 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         ///     Total generated shaft energy (delivered energy). (kWh)
         /// </summary>
         public double? TotalGeneratedShaftEnergy { get; set; }
+
+        /// <summary>
+        /// Total generated energy taken from main engine shaft generator. (kWh)
+        /// </summary>
+        public double? TotalGeneratedShaftGeneratorEnergyMe { get; set; }
+
+        /// <summary>
+        /// Total generated power of main engine shaft generator. (kW)
+        /// </summary>
+        public double? TotalGeneratedShaftGeneratorPowerMe { get; set; }
 
         /// <summary>
         ///     Total NOx Emissions (t).
