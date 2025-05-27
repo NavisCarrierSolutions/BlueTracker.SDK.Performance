@@ -129,6 +129,18 @@ namespace BlueTracker.SDK.Performance.Clients
         }
 
         /// <summary>
+        /// Get the report history.
+        /// </summary>
+        /// <param name="reportId">ID of the report.</param>
+        /// <returns>The report history.</returns>
+        public List<PerformanceReportHistoryShort> GetHistory(int reportId)
+        {
+            var route = $"/api/v1/reports/{reportId}/history";
+            var ret = GetObject<List<PerformanceReportHistoryShort>>(route);
+            return ret;
+        }
+
+        /// <summary>
         /// Get the complete and processed report.
         /// </summary>
         /// <param name="reportId">ID of the report.</param>
