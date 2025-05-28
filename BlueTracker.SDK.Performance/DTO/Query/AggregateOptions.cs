@@ -18,5 +18,8 @@ namespace BlueTracker.SDK.Performance.DTO.Query
 
         [JsonProperty(PropertyName = "incinerator")]
         Incinerator,
+
+        [JsonProperty(PropertyName = "cargoBoiler")]
+        CargoBoiler
     }
 }

@@ -16,14 +16,14 @@ namespace BlueTracker.SDK.Performance.Model.Enums
         MainEngine,
 
         /// <summary>
-        /// Auxilliary engine of a vessel (used for electrical power generation).
+        /// Auxiliary engine of a vessel (used for electrical power generation).
         /// </summary>
         [EnumMember(Value = "auxEngine")]
         [JsonProperty(PropertyName = "auxEngine")]
         AuxEngine,
 
         /// <summary>
-        /// Auxilliary boiler of a vessel (with own fuel burner, no exhaust gas boiler).
+        /// Auxiliary boiler of a vessel (with own fuel burner, no exhaust gas boiler).
         /// </summary>
         [EnumMember(Value = "boiler")]
         [JsonProperty(PropertyName = "boiler")]
@@ -41,6 +41,13 @@ namespace BlueTracker.SDK.Performance.Model.Enums
         /// </summary>
         [EnumMember(Value = "incinerator")]
         [JsonProperty(PropertyName = "incinerator")]
-        Incinerator
+        Incinerator,
+
+        /// <summary>
+        /// Cargo Boiler
+        /// </summary>
+        [EnumMember(Value = "cargoBoiler")]
+        [JsonProperty(PropertyName = "cargoBoiler")]
+        CargoBoiler
     }
 }
