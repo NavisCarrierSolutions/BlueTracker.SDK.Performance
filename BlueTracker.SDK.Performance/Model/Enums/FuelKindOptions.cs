@@ -124,6 +124,26 @@ namespace BlueTracker.SDK.Performance.Model.Enums
         /// <summary>
         /// LFO Low Low Sulphur
         /// </summary>
-        LFOLLS
+        LFOLLS,
+
+        /// <summary>
+        /// Bio methanol
+        /// </summary>
+        BioMethanol,
+
+        /// <summary>
+        /// Methanol (produced by electricity from renewable sources).
+        /// </summary>
+        EMethanol,
+
+        /// <summary>
+        /// Bio LNG
+        /// </summary>
+        BioLNG,
+
+        /// <summary>
+        /// LNG (produced by electricity from renewable sources).
+        /// </summary>
+        ELNG
     }
 }
