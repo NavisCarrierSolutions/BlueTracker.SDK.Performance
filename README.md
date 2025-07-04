@@ -1,5 +1,7 @@
 ![Build Status](https://ncs-fleet.visualstudio.com/_apis/public/build/definitions/36e4a17c-95ff-4c57-b1ae-af779fd7672c/28/badge)
 
+A test
+
 # BlueTracker.SDK.Performance
 This project is a C# wrapper of the Bluetracker REST API. It is used to easily query and modify Bluetracker entities in C#.
 
