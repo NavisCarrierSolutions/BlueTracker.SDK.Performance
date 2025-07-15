@@ -210,6 +210,6 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         /// Bunker date in local time zone.
         /// </summary> 
         [JsonProperty("bunkerDateLocal")]
-        public DateTime BunkerDateLocal { get; set; }
+        public DateTimeOffset BunkerDateLocal { get; set; }
     }
 }
