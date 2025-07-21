@@ -1,5 +1,6 @@
 ﻿using BlueTracker.SDK.Performance.Model.Common;
 using BlueTracker.SDK.Performance.Model.Enums;
+using System;
 using System.Collections.Generic;
 
 namespace BlueTracker.SDK.Performance.Model.Processing.Report
@@ -70,5 +71,16 @@ namespace BlueTracker.SDK.Performance.Model.Processing.Report
         /// Bio energy content of the fuel. (MJ)
         /// </summary>
         public double? BioEnergy { get; set; }
+
+        public DateTime? DateTimeHoseConnected { get; set; }
+        public DateTime? DateTimeHoseDisconnected { get; set; }
+        public DateTime? StartPumpingFuel { get; set; }
+        public DateTime? StopPumpingFuel { get; set; }
+        public string DeliveredVia { get; set; }
+        public string BargeName { get; set; }
+        public DateTime? BargeAlongside { get; set; }
+        public DateTime? BargeAway { get; set; }
+        public string SampleSealNumber { get; set; }
+        public string SampleDescription { get; set; }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using BlueTracker.SDK.Performance.Model.Common;
 using BlueTracker.SDK.Performance.Model.Enums;
 using Newtonsoft.Json;
@@ -82,5 +83,66 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Report
         [JsonProperty(PropertyName = "fossilComponent")]
         [JsonConverter(typeof(StringEnumConverter))]
         public FossilBlendOptions? FossilComponent { get; set; }
+
+        /// <summary>
+        /// Date and time when the hose was connected.
+        /// </summary>
+        [JsonProperty(PropertyName = "dateTimeHoseConnected")]
+        public DateTime? DateTimeHoseConnected { get; set; }
+
+        /// <summary>
+        /// Date and time when the hose was disconnected.
+        /// </summary>
+        [JsonProperty(PropertyName = "dateTimeHoseDisconnected")]
+        public DateTime? DateTimeHoseDisconnected { get; set; }
+
+        /// <summary>
+        /// Date and time when pumping fuel started.
+        /// </summary>
+        [JsonProperty(PropertyName = "startPumpingFuel")]
+        public DateTime? StartPumpingFuel { get; set; }
+
+        /// <summary>
+        /// Date and time when pumping fuel stopped.
+        /// </summary>
+        [JsonProperty(PropertyName = "stopPumpingFuel")]
+        public DateTime? StopPumpingFuel { get; set; }
+
+        /// <summary>
+        /// Method of delivery.
+        /// </summary>
+        [JsonProperty(PropertyName = "deliveredVia")]
+        public string DeliveredVia { get; set; }
+
+        /// <summary>
+        /// Name of the barge.
+        /// </summary>
+        [JsonProperty(PropertyName = "bargeName")]
+        public string BargeName { get; set; }
+
+        /// <summary>
+        /// Date and time when the barge was alongside.
+        /// </summary>
+        [JsonProperty(PropertyName = "bargeAlongside")]
+        public DateTime? BargeAlongside { get; set; }
+
+        /// <summary>
+        /// Date and time when the barge left.
+        /// </summary>
+        [JsonProperty(PropertyName = "bargeAway")]
+        public DateTime? BargeAway { get; set; }
+
+        /// <summary>
+        /// Seal number of the sample.
+        /// </summary>
+        [JsonProperty(PropertyName = "sampleSealNumber")]
+        public string SampleSealNumber { get; set; }
+
+        /// <summary>
+        /// Description of the sample.
+        /// </summary>
+        [JsonProperty(PropertyName = "sampleDescription")]
+        public string SampleDescription { get; set; }
+
     }
 }
