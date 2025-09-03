@@ -21,5 +21,10 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public double? Temp { get; set; }
 
         public FuelType Type { get; set; }
+
+        /// <summary>
+        /// Percentage of biofuel in the fuel blend, if applicable (used only for old ROB based systems).
+        /// </summary>
+        public double? PercentageOfBioFuelInBlend { get; set; }
     }
 }
