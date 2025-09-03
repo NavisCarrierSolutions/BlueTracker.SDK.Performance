@@ -56,5 +56,10 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Report
         /// Unique name of bunker charge.
         /// </summary>
         public string BunkerChargeName { get; set; }
+
+        /// <summary>
+        /// Percentage of biofuel in the fuel blend, if applicable (used only for old ROB based systems).
+        /// </summary>
+        public double? PercentageOfBioFuelInBlend { get; set; }
     }
 }
