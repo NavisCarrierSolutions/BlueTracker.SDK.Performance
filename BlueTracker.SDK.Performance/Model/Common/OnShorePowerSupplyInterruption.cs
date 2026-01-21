@@ -2,7 +2,7 @@
 using BlueTracker.SDK.Performance.Model.Enums;
 using Newtonsoft.Json;
 
-namespace BlueTracker.SDK.Performance.Model.Basic.Report
+namespace BlueTracker.SDK.Performance.Model.Common
 {
     /// <summary>
     /// Represents an interruption in the on-shore power supply, including its start and end times and the reason for

@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace BlueTracker.SDK.Performance.Model.Basic.Report
+namespace BlueTracker.SDK.Performance.Model.Common
 {
     /// <summary>
     /// Represents details about on-shore power supply usage, including energy consumption and associated EDN file

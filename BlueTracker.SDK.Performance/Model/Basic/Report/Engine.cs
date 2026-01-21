@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using BlueTracker.SDK.Performance.Model.Common;
 using BlueTracker.SDK.Performance.Model.Enums;
 using Newtonsoft.Json;
 
