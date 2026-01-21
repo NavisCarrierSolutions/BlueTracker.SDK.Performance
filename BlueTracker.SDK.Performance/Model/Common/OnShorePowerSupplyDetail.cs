@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using System;
 
 namespace BlueTracker.SDK.Performance.Model.Common
 {
@@ -22,5 +23,11 @@ namespace BlueTracker.SDK.Performance.Model.Common
         /// </summary>
         [JsonProperty("ednFile")]
         public string EdnFile { get; set; }
+
+        /// <summary>
+        /// Gets or sets the unique identifier (UID) of the EDN file.
+        /// </summary>
+        [JsonProperty("ednFileUid")]
+        public Guid? EdnFileUid { get; set; }
     }
 }
