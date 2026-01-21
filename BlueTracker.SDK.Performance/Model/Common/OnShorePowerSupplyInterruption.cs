@@ -1,6 +1,7 @@
-﻿using System;
-using BlueTracker.SDK.Performance.Model.Enums;
+﻿using BlueTracker.SDK.Performance.Model.Enums;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+using System;
 
 namespace BlueTracker.SDK.Performance.Model.Common
 {
@@ -28,6 +29,7 @@ namespace BlueTracker.SDK.Performance.Model.Common
         /// Gets or sets the reason for the interruption of on-shore power supply.
         /// </summary>
         [JsonProperty("interruptionReason")]
+        [JsonConverter(typeof(StringEnumConverter))]
         public OnShorePowerSupplyInterruptionReason InterruptionReason { get; set; }
     }
 }
