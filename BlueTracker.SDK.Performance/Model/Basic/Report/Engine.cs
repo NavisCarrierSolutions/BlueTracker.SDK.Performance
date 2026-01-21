@@ -67,7 +67,21 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Report
         /// <summary>
         ///     Shore energy supplied - electrical energy from shore (kWh)
         /// </summary>
+        [Obsolete]
+        [JsonProperty(PropertyName = "shoreEnergyReceived")]
         public double? ShoreEnergyReceived { get; set; }
+
+        /// <summary>
+        /// Gets or sets the collection of on-shore power supply details associated with the report.
+        /// </summary>
+        [JsonProperty(PropertyName = "onShorePowerSupplyDetails")]
+        public List<OnShorePowerSupplyDetail> OnShorePowerSupplyDetails { get; set; }
+
+        /// <summary>
+        /// Gets or sets the collection of on-shore power supply interruptions associated with the report.
+        /// </summary>
+        [JsonProperty(PropertyName = "onShorePowerSupplyInterruptions")]
+        public List<OnShorePowerSupplyInterruption> OnShorePowerSupplyInterruptions { get; set; }
 
         /// <summary>
         /// Indicates whether ship is running the scrubber in operation.
