@@ -1,7 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using BlueTracker.SDK.Performance.Model.Enums;
+﻿using BlueTracker.SDK.Performance.Model.Enums;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+using System;
+using System.Collections.Generic;
 
 namespace BlueTracker.SDK.Performance.Model.Basic.Report
 {
@@ -63,6 +64,12 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Report
         /// </summary>
         [JsonProperty(PropertyName = "reasonForNotConnecting")]
         public ReasonForNotConnecting? ReasonForNotConnecting { get; set; }
+
+        /// <summary>
+        ///     Tier-based NOx emission standards for marine engines.
+        /// </summary>
+        [JsonProperty(PropertyName = "tierMode")]
+        public TierMode? TierMode { get; set; }
 
         /// <summary>
         ///     Shore energy supplied - electrical energy from shore (kWh)
