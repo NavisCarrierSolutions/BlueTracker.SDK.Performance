@@ -1403,6 +1403,11 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public ReasonForNotConnecting? ReasonForNotConnecting { get; set; }
 
         /// <summary>
+        ///     Tier-based NOx emission standards for marine engines.
+        /// </summary>
+        public TierMode? TierMode { get; set; }
+
+        /// <summary>
         ///     Shore energy supplied - electrical energy from shore (kWh)
         /// </summary>
         public double? ShoreEnergyReceived { get; set; }

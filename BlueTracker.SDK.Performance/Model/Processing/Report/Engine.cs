@@ -1,6 +1,8 @@
-﻿using System;
+﻿using BlueTracker.SDK.Performance.Model.Enums;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+using System;
 using System.Collections.Generic;
-using BlueTracker.SDK.Performance.Model.Enums;
 
 namespace BlueTracker.SDK.Performance.Model.Processing.Report
 {
@@ -23,6 +25,8 @@ namespace BlueTracker.SDK.Performance.Model.Processing.Report
         public DateTimeOffset? EndOnShorePowerSupply { get; set; }
 
         public ReasonForNotConnecting? ReasonForNotConnecting { get; set; }
+        
+        public TierMode? TierMode { get; set; }
 
         public double? ShoreEnergyReceived { get; set; }
 
