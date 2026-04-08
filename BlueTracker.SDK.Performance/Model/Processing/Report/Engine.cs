@@ -34,6 +34,8 @@ namespace BlueTracker.SDK.Performance.Model.Processing.Report
 
         public bool? IsOnScrubberMode { get; set; }
 
+        public ScrubberSystem ScrubberSystem { get; set; }
+
         public double? TotalFoc { get; set; }
 
         public double? TotalFocIso { get; set; }
