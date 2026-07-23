@@ -97,6 +97,12 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Report
         public bool? IsOnScrubberMode { get; set; }
 
         /// <summary>
+        /// Gets or sets the scrubber system data associated with the report engine section.
+        /// </summary>
+        [JsonProperty(PropertyName = "scrubberSystem")]
+        public ScrubberSystem ScrubberSystem { get; set; }
+
+        /// <summary>
         /// A list of Main Engines, which are installed on the vessel.
         /// </summary>
         [JsonProperty(PropertyName = "mainEngines")]
