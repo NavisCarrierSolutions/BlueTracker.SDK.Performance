@@ -64,6 +64,8 @@ namespace BlueTracker.SDK.Performance.Model.Processing.Report
 
         public double? TotalAverageShaftPower { get; set; }
 
+        public double? TotalShaftLoad { get; set; }
+
         public double? TotalAverageElectricalPower { get; set; }
 
         public double? TotalGeneratedMeEnergy { get; set; }

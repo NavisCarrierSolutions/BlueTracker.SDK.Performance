@@ -57,6 +57,12 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Report
         public double? PropellerPitch { get; set; }
 
         /// <summary>
+        /// Shaft load: average generator power relative to generator max power. (Unit: %)
+        /// </summary>
+        [JsonProperty(PropertyName = "shaftLoad")]
+        public double? ShaftLoad { get; set; }
+
+        /// <summary>
         /// Engine specific list of lub oil quantities consumed.
         /// </summary>
         [JsonProperty(PropertyName = "lubOilConsumptions")]
