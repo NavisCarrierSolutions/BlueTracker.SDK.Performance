@@ -20,6 +20,8 @@
 
         public double? RelativePower { get; set; }
 
+        public double? ShaftLoad { get; set; }
+
         public double? GeneratedGeneratorEnergy { get; set; }
 
         public double? PropellerPitch { get; set; }
