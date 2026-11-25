@@ -168,5 +168,17 @@ namespace BlueTracker.SDK.Performance.Model.Basic.Report
         /// </summary>
         [JsonProperty("firstLineAshore")]
         public DateTime? FirstLineAshore { get; set; }
+
+        /// <summary>
+        /// UID of the origin port call.
+        /// </summary>
+        [JsonProperty("originPortCallUid")]
+        public Guid? OriginPortCallUid { get; set; }
+
+        /// <summary>
+        /// UID of the destination port call.
+        /// </summary>
+        [JsonProperty("destinationPortCallUid")]
+        public Guid? DestinationPortCallUid { get; set; }
     }
 }

@@ -2950,6 +2950,16 @@ namespace BlueTracker.SDK.Performance.DTO.Query
         public double? WindSpeedTrueKnots { get; set; }
 
         /// <summary>
+        /// UID of origin port call.
+        /// </summary>
+        public Guid? OriginPortCallUid { get; set; }
+
+        /// <summary>
+        /// UID of destination port call.
+        /// </summary>
+        public Guid? DestinationPortCallUid { get; set; }
+
+        /// <summary>
         ///     Boiler Bio LNG sulphur content (%).
         /// </summary>
         public double? AbBioLngSulphurContent { get; set; }
