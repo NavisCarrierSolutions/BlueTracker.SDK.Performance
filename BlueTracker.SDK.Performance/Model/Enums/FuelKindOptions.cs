@@ -144,6 +144,81 @@ namespace BlueTracker.SDK.Performance.Model.Enums
         /// <summary>
         /// LNG (produced by electricity from renewable sources).
         /// </summary>
-        ELNG
+        ELNG,
+
+        /// <summary>
+        /// LPG (Liquid petroleum gas)
+        /// </summary>
+        LPG,
+
+        /// <summary>
+        /// Blue LNG
+        /// </summary>
+        BlueLNG,
+
+        /// <summary>
+        /// Bio LPG
+        /// </summary>
+        BioLPG,
+
+        /// <summary>
+        /// RDME
+        /// </summary>
+        RDME,
+
+        /// <summary>
+        /// RDME Blend
+        /// </summary>
+        RDMEBlend,
+
+        /// <summary>
+        /// Blue Methanol
+        /// </summary>
+        BlueMethanol,
+
+        /// <summary>
+        /// Bio Ethanol
+        /// </summary>
+        BioEthanol,
+
+        /// <summary>
+        /// NH3
+        /// </summary>
+        NH3,
+
+        /// <summary>
+        /// Blue NH3
+        /// </summary>
+        BlueNH3,
+
+        /// <summary>
+        /// Bio NH3
+        /// </summary>
+        BioNH3,
+
+        /// <summary>
+        /// NH3 (produced by electricity from renewable sources)
+        /// </summary>
+        ENH3,
+
+        /// <summary>
+        /// H2
+        /// </summary>
+        H2,
+
+        /// <summary>
+        /// Blue H2
+        /// </summary>
+        BlueH2,
+
+        /// <summary>
+        /// H2 (produced by electricity from renewable sources)
+        /// </summary>
+        EH2,
+
+        /// <summary>
+        /// Bio H2
+        /// </summary>
+        BioH2
     }
 }
