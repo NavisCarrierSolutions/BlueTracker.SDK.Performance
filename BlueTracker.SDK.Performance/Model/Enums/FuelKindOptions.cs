@@ -152,7 +152,7 @@ namespace BlueTracker.SDK.Performance.Model.Enums
         LPG,
 
         /// <summary>
-        /// Blue LNG
+        /// Blue LNG (low carbon Liquefied Natural Gas)
         /// </summary>
         BlueLNG,
 
@@ -162,17 +162,17 @@ namespace BlueTracker.SDK.Performance.Model.Enums
         BioLPG,
 
         /// <summary>
-        /// RDME
+        /// RDME (Renewable DiMethyl Ether)
         /// </summary>
         RDME,
 
         /// <summary>
-        /// RDME Blend
+        /// RDME Blend (Renewable DiMethyl Ether Blend)
         /// </summary>
         RDMEBlend,
 
         /// <summary>
-        /// Blue Methanol
+        /// Blue Methanol (low carbon Methanol)
         /// </summary>
         BlueMethanol,
 
@@ -182,42 +182,42 @@ namespace BlueTracker.SDK.Performance.Model.Enums
         BioEthanol,
 
         /// <summary>
-        /// NH3
+        /// NH3 (Ammonia)
         /// </summary>
         NH3,
 
         /// <summary>
-        /// Blue NH3
+        /// Blue NH3 (low carbon Ammonia)
         /// </summary>
         BlueNH3,
 
         /// <summary>
-        /// Bio NH3
+        /// Bio NH3 (Bio Ammonia)
         /// </summary>
         BioNH3,
 
         /// <summary>
-        /// NH3 (produced by electricity from renewable sources)
+        /// NH3 (synthetic Ammonia)
         /// </summary>
         ENH3,
 
         /// <summary>
-        /// H2
+        /// H2 (Hydrogen)
         /// </summary>
         H2,
 
         /// <summary>
-        /// Blue H2
+        /// Blue H2 (low carbon Hydrogen)
         /// </summary>
         BlueH2,
 
         /// <summary>
-        /// H2 (produced by electricity from renewable sources)
+        /// H2 (synthetic Hydrogen)
         /// </summary>
         EH2,
 
         /// <summary>
-        /// Bio H2
+        /// Bio H2 (bio Hydrogen)
         /// </summary>
         BioH2
     }
